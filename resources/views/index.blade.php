@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="container-fluid mt-3 ms-4">
+    <header class="container-fluid mt-3">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="#" class="col-md-1 d-flex align-items-center mb-2 mb-lg-0 text-white text-deocoration-none">
                 <img src="kokusai_logo.png">
@@ -55,7 +55,6 @@
     <h6 class="col-md-2">ABOUT US</h6>
     <div class="vr border"></div>
     <h6 class="col-md-2">CONTACT</h6>
-    <div class="vr border"></div>
    </div>
 
    <!-- Landing Page Heading -->
@@ -121,9 +120,9 @@
 
     
     <!-- Section 2 -->
-    <div class="" 
-     style="background: url('/images/2ndpicx.jpg');
-            height: 50vh">
+    <div class="mb-5" 
+    style="background: url({{URL::asset('/image/2ndpicx.jpg')}});
+    height: 50vh">
     </div>
 
     <!-- Section 3 -->
@@ -152,27 +151,62 @@
     </p>
     <p class="text-end"><strong>Laura V. Cespon, LPT, Ed. D.</strong> | Education Department Head</p>
    </div>
-   <div class="container">
-        <div class="row">
+   <div class="container mt-5 mb-5">
+        <div class="row text-center" style="color:#393280;">
             <div class="col-sm">
-                <img src="academics_2.png" alt="test">
+            <img src="{{URL::asset('/image/academics-1.png')}}" width="200" height="200">
+            <p class="fw-bold">International Studies Department</p>
             </div>
             <div class="col-sm">
-            One of three columns
+            <img src="{{URL::asset('/image/academics-2.png')}}" width="200" height="200">
+            <p class="fw-bold">Human Services Department</p>    
             </div>
             <div class="col-sm">
-            One of three columns
+            <img src="{{URL::asset('/image/academics-3.png')}}" width="200" height="200">
+            <p class="fw-bold">Education Department</p>   
             </div>
             <div class="col-sm">
-            One of three columns
+            <img src="{{URL::asset('/image/academics-4.png')}}" width="200" height="200">
+            <p class="fw-bold">Information System Department</p>
             </div>
             <div class="col-sm">
-            One of three columns
+            <img src="{{URL::asset('/image/academics-5.png')}}" width="150" height="200">
+            <p class="fw-bold">Entrepreneurship Department</p>   
             </div>
         </div>
     </div>
+    <hr>
 
-
+    <!-- section 4 -->
+    <div class="container mt-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-sm" style="text-align:justify; text-justify:interword;">
+                    <h1 class="fw-bold" style="color:#393280;">SCHOLARSHIPS</h1>
+                    <h6 style="color:#393280;">ACADEMIC SCHOLARSHIPS AND GRANT-IN-AID</h6>
+                    <p class="fw-bold">The College acknowledges top-performing students 
+                    every semester who are granted discounts on their
+                    tuition fees. In order to become a Dean's Lister,
+                    students must carry at least 18 units every semester
+                    and obtain the required Weighted Percentage
+                    Average (WPA). Students who are financially
+                    challenged but are excellent in academics 
+                    are also recommended for foster parenting by
+                    Japanese Nationals.</p>
+                </div>
+                <div class="col-sm mt-5">
+                    <h4 class="mx-4" style="color:#393280;">Other Scholarships Offered</h4>
+                    <ul class="fw-bold" style="text-align:justify; text-justify:interword;">
+                        <li>High School Graduates with Academic Honors</li>
+                        <li>High School Graduates with Academic Honors</li>
+                        <li>High School Graduates with Academic Honors</li>
+                        <li>High School Graduates with Academic Honors</li>
+                        <li>High School Graduates with Academic Honors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
