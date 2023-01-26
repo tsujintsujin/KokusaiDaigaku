@@ -17,6 +17,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard');
+})->name('dashboard');
+
+Route::get('/add_courses_subjects', function () {
+    return view('dashboard.add_courses_subjects');
+})->name('add_courses_subjects');
+
+Route::get('/student_account_management', function () {
+    return view('dashboard.student_account_management');
+})->name('student_account_management');
+
+Route::get('/teacher_account_management', function () {
+    return view('dashboard.teacher_account_management');
+})->name('teacher_account_management');
+
+Route::get('/change_password_account_management', function () {
+    return view('dashboard.change_password_account_management');
+})->name('change_password_account_management');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
