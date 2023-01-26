@@ -1,38 +1,35 @@
 @extends('dashboard.layout')
 @section('content')
-<div class="container col justify-content-center col-9 m-5">
-    <div class="d-flex  row  " id="dashboardContainers" style="background-color: #eeefff">
-        <div class="col-3 text-center">
-            <h5 class=" dashboardContainer">Date</h5>
-            <div style="border-right: 3px solid #d9d9da;">
-                {{-- this is for calendar --}}
-                test
+<div class="container justify-content-center col-9 py-5 rounded-top-left-1 rounded-top-right-1">
+    <div class="d-flex row rounded-top" id="dashboardContainers" style="background-color: #eeefff">
+        <div class="col-3 text-center m-0 p-0">
+            <div>
+                <h5 class="dashboardContainer rounded-top-left-1 h-50">Date</h5>
+            </div>
+            <div class="h-50 d-flex align-items-center justify-content-center">
+                <h5 class="nomargin mt-2">Sample</h5>
             </div>
         </div>
-        <div class="col-9 text-center">
-            <h5 class="dashboardContainer">Users in the system</h5>
-            <div class="row">
-
-                <div class="col">
-                    <h5 class=" ">Students</h5>
-                    <div style="border-right: 3px solid #d9d9da;">
-                        {{-- this is for number of students --}}
-                        test
+        <div class="container col-9 text-center m-0 p-0 ">
+            <h5 class="dashboardContainer rounded-top-right-1">Users in the system</h5>
+            <div class="row m-0 p-0">
+                <div class="col-6">
+                    <h5>Students</h5>
+                    <div class="h-50 d-flex align-items-center justify-content-center">
+                        <h5 class="nomargin mt-2">Sample</h5>
                     </div>
                 </div>
-                <div class="col">
-                    <h5 class=" ">Teachers</h5>
-                    <div>
-                        {{-- this is for number of teachers --}}
-                        test
+                <div class="col-6 m-0">
+                    <h5>Teachers</h5>
+                    <div class="h-50 d-flex align-items-center justify-content-center">
+                        <h5 class="nomargin mt-2">Sample</h5>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
     </div>
+
+
     <table class="table mt-5">
         <thead>
             <tr>
