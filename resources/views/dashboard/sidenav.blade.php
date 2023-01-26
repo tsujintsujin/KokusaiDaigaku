@@ -58,4 +58,5 @@
         </li>
     </ul>
 </div>
+
 {{-- End of Side Bar --}}

@@ -1,8 +1,39 @@
+/* ------------------------element name here----------------------- */
 body {
     background-color: #ffffff;
     /* overflow-x: hidden; */
     /* Hide horizontal scrollbar */
 }
+
+/* this the zebra effects of rows in tables */
+tr:nth-child(even) {
+    background-color: #cdcbdf;
+}
+
+thead {
+    color: #fafafc;
+    background-color: #393280;
+    padding: 1rem;
+
+}
+
+input[type="text"]:focus{
+    border-color: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+input[type="text"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
+/* ----------------------end element name -------------------------- */
+
+
+
+/* ----------------------id element down here-------------------------- */
 #sidebar {
     color: #fafafc;
     background-color: #393280;
@@ -22,6 +53,12 @@ body {
 }
 
 
+
+
+/* * ----------------------end id element -------------------------- */
+
+
+/* * ----------------------class element down here -------------------------- */
 .dashboardContainer {
     color: #fafafc;
     background-color: #393280;
@@ -35,18 +72,22 @@ body {
 .rounded-top-left-1 {
     border-top-left-radius: .5rem;
 }
+
 .rounded-top-right-1 {
     border-top-right-radius: .5rem;
 }
+
 .rounded-bottom-left-1 {
     border-bottom-left-radius: .5rem;
 }
+
 .rounded-bottom-right-1 {
     border-bottom-right-radius: .5rem;
 }
 
-.h-50{
-    height:50%;
-    margin:0 !important;
+.h-50 {
+    height: 50%;
+    margin: 0 !important;
 }
 
+/* * ----------------------class element end  -------------------------- */
