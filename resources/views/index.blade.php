@@ -198,17 +198,87 @@
                     <h4 class="mx-4" style="color:#393280;">Other Scholarships Offered</h4>
                     <ul class="fw-bold" style="text-align:justify; text-justify:interword;">
                         <li>High School Graduates with Academic Honors</li>
-                        <li>High School Graduates with Academic Honors</li>
-                        <li>High School Graduates with Academic Honors</li>
-                        <li>High School Graduates with Academic Honors</li>
-                        <li>High School Graduates with Academic Honors</li>
+                        <li>Academic Scholarship (Dean's Lister)</li>
+                        <li>MKD Grant-in-Aid Program</li>
+                        <li>PNJKIS Alumni Grant</li>
+                        <li>Board of Trustees/Employee Tuition Fee Discount</li>
+                        <li>Descendant Discount</li>
+                        <li>MKD SATOGO Program</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <hr>
 
+    <!-- section 5 -->
+    <div class="container mb-5">
+        <h1 class="mt-5 fw-bold" style="color:#393280;">RECENT EVENTS</h1>
+        <div class="mt-4 d-flex">
+            <div class="col-9">
+                <img src="{{URL::asset('/image/section5img.png')}}">
+            </div>
+            <div class="col-3">
+                <p class="h4 text-dark">One Heart.</p>
+                <p class="h4 text-dark">One Community.</p>
+                <p class="h4 text-dark">One MKD.</p>
+                <p class="mt-5" style="text-align:justify; text-justify:interword;">
+                    Today marks the 20th Anniversary of
+                    Mindanao Kokusai Daigaku. To commemorate
+                    the humble beginnings of the institution,
+                    may we move forward with hope and glory 
+                    for the years to come!
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row-cols-2">
+                <div class="col">
+                    <img src="{{URL::asset('/image/section5_1.png')}}">
+                </div>
+                <div class="col">
+                    <img src="{{URL::asset('/image/section5_2.png')}}">
+                </div>
+                <div class="col">
+                    <img src="{{URL::asset('/image/section5_3.png')}}">
+                </div>
+                <div class="col">
+                    <img src="{{URL::asset('/image/section5_4.png')}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
 
+    <!-- FAQ'S -->
+    <div class="container fst-italic mb-5">
+        <h1 class="mt-5 mb-5 text-center">FAQ'S</h1>
+        <div class="row">
+            <div class="col">
+                <p class="blockquote-footer fs-5">What a courses do you offer?</p>
+                <p>INTERNATIONAL STUDIES Major in Japanese Language & Studies</p>
+                <p>HUMAN SERVICES Major in Care of Older Persons</p>
+                <p>INFORMATION SYSTEMS</p>
+                <p>SECONDARY EDUCATION Major in :</p>
+                    <ul>
+                        <li>English</li>
+                        <li>Mathematics</li>
+                        <li>Science</li>
+                        <li>Special Needs Education</li>
+                        <li>Early Childhood Education</li>
+                    </ul>
+            </div>
+            <div class="col">
+                <p class="blockquote-footer fs-5 fst-italic" style="text-align:justify; text-justify:interword;">Can I enroll even if I am not Filipino or Japanese?</p>
+                <p>Yes, you can definitely enroll regardless of 
+                your nationality. In fact, we have several nationalities 
+                enrolled in the school. Aside from Filipino and 
+                Japanese, we also have Americans, Indians and Arabs.
+                </p>
+        
+            </div>
+        </div>
+    </div>
 
 
 
