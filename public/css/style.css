@@ -3,6 +3,7 @@ body {
     /* overflow-x: hidden; */
     /* Hide horizontal scrollbar */
 }
+
 #sidebar {
     color: #fafafc;
     background-color: #393280;
@@ -35,18 +36,69 @@ body {
 .rounded-top-left-1 {
     border-top-left-radius: .5rem;
 }
+
 .rounded-top-right-1 {
     border-top-right-radius: .5rem;
 }
+
 .rounded-bottom-left-1 {
     border-bottom-left-radius: .5rem;
 }
+
 .rounded-bottom-right-1 {
     border-bottom-right-radius: .5rem;
 }
 
-.h-50{
-    height:50%;
-    margin:0 !important;
+.h-50 {
+    height: 50%;
+    margin: 0 !important;
 }
 
+.vh-50 {
+    height: 50vh;
+}
+
+
+.hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.admission {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mpv-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.yellow-arrow {
+    height: 35px;
+}
+
+.color-title{
+    color: #393280;
+}
+.color-highlight{
+    color: #F6C400;
+}
+
+.text-title {
+    color: #393280;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #F6C400;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    background: #fff;
+    padding: 0 80px;
+}
+
+.title-lines{
+    background:#fff; 
+    padding:0 80px;
+}
