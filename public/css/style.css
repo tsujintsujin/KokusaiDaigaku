@@ -60,8 +60,11 @@ body {
 
 .vh-25 {
     height: 25vh;
-
 }
+.vh-75{
+    height: 75vh;
+}
+
 
 .hero {
     background-repeat: no-repeat;

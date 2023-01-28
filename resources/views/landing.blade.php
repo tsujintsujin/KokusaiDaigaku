@@ -13,11 +13,11 @@
     </div>
 
     <!-- Mission, Philosophy, Vision -->
-    <div class="container my-5 text-center text-dark">
-        <div class="row">
+    <div class="container vh-75 my-5 text-center text-dark  d-flex align-items-center">
+        <div class="row ">
             <div class="col-md-4 p-5">
-                <h3 class="fw-bold">MISSION</h3>
-                <p class="fst-italic justify-content"><span class="h2">W</span>e aim to provide a diverse range of
+                <h2 class="fw-bold">MISSION</h2>
+                <h5 class="fst-italic justify-content"><span class="h2">W</span>e aim to provide a diverse range of
                     learning opportunities and activities in
                     Japanese, English, and Filipino
                     languages, as well as other
@@ -29,11 +29,11 @@
                     instill a culture of morality, civic
                     consciousness, gender sensitivity, and
                     corporate social responsibility in all of
-                    our endeavors.</p>
+                    our endeavors.</h5>
             </div>
             <div class="col-md-4 p-5">
-                <h3 class="fw-bold">PHILOSOPHY</h3>
-                <p class="fst-italic justify-content"><span class="h2">T</span>he College is dedicated to providing
+                <h2 class="fw-bold">PHILOSOPHY</h2>
+                <h5 class="fst-italic justify-content"><span class="h2">T</span>he College is dedicated to providing
                     a holistic education, and aims to
                     produce graduates who are well-rounded
                     individuals. Our goal is to
@@ -47,11 +47,11 @@
                     their emotional, social, and ethical
                     abilities, in order to create graduates who have the knowledge, skills, and
                     values to make a positive impact on
-                    the world.</p>
+                    the world.</>
             </div>
             <div class="col-md-4 p-5">
-                <h3 class="fw-bold">VISION</h3>
-                <p class="fst-italic justify-content"><span class="h2">A</span>n academic community proficient in
+                <h2 class="fw-bold">VISION</h2>
+                <h5 class="fst-italic justify-content"><span class="h2">A</span>n academic community proficient in
                     Japanese Language, equipped with
                     multicultural sensitivity, strong work
                     ethics, and global competencies is
@@ -60,7 +60,7 @@
                     challenges and opportunities of the
                     21st century, and will be able to make
                     a positive impact in their fields and in
-                    the world at large.</p>
+                    the world at large.</h5>
             </div>
         </div>
     </div>
@@ -167,50 +167,65 @@
         <hr class="hr">
 
         <div class="container my-5 py-5">
-            <div class="row">
+            <div class="row my-5">
                 <h1 class="fw-bold color-title">RECENT EVENTS<span><img class="yellow-arrow ms-3 mb-2"
-                            src="{{ asset('image/right_arrow.png') }}" alt=""></span></h1>
+                            src="{{ asset('image/right_arrow.png') }}" alt=""></span>
+                </h1>
                 <br>
                 <section class="row vh-50 d-flex px-0">
-                        <div class="px-0 mx-0 col-md-8 col-12">
-                            <div id="myCarousel" class="carousel slide" data-mdb-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="d-flex justify-content-between vh-50 hero my-3"
-                                            style="background-image: url({{ asset('image/carousel_1.jpg') }})">
-                                        </div>
+                    <div class="px-0 mx-0 col-md-8 col-12">
+                        <div id="myCarousel" class="carousel slide" data-mdb-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="d-flex justify-content-between vh-50 hero my-3"
+                                        style="background-image: url({{ asset('image/carousel_1.jpg') }})">
                                     </div>
-                                    <div class="carousel-item">
-                                        <div class="d-flex justify-content-between vh-50 hero my-3"
-                                            style="background-image: url({{ asset('image/carousel_2.jpg') }})">
-                                        </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex justify-content-between vh-50 hero my-3"
+                                        style="background-image: url({{ asset('image/carousel_2.jpg') }})">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 pe-5 text-end">
-                            <h1 class="fw-bold mt-5"> One Heart.<br>One Community.<br>One MKD. </h1>
-                           <br>
-                           <h5 class="mb-5">Today marks the 20th Anniversary of Mindanao Kokusai Daigaku.
+                    </div>
+                    <div class="col-md-4 pe-5 text-end">
+                        <h1 class="fw-bold mt-5"> One Heart.<br>One Community.<br>One MKD. </h1>
+                        <br>
+                        <h5 class="mb-5">Today marks the 20th Anniversary of Mindanao Kokusai Daigaku.
                             To commemorate the humble beginnings of the institution,
                             may we move forward with hope and glory for the years to come!</h5>
-                            <div class="mt-auto">
-                                <button class="btn rounded-circle btn-main btn-carousel-controller"
-                                    type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                                    🡠
-                                </button>
-                                <button class="btn rounded-circle btn-main btn-carousel-controller"
-                                    type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                                    🡢
-                                </button>
-                            </div>
+                        <div class="mt-auto">
+                            <button class="btn rounded-circle btn-main btn-carousel-controller" type="button"
+                                data-bs-target="#myCarousel" data-bs-slide="next">
+                                🡠
+                            </button>
+                            <button class="btn rounded-circle btn-main btn-carousel-controller" type="button"
+                                data-bs-target="#myCarousel" data-bs-slide="next">
+                                🡢
+                            </button>
                         </div>
+                    </div>
                 </section>
             </div>
-       
 
+            <div class="row mt-3">
+                <div class="col-5 vh-25">
 
+                </div>
+                <div class="col-5 vh-25">
+                    
+                </div>
+            </div>
 
+            <div class="row mt-3">
+                <div class="col-5 vh-25">
+
+                </div>
+                <div class="col-5 vh-25">
+                    
+                </div>
+            </div>
 
         </div>
     @endsection
