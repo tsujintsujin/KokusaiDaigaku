@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-md-4 p-5">
                 <h3 class="fw-bold">MISSION</h3>
-                <p class="fst-italic mpv-content"><span class="h2">W</span>e aim to provide a diverse range of
+                <p class="fst-italic justify-content"><span class="h2">W</span>e aim to provide a diverse range of
                     learning opportunities and activities in
                     Japanese, English, and Filipino
                     languages, as well as other
@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-4 p-5">
                 <h3 class="fw-bold">PHILOSOPHY</h3>
-                <p class="fst-italic mpv-content"><span class="h2">T</span>he College is dedicated to providing
+                <p class="fst-italic justify-content"><span class="h2">T</span>he College is dedicated to providing
                     a holistic education, and aims to
                     produce graduates who are well-rounded
                     individuals. Our goal is to
@@ -51,7 +51,7 @@
             </div>
             <div class="col-md-4 p-5">
                 <h3 class="fw-bold">VISION</h3>
-                <p class="fst-italic mpv-content"><span class="h2">A</span>n academic community proficient in
+                <p class="fst-italic justify-content"><span class="h2">A</span>n academic community proficient in
                     Japanese Language, equipped with
                     multicultural sensitivity, strong work
                     ethics, and global competencies is
@@ -67,19 +67,20 @@
 
 
     <!-- Section 2 -->
-    <div class="admission mb-5 vh-50 container-fluid p-5"
+    <div class="admission mb-5 vh-50 container-fluid p-md-5 p-2"
         style="background-image: url({{ asset('/image/admission_bg.jpg') }})">
         <div class="row d-flex justify-content-end  align-content-center h-100">
             <div class="col-md-4 text-end">
-                <h1 class="fw-bold color-title"><span><img class="yellow-arrow me-3"
-                            src="{{ asset('image/left_arrow.png') }}" alt=""></span>ADDMISSION</h1>
+                <h1 class="fw-bold color-title"><span><img class="yellow-arrow me-3 mb-2"
+                            src="{{ asset('image/left_arrow.png') }}" alt=""></span>ADMISSION</h1>
                 <hr>
                 <h5>Please visit the MKD Facebook page for additional info on
-                    the Online Enrollment for face-to-face schedules.
-                    For an advanced enrollment, you may click on the
+                    the Online Enrollment for face-to-face schedules.</h5>
+                <h5>For an advanced enrollment, you may click on the
                     button below. Please provide accurate email address
                     and contact number, so we can contact you directly
                     should you have any lacking requirements.</h5>
+                <button class="btn btn-lg border-primary fs-6 py-3 mt-3"> Submit Form →</button>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -92,51 +93,52 @@
                 ACADEMICS
             </span>
         </h1>
-   
-    <div class="container text-center col-md-4 mt-5">
-        <p class="fst-italic" style="text-align:justify; text-justify:interword;">"MKD desires to provide future teachers a
-            rewarding
-            learning experience and get maximum benefits from their
-            experiential learning courses with the end in view of
-            transferring quality basic education for all Filipino
-            children, which is the country's ultimate goal."
-        </p>
-        <p class="text-end"><strong>Laura V. Cespon, LPT, Ed. D.</strong> | Education Department Head</p>
-    </div>
-    <div class="container-fluid  px-5 mt-5 mb-5">
-        <div class="color-title row text-center">
-            <div class="col-sm">
-                <img src="{{asset('/image/academics-1.png') }}" width="200" height="200">
-                <p class="fw-bold">International Studies Department</p>
-            </div>
-            <div class="col-sm">
-                <img src="{{asset('/image/academics-2.png') }}" width="200" height="200">
-                <p class="fw-bold">Human Services Department</p>
-            </div>
-            <div class="col-sm">
-                <img src="{{asset('/image/academics-3.png') }}" width="200" height="200">
-                <p class="fw-bold">Education Department</p>
-            </div>
-            <div class="col-sm">
-                <img src="{{asset('/image/academics-4.png') }}" width="200" height="200">
-                <p class="fw-bold">Information System Department</p>
-            </div>
-            <div class="col-sm">
-                <img src="{{asset('/image/academics-5.png') }}" width="150" height="200">
-                <p class="fw-bold">Entrepreneurship Department</p>
+
+        <div class="container text-center col-md-4 mt-5">
+            <p class="fst-italic" style="text-align:justify; text-justify:interword;">"MKD desires to provide future
+                teachers a
+                rewarding
+                learning experience and get maximum benefits from their
+                experiential learning courses with the end in view of
+                transferring quality basic education for all Filipino
+                children, which is the country's ultimate goal."
+            </p>
+            <p class="text-end"><strong>Laura V. Cespon, LPT, Ed. D.</strong> | Education Department Head</p>
+        </div>
+        <div class="container px-5 mt-5 mb-5">
+            <div class="color-title row text-center">
+                <div class="col-sm">
+                    <img src="{{ asset('/image/academics-1.png') }}" width="200" height="200">
+                    <p class="fw-bold">International Studies Department</p>
+                </div>
+                <div class="col-sm">
+                    <img src="{{ asset('/image/academics-2.png') }}" width="200" height="200">
+                    <p class="fw-bold">Human Services Department</p>
+                </div>
+                <div class="col-sm">
+                    <img src="{{ asset('/image/academics-3.png') }}" width="200" height="200">
+                    <p class="fw-bold">Education Department</p>
+                </div>
+                <div class="col-sm">
+                    <img src="{{ asset('/image/academics-4.png') }}" width="200" height="200">
+                    <p class="fw-bold">Information System Department</p>
+                </div>
+                <div class="col-sm">
+                    <img src="{{ asset('/image/academics-5.png') }}" width="150" height="200">
+                    <p class="fw-bold">Entrepreneurship Department</p>
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
+        <hr class="hr">
 
-    <!-- section 4 -->
-    <div class="container mt-5">
-        <div class="container">
+        <!-- section 4 -->
+        <div class="container my-5 py-5">
             <div class="row mb-5">
-                <div class="col-sm" style="text-align:justify; text-justify:interword;">
-                    <h1 class="fw-bold" style="color:#393280;">SCHOLARSHIPS</h1>
-                    <h6 style="color:#393280;">ACADEMIC SCHOLARSHIPS AND GRANT-IN-AID</h6>
-                    <p class="fw-bold">The College acknowledges top-performing students
+                <div class="col-sm justify-content">
+                    <h1 class="fw-bold color-title">SCHOLARSHIPS<span><img class="yellow-arrow ms-3 mb-2"
+                                src="{{ asset('image/right_arrow.png') }}" alt=""></span></h1>
+                    <h5 class="fw-bold color-title">ACADEMIC SCHOLARSHIPS AND GRANT-IN-AID</h5>
+                    <p>The College acknowledges top-performing students
                         every semester who are granted discounts on their
                         tuition fees. In order to become a Dean's Lister,
                         students must carry at least 18 units every semester
@@ -146,18 +148,69 @@
                         are also recommended for foster parenting by
                         Japanese Nationals.</p>
                 </div>
+                <div class="col-md-2"></div>
                 <div class="col-sm mt-5">
-                    <h4 class="mx-4" style="color:#393280;">Other Scholarships Offered</h4>
-                    <ul class="fw-bold" style="text-align:justify; text-justify:interword;">
+                    <h5 class="mx-4 color-title fw-bold">Other Scholarships Offered</h5>
+                    <ul class="justify-content">
+                        <li>Board of Trustees/Employee Tuition Fee Discount</li>
                         <li>High School Graduates with Academic Honors</li>
-                        <li>High School Graduates with Academic Honors</li>
-                        <li>High School Graduates with Academic Honors</li>
-                        <li>High School Graduates with Academic Honors</li>
-                        <li>High School Graduates with Academic Honors</li>
+                        <li>Academic Scholarship (Dean’s Lister)</li>
+                        <li>MKD Grant-in-Aid Program</li>
+                        <li>PNJKIS Alumni Grant</li>
+                        <li>Descendant Discount</li>
+                        <li>MKD SATOGO Program</li>
+
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-@endsection
+        <hr class="hr">
+
+        <div class="container my-5 py-5">
+            <div class="row">
+                <h1 class="fw-bold color-title">RECENT EVENTS<span><img class="yellow-arrow ms-3 mb-2"
+                            src="{{ asset('image/right_arrow.png') }}" alt=""></span></h1>
+                <br>
+                <section class="row vh-50 d-flex px-0">
+                        <div class="px-0 mx-0 col-md-8 col-12">
+                            <div id="myCarousel" class="carousel slide" data-mdb-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="d-flex justify-content-between vh-50 hero my-3"
+                                            style="background-image: url({{ asset('image/carousel_1.jpg') }})">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-flex justify-content-between vh-50 hero my-3"
+                                            style="background-image: url({{ asset('image/carousel_2.jpg') }})">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pe-5 text-end">
+                            <h1 class="fw-bold mt-5"> One Heart.<br>One Community.<br>One MKD. </h1>
+                           <br>
+                           <h5 class="mb-5">Today marks the 20th Anniversary of Mindanao Kokusai Daigaku.
+                            To commemorate the humble beginnings of the institution,
+                            may we move forward with hope and glory for the years to come!</h5>
+                            <div class="mt-auto">
+                                <button class="btn rounded-circle btn-main btn-carousel-controller"
+                                    type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                    🡠
+                                </button>
+                                <button class="btn rounded-circle btn-main btn-carousel-controller"
+                                    type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                    🡢
+                                </button>
+                            </div>
+                        </div>
+                </section>
+            </div>
+       
+
+
+
+
+        </div>
+    @endsection
