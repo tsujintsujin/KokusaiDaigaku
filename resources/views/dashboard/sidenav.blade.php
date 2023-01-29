@@ -25,18 +25,16 @@
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-      
-            <div class="dropdown">
+            <div class="dropdown " >
                 <a class="nav-link link-light sideBarLink py-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#table"></use>
                     </svg>
                     Account Management
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{{ route('student_account_management') }}">Manage Accounts</a></li>
-                  <li><a class="dropdown-item" href="{{ route('change_password_account_management') }}">Change Password Req.</a></li>
-                  
+                <ul class="dropdown-menu w-100 p-1 " >
+                  <li><a class="dropdown-item my-2 py-2" href="{{ route('student_account_management') }}">Manage Accounts</a></li>
+                  <li><a class="dropdown-item my-2 py-2" href="{{ route('change_password_account_management') }}">Change Password Req.</a></li>
                 </ul>
               </div>
         </li>
