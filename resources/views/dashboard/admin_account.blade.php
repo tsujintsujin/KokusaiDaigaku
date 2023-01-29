@@ -1,6 +1,6 @@
 @extends('dashboard.layout')
 @section('content')
-    <div class="container justify-content-center col-5 py-5 rounded-top-left-1 rounded-top-right-1 ">
+    <div class="container justify-content-center align-self-center col-5 py-5 rounded-top-left-1 rounded-top-right-1 ">
 
         <div class="d-flex row rounded-top text-center" id="dashboardContainers" style="background-color: #eeefff">
             <div class="m-0 p-0 ">
