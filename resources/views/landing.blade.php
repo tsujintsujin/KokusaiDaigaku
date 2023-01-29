@@ -1,23 +1,25 @@
 @extends('layout')
 @section('content')
     <div class="hero container-fluid d-flex vh-100" style="background-image: url({{ asset('image/hero_bg.jpg') }})">
-        <div class="col-md-1"></div>
-        <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="col">
-                <h1 class="fw-bold">The No. 1</h1>
-                <h1 class="fw-bold my-2">Japanese Language College</h1>
-                <h1 class="fw-bold mb-4">In The Philippines</h1>
-                <button class="btn btn-lg border-primary fs-6 py-3"> Read More →</button>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <h1 class="fw-bold">The No. 1</h1>
+                    <h1 class="fw-bold my-2">Japanese Language College</h1>
+                    <h1 class="fw-bold mb-4">In The Philippines</h1>
+                    <button class="btn btn-lg border-primary fs-6 py-3"> Read More →</button>
+                </div>
             </div>
         </div>
     </div>
-
     <!-- Mission, Philosophy, Vision -->
-    <div class="container vh-75 my-5 text-center text-dark  d-flex align-items-center">
-        <div class="row ">
-            <div class="col-md-4 p-5">
-                <h2 class="fw-bold">MISSION</h2>
-                <h5 class="fst-italic justify-content"><span class="h2">W</span>e aim to provide a diverse range of
+    <div class="container my-5 text-center text-dark d-flex align-items-center">
+        <div class="row">
+            <div class="col-lg-4 p-5">
+                <h2 class="fw-bold color-title ">MISSION</h2>
+                <h5 class="fst-italic justify-content"><span class="h2 color-highlight">W</span>e aim to provide a diverse
+                    range of
                     learning opportunities and activities in
                     Japanese, English, and Filipino
                     languages, as well as other
@@ -31,9 +33,10 @@
                     corporate social responsibility in all of
                     our endeavors.</h5>
             </div>
-            <div class="col-md-4 p-5">
-                <h2 class="fw-bold">PHILOSOPHY</h2>
-                <h5 class="fst-italic justify-content"><span class="h2">T</span>he College is dedicated to providing
+            <div class="col-lg-4 p-5">
+                <h2 class="fw-bold color-title">PHILOSOPHY</h2>
+                <h5 class="fst-italic justify-content"><span class="h2 color-highlight">T</span>he College is dedicated to
+                    providing
                     a holistic education, and aims to
                     produce graduates who are well-rounded
                     individuals. Our goal is to
@@ -49,9 +52,10 @@
                     values to make a positive impact on
                     the world.</>
             </div>
-            <div class="col-md-4 p-5">
-                <h2 class="fw-bold">VISION</h2>
-                <h5 class="fst-italic justify-content"><span class="h2">A</span>n academic community proficient in
+            <div class="col-lg-4 p-5">
+                <h2 class="fw-bold color-title">VISION</h2>
+                <h5 class="fst-italic justify-content"><span class="h2 color-highlight">A</span>n academic community
+                    proficient in
                     Japanese Language, equipped with
                     multicultural sensitivity, strong work
                     ethics, and global competencies is
@@ -65,12 +69,11 @@
         </div>
     </div>
 
-
     <!-- Section 2 -->
-    <div class="admission mb-5 vh-50 container-fluid p-md-5 p-2"
+    <div class="admission mb-5 container-fluid p-md-5 p-2 py-5"
         style="background-image: url({{ asset('/image/admission_bg.jpg') }})">
         <div class="row d-flex justify-content-end  align-content-center h-100">
-            <div class="col-md-4 text-end">
+            <div class="admission-text col-md-8 col-lg-4 text-end">
                 <h1 class="fw-bold color-title"><span><img class="yellow-arrow me-3 mb-2"
                             src="{{ asset('image/left_arrow.png') }}" alt=""></span>ADMISSION</h1>
                 <hr>
@@ -82,19 +85,33 @@
                     should you have any lacking requirements.</h5>
                 <button class="btn btn-lg border-primary fs-6 py-3 mt-3"> Submit Form →</button>
             </div>
-            <div class="col-md-1"></div>
+            <div class="col-lg-1"></div>
         </div>
     </div>
 
     <!-- Section 3 -->
-    <div class="academics mt-5 pt-5">
-        <h1 class="text-title">
-            <span class="title-lines fw-bold">
-                ACADEMICS
-            </span>
-        </h1>
+    <div class=" mt-5 pt-5">
+        
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col text-title-lines ">
 
-        <div class="container text-center col-md-4 mt-5">
+                </div>
+                <div class="col text-center">
+                   <h1 class="fw-bold color-title">ACADEMICS</h1> 
+                </div>
+                <div class="col text-title-lines">
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="container text-center col-8 mt-5">
             <p class="fst-italic" style="text-align:justify; text-justify:interword;">"MKD desires to provide future
                 teachers a
                 rewarding
@@ -105,7 +122,7 @@
             </p>
             <p class="text-end"><strong>Laura V. Cespon, LPT, Ed. D.</strong> | Education Department Head</p>
         </div>
-        <div class="container px-5 mt-5 mb-5">
+        <div class="container my-5 py-5 ">
             <div class="color-title row text-center">
                 <div class="col-sm">
                     <img src="{{ asset('/image/academics-1.png') }}" width="200" height="200">
@@ -134,7 +151,7 @@
         <!-- section 4 -->
         <div class="container my-5 py-5">
             <div class="row mb-5">
-                <div class="col-sm justify-content">
+                <div class="col justify-content">
                     <h1 class="fw-bold color-title">SCHOLARSHIPS<span><img class="yellow-arrow ms-3 mb-2"
                                 src="{{ asset('image/right_arrow.png') }}" alt=""></span></h1>
                     <h5 class="fw-bold color-title">ACADEMIC SCHOLARSHIPS AND GRANT-IN-AID</h5>
@@ -148,8 +165,8 @@
                         are also recommended for foster parenting by
                         Japanese Nationals.</p>
                 </div>
-                <div class="col-md-2"></div>
-                <div class="col-sm mt-5">
+                <div class="col-md-1"></div>
+                <div class="col mt-5">
                     <h5 class="mx-4 color-title fw-bold">Other Scholarships Offered</h5>
                     <ul class="justify-content">
                         <li>Board of Trustees/Employee Tuition Fee Discount</li>
@@ -172,7 +189,7 @@
                             src="{{ asset('image/right_arrow.png') }}" alt=""></span>
                 </h1>
                 <br>
-                <section class="row vh-50 d-flex px-0">
+                <section class="row d-flex m-0 p-0">
                     <div class="px-0 mx-0 col-md-8 col-12">
                         <div id="myCarousel" class="carousel slide" data-mdb-ride="carousel">
                             <div class="carousel-inner">
@@ -189,19 +206,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 pe-5 text-end">
+                    <div class="col-md-4 pe-md-5 text-md-end text-center">
                         <h1 class="fw-bold mt-5"> One Heart.<br>One Community.<br>One MKD. </h1>
                         <br>
                         <h5 class="mb-5">Today marks the 20th Anniversary of Mindanao Kokusai Daigaku.
                             To commemorate the humble beginnings of the institution,
                             may we move forward with hope and glory for the years to come!</h5>
                         <div class="mt-auto">
-                            <button class="btn rounded-circle btn-main btn-carousel-controller" type="button"
-                                data-bs-target="#myCarousel" data-bs-slide="next">
+                            <button class=" text-white btn rounded-circle bg-secondary-color btn-carousel-controller"
+                                type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                                 🡠
                             </button>
-                            <button class="btn rounded-circle btn-main btn-carousel-controller" type="button"
-                                data-bs-target="#myCarousel" data-bs-slide="next">
+                            <button class=" text-white btn rounded-circle bg-secondary-color btn-carousel-controller"
+                                type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                                 🡢
                             </button>
                         </div>
@@ -209,23 +226,80 @@
                 </section>
             </div>
 
-            <div class="row mt-3">
-                <div class="col-5 vh-25">
 
+
+            <div class="container mt-3 pt-3">
+                <div class="row mt-3 d-flex justify-content-center">
+                    <div class="col-lg-5 p-0 m-3 card">
+                        <div class="card text-white border-0 mask">
+                            <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                        </div>
+                        <div class="overlay-text d-flex flex-column justify-content-end">
+                            <h5 class="card-title "> One Heart.
+                                One Community.
+                                One MKD.
+                            </h5>
+                            <p class="card-text">
+                                Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
+                                beginnings of the institution, may we move forward with hope and glory for the years to
+                                come!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 p-0 m-3 card">
+                        <div class="overlay-text d-flex flex-column justify-content-end">
+                            <h5 class="card-title "> One Heart.
+                                One Community.
+                                One MKD.
+                            </h5>
+                            <p class="card-text">
+                                Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
+                                beginnings of the institution, may we move forward with hope and glory for the years to
+                                come!
+                            </p>
+                        </div>
+                        <div class="card text-white border-0 mask">
+                            <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                        </div>
+                    </div>
                 </div>
-                <div class="col-5 vh-25">
-                    
+                <div class="row mt-3 d-flex justify-content-center">
+                    <div class="col-lg-5 p-0 m-3 card">
+                        <div class="card text-white border-0 mask">
+                            <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                        </div>
+                        <div class="overlay-text d-flex flex-column justify-content-end">
+                            <h5 class="card-title "> One Heart.
+                                One Community.
+                                One MKD.
+                            </h5>
+                            <p class="card-text">
+                                Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
+                                beginnings of the institution, may we move forward with hope and glory for the years to
+                                come!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 p-0 m-3 card">
+                        <div class="overlay-text d-flex flex-column justify-content-end">
+                            <h5 class="card-title "> One Heart.
+                                One Community.
+                                One MKD.
+                            </h5>
+                            <p class="card-text">
+                                Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
+                                beginnings of the institution, may we move forward with hope and glory for the years to
+                                come!
+                            </p>
+                        </div>
+                        <div class="card text-white border-0 mask">
+                            <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="row mt-3">
-                <div class="col-5 vh-25">
 
-                </div>
-                <div class="col-5 vh-25">
-                    
-                </div>
-            </div>
 
         </div>
     @endsection
