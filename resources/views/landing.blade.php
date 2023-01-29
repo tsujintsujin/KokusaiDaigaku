@@ -1,12 +1,11 @@
 @extends('layout')
 @section('content')
     <div class="hero container-fluid d-flex vh-100" style="background-image: url({{ asset('image/hero_bg.jpg') }})">
-        <div class="row">
-            <div class="col-md-1"></div>
+        <div class="ps-2 ms-2 mb-lg-5 pb-lg-5 row">
             <div class="col d-flex justify-content-center align-items-center h-100">
                 <div class="col">
                     <h1 class="fw-bold">The No. 1</h1>
-                    <h1 class="fw-bold my-2">Japanese Language College</h1>
+                    <h1 class="fw-bold">Japanese Language College</h1>
                     <h1 class="fw-bold mb-4">In The Philippines</h1>
                     <button class="btn btn-lg border-primary fs-6 py-3"> Read More →</button>
                 </div>
