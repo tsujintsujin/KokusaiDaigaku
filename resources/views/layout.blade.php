@@ -22,7 +22,7 @@
                 <h6 class="ps-md-4 ps-lg-5 text-center text-md-start">THE NO. 1 JAPANESE LANGUAGE COLLEGE IN THE
                     PHILIPPINES</h6>
             </div>
-            <div class="col-3 title-address p-3 rounded-4 text-start">
+            {{-- <div class="col-3 title-address p-3 rounded-4 text-start">
                 <div class="mt-3 d-flex">
                     <div class="col">
                         <small><i class="fa-solid fa-envelope"></i>
@@ -38,13 +38,13 @@
                             <p>DAVAO CITY, DAVAO DEL SUR, PHILIPPINES</p>
                         </small>
                     </div>
-                    
+
                 </div>
-            </div>
+            </div> --}}
 
 
         </div>
-        
+
         {{-- <div class="row d-flex flex-column align-content-end">
             <div class="col-md-7 ">
                 <div class="mt-3 d-flex">
@@ -147,19 +147,25 @@
 
         <img class="mt-3" src="kokusai_logo.png">
         <p class="mt-3 h3">The No. 1 Japanese Language College in the Philippines</p>
-        <div class="d-flex justify-content-center gap-5">
-            <small><i class="fa-solid fa-envelope"></i>
-                <span>EMAIL US AT</span>
-                <p>info@mkdph.com</p>
-            </small>
-            <small><i class="fa-solid fa-phone"></i>
-                <span>CALL US ON</span>
-                <p>+63822330013</p>
-            </small>
-            <small><i class="fa-solid fa-location-pin"></i>
-                <span>ANGLIONGTO AVENUE, MAMAY ROAD, LANANG</span>
-                <p>DAVAO CITY, DAVAO DEL SUR, PHILIPPINES</p>
-            </small>
+        <div class="row d-flex justify-content-center">
+            <div class="col-6 col-md-4 col-lg-2">
+                <small><i class="fa-solid fa-envelope"></i>
+                    <span>EMAIL US AT</span>
+                    <p>info@mkdph.com</p>
+                </small>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <small><i class="fa-solid fa-phone"></i>
+                    <span>CALL US ON</span>
+                    <p>+63822330013</p>
+                </small>
+            </div>
+            <div class="col-12 col">
+                <small><i class="fa-solid fa-location-pin"></i>
+                    <span>ANGLIONGTO AVENUE, MAMAY ROAD, LANANG</span>
+                    <p>DAVAO CITY, DAVAO DEL SUR, PHILIPPINES</p>
+                </small>
+            </div>
         </div>
         <p>© 2023 Mindanao Kokusai Daigaku. All Rights Reserved</p>
     </footer>

@@ -91,17 +91,15 @@
 
     <!-- Section 3 -->
     <div class=" mt-5 pt-5">
-        
+
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col text-title-lines ">
-
                 </div>
                 <div class="col text-center">
-                   <h1 class="fw-bold color-title">ACADEMICS</h1> 
+                    <h1 class="fw-bold color-title">ACADEMICS</h1>
                 </div>
                 <div class="col text-title-lines">
-
                 </div>
             </div>
         </div>
@@ -182,15 +180,16 @@
             </div>
         </div>
         <hr class="hr">
-
-        <div class="container my-5 py-5">
-            <div class="row my-5">
-                <h1 class="fw-bold color-title">RECENT EVENTS<span><img class="yellow-arrow ms-3 mb-2"
+        <div>
+            <div class="container">
+                <h1 class="fw-bold color-title ">RECENT EVENTS<span><img class="yellow-arrow ms-3 s"
                             src="{{ asset('image/right_arrow.png') }}" alt=""></span>
                 </h1>
-                <br>
-                <section class="row d-flex m-0 p-0">
-                    <div class="px-0 mx-0 col-md-8 col-12">
+            </div>
+            <div class="container mb-5 pb-5 p-0">
+                <div class="row d-flex m-0 p-0">
+                    <br>
+                    <div class="px-0 mx-0 col-lg-8 ">
                         <div id="myCarousel" class="carousel slide" data-mdb-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -206,8 +205,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 pe-md-5 text-md-end text-center">
-                        <h1 class="fw-bold mt-5"> One Heart.<br>One Community.<br>One MKD. </h1>
+                    <div class="col text-lg-end text-center">
+                        <h1 class="fw-bold mt-5 "> One Heart.<br>One Community.<br>One MKD. </h1>
                         <br>
                         <h5 class="mb-5">Today marks the 20th Anniversary of Mindanao Kokusai Daigaku.
                             To commemorate the humble beginnings of the institution,
@@ -222,84 +221,138 @@
                                 🡢
                             </button>
                         </div>
+
                     </div>
-                </section>
-            </div>
+                </div>
 
 
 
-            <div class="container mt-3 pt-3">
-                <div class="row mt-3 d-flex justify-content-center">
-                    <div class="col-lg-5 p-0 m-3 card">
-                        <div class="card text-white border-0 mask">
-                            <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                <div class="container mt-3 pt-3">
+                    <div class="row mt-3 d-flex justify-content-center">
+                        <div class="col-lg-5 p-0 m-3 card">
+                            <div class="card text-white border-0 mask">
+                                <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                            </div>
+                            <div class="overlay-text d-flex flex-column justify-content-end">
+                                <h5 class="card-title "> One Heart.
+                                    One Community.
+                                    One MKD.
+                                </h5>
+                                <p class="card-text">
+                                    Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
+                                    beginnings of the institution, may we move forward with hope and glory for the years to
+                                    come!
+                                </p>
+                            </div>
                         </div>
-                        <div class="overlay-text d-flex flex-column justify-content-end">
-                            <h5 class="card-title "> One Heart.
-                                One Community.
-                                One MKD.
-                            </h5>
-                            <p class="card-text">
-                                Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
-                                beginnings of the institution, may we move forward with hope and glory for the years to
-                                come!
-                            </p>
+                        <div class="col-lg-5 p-0 m-3 card">
+                            <div class="overlay-text d-flex flex-column justify-content-end">
+                                <h5 class="card-title "> One Heart.
+                                    One Community.
+                                    One MKD.
+                                </h5>
+                                <p class="card-text">
+                                    Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
+                                    beginnings of the institution, may we move forward with hope and glory for the years to
+                                    come!
+                                </p>
+                            </div>
+                            <div class="card text-white border-0 mask">
+                                <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 p-0 m-3 card">
-                        <div class="overlay-text d-flex flex-column justify-content-end">
-                            <h5 class="card-title "> One Heart.
-                                One Community.
-                                One MKD.
-                            </h5>
-                            <p class="card-text">
-                                Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
-                                beginnings of the institution, may we move forward with hope and glory for the years to
-                                come!
-                            </p>
+                    <div class="row mt-3 d-flex justify-content-center">
+                        <div class="col-lg-5 p-0 m-3 card">
+                            <div class="card text-white border-0 mask">
+                                <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                            </div>
+                            <div class="overlay-text d-flex flex-column justify-content-end">
+                                <h5 class="card-title "> One Heart.
+                                    One Community.
+                                    One MKD.
+                                </h5>
+                                <p class="card-text">
+                                    Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
+                                    beginnings of the institution, may we move forward with hope and glory for the years to
+                                    come!
+                                </p>
+                            </div>
                         </div>
-                        <div class="card text-white border-0 mask">
-                            <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                        <div class="col-lg-5 p-0 m-3 card">
+                            <div class="overlay-text d-flex flex-column justify-content-end">
+                                <h5 class="card-title "> One Heart.
+                                    One Community.
+                                    One MKD.
+                                </h5>
+                                <p class="card-text">
+                                    Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
+                                    beginnings of the institution, may we move forward with hope and glory for the years to
+                                    come!
+                                </p>
+                            </div>
+                            <div class="card text-white border-0 mask">
+                                <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3 d-flex justify-content-center">
-                    <div class="col-lg-5 p-0 m-3 card">
-                        <div class="card text-white border-0 mask">
-                            <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+            </div>
+
+
+            <div>
+                <div class="container-fluid mt-5 pt-5">
+                    <div class="row align-items-center">
+                        <div class="col text-title-lines ">
                         </div>
-                        <div class="overlay-text d-flex flex-column justify-content-end">
-                            <h5 class="card-title "> One Heart.
-                                One Community.
-                                One MKD.
-                            </h5>
-                            <p class="card-text">
-                                Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
-                                beginnings of the institution, may we move forward with hope and glory for the years to
-                                come!
-                            </p>
+                        <div class="col text-center">
+                            <h1 class="fw-bold color-title">FAQ’s</h1>
+                        </div>
+                        <div class="col text-title-lines">
                         </div>
                     </div>
-                    <div class="col-lg-5 p-0 m-3 card">
-                        <div class="overlay-text d-flex flex-column justify-content-end">
-                            <h5 class="card-title "> One Heart.
-                                One Community.
-                                One MKD.
+                </div>
+                <div class="faq container pb-5 mb-5">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5">
+                            <div class="row align-items-center">
+                                <div class="col-2 text-title-lines">
+                                </div>
+                                <div class="col">
+                                    <h3 class="fw-bold fst-italic text-muted">What a courses do you offer?</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <h5 class="fst-italic justify-content">
+                                INTERNATIONAL STUDIES Major in Japanese Language & Studies
+                                HUMAN SERVICES Major in Care of Older Persons
+                                INFORMATION SYSTEMS
+                                SECONDARY EDUCATION Major in:
+                                <h5>&emsp;&emsp;English</h5>
+                                <h5>&emsp;&emsp;Mathematics</h5>
+                                <h5>&emsp;&emsp;Science</h5>
+                                <h5>&emsp;&emsp;Special Needs Education</h5>
+                                <h5>&emsp;&emsp;Early Childhood Education</h5>
                             </h5>
-                            <p class="card-text">
-                                Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
-                                beginnings of the institution, may we move forward with hope and glory for the years to
-                                come!
-                            </p>
                         </div>
-                        <div class="card text-white border-0 mask">
-                            <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5">
+                            <div class="row align-items-center">
+                                <div class="col-2 text-title-lines">
+                                </div>
+                                <div class="col">
+                                    <h3 class="fw-bold fst-italic text-muted">Can I enroll even if I am not Filipino or
+                                        Japanese?
+                                </div>
+                            </div>
+                            </h3>
+                            <br>
+                            <h5 class="fst-italic justify-content">
+                                Yes, yot, we have several nationalities enrolled in the school.
+                                Asu can definitely enroll regardless of your nationality.
+                                In facide from Filipino and Japanese, we also have Americans, Indians and Arabs. </h5>
+                            </h5>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-        </div>
-    @endsection
+        @endsection
