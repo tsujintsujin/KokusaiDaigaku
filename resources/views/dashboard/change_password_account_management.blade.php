@@ -1,9 +1,10 @@
 @extends('dashboard.layout')
 @section('content')
-    <div class="container col row justify-content-center col-9 m-5">
+    <div class="container row justify-content-end my-5 ms-5 col-10 " >
         <div class="col">
             <h3>Request for password reset</h3>
-            <table class="table mt-5">
+
+            <table class="table mt-5"  >
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -65,7 +66,7 @@
 
             </table>
         </div>
-        <div class="col">
+        <div class="col-4">
             <h3>View account of</h3>
             <div class="mx-5">
                 <p class="fw-bold">Bachelor in Science Major in Computer Science</p>

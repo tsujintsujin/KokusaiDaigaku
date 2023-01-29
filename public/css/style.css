@@ -37,6 +37,11 @@ input[type="number"]:focus {
     box-shadow: none;
     outline: 0 none;
 }
+input[type="password"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
 input[type="text"] {
     background-color: #eeefff;
     border: 0px none #d9d9da;
@@ -59,6 +64,12 @@ input[type="email"] {
 }
 
 input[type="number"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+input[type="password"] {
     background-color: #eeefff;
     border: 0px none #d9d9da;
     border-bottom: 3px solid #d9d9da;
