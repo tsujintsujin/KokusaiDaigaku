@@ -1,0 +1,52 @@
+body {
+    background-color: #ffffff;
+    /* overflow-x: hidden; */
+    /* Hide horizontal scrollbar */
+}
+#sidebar {
+    color: #fafafc;
+    background-color: #393280;
+    /* height: 100vh; */
+
+}
+
+#dashboardContainers {
+    /* height: auto; */
+    border: 1px solid #d9d9da;
+}
+
+#courseContainers,
+#subjectContainers {
+    /* height: auto; */
+    border: 1px solid #d9d9da;
+}
+
+
+.dashboardContainer {
+    color: #fafafc;
+    background-color: #393280;
+    padding: 1rem;
+}
+
+.hoverOfSidebar:hover {
+    background-color: #886a43;
+}
+
+.rounded-top-left-1 {
+    border-top-left-radius: .5rem;
+}
+.rounded-top-right-1 {
+    border-top-right-radius: .5rem;
+}
+.rounded-bottom-left-1 {
+    border-bottom-left-radius: .5rem;
+}
+.rounded-bottom-right-1 {
+    border-bottom-right-radius: .5rem;
+}
+
+.h-50{
+    height:50%;
+    margin:0 !important;
+}
+
