@@ -1,25 +1,27 @@
 @extends('dashboard.layout')
 @section('content')
-<div class="container col justify-content-center col-9 m-5 h-auto" style="height: auto;">
-    {{-- tab for adding teacher and student --}}
-    <div class="d-flex  row" id="courseContainers" style="background-color: #eeefff">
-        <div class="col">
-            <ul class="nav dashboardContainer p-3 mb-4">
-                <li class="nav-item ">
-                    <a class="nav-link active" style="color: #fafafc;" aria-current="page"
-                        href="{{ route('student_account_management') }}">Students</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('teacher_account_management') }}"
-                        style="color: #fafafc;">Teachers</a>
-                </li>
-            </ul>
+    <div class="container col justify-content-center col-9 mx-5 mt-3 h-auto" style="height: auto;">
+        {{-- tab for adding teacher and student --}}
+        <div class="d-flex  row" id="courseContainers" style="background-color: #eeefff">
+            <div class="col text-center m-0 p-0 h-50">
+                <ul class="nav dashboardContainer rounded-top-left-1 h-50">
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link active" style="color: #fafafc;" aria-current="page"
+                            href="{{ route('student_account_management') }}">Students</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="{{ route('teacher_account_management') }}"
+                            style="color: #fafafc;">Teachers</a>
+                    </li>
+                </ul>
 
+            </div>
+            <div class="my-3">
+                 @yield('student_account')
+                @yield('teacher_account')
+            </div>
 
-        </div>
-        @yield('student_account')
-        @yield('teacher_account')
-        {{-- <form action="POST">
+            {{-- <form action="POST">
             @csrf
 
             <div>
@@ -135,7 +137,5 @@
 
     </form> --}}
 
-</div>
-
-
-@endsection
+        </div>
+    @endsection

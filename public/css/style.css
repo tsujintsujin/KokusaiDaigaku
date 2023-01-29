@@ -17,12 +17,48 @@ thead {
 
 }
 
-input[type="text"]:focus{
+input[type="text"]:focus {
     border-color: none;
-  box-shadow: none;
-  outline: 0 none;
+    box-shadow: none;
+    outline: 0 none;
+}
+input[type="date"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
+input[type="email"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
+input[type="number"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
 }
 input[type="text"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
+input[type="date"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
+input[type="email"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
+input[type="number"] {
     background-color: #eeefff;
     border: 0px none #d9d9da;
     border-bottom: 3px solid #d9d9da;
