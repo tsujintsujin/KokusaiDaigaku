@@ -215,14 +215,14 @@
     <div class="container mb-5">
         <h1 class="mt-5 fw-bold" style="color:#393280;">RECENT EVENTS</h1>
         <div class="mt-4 d-flex">
-            <div class="col-9">
-                <img src="{{URL::asset('/image/section5img.png')}}">
+            <div class="col-md-9 mb-3">
+                <img src="{{URL::asset('/image/section5img.png')}}" class="img-fluid">
             </div>
-            <div class="col-3">
+            <div class="col-sm-3">
                 <p class="h4 text-dark">One Heart.</p>
                 <p class="h4 text-dark">One Community.</p>
                 <p class="h4 text-dark">One MKD.</p>
-                <p class="mt-5" style="text-align:justify; text-justify:interword;">
+                <p class="mt-2" style="text-align:justify; text-justify:interword;">
                     Today marks the 20th Anniversary of
                     Mindanao Kokusai Daigaku. To commemorate
                     the humble beginnings of the institution,
@@ -233,17 +233,17 @@
         </div>
         <div class="container">
             <div class="row row-cols-2">
-                <div class="col">
-                    <img src="{{URL::asset('/image/section5_1.png')}}">
+                <div class="col-sm-6">
+                    <img src="{{URL::asset('/image/section5_1.png')}}" class="img-fluid mb-3">
                 </div>
-                <div class="col">
-                    <img src="{{URL::asset('/image/section5_2.png')}}">
+                <div class="col-sm-6">
+                    <img src="{{URL::asset('/image/section5_2.png')}}" class="img-fluid mb-3">
                 </div>
-                <div class="col">
-                    <img src="{{URL::asset('/image/section5_3.png')}}">
+                <div class="col-sm-6">
+                    <img src="{{URL::asset('/image/section5_3.png')}}" class="img-fluid">
                 </div>
-                <div class="col">
-                    <img src="{{URL::asset('/image/section5_4.png')}}">
+                <div class="col-sm-6">
+                    <img src="{{URL::asset('/image/section5_4.png')}}" class="img-fluid">
                 </div>
             </div>
         </div>
