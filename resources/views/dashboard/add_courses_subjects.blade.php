@@ -11,7 +11,7 @@
                     <input id="courseNameAdding" type="text" class="form-control m-3" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="Course Name">
                 </div>
-                <button type="button" class="btn  float-end px-5 py-2 my-2"
+                <button type="button" class="btn  float-end px-5 py-2 my-3 mx-3"
                     style=" background-color: #393280; color: #fafafc;">Add</button>
             </div>
 
@@ -46,7 +46,7 @@
                     <input type="text" class="form-control mx-3 my-2 " aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="Units">
                 </div>
-                <button type="button" class="btn  float-end px-5 py-2 my-2"
+                <button type="button" class="btn  float-end px-5 py-2 my-3 mx-3"
                     style=" background-color: #393280; color: #fafafc;">Add</button>
             </div>
         </div>
