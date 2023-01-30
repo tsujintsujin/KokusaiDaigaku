@@ -120,6 +120,60 @@ input[type="password"] {
     border-top-left-radius: .5rem;
 }
 
+.rounded-top-right-1 {
+    border-top-right-radius: .5rem;
+}
+
+.rounded-bottom-left-1 {
+    border-bottom-left-radius: .5rem;
+}
+
+.rounded-bottom-right-1 {
+    border-bottom-right-radius: .5rem;
+}
+
+.h-50 {
+    height: 50%;
+    margin: 0 !important;
+}
+body {
+    background-color: #ffffff;
+    /* overflow-x: hidden; */
+    /* Hide horizontal scrollbar */
+}
+
+#sidebar {
+    color: #fafafc;
+    background-color: #393280;
+    /* height: 100vh; */
+
+}
+
+#dashboardContainers {
+    /* height: auto; */
+    border: 1px solid #d9d9da;
+}
+
+#courseContainers,
+#subjectContainers {
+    /* height: auto; */
+    border: 1px solid #d9d9da;
+}
+
+
+.dashboardContainer {
+    color: #fafafc;
+    background-color: #393280;
+    padding: 1rem;
+}
+
+.hoverOfSidebar:hover {
+    background-color: #886a43;
+}
+
+.rounded-top-left-1 {
+    border-top-left-radius: .5rem;
+}
 
 .rounded-top-right-1 {
     border-top-right-radius: .5rem;
@@ -133,9 +187,9 @@ input[type="password"] {
     border-bottom-right-radius: .5rem;
 }
 
-.h-50  {
-    height:  50%;
-    margin:  0 !important;
+.h-50 {
+    height: 50%;
+    margin: 0 !important;
 }
 
 .vh-50 {
@@ -242,3 +296,74 @@ input[type="password"] {
     padding: 20px;
 }
 
+/* medium screen and below */
+@media only screen and (max-width: 768px) {
+
+    .nav-divider {
+        display: none !important;
+    }
+
+    .btn-login-list {
+        display: block;
+    }
+
+    .btn-login-head {
+        display: none !important;
+    }
+
+    .wrapper {
+        display: block;
+    }
+
+    .hero {
+        background-size: contain;
+        background-position: bottom;
+    }
+
+    .admission {
+        background-position: right;
+
+    }
+
+    .title-address{
+        display: none !important;
+
+    }
+ 
+
+/* * ----------------------class element end  -------------------------- */
+}
+
+/* small screen & below */
+
+@media only screen and (max-width: 600px) {
+    .overlay-text {
+        min-height: 100%;
+    }
+
+    .admission-text h5 {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+}
+
+/* large screen and up */
+@media only screen and (min-width: 992px) {
+
+    .btn-login-list {
+        display: none;
+    }
+
+    .btn-login-head {
+        display: block;
+    }
+
+    .wrapper {
+        display: none;
+    }
+
+    .navbar{
+        box-shadow: none !important;
+    }
+}
