@@ -94,7 +94,7 @@
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ADMISSION</a>
+                        <a class="nav-link" href="{{ route('admission') }}">ADMISSION</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
