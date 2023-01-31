@@ -64,7 +64,7 @@
                 <td>--</td>
             </tr>
             <tr>
-                <th scope="row">Math 7</th>
+                <th scope="row">BSIT</th>
                 <td>--</td>
                 <td>--</td>
                 <td>--</td>

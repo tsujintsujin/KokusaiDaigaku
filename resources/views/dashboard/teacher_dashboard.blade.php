@@ -4,8 +4,7 @@
 <div class="container justify-content-center col-9 py-5 rounded-top-left-1 rounded-top-right-1 ">
     <div class="row">
         <div class="col text-end">
-            <h1 class="date-heading fw-bold">February 15<br>
-                2023</h1>
+            <h1 class="date-heading fw-bold">February 15<br> 2023</h1>
         </div>
         <div class="col text-end">
         </div>
@@ -18,7 +17,7 @@
                 <th>Subject</th>
                 <th>Description</th>
                 <th>Average Grades For This Subject</th>
-                <th>Section</th>
+                <th>Year & Section</th>
                 <th>Failing</th>
             </tr>
         </thead>
