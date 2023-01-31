@@ -11,8 +11,8 @@
                         <th scope="col">Name</th>
                         <th scope="col">
                             <span class="">view</span>
-                            <span class="">reset</span>
-                            <span class="">block</span>
+                            <span class="">print</span>
+                            <span class="">remove</span>
                         </th>
 
                     </tr>
@@ -67,27 +67,19 @@
             </table>
         </div>
         <div class="col-4">
-            <h3>View account of</h3>
             <div class="mx-5">
+                <h2>Justin Masiga</h2>
                 <p class="fw-bold">Bachelor in Science Major in Computer Science</p>
                 <p class="fw-bold">Section: WD 29</p>
-                <p>Justin Masiga</p>
+                
                 <p>Japanese</p>
                 <p>Male</p>
                 <p>09254125632</p>
                 <p>justin@gmail.com</p>
                 <p>Block 2, Lot 4, Etc St., Tagum City</p>
-            </div>
-            <h3>Contact Person</h3>
-            <div class="mx-5">
-
-                <p>Jecery Masiga</p>
-                <p>Japanese</p>
-                <p>Female</p>
-                <p>09254125632</p>
-                <p>jecery@gmail.com</p>
-                <p>Block 2, Lot 4, Etc St., Tagum City</p>
-            </div>
+            </div >
+            <h3>Enrolling for</h3>
+            <h1>2nd Semester S.Y. 2023-2024</h1>
 
         </div>
     </div>

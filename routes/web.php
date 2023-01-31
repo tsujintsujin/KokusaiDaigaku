@@ -27,17 +27,25 @@ Route::get('/addcourses', function () {
     return view('dashboard.admin_add_courses_subjects');
 })->name('addcourses');
 
-Route::get('/student_account_management', function () {
-    return view('dashboard.admin_student_account_management');
-})->name('student_account_management');
+Route::get('/account_management_student', function () {
+    return view('dashboard.admin_account_management_student');
+})->name('account_management_student');
 
-Route::get('/teacher_account_management', function () {
-    return view('dashboard.admin_teacher_account_management');
-})->name('teacher_account_management');
+Route::get('/account_management_teacher', function () {
+    return view('dashboard.admin_account_management_teacher');
+})->name('account_management_teacher');
 
-Route::get('/change_password_account_management', function () {
-    return view('dashboard.admin_change_password_account_management');
-})->name('change_password_account_management');
+Route::get('/account_management_change_password', function () {
+    return view('dashboard.admin_account_management_change_password');
+})->name('account_management_change_password');
+
+Route::get('/pre_enrolled_students', function () {
+    return view('dashboard.admin_pre_enrolled_students');
+})->name('pre_enrolled_students');
+
+Route::get('/admin_account', function () {
+    return view('dashboard.admin_admin_account');
+})->name('admin_account');
 
 // end admin area
 

@@ -28,26 +28,49 @@
             </div>
         </div>
     </div>
+    <div class="d-flex row rounded-top pt-0"  >
+        <table class="table mt-5 border " id="dashboardContainers">
+            <thead>
+                <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col">Subjects</th>
+                    <th scope="col">Average Grade</th>
+                    <th scope="col">Sections</th>
+                    <th scope="col">Students</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">BSIT</th>
+                    <td>23</td>
+                    <td>80.20</td>
+                    <td>2</td>
+                    <td>124</td>
+                </tr>
+                <tr>
+                    <th scope="row">BSIT</th>
+                    <td>23</td>
+                    <td>80.20</td>
+                    <td>2</td>
+                    <td>124</td>
+                </tr>
+                <tr>
+                    <th scope="row">BSIT</th>
+                    <td>23</td>
+                    <td>80.20</td>
+                    <td>2</td>
+                    <td>124</td>
+                </tr>
+                <tr>
+                    <th scope="row">BSIT</th>
+                    <td>23</td>
+                    <td>80.20</td>
+                    <td>2</td>
+                    <td>124</td>
+                </tr>
 
-    <table class="table mt-5">
-        <thead>
-            <tr>
-                <th scope="col">Course</th>
-                <th scope="col">Subjects</th>
-                <th scope="col">Average Grade</th>
-                <th scope="col">Sections</th>
-                <th scope="col">Students</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">BSIT</th>
-                <td>23</td>
-                <td>80.20</td>
-                <td>2</td>
-                <td>124</td>
-            </tr>
+        </table>
+    </div>
 
-    </table>
 </div>
 @endsection
