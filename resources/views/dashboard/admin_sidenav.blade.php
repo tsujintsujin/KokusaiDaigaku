@@ -42,16 +42,16 @@
         <div class="collapse" id="home-collapse" style="">
             <ul class=" w-100 p-1 btn-toggle-nav list-unstyled">
                 <li class="nav-item my-1 hoverOfSidebar">
-                    <a href="{{ route('account_management_student') }}" class="dropdown-item my-2 ms-4 py-2" >
-                        <svg class="bi me-2" width="16" height="16">
+                    <a href="{{ route('account_management_student') }}" class="dropdown-item my-2 ms-5 py-3" >
+                        <svg class="bi " width="16" height="16">
                             <use xlink:href="#speedometer2"></use>
                         </svg>
                         Manage Accounts
                     </a>
                 </li>
                 <li class="nav-item my-1 hoverOfSidebar">
-                    <a href="{{ route('account_management_change_password') }}" class="dropdown-item my-2 ms-4 py-2">
-                        <svg class="bi me-2" width="16" height="16">
+                    <a href="{{ route('account_management_change_password') }}" class="dropdown-item my-2 ms-5 py-3">
+                        <svg class="bi" width="16" height="16">
                             <use xlink:href="#speedometer2"></use>
                         </svg>
                         Change Password Req.
