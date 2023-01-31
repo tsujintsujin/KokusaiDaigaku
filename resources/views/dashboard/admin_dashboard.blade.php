@@ -1,4 +1,4 @@
-@extends('dashboard.layout')
+@extends('dashboard.admin_layout')
 @section('content')
 <div class="container justify-content-center col-9 py-5 rounded-top-left-1 rounded-top-right-1">
     <div class="d-flex row rounded-top" id="dashboardContainers" style="background-color: #eeefff">
@@ -28,7 +28,6 @@
             </div>
         </div>
     </div>
-
 
     <table class="table mt-5">
         <thead>

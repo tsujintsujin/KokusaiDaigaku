@@ -1,4 +1,4 @@
-@extends('dashboard.layout')
+@extends('dashboard.admin_layout')
 @section('content')
 <div class="container col justify-content-center col-9 m-5">
     <div class="d-flex  row  " id="courseContainers" style="background-color: #eeefff">

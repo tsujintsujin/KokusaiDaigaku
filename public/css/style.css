@@ -11,22 +11,23 @@ body {
 
 }
 
-#dashboardContainers {
-    /* height: auto; */
-    border: 1px solid #d9d9da;
-}
-
 #courseContainers,
 #subjectContainers {
     /* height: auto; */
     border: 1px solid #d9d9da;
 }
 
-
 .dashboardContainer {
+    background-color: #d9d9da;
+}
+
+.bg-account{
+    background-color: #EEEFFF;
+}
+
+.dashboardTitleContainer {
     color: #fafafc;
     background-color: #393280;
-    padding: 1rem;
 }
 
 .hoverOfSidebar:hover {
@@ -158,6 +159,43 @@ body {
     padding: 20px;
 }
 
+
+
+/* dashboards */
+
+.date-heading{
+font-size: 96px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end dashboards */
+
+
+
 /* medium screen and below */
 @media only screen and (max-width: 768px) {
 
@@ -227,3 +265,8 @@ body {
         box-shadow: none !important;
     }
 }
+
+
+
+
+
