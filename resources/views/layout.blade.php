@@ -86,11 +86,11 @@
                         <div class="nav-divider vr vr-blurry mx-5"></div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">HOME</a>
+                        <a class="nav-link active" href="/">HOME</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ACADEMICS</a>
+                        <a class="nav-link" href="{{ route('academics') }}">ACADEMICS</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
@@ -135,13 +135,13 @@
         <h6 class="col-md-2">CONTACT</h6>
     </div> --}}
     <!-- Landing Page Heading -->
-
+  
     @yield('content')
 
 
-
+   
     <!-- Footer -->
-    <div class="bg-main-color mb-1" style="height:10px;">s</div>
+    <div class="bg-main-color mb-1" style="height:10px;"></div>
     <footer class="text-center text-white p-4 bg-main-color">
 
 
@@ -170,5 +170,5 @@
         <p>© 2023 Mindanao Kokusai Daigaku. All Rights Reserved</p>
     </footer>
 </body>
-
+   
 </html>

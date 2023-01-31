@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Route::get('/academics', function () {
+    return view('academics');
+})->name('academics');
+
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
