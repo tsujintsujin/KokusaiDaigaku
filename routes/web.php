@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('landing');
 });
 
-// admin area
+
 
 Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
