@@ -11,10 +11,7 @@
     </head>
 
 <body>
-<div class="container-fluid">
-    {{-- dashboard --}}
-    <div class="row">
-        {{-- Side Bar --}}
+      {{-- Side Bar --}}
         {{-- <div class="d-flex col-3 flex-column flex-shrink-0 p-3 float-start" id="sidebar" style="width: 280px;">
             <div class="text-center my-5 ">
                 <img src="https://mkdph.com/wp-content/uploads/2022/06/MKD-logo-93p.png" class="rounded"
@@ -61,15 +58,15 @@
 
 
         </div> --}}
+<div class="container-fluid">
+  
+    <div class="row">
+      
         @include('dashboard.admin_sidenav')
-        {{-- End of Side Bar --}}
-
-        {{-- container in the middle --}}
+   
         @yield('content')
-        {{-- End of container in the middle --}}
 
     </div>
 </div>
 </body>
-
 </html>

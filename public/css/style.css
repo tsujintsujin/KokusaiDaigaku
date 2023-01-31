@@ -76,6 +76,13 @@ input[type="password"] {
     font-size: 30px;
 }
 
+textarea{
+     background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
 /* ----------------------end element name -------------------------- */
 
 

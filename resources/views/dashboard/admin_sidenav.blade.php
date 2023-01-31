@@ -1,9 +1,5 @@
 {{-- Side Bar --}}
 <div class="d-flex col-3 flex-column flex-shrink-0 vh-100 dashboardContainer" id="sidebar" style="width: 280px;">
-    <button class="w-100 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"> </i>
-    </button>
     <div class="text-center my-5 ">
         <img src="https://mkdph.com/wp-content/uploads/2022/06/MKD-logo-93p.png" class="rounded"
             alt="Mindanao Kokusai Daigaku Logo">
