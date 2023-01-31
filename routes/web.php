@@ -25,6 +25,10 @@ Route::get('/admission', function () {
     return view('admission');
 })->name('admission');
 
+Route::get('/student_services', function () {
+    return view('student_services');
+})->name('student_services');
+
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
