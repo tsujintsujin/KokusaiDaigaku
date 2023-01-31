@@ -19,6 +19,20 @@ Route::get('/', function () {
 
 
 
+Route::get('/academics', function () {
+    return view('academics');
+})->name('academics');
+
+Route::get('/admission', function () {
+    return view('admission');
+})->name('admission');
+
+Route::get('/student_services', function () {
+    return view('student_services');
+})->name('student_services');
+
+
+
 Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
 })->name('admin');

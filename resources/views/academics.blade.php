@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
 
+<div class="container-fluid">
     <div class="row align-items-center mt-5">
         <div class="col text-title-lines ">
         </div>
@@ -10,7 +11,7 @@
         <div class="col text-title-lines">
         </div>
     </div>
-
+</div>
 <!-- x -->
 
     <div class="container-fluid mt-5 p-2" style="background-color:#d8d5e0;">
