@@ -1,62 +1,96 @@
 @extends('dashboard.admin_layout')
 @section('content')
-<div class="container col justify-content-center col-9 m-5">
-    <div class="d-flex  row  " id="courseContainers" style="background-color: #eeefff">
-        <div class="col">
-            <h5 class=" dashboardContainer p-3 mb-4">Add Course</h5>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default" placeholder="Course Name"
-                    style="background-color:#eeefff; 
-                    border: 0px  none #d9d9da;  
-                    border-bottom: 2px  solid #d9d9da;">
+    <div class="container justify-content-center col-9 py-5 rounded-top-left-1 rounded-top-right-1">
+        <div class="row">
+            <div class="col dashboardContainer d-flex flex-column rounded-top">
+                <div class="row dashboardTitleContainer ps-4 rounded-top">
+                    <h3 class="fw-bold pt-2">Add Course</h3>
+                </div>
+                <div class="row dashboardContainer ps-4 pb-4">
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <div class="form-outline mb-4 bg-white rounded p-1 pt-2">
+                                <input type="email" id="form1Example1" class="form-control" />
+                                <label class="form-label" for="form1Example1">Course Full Name</label>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="form-outline mb-4 bg-white rounded p-1 pt-2">
+                                <input type="email" id="form1Example1" class="form-control" />
+                                <label class="form-label" for="form1Example1">Description</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-end">
+                        <button class="p-2 me-3 col-1 btn btn-primary ">
+                            Add
+                        </button>
+                    </div>
+                </div>
             </div>
-            <button type="button" class="btn  float-end px-5 py-2 my-2"
-                style=" background-color: #393280; color: #fafafc;">Add</button>
         </div>
 
+        <div class="row mt-5">
+            <div class="col dashboardContainer d-flex flex-column rounded-top">
+                <div class="row dashboardTitleContainer ps-4 rounded-top">
+                    <h3 class="fw-bold pt-2">Add Subject</h3>
+                </div>
+                <div class="row dashboardContainer ps-4 pb-4">
+                    <div class="row my-4">
+                        <div class="col-2">
+
+                            <div class="dropdown">
+                                <h6 class="text-muted text-left ps-1">Select Course</h6>
+
+                                <a class="btn btn-primary dropdown-toggle w-100 text-start" href="#" role="button"
+                                    id="dropdownMenuLink" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    BSIT
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">BSCS</a></li>
+                                    <li><a class="dropdown-item" href="#">BSBA</a></li>
+                                    <li><a class="dropdown-item" href="#">BSTM</a></li>
+                                </ul>
+                            </div>
 
 
 
-    </div>
-    <div class="d-flex  row my-5 " id="subjectContainers" style="background-color: #eeefff">
-        <div class="col">
-            <h5 class=" dashboardContainer p-3 mb-4">Add Subject</h5>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false"
-                    style=" background-color: #393280; color: #fafafc;">
-                    Course
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                        </div>
+                        <div class="col-2">
+                            <div class="col">
+                                <div class="form-outline mb-4 bg-white rounded p-1 pt-2 mt-4">
+                                    <input type="email" id="form1Example1" class="form-control" />
+                                    <label class="form-label" for="form1Example1">Subject Code</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-outline mb-4 bg-white rounded ">
+                                <textarea class="text-area-no-resize form-control " id="form4Example3" cols="1" max-rows="4"></textarea>
+                                <label class="form-label" for="form4Example3">Description</label>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- justify-content-between --}}
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="form-outline mb-4 bg-white rounded p-1 mt-4 pt-2">
+                                <input type="number" id="form1Example1" class="form-control" />
+                                <label class="form-label" for="form1Example1">Units</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-end">
+                        <button class="p-2 me-3 col-1 btn btn-primary ">
+                            Add
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="input-group mb-3 w-25">
-                <input type="text" class="form-control my-2" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default" placeholder="Subject Code"
-                    style="background-color:#eeefff; 
-                    border: 0px  none #d9d9da;  
-                    border-bottom: 2px  solid #d9d9da;">
-            </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                    style="height: 100px;background-color:#dfe0ee;"></textarea>
-                <label for="floatingTextarea2">Descriptions</label>
-            </div>
-            <div class="input-group mb-3 w-25 my-2">
-                <input type="text" class="form-control my-2 " aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default" placeholder="Units"
-                    style="background-color:#eeefff; 
-                    border: 0px  none #d9d9da;  
-                    border-bottom: 2px  solid #d9d9da;">
-            </div>
-            <button type="button" class="btn  float-end px-5 py-2 my-2"
-                style=" background-color: #393280; color: #fafafc;">Add</button>
         </div>
     </div>
-</div>
-
 @endsection
