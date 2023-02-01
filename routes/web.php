@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 
-
 Route::get('/academics', function () {
     return view('academics');
 })->name('academics');
@@ -91,3 +90,13 @@ Route::get('/teacheraccount', function () {
 Auth::routes();
 
 Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+
+
+
