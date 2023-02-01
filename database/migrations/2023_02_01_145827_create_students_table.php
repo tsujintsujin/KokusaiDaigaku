@@ -24,8 +24,12 @@ return new class extends Migration
             $table->string('nationality');
             $table->integer('contact_number');
             $table->string('address');
-            $table->unsignedBigInteger('course_name');
-            $table->foreign('course_name')->references('name')->on('courses')->onDelete('cascade');
+            $table->string('password');
+            $table->unsignedBigInteger('course_id');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->unsignedBigInteger('section_id');
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
+
            
             // $table->Hash::make($value)
             $table->timestamps();
