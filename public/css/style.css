@@ -158,6 +158,11 @@ body {
     padding: 20px;
 }
 
+.border-style{
+    border-style:solid;
+    border-color:#393280;
+}
+
 /* medium screen and below */
 @media only screen and (max-width: 768px) {
 

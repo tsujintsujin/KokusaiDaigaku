@@ -29,6 +29,10 @@ Route::get('/student_services', function () {
     return view('student_services');
 })->name('student_services');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
