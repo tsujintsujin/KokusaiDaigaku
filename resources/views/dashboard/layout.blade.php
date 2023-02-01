@@ -12,78 +12,90 @@
 </head>
 
 <body>
-<div class="container-fluid">
-    {{-- dashboard --}}
-    <div class="row">
-        {{-- Side Bar --}}
-        {{-- <div class="d-flex col-3 flex-column flex-shrink-0 p-3 float-start" id="sidebar" style="width: 280px;">
-            <div class="text-center my-5 ">
-                <img src="https://mkdph.com/wp-content/uploads/2022/06/MKD-logo-93p.png" class="rounded"
+    {{-- <div class="container-fluid d-flex flex-column p-0 flex-md-row bg-secondary" id="layoutContainer">
+        <nav class="navbar ms-0 navbar-expand-md d-flex flex-md-column dashboardContainer w-md-100" id="testNavbar">
+            <a href="#">
+                <img src="https://mkdph.com/wp-content/uploads/2022/06/MKD-logo-93p.png" alt="logo" class="rounded"
                     alt="Mindanao Kokusai Daigaku Logo">
-                <h4 class="h4 mt-5">Hello Admin</h4>
-                <p class="">Account ID: MKD105915</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportContent" aria-controls="navbarSupportContent" aria-expanded="false"
+                aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse w-100" id="navbarSupportContent">
+                <ul class="navbar-nav w-100 d-flex flex-md-column text-center text-md-end" id="navbarNav">
+                    <li class="nav-item my-1 hoverOfSidebar">
+                        <a href="{{ route('dashboard') }}" class="nav-link link-light sideBarLink py-3">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item my-1 hoverOfSidebar">
+                        <a href="{{ route('add_courses_subjects') }}" class="nav-link link-light sideBarLink py-3">
+                            Add Course / Subjects
+                        </a>
+                    </li>
+                    <li class="nav-item my-1 hoverOfSidebar">
+
+                        <button class=" btn btn-toggle rounded collapsed nav-link link-light sideBarLink py-3"
+                            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                            Account Management
+                        </button>
+
+                    </li>
+                    <div class="collapse" id="home-collapse" style="">
+
+                        <ul class=" w-100 p-1 btn-toggle-nav list-unstyled">
+                            <li class="nav-item my-1 hoverOfSidebar">
+                                <a class="dropdown-item my-2 ms-4 py-2"
+                                    href="{{ route('student_account_management') }}">
+                                    Manage Accounts
+                                </a>
+                            </li>
+                            <li class="nav-item my-1 hoverOfSidebar">
+                                <a class="dropdown-item my-2 ms-4 py-2"
+                                    href="{{ route('change_password_account_management') }}">
+                                    Change Password Req.
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item my-1 hoverOfSidebar">
+                        <a href="{{ route('pre_enrolled_students') }}" class="nav-link link-light sideBarLink py-3">
+                            Pre Enrolled Students
+                        </a>
+                    </li>
+                    <li class="nav-item my-1 hoverOfSidebar">
+                        <a href="{{ route('admin_account') }}" class="nav-link link-light sideBarLink py-3">
+                            Admin Account
+                        </a>
+                    </li>
+                </ul>
+
             </div>
 
-            <ul class="nav  nav-pills text-light flex-column mb-auto">
-                <li class="nav-item my-1 hoverOfSidebar">
-                    <a href="#" class="nav-link link-light sideBarLink py-3 active">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#home"></use>
-                        </svg>
-                        Dashboard
-                    </a>
-                </li>
-                <li class="nav-item my-1 hoverOfSidebar">
-                    <a href="#" class="nav-link link-light sideBarLink py-3">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#speedometer2"></use>
-                        </svg>
-                        Add Course / Subjects
-                    </a>
-                </li>
-                <li class="nav-item my-1 hoverOfSidebar">
-                    <a href="#" class="nav-link link-light sideBarLink py-3">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#table"></use>
-                        </svg>
-                        Account Management
-                    </a>
-                </li>
-                <li class="nav-item my-1 hoverOfSidebar">
-                    <a href="#" class="nav-link link-light sideBarLink py-3">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#grid"></use>
-                        </svg>
-                        Admin Account
-                    </a>
-                </li>
+        </nav>
 
-            </ul>
+        <main class="ps-0 ps-md-5 flex-grow-1">
+            @yield('content')
+        </main>
+    </div> --}}
+
+    <div class="container-fluid">
+        <div class="row">
+            @include('dashboard.sidenav')
+            @yield('content')
+            
 
 
-        </div> --}}
-        @include('dashboard.sidenav')
-        {{-- End of Side Bar --}}
 
-        {{-- container in the middle --}}
-        @yield('content')
-        {{-- End of container in the middle --}}
-
+        </div>
     </div>
-</div>
-    {{-- bootstrap cdn  --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
 
-    {{-- changing the background color of sidebar link --}}
-    <script>
-        // const sideBarLink = document.querySelectorAll(".sideBarLink")
-        // sideBarLink.forEach(sideBarLink => {
-        //     sideBarLink.addEventListener('click', () => {
-        //         sideBarLink.style = "background-color : #886a43;"
-        //     })
-        // });
+    {{-- CDN bootstrap 5 --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 </body>
 

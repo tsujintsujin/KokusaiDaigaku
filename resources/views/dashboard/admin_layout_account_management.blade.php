@@ -1,4 +1,4 @@
-@extends('dashboard.layout')
+@extends('dashboard.admin_layout')
 @section('content')
 <div class="container col justify-content-center col-9 m-5 h-auto" style="height: auto;">
     {{-- tab for adding teacher and student --}}
@@ -14,8 +14,6 @@
                         style="color: #fafafc;">Teachers</a>
                 </li>
             </ul>
-
-
         </div>
         @yield('student_account')
         @yield('teacher_account')
