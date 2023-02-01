@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('landing');
 });
 
-
 Route::get('/academics', function () {
     return view('academics');
 })->name('academics');
+
 
 Route::get('/admission', function () {
     return view('admission');
@@ -36,9 +36,14 @@ Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
 })->name('admin');
 
-Route::get('/addcourses', function () {
-    return view('dashboard.admin_add_courses_subjects');
-})->name('addcourses');
+
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard');
+})->name('dashboard');
+
+Route::get('/add_courses_subjects', function () {
+    return view('dashboard.add_courses_subjects');
+})->name('add_courses_subjects');
 
 Route::get('/student_account_management', function () {
     return view('dashboard.admin_student_account_management');
@@ -96,7 +101,4 @@ Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/login', function () {
     return view('login');
 });
-
-
-
 

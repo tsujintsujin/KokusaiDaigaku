@@ -102,11 +102,11 @@
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
+                        <a class="nav-link" href="{{ route('about') }}">ABOUT</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="{{ route('contact') }}">CONTACT</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item btn-login-head">
