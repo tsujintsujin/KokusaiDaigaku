@@ -17,15 +17,26 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Route::get('/academics', function () {
+    return view('academics');
+})->name('academics');
 
+Route::get('/admission', function () {
+    return view('admission');
+})->name('admission');
+
+Route::get('/student_services', function () {
+    return view('student_services');
+})->name('student_services');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
 Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
 })->name('admin');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
 
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
