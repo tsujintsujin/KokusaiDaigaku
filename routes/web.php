@@ -21,6 +21,7 @@ Route::get('/academics', function () {
     return view('academics');
 })->name('academics');
 
+
 Route::get('/admission', function () {
     return view('admission');
 })->name('admission');
@@ -29,13 +30,7 @@ Route::get('/student_services', function () {
     return view('student_services');
 })->name('student_services');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
 
 Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
@@ -100,3 +95,10 @@ Route::get('/teacheraccount', function () {
 Auth::routes();
 
 Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+
