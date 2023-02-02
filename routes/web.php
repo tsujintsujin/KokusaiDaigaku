@@ -136,9 +136,7 @@ Route::get('/login', function () {
 //course routes 
 Route::post('/createcourse', [CourseController::class, 'create'])->name('createcourse');
 Route::get('/add_courses_subjects', [Admin_Add_Course_Subject::class, 'index'])->name('add_courses_subjects');
-// Route::get('/add_courses_subjects', function () {
-//     return view('dashboard.admin_add_courses_subjects');
-// })->name('add_courses_subjects');
+
 
 
 
