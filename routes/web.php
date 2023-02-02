@@ -62,6 +62,16 @@ Route::get('/change_password_account_management', function () {
     return view('dashboard.admin_change_password_account_management');
 })->name('change_password_account_management');
 
+
+Route::get('/pre_enroll', function () {
+    return view('dashboard.admin_pre_enroll');
+})->name('pre_enroll');
+
+
+Route::get('/adminaccount', function () {
+    return view('dashboard.admin_account_dashboard');
+})->name('adminaccount');
+
 // end admin area
 
 // student area
@@ -78,6 +88,12 @@ Route::get('/studentaccount', function () {
     return view('dashboard.student_account_dashboard');
 })->name('studentaccount');
 
+
+Route::get('/studentchangepassword', function () {
+    return view('dashboard.student_account_change_password');
+})->name('studentchangepassword');
+
+
 // end student area
 
 // teacher area
@@ -93,6 +109,12 @@ Route::get('/gradeinput', function () {
 Route::get('/teacheraccount', function () {
     return view('dashboard.teacher_account_dashboard');
 })->name('teacheraccount');
+
+
+Route::get('/teacherchangepassword', function () {
+    return view('dashboard.teacher_account_change_password');
+})->name('teacherchangepassword');
+
 
 // end teacher area
 

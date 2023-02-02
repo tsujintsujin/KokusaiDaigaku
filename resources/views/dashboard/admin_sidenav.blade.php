@@ -55,7 +55,7 @@
             </li>
         </div>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('admin') }}" class="nav-link link-light sideBarLink py-3">
+            <a href="{{ route('pre_enroll') }}" class="nav-link link-light sideBarLink py-3">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#grid"></use>
                 </svg>
@@ -63,7 +63,7 @@
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('admin') }}" class="nav-link link-light sideBarLink py-3">
+            <a href="{{ route('adminaccount') }}" class="nav-link link-light sideBarLink py-3">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#grid"></use>
                 </svg>

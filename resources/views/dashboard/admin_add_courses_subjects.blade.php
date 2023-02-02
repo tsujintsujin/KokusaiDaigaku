@@ -6,7 +6,7 @@
                 <div class="row dashboardTitleContainer ps-4 rounded-top">
                     <h3 class="fw-bold pt-2">Add Course</h3>
                 </div>
-                <div class="row dashboardContainer ps-4 pb-4">
+                <div class="row dashboardContainer ps-4 pb-4 mt-3">
                     <div class="row mt-4">
                         <div class="col-4">
                             <div class="form-outline mb-4 bg-white rounded p-1 pt-2">
@@ -36,7 +36,7 @@
                 <div class="row dashboardTitleContainer ps-4 rounded-top">
                     <h3 class="fw-bold pt-2">Add Subject</h3>
                 </div>
-                <div class="row dashboardContainer ps-4 pb-4">
+                <div class="row dashboardContainer ps-4 pb-4  mt-3"">
                     <div class="row my-4">
                         <div class="col-2">
 
