@@ -15,7 +15,6 @@
                                 <th class="col text-center d-flex align-items-center">
                                     <div class="col-4"></div>
                                     <div class="col">view</div>
-                                    <div class="col">reset</div>
                                     <div class="col">ignore</div>
                                     <div class="col-3"></div>
                                 </th>
@@ -30,9 +29,7 @@
                                     <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
                                                 class="vri-icon" src="{{ asset('image/view_active.png') }}"
                                                 alt=""></button></div>
-                                    <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
-                                                class="vri-icon" src="{{ asset('image/reset.png') }}"
-                                                alt=""></button></div>
+                                   
                                     <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
                                                 class="vri-icon" src="{{ asset('image/ignore.png') }}"
                                                 alt=""></button></div>
@@ -48,9 +45,6 @@
                                                 class="vri-icon" src="{{ asset('image/view.png') }}"
                                                 alt=""></button></div>
                                     <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
-                                                class="vri-icon" src="{{ asset('image/reset.png') }}"
-                                                alt=""></button></div>
-                                    <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
                                                 class="vri-icon" src="{{ asset('image/ignore.png') }}"
                                                 alt=""></button></div>
                                     <div class="col-3"></div>
@@ -63,9 +57,6 @@
                                     <div class="col-4"></div>
                                     <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
                                                 class="vri-icon" src="{{ asset('image/view.png') }}"
-                                                alt=""></button></div>
-                                    <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
-                                                class="vri-icon" src="{{ asset('image/reset.png') }}"
                                                 alt=""></button></div>
                                     <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
                                                 class="vri-icon" src="{{ asset('image/ignore.png') }}"
@@ -89,15 +80,9 @@
                     <h5>Birthdate</h5>
                     <h5>Email</h5>
                     <h5>Address</h5>
-                    <h2 class="fw-bold mt-5">Contact Person</h2>
-                    <h3>Jecery Masiga</h3>
-                    <h5>Wife</h5>
-                    <div class="mt-5">
-                        <h5>Nationality</h5>
-                        <h5>Gender</h5>
-                        <h5>Phone Number</h5>
-                        <h5>Address</h5>
-                    </div>
+                    <h2 class="fw-bold mt-5 text-muted">Enrolling For</h2>
+                        <h3 class="fw-bold">2nd Semester</h3>
+                        <h3 class="fw-bold">S.Y. 2022-2023</h3>
                 </div>
 
             </div>

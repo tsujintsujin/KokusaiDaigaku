@@ -12,11 +12,8 @@
 
 <body>
 <div class="container-fluid">
-
     <div class="row">
-        
         @include('dashboard.teacher_sidenav')
-        
         @yield('content')
        
 
