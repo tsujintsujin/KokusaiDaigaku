@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Subject;
 use Illuminate\Http\Request;
+use App\Models\Subject;
+
 
 class SubjectController extends Controller
 {
@@ -22,9 +23,16 @@ class SubjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $subject = new Subject;
+        $subject->course_id = $request->course;
+        $subject->subject_code = $request->subject_code;
+        $subject->description = $request->description;
+        $subject->units = $request->units;
+        $subject->save();
+        return redirect()->route('add_courses_subjects'); //->with('courses',Course::orderBy('name','asc'));
+
     }
 
     /**

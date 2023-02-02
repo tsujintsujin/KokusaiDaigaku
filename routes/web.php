@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\Admin_Add_Course_Subject;
 
 /*
@@ -137,6 +138,8 @@ Route::get('/login', function () {
 Route::post('/createcourse', [CourseController::class, 'create'])->name('createcourse');
 Route::get('/add_courses_subjects', [Admin_Add_Course_Subject::class, 'index'])->name('add_courses_subjects');
 
+// subject routes
+Route::post('/createsubject', [SubjectController::class, 'create'])->name('createsubject');
 
 
 
