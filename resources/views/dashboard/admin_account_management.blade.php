@@ -44,6 +44,7 @@
 
                     <div class="row mt-3">
                         <div class="col-2">
+
                             <div class="dropdown">
                                 <h6 class="text-muted text-left ps-1">Select Course</h6>
 
@@ -155,6 +156,8 @@
                                 <label class="form-label" for="form1Example1">Address</label>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
 
@@ -290,9 +293,9 @@
 
                     <div class="row mt-3">
                         <div class="col-2">
-                          
+
                         </div>
-                       
+
                     </div>
 
                     <div class="row mt-4">
