@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\Admin_Add_Course_Subject;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//navbar routes
 Route::get('/', function () {
     return view('landing');
 });
@@ -37,6 +41,8 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+
+//admin routes
 Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
 })->name('admin');
@@ -45,10 +51,6 @@ Route::get('/admin', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
-
-Route::get('/add_courses_subjects', function () {
-    return view('dashboard.admin_add_courses_subjects');
-})->name('add_courses_subjects');
  
 Route::get('/account_management', function () {
     return view('dashboard.admin_account_management');
@@ -129,6 +131,14 @@ Route::get('/login', function () {
     return view('login');
 });
 
+
+
+//course routes 
+Route::post('/createcourse', [CourseController::class, 'create'])->name('createcourse');
+Route::get('/add_courses_subjects', [Admin_Add_Course_Subject::class, 'index'])->name('add_courses_subjects');
+// Route::get('/add_courses_subjects', function () {
+//     return view('dashboard.admin_add_courses_subjects');
+// })->name('add_courses_subjects');
 
 
 
