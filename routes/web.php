@@ -160,3 +160,5 @@ Route::post('/createsection', [SectionController::class, 'create'])->name('creat
 Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
 
 
+//student routes
+Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
