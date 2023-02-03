@@ -46,10 +46,14 @@ Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
 
-Route::get('/add_courses_subjects', function () {
-    return view('dashboard.admin_add_courses_subjects');
-})->name('add_courses_subjects');
+Route::get('/add_courses_sections', function () {
+    return view('dashboard.admin_add_courses_sections');
+})->name('add_courses_sections');
  
+Route::get('/add_subjects', function () {
+    return view('dashboard.admin_add_subjects');
+})->name('add_subjects');
+
 Route::get('/account_management', function () {
     return view('dashboard.admin_account_management');
 })->name('account_management');
