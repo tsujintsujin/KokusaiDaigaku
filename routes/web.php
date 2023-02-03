@@ -46,10 +46,10 @@ Route::get('/contact', function () {
 
 
 //admin routes
+
 Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
 })->name('admin');
-
 
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
@@ -58,10 +58,6 @@ Route::get('/dashboard', function () {
 Route::get('/account_management', function () {
     return view('dashboard.admin_account_management');
 })->name('account_management');
-
-// Route::get('/teacher_account_management', function () {
-//     return view('dashboard.admin_change_password_account_management');
-// })->name('teacher_account_management');
 
 Route::get('/change_password_account_management', function () {
     return view('dashboard.admin_change_password_account_management');
@@ -76,16 +72,6 @@ Route::get('/pre_enroll', function () {
 Route::get('/adminaccount', function () {
     return view('dashboard.admin_account_dashboard');
 })->name('adminaccount');
-
-Route::get('/add_subjects', function () {
-    return view('dashboard.admin_add_subjects');
-})->name('add_subjects');
-
-Route::get('/add_courses_sections', function () {
-    return view('dashboard.admin_add_courses_sections');
-})->name('add_courses_sections');
-
-
 
 // end admin area
 
@@ -160,5 +146,3 @@ Route::post('/createsection', [SectionController::class, 'create'])->name('creat
 Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
 
 
-//student routes
-Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
