@@ -77,6 +77,16 @@ Route::get('/adminaccount', function () {
     return view('dashboard.admin_account_dashboard');
 })->name('adminaccount');
 
+Route::get('/add_subjects', function () {
+    return view('dashboard.admin_add_subjects');
+})->name('add_subjects');
+
+Route::get('/add_courses_sections', function () {
+    return view('dashboard.admin_add_courses_sections');
+})->name('add_courses_sections');
+
+
+
 // end admin area
 
 // student area
@@ -145,6 +155,10 @@ Route::post('/createsubject', [SubjectController::class, 'create'])->name('creat
 
 //section routes
 Route::post('/createsection', [SectionController::class, 'create'])->name('createsection');
+
+//student routes
+Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
+
 
 //student routes
 Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
