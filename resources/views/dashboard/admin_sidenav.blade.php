@@ -19,11 +19,19 @@
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('add_courses_subjects') }}" class="nav-link link-light sideBarLink py-3">
+            <a href="{{ route('add_courses_sections') }}" class="nav-link link-light sideBarLink py-3">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#speedometer2"></use>
                 </svg>
-                Add Course / Subjects 
+                Course & Sections
+            </a>
+        </li>
+        <li class="nav-item my-1 hoverOfSidebar">
+            <a href="{{ route('add_subjects') }}" class="nav-link link-light sideBarLink py-3">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
+                Subjects
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
@@ -63,7 +71,7 @@
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('adminaccount') }}" class="nav-link link-light sideBarLink py-3">
+            <a href="{{ route('admin') }}" class="nav-link link-light sideBarLink py-3">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#grid"></use>
                 </svg>
@@ -71,12 +79,4 @@
             </a>
         </li>
     </ul>
-
-
-
-
-
-
-
-
 </div>
