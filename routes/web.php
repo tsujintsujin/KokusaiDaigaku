@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\SectionController;
 use App\Http\Controllers\Admin_Add_Course_Subject;
 
 /*
@@ -141,5 +142,6 @@ Route::get('/add_courses_subjects', [Admin_Add_Course_Subject::class, 'index'])-
 // subject routes
 Route::post('/createsubject', [SubjectController::class, 'create'])->name('createsubject');
 
-
+//section routes
+Route::post('/createsection', [SectionController::class, 'create'])->name('createsection');
 
