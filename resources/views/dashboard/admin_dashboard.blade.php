@@ -26,14 +26,9 @@
                         <h3 class="fw-bold pt-2">34</h3>
                     </div>
                     <div class="col"></div>
- 
-
                 </div>
-
             </div>
         </div>
-
-
         <table class="table mt-5">
             <thead>
                 <tr>

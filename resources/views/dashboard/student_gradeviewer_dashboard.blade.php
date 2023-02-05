@@ -7,19 +7,16 @@
                     <h3 class="fw-bold pt-2">Select School Year</h3>
                 </div>
                 <div class="row">
-                    <div class="dropdown-center p-4">
-                        <button class="col-11  py-2 btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Select Year
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item" href="#">S.Y. 2022-2023 First Semester</a></li>
-                          <li><a class="dropdown-item mb-2" href="#">S.Y. 2022-2023 Second Semester</a></li>
-
-                          <li><a class="dropdown-item" href="#">S.Y. 2023-2024 First Semester</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">This School Year</a></li>
-                        </ul>
-                      </div>
+                    <div class="col">
+                        <div class="dropdown mt-3">
+                            <select class="text-start form-select p-2">
+                                <option selected disabled value="0">School Year</option>
+                                <option value="1">WD29</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-1"></div>

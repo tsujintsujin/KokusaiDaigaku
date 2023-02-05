@@ -7,8 +7,7 @@
         <h4 class="h4 mt-5">Hello Admin</h4>
         <p class="">Account ID: MKD105915</p>
     </div>
-
-  
+    {{-- sidebarActive --}}
     <ul class="nav text-light flex-column mb-auto">
         <li class="nav-item my-1 hoverOfSidebar">
             <a href="{{ route('admin') }}" class="nav-link link-light sideBarLink py-3">
@@ -19,34 +18,58 @@
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('add_courses_subjects') }}" class="nav-link link-light sideBarLink py-3">
+            <a href="{{ route('courses') }}" class="nav-link link-light sideBarLink py-3">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#speedometer2"></use>
                 </svg>
-                Add Course / Subjects 
+                Courses
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a class="nav-link link-light sideBarLink py-3" data-bs-toggle="collapse"
-                data-bs-target="#home-collapse" aria-expanded="false">
-                {{-- <a class="btn btn-toggle align-items-center rounded collapsed nav-link link-light sideBarLink py-3 shadow-none" --}}
+            <a href="{{ route('sections') }}" class="nav-link link-light sideBarLink py-3">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#speedometer2"></use>
                 </svg>
-                Account Management &nbsp; ▾
+                Sections
             </a>
         </li>
-        <div class="collapse" id="home-collapse" style="">
+        <li class="nav-item my-1 hoverOfSidebar">
+            <a href="{{ route('subjects') }}" class="nav-link link-light sideBarLink py-3">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
+                Subjects
+            </a>
+        </li>
+        <li class="nav-item my-1 hoverOfSidebar">
+            <a class="nav-link link-light sideBarLink py-3" data-bs-toggle="collapse" data-bs-target="#home-collapse"
+                aria-expanded="false" >
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
+                Accounts &nbsp; ▾
+            </a>
+        </li>
+        <div class="collapse" id="home-collapse">
             <li class="nav-item my-1 hoverOfSidebar ps-4">
-                <a href="{{ route('account_management') }}" class="nav-link link-light sideBarLink py-3">
+                <a href="{{ route('student_management') }}" class="nav-link link-light sideBarLink py-3 ">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#speedometer2"></use>
                     </svg>
-                    Manage Accounts
+                    Students
                 </a>
             </li>
             <li class="nav-item my-1 hoverOfSidebar ps-4">
-                <a href="{{ route('change_password_account_management') }}" class="nav-link link-light sideBarLink py-3">
+                <a href="{{ route('teacher_management') }}" class="nav-link link-light sideBarLink py-3">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#speedometer2"></use>
+                    </svg>
+                    Teachers
+                </a>
+            </li>
+            <li class="nav-item my-1 hoverOfSidebar ps-4">
+                <a href="{{ route('change_password_account_management') }}"
+                    class="nav-link link-light sideBarLink py-3">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#speedometer2"></use>
                     </svg>
@@ -54,6 +77,22 @@
                 </a>
             </li>
         </div>
+        <li class="nav-item my-1 hoverOfSidebar">
+            <a href="" class="nav-link link-light sideBarLink py-3">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#grid"></use>
+                </svg>
+                Assign Subjects - x
+            </a>
+        </li>
+        <li class="nav-item my-1 hoverOfSidebar">
+            <a href="{{route('archive')}}" class="nav-link link-light sideBarLink py-3">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#grid"></use>
+                </svg>
+                Archive
+            </a>
+        </li>
         <li class="nav-item my-1 hoverOfSidebar">
             <a href="{{ route('pre_enroll') }}" class="nav-link link-light sideBarLink py-3">
                 <svg class="bi me-2" width="16" height="16">
@@ -71,12 +110,4 @@
             </a>
         </li>
     </ul>
-
-
-
-
-
-
-
-
 </div>
