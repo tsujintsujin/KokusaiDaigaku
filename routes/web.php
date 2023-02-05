@@ -6,7 +6,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\Admin_Add_Course_Subject;
+use App\Http\Controllers\Admin_Course;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,18 +46,33 @@ Route::get('/contact', function () {
 
 
 //admin routes
-
 Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
 })->name('admin');
 
-Route::get('/dashboard', function () {
-    return view('dashboard.dashboard');
-})->name('dashboard');
- 
-Route::get('/account_management', function () {
-    return view('dashboard.admin_account_management');
-})->name('account_management');
+Route::get('/courses', function () {
+    return view('dashboard.admin_course');
+})->name('courses');
+
+Route::get('/sections', function () {
+    return view('dashboard.admin_section');
+})->name('sections');
+
+Route::get('/subjects', function () {
+    return view('dashboard.admin_subject');
+})->name('subjects');
+
+Route::get('/student_management', function () {
+    return view('dashboard.admin_student_management');
+})->name('student_management');
+
+Route::get('/teacher_management', function () {
+    return view('dashboard.admin_teacher_management');
+})->name('teacher_management');
+
+Route::get('/archive', function () {
+    return view('dashboard.admin_archive');
+})->name('archive');
 
 Route::get('/change_password_account_management', function () {
     return view('dashboard.admin_change_password_account_management');
@@ -70,7 +85,7 @@ Route::get('/pre_enroll', function () {
 
 
 Route::get('/adminaccount', function () {
-    return view('dashboard.admin_account_dashboard');
+    return view('dashboard.admin_account_setting');
 })->name('adminaccount');
 
 // end admin area
@@ -134,7 +149,7 @@ Route::get('/login', function () {
 
 //course routes 
 Route::post('/createcourse', [CourseController::class, 'create'])->name('createcourse');
-Route::get('/add_courses_subjects', [Admin_Add_Course_Subject::class, 'index'])->name('add_courses_subjects');
+Route::get('/courses', [Admin_Course::class, 'index'])->name('courses');
 
 // subject routes
 Route::post('/createsubject', [SubjectController::class, 'create'])->name('createsubject');
@@ -146,3 +161,4 @@ Route::post('/createsection', [SectionController::class, 'create'])->name('creat
 Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
 
 
+ 

@@ -1,4 +1,5 @@
 @extends('dashboard.admin_layout')
+@section('title', 'Account')
 @section('content')
     <div class="container justify-content-center col-9 py-5 rounded-top-left-1 rounded-top-right-1 rounded-top">
         <ul class="row dashboardTitleContainer nav nav-fill rounded-top">
@@ -14,7 +15,6 @@
         </ul>
 
         <!-- Tabs content -->
-
 
         {{-- student --}}
         <div class="tab-content" id="ex1-content">
@@ -83,25 +83,27 @@
                         <div class="row mt-4">
                             <div class="col">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="text" id="form1Example1" class="form-control" name="studentLastName"/>
+                                    <input type="text" id="form1Example1" class="form-control" name="studentLastName" />
                                     <label class="form-label" for="form1Example1">Last Name</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="text" id="form1Example1" class="form-control" name="studentMiddleName"/>
+                                    <input type="text" id="form1Example1" class="form-control"
+                                        name="studentMiddleName" />
                                     <label class="form-label" for="form1Example1">Middle Name</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="text" id="form1Example1" class="form-control" name="studentFirstName"/>
+                                    <input type="text" id="form1Example1" class="form-control" name="studentFirstName" />
                                     <label class="form-label" for="form1Example1">First Name</label>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="text" id="form1Example1" class="form-control" name="studentSuffixName"/>
+                                    <input type="text" id="form1Example1" class="form-control"
+                                        name="studentSuffixName" />
                                     <label class="form-label" for="form1Example1">Pre/Suffix</label>
                                 </div>
                             </div>
@@ -125,7 +127,8 @@
                             </div>
                             <div class="col">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="text" id="form1Example1" class="form-control" name="studentNationality"/>
+                                    <input type="text" id="form1Example1" class="form-control"
+                                        name="studentNationality" />
                                     <label class="form-label" for="form1Example1">Nationality</label>
                                 </div>
                             </div>
@@ -134,7 +137,8 @@
                             </div>
                             <div class="col">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="date" id="form1Example1" class="form-control" name="studentBirthdate"/>
+                                    <input type="date" id="form1Example1" class="form-control"
+                                        name="studentBirthdate" />
                                     <label class="form-label" for="form1Example1"></label>
                                 </div>
                             </div>
@@ -145,19 +149,21 @@
                         <div class="row mt-4">
                             <div class="col-2">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="number" id="form1Example1" class="form-control" name="studentContactNumber"/>
+                                    <input type="number" id="form1Example1" class="form-control"
+                                        name="studentContactNumber" />
                                     <label class="form-label" for="form1Example1">Contact Number</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="email" id="form1Example1" class="form-control" name="studentEmail"/>
+                                    <input type="email" id="form1Example1" class="form-control" name="studentEmail" />
                                     <label class="form-label" for="form1Example1">Email</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-outline bg-white rounded p-1">
-                                    <input type="text" id="form1Example1" class="form-control" name="studentAddress"/>
+                                    <input type="text" id="form1Example1" class="form-control"
+                                        name="studentAddress" />
                                     <label class="form-label" for="form1Example1">Address</label>
                                 </div>
                             </div>
@@ -178,25 +184,29 @@
                             <div class="row mt-4">
                                 <div class="col">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="text" id="form1Example1" class="form-control" name="contactLastName"/>
+                                        <input type="text" id="form1Example1" class="form-control"
+                                            name="contactLastName" />
                                         <label class="form-label" for="form1Example1">Last Name</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="text" id="form1Example1" class="form-control" name="contactMiddleName"/>
+                                        <input type="text" id="form1Example1" class="form-control"
+                                            name="contactMiddleName" />
                                         <label class="form-label" for="form1Example1">Middle Name</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="text" id="form1Example1" class="form-control" name="contactFirstName"/>
+                                        <input type="text" id="form1Example1" class="form-control"
+                                            name="contactFirstName" />
                                         <label class="form-label" for="form1Example1">First Name</label>
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="text" id="form1Example1" class="form-control" name="contactSuffixName"/>
+                                        <input type="text" id="form1Example1" class="form-control"
+                                            name="contactSuffixName" />
                                         <label class="form-label" for="form1Example1">Pre/Suffix</label>
                                     </div>
                                 </div>
@@ -220,14 +230,16 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="text" id="form1Example1" class="form-control" name="contactNationality"/>
+                                        <input type="text" id="form1Example1" class="form-control"
+                                            name="contactNationality" />
                                         <label class="form-label" for="form1Example1">Nationality</label>
                                     </div>
                                 </div>
 
                                 <div class="col">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="text" id="form1Example1" class="form-control" name="contactRelationship"/>
+                                        <input type="text" id="form1Example1" class="form-control"
+                                            name="contactRelationship" />
                                         <label class="form-label" for="form1Example1">Relationship</label>
                                     </div>
                                 </div>
@@ -238,19 +250,22 @@
                             <div class="row mt-4">
                                 <div class="col-2">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="text" id="form1Example1" class="form-control" name="contactContactNumber"/>
+                                        <input type="text" id="form1Example1" class="form-control"
+                                            name="contactContactNumber" />
                                         <label class="form-label" for="form1Example1">Contact Number</label>
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="email" id="form1Example1" class="form-control" name="contactEmail"/>
+                                        <input type="email" id="form1Example1" class="form-control"
+                                            name="contactEmail" />
                                         <label class="form-label" for="form1Example1">Email</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline bg-white rounded p-1">
-                                        <input type="text" id="form1Example1" class="form-control" name="contactAddress"/>
+                                        <input type="text" id="form1Example1" class="form-control"
+                                            name="contactAddress" />
                                         <label class="form-label" for="form1Example1">Address</label>
                                     </div>
                                 </div>

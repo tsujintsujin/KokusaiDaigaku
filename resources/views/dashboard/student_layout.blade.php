@@ -18,7 +18,6 @@
         @include('dashboard.student_sidenav')
         
         @yield('content')
-       
 
     </div>
 </div>

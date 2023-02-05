@@ -6,25 +6,26 @@
                 <div class="row dashboardTitleContainer rounded-top">
                     <h3 class="fw-bold pt-2">Class Selection</h3>
                 </div>
-                <div class="row">
-                    <div class="dropdown-center p-4">
-                        <button class="col-5  py-2 btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Subject
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#">Math 1</a></li>
-                            <li><a class="dropdown-item" href="#">Math 2</a></li>
-                            <li><a class="dropdown-item" href="#">Math 3</a></li>
-                        </ul>
-                        <button class="col-5  py-2 btn btn-secondary dropdown-toggle" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Section
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark"></a></li>
-                            <li><a class="dropdown-item" href="#">WD 30</a></li>
-                            <li><a class="dropdown-item" href="#">WD 29</a></li>
-                        </ul>
+                <div class="row mt-3">
+                    <div class="col">
+                        <div class="dropdown">
+                            <select class="form-select p-2" aria-label="Default select example">
+                                <option selected disabled value="1">Course</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="dropdown">
+                            <select class="form-select p-2" aria-label="Default select example">
+                                <option selected disabled value="0">Subject</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,48 +42,97 @@
 
 
 
-        <table class="table mt-5 pt-5">
+        <table class="table mt-5 pt-5  table-striped">
             <thead>
+                <th>Name</th>
+                <th>Prelim</th>
+                <th>Midterm</th>
+                <th>Finals</th>
+
                 <tr>
-                    <th scope="col">Student Name</th>
-                    <th scope="col">Prelim</th>
-                    <th scope="col">Midterm</th>
-                    <th scope="col">Finals</th>
-                    <td class="text-end">Actions</th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Justin M</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td class="pt-3">Justin Masiga</td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="prelim" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="midterm" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="finals" />
+                            </div>
+                        </div>
+                    </td>
                     <td class="text-end">
-                        <button class="btn btn-sm shadow-none btn-primary" style="text-decoration:none;" href="">Edit</button>
-                        <button class="btn btn-sm shadow-none btn-danger" href="">Lock</button>
-
+                       
+                        <button class="btn btn-sm shadow-none btn-primary" href="">Update</button>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Clarence P</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td class="pt-3">Clarence P</td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="prelim" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="midterm" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="finals" />
+                            </div>
+                        </div>
+                    </td>
                     <td class="text-end">
-                        <button class="btn btn-sm shadow-none btn-primary" style="text-decoration:none;" href="">Edit</button>
-                        <button class="btn btn-sm shadow-none btn-danger" href="">Lock</button>
-
+                       
+                        <button class="btn btn-sm shadow-none btn-primary" href="">Update</button>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Ralph C</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td class="pt-3">Ralph C</td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="prelim" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="midterm" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-2  text-center">
+                            <div class=" border-0">
+                                <input placeholder="--" type="text" id="" class="form-control  text-center" name="finals" />
+                            </div>
+                        </div>
+                    </td>
                     <td class="text-end">
-                        <button class="btn btn-sm shadow-none btn-primary" style="text-decoration:none;" href="">Edit</button>
-                        <button class="btn btn-sm shadow-none btn-danger" href="">Lock</button>
-
+                       
+                        <button class="btn btn-sm shadow-none btn-primary" href="">Update</button>
                     </td>
                 </tr>
         </table>

@@ -31,7 +31,7 @@ class SubjectController extends Controller
         $subject->description = $request->description;
         $subject->units = $request->units;
         $subject->save();
-        return redirect()->route('add_courses_subjects'); //->with('courses',Course::orderBy('name','asc'));
+        return redirect()->route('add_subjects'); //->with('courses',Course::orderBy('name','asc'));
 
     }
 
