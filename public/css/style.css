@@ -32,6 +32,11 @@ body {
 
 .hoverOfSidebar:hover {
     background-color: #886a43;
+    cursor: pointer;
+}
+
+.sidebarActive {
+    background-color: #886a43;
 }
 
 .rounded-top-left-1 {

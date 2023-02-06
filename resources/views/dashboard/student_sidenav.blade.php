@@ -1,5 +1,6 @@
 {{-- Side Bar --}}
-<div class="d-flex col-md-2 col-lg-3 flex-column flex-shrink-0 vh-100 dashboardContainer " id="sidebar" style="width: 280px;">
+<div class="d-flex col-md-2 col-lg-3 flex-column flex-shrink-0 vh-100 dashboardContainer " id="sidebar"
+    style="width: 280px;">
     <div class="text-center my-5 ">
         <img src="https://mkdph.com/wp-content/uploads/2022/06/MKD-logo-93p.png" class="rounded"
             alt="Mindanao Kokusai Daigaku Logo">
@@ -29,10 +30,19 @@
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#speedometer2"></use>
                 </svg>
+                Enrollment Form -x
+                {{-- just a view and print pdf --}}
+            </a>
+        </li>
+        <li class="nav-item my-1 hoverOfSidebar">
+            <a href="{{ route('studentaccount') }}" class="nav-link link-light sideBarLink py-3">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
                 Account
             </a>
         </li>
-       
+
     </ul>
 </div>
 {{-- End of Side Bar --}}
