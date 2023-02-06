@@ -170,8 +170,6 @@
                         <label class="form-label" for="">Abbreviation</label>
                     </div>
                 </div>
-                {{-- <form action="{{ route('createcourse') }}" method="POST"> --}}
-                {{-- @csrf --}}
                 <div class="row mt-4">
                     <div class="col">
                         <div class="form-outline mb-4 bg-white rounded ">
