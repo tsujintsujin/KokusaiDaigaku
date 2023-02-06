@@ -108,32 +108,6 @@ input[type="password"] {
 
 /* * ----------------------end id element -------------------------- */
 
-/* * ---------------------- animation -------------------------- */
-.firstLetter{
-    animation-name: test;
-    animation-duration:4s;
-}
-
-nav{
-    animation: nav-load 600ms;
-}
-
-@keyframes test{
-    from {color:#393280;}
-    to {color:#F6C400;}
-}
-
-@keyframes nav-load {
-    0%{
-        transform: translateY(-100%);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-/* * ---------------------- animation -------------------------- */
-
 /* * ----------------------class element down here -------------------------- */
 .dashboardContainer {
     color: #fafafc;
