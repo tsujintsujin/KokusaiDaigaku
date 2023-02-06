@@ -3,19 +3,19 @@
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Courses</h3>
         </div>
-        <form action="{{ route('createcourse') }}" method="POST">
-            @csrf
+        <form wire:submit.prevent="create">
+            
             <div class="row dashboardContainer ps-4 pb-4">
                 <div class="row mt-4">
                     <div class="col-6">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control" name="name" />
+                            <input wire:model="name" type="text" id="" class="form-control" name="name" />
                             <label class="form-label" for="">Course Name (Full)</label>
                         </div>
                     </div>
                     <div class="col-2">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control" name="abbreviation" />
+                            <input wire:model="abbreviation" type="text" id="" class="form-control" name="abbreviation" />
                             <label class="form-label" for="">Abbreviation</label>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                     <div class="row mt-4">
                         <div class="col">
                             <div class="form-outline mb-4 bg-white rounded ">
-                                <textarea class="text-area-no-resize form-control " id="" cols="1" max-rows="4" name="description"></textarea>
+                                <textarea  wire:model="description" class="text-area-no-resize form-control " id="" cols="1" max-rows="4" name="description"></textarea>
                                 <label class="form-label" for="3">Description</label>
                             </div>
                         </div>
@@ -40,20 +40,16 @@
                 </div>
             </div>
         </form>
-        {{-- <form action="{{ route('indexcourses') }}" method="GET">
-            @csrf --}}
             <div class="ps-4 mt-3">
                 <div class="col-4">
-                    <div class="dropdown"><label class="form-label" for="">View</label>
+                    <div class="dropdown"><label class="form-label" for="">View Course</label>
                         <select class="text-start form-select p-2">
-                            {{-- <option value="1">Bachelor in sadasdsa</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option> --}}
-                            {{-- @foreach ($courses as $course)
+                        
+                            @foreach (App\Models\Course::latest()->get() as $course)
                                 <option>
                                     <a class="dropdown-item" href="#">{{ $course->name }}</a>
                                 </option>
-                            @endforeach --}}
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -126,7 +122,6 @@
                         </tr>
                 </table>
             </div>
-        {{-- </form> --}}
     @else
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Edit Course</h3>
@@ -192,12 +187,7 @@
                             Update Course Details
                         </button>
                     </div>
-                    {{-- </form> --}}
                 </div>
-
-
-
-
             </div>
     @endif
 </div>

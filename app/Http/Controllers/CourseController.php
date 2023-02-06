@@ -14,7 +14,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-        return view('dashboard.admin_course')->with('courses', Course::orderBy('name', 'asc')->get());  
+        // return view('livewire.course-controller')->with('courses', Course::orderBy('name', 'asc')->get());  
+        return view('dashboard.admin_course')->with('success', 'hello world');  
+
     }
 
     /**
