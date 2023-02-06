@@ -17,8 +17,8 @@
                 <img src="kokusai_logo.png">
             </div>
             <div class="col">
-                <h1 class="ps-md-4 ps-lg-5 text-center text-md-start"><span style="color:#F6C400;">M</span>indanao <span
-                        style="color:#F6C400;">K</span>okusai <span style="color:#F6C400;">D</span>aigaku</h1>
+                <h1 class="ps-md-4 ps-lg-5 text-center text-md-start"><span class="firstLetter" style="color:#F6C400;">M</span>indanao <span class="firstLetter"
+                        style="color:#F6C400;">K</span>okusai <span class="firstLetter" style="color:#F6C400;">D</span>aigaku</h1>
                 <h6 class="ps-md-4 ps-lg-5 text-center text-md-start">THE NO. 1 JAPANESE LANGUAGE COLLEGE IN THE
                     PHILIPPINES</h6>
             </div>
@@ -169,6 +169,9 @@
         </div>
         <p>© 2023 Mindanao Kokusai Daigaku. All Rights Reserved</p>
     </footer>
+    
+    <script>
+        AOS.init();
+    </script>
 </body>
-   
 </html>

@@ -12,3 +12,8 @@
    </script>
    <!-- MDB -->
    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+
+   <!-- animation on scroll -->
+   <!-- https://github.com/michalsnik/aos -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
