@@ -40,8 +40,8 @@
                 </div>
             </div>
         </form>
-        <form action="{{ route('indexcourses') }}" method="GET">
-            @csrf
+        {{-- <form action="{{ route('indexcourses') }}" method="GET">
+            @csrf --}}
             <div class="ps-4 mt-3">
                 <div class="col-4">
                     <div class="dropdown"><label class="form-label" for="">View</label>
@@ -49,11 +49,11 @@
                             {{-- <option value="1">Bachelor in sadasdsa</option>
                         <option value="2">2</option>
                         <option value="3">3</option> --}}
-                            @foreach ($courses as $course)
+                            {{-- @foreach ($courses as $course)
                                 <option>
                                     <a class="dropdown-item" href="#">{{ $course->name }}</a>
                                 </option>
-                            @endforeach
+                            @endforeach --}}
                         </select>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                         </tr>
                 </table>
             </div>
-        </form>
+        {{-- </form> --}}
     @else
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Edit Course</h3>
