@@ -86,27 +86,27 @@
                         <div class="nav-divider vr vr-blurry mx-5"></div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">HOME</a>
+                        <a class="nav-link {{ Request::is('/') ? 'active':'' }}" href="/">HOME</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('academics') }}">ACADEMICS</a>
+                        <a class="nav-link {{ Request::is('academics') ? 'active':'' }}" href="{{ route('academics') }}">ACADEMICS</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admission') }}">ADMISSION</a>
+                        <a class="nav-link {{ Request::is('admission') ? 'active':'' }}" href="{{ route('admission') }}">ADMISSION</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('student_services') }}">STUDENT SERVICES</a>
+                        <a class="nav-link {{ Request::is('student_services') ? 'active':'' }}" href="{{ route('student_services') }}">STUDENT SERVICES</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">ABOUT</a>
+                        <a class="nav-link {{ Request::is('about') ? 'active':'' }}" href="{{ route('about') }}">ABOUT</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">CONTACT</a>
+                        <a class="nav-link {{ Request::is('contact') ? 'active':'' }}" href="{{ route('contact') }}">CONTACT</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item btn-login-head">
