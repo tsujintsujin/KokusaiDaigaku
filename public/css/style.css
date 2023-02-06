@@ -1,3 +1,144 @@
+
+/* ------------------------element name here----------------------- */
+body {
+    background-color: #ffffff;
+    /* overflow-x: hidden; */
+    /* Hide horizontal scrollbar */
+}
+
+/* this the zebra effects of rows in tables */
+tr:nth-child(even) {
+    background-color: #cdcbdf;
+}
+
+thead {
+    color: #fafafc;
+    background-color: #393280;
+    padding: 1rem;
+
+}
+
+input[type="text"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
+input[type="date"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
+input[type="email"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
+input[type="number"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
+input[type="password"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
+input[type="text"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
+input[type="date"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
+input[type="email"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
+input[type="number"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+input[type="password"] {
+    background-color: #eeefff;
+    border: 0px none #d9d9da;
+    border-bottom: 3px solid #d9d9da;
+    font-size: 30px;
+}
+
+/* ----------------------end element name -------------------------- */
+
+
+
+/* ----------------------id element down here-------------------------- */
+#sidebar {
+    color: #fafafc;
+    background-color: #393280;
+    /* height: 100vh; */
+
+}
+
+#dashboardContainers {
+    /* height: auto; */
+    border: 1px solid #d9d9da;
+}
+
+#courseContainers,
+#subjectContainers {
+    /* height: auto; */
+    border: 1px solid #d9d9da;
+}
+
+/* #layoutContainer{
+    height: 100vh;
+} */
+
+
+
+/* * ----------------------end id element -------------------------- */
+
+/* * ----------------------class element down here -------------------------- */
+.dashboardContainer {
+    color: #fafafc;
+    background-color: #393280;
+    padding: 1rem;
+}
+
+.hoverOfSidebar:hover {
+    background-color: #886a43;
+}
+
+.rounded-top-left-1 {
+    border-top-left-radius: .5rem;
+}
+
+.rounded-top-right-1 {
+    border-top-right-radius: .5rem;
+}
+
+.rounded-bottom-left-1 {
+    border-bottom-left-radius: .5rem;
+}
+
+.rounded-bottom-right-1 {
+    border-bottom-right-radius: .5rem;
+}
+
+.h-50 {
+    height: 50%;
+    margin: 0 !important;
+}
 body {
     background-color: #ffffff;
     /* overflow-x: hidden; */
@@ -11,31 +152,25 @@ body {
 
 }
 
+#dashboardContainers {
+    /* height: auto; */
+    border: 1px solid #d9d9da;
+}
+
 #courseContainers,
 #subjectContainers {
     /* height: auto; */
     border: 1px solid #d9d9da;
 }
 
+
 .dashboardContainer {
-    background-color: #d9d9da;
-}
-
-.bg-account{
-    background-color: #EEEFFF;
-}
-
-.dashboardTitleContainer {
     color: #fafafc;
     background-color: #393280;
+    padding: 1rem;
 }
 
 .hoverOfSidebar:hover {
-    background-color: #886a43;
-    cursor: pointer;
-}
-
-.sidebarActive {
     background-color: #886a43;
 }
 
@@ -164,41 +299,10 @@ body {
     padding: 20px;
 }
 
-
-
-/* dashboards */
-
-.date-heading{
-font-size: 96px;
+.border-style{
+    border-style:solid;
+    border-color:#393280;
 }
-
-.text-area-no-resize{
-    resize: none;
-}
-
-
-
-.vri-icon{
-    height: 25px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* end dashboards */
-
-
 
 /* medium screen and below */
 @media only screen and (max-width: 768px) {
@@ -233,52 +337,6 @@ font-size: 96px;
         display: none !important;
 
     }
- 
-}
-
-/* small screen & below */
-
-@media only screen and (max-width: 600px) {
-    .overlay-text {
-        min-height: 100%;
-    }
-
-    .admission-text h5 {
-        text-align: justify;
-        text-justify: inter-word;
-    }
-
-}
-
-/* large screen and up */
-@media only screen and (min-width: 992px) {
-
-    .btn-login-list {
-        display: none;
-    }
-
-    .btn-login-head {
-        display: block;
-    }
-
-    .wrapper {
-        display: none;
-    }
-
-    .navbar{
-        box-shadow: none !important;
-    }
-}
-
-
-
-
-
-
-
-
-
-
 
 
 

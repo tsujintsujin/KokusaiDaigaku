@@ -73,16 +73,16 @@
         style="background-image: url({{ asset('/image/admission_bg.jpg') }})">
         <div class="row d-flex justify-content-end  align-content-center h-100">
             <div class="admission-text col-md-8 col-lg-4 text-end">
-                <h1 class="fw-bold color-title"><span><img class="yellow-arrow me-3 mb-2"
+                <h1 class="fw-bold color-title"data-aos="fade-right"><span><img class="yellow-arrow me-3 mb-2"
                             src="{{ asset('image/left_arrow.png') }}" alt=""></span>PRE-ENROLL</h1>
                 <hr>
-                <h5>Please visit the MKD Facebook page for additional info on
+                <h5 data-aos="fade-right" data-aos-delay="100">Please visit the MKD Facebook page for additional info on
                     the Online Enrollment for face-to-face schedules.</h5>
-                <h5>For an advanced enrollment, you may click on the
+                <h5 data-aos="fade-right" data-aos-delay="200">For an advanced enrollment, you may click on the
                     button below. Please provide accurate email address
                     and contact number, so we can contact you directly
                     should you have any lacking requirements.</h5>
-                <button class="btn btn-lg border-primary fs-6 py-3 mt-3"> Submit Form →</button>
+                <button class="btn btn-lg border-primary fs-6 py-3 mt-3" data-aos="fade-right" data-aos-delay="400"> Submit Form →</button>
             </div>
             <div class="col-lg-1"></div>
         </div>
