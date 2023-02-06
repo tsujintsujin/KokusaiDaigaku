@@ -50,9 +50,6 @@ Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
 })->name('admin');
 
-Route::get('/courses', function () {
-    return view('dashboard.admin_course');
-})->name('courses');
 
 Route::get('/sections', function () {
     return view('dashboard.admin_section');
@@ -149,7 +146,8 @@ Route::get('/login', function () {
 
 //course routes 
 Route::post('/createcourse', [CourseController::class, 'create'])->name('createcourse');
-Route::get('/courses', [Admin_Course::class, 'index'])->name('courses');
+// Route::get('/admin_course', [CourseController::class, 'index'])->name('indexcourses');
+Route::get('/courses', [CourseController::class, 'index'])->name('courses');
 
 // subject routes
 Route::post('/createsubject', [SubjectController::class, 'create'])->name('createsubject');

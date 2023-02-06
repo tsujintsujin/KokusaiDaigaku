@@ -14,7 +14,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        // return view('livewire.course-controller')->with('courses', Course::orderBy('name', 'asc')->get());  
+        return view('dashboard.admin_course')->with('success', 'hello world');  
+
     }
 
     /**
@@ -26,9 +28,10 @@ class CourseController extends Controller
     {
         $course = new Course;
         $course->name = $request->name;
+        $course->abbreviation = $request->abbreviation;
         $course->description = $request->description;
         $course->save();
-        return redirect()->route('course'); //->with('courses',Course::orderBy('name','asc'));
+        return redirect()->route('courses'); //->with('courses',Course::orderBy('name','asc'));
 
         // redirect()->route('add_courses_subjects');
     }

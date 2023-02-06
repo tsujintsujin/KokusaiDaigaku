@@ -15,7 +15,7 @@ class Admin_Course extends Controller
      */
     public function index()
     {
-        return view('dashboard.admin_course')->with('courses', Course::orderBy('name', 'asc')->get());
+        // return view('dashboard.admin_course')->with('courses', Course::orderBy('name', 'asc')->get());
     }
 
     /**
