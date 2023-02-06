@@ -149,7 +149,7 @@ Route::get('/login', function () {
 
 //course routes 
 Route::post('/createcourse', [CourseController::class, 'create'])->name('createcourse');
-Route::get('/courses', [Admin_Course::class, 'index'])->name('courses');
+Route::get('/indexcourses', [CourseController::class, 'index'])->name('indexcourses');
 
 // subject routes
 Route::post('/createsubject', [SubjectController::class, 'create'])->name('createsubject');

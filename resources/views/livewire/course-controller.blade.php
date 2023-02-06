@@ -40,89 +40,93 @@
                 </div>
             </div>
         </form>
-        <div class="ps-4 mt-3">
-            <div class="col-4">
-                <div class="dropdown"><label class="form-label" for="">View</label>
-                    <select class="text-start form-select p-2">
-                        {{-- <option value="1">Bachelor in sadasdsa</option>
+        <form action="{{ route('indexcourses') }}" method="GET">
+            @csrf
+            <div class="ps-4 mt-3">
+                <div class="col-4">
+                    <div class="dropdown"><label class="form-label" for="">View</label>
+                        <select class="text-start form-select p-2">
+                            {{-- <option value="1">Bachelor in sadasdsa</option>
                         <option value="2">2</option>
                         <option value="3">3</option> --}}
-                        {{-- @foreach ($courses as $course)
-                            <option ><a class="dropdown-item" href="#">{{ $course->name }}</a>
-                            </option>
-                        @endforeach --}}
-                    </select>
+                            @foreach ($courses as $course)
+                                <option>
+                                    <a class="dropdown-item" href="#">{{ $course->name }}</a>
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
+                <table class="table mt-5">
+                    <thead>
+                        <tr>
+                            <th>Active Courses</th>
+                            <th>Subjects</th>
+                            <th>Total Average Grade</th>
+                            <th>Sections</th>
+                            <th>Students</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Math 1</th>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <th>Math 2</th>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <th>Math 3</th>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <th>Math 4</th>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <th>Math 5</th>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <th>Math 6</th>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <th>BSIT</th>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <th>Math 8</th>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                </table>
             </div>
-            <table class="table mt-5">
-                <thead>
-                    <tr>
-                        <th>Active Courses</th>
-                        <th>Subjects</th>
-                        <th>Total Average Grade</th>
-                        <th>Sections</th>
-                        <th>Students</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Math 1</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 2</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 3</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 4</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 5</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 6</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>BSIT</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 8</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-            </table>
-        </div>
+        </form>
     @else
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Edit Course</h3>
