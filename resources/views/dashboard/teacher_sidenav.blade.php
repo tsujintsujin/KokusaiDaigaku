@@ -7,7 +7,7 @@
         <p class="">Account ID: MKD105915</p>
     </div>
 
-    <ul class="nav  nav-pills text-light flex-column mb-auto">
+    <ul class="nav  text-light flex-column mb-auto">
         <li class="nav-item my-1 hoverOfSidebar">
             <a href="{{ route('teacher') }}" class="nav-link link-light sideBarLink py-3">
                 <svg class="bi me-2" width="16" height="16">

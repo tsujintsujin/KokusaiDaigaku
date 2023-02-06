@@ -44,9 +44,9 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-            <button class="mt-5 p-3 col-3 btn btn-primary shadow">
+            <a href="{{route('studentchangepassword')}}" class="mt-5 p-3 col-3 btn btn-primary shadow">
                 Change Password
-            </button>
+            </a>
         </div>
     </div>
 @endsection
