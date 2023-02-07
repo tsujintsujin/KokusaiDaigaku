@@ -54,7 +54,7 @@
                 </div> --}}
                     <div class="col-2">
                         <div class="dropdown">
-                            <h6 class="text-muted text-left ps-1">Select Course</h6>
+                            <h6 class="text-muted text-left ps-1">Select Section</h6>
                             <select class="form-select p-2" aria-label="Default select example">
                                 <option value="0">None Selected</option>
                                 <option value="1">One</option>

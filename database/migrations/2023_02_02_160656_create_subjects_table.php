@@ -19,7 +19,8 @@ return new class extends Migration
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->string('subject_code');
             $table->text('description');
-            $table->integer('units');
+            $table->string('units');
+            $table->string('year_level');
             $table->timestamps();
         });
     }

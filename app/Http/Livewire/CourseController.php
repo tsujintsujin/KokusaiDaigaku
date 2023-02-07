@@ -23,6 +23,13 @@ class CourseController extends Component
 
     }
 
+      // this function is when admin clicked the cancel button when admin is in the edit form.
+      public function cancel()
+      {
+          $this->window = "create";
+        
+      }
+
     public function edit()
     {
         $this->window = "edit";

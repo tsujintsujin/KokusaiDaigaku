@@ -3,125 +3,130 @@
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Courses</h3>
         </div>
-        <form wire:submit.prevent="create">
-            
-            <div class="row dashboardContainer ps-4 pb-4">
-                <div class="row mt-4">
-                    <div class="col-6">
+
+        <div class="row dashboardContainer ps-4 pb-4">
+            <div class="row mt-4">
+                <div class="col-6">
+                    <form wire:submit.prevent="create">
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:model="name" type="text" id="" class="form-control" name="name" />
                             <label class="form-label" for="">Course Name (Full)</label>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="abbreviation" type="text" id="" class="form-control" name="abbreviation" />
-                            <label class="form-label" for="">Abbreviation</label>
-                        </div>
-                    </div>
-
-                    <div class="row mt-4">
-                        <div class="col">
-                            <div class="form-outline mb-4 bg-white rounded ">
-                                <textarea  wire:model="description" class="text-area-no-resize form-control " id="" cols="1" max-rows="4" name="description"></textarea>
-                                <label class="form-label" for="3">Description</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row d-flex justify-content-end">
-                        <button class="p-2 me-3 col-1 btn btn-primary " type="submit">
-                            Add
-                        </button>
-                        <button wire:click="edit" class="p-2 me-3 col-1 btn btn-primary ">
-                            Edit
-                        </button>
-                    </div>
-
                 </div>
-            </div>
-        </form>
-            <div class="ps-4 mt-3">
-                <div class="col-4">
-                    <div class="dropdown"><label class="form-label" for="">View Course</label>
-                        <select class="text-start form-select p-2">
-                            <option value="0" selected disabled>Course</option>
-                            @foreach (App\Models\Course::latest()->get() as $course)
-                                <option>
-                                    <a class="dropdown-item" href="#">{{ $course->name }} ({{ $course->abbreviation }})</a>
-                                </option>
-                            @endforeach
-                        </select>
+                <div class="col-2">
+                    <div class="form-outline bg-white rounded p-1">
+                        <input wire:model="abbreviation" type="text" id="" class="form-control"
+                            name="abbreviation" />
+                        <label class="form-label" for="">Abbreviation</label>
                     </div>
                 </div>
-                <table class="table mt-5">
-                    <thead>
-                        <tr>
-                            <th>Active Courses</th>
-                            <th>Subjects</th>
-                            <th>Total Average Grade</th>
-                            <th>Sections</th>
-                            <th>Students</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Math 1</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <th>Math 2</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <th>Math 3</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <th>Math 4</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <th>Math 5</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <th>Math 6</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <th>BSIT</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <th>Math 8</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                </table>
+
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="form-outline mb-4 bg-white rounded ">
+                            <textarea wire:model="description" class="text-area-no-resize form-control " id="" cols="1"
+                                max-rows="4" name="description"></textarea>
+                            <label class="form-label" for="3">Description</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-end">
+                    <button class="p-2 me-3 col-1 btn btn-primary " type="submit">
+                        Add
+                    </button>
+                    </form>
+                    <button wire:click="edit" class="p-2 me-3 col-1 btn btn-primary ">
+                        Edit
+                    </button>
+                </div>
+
             </div>
+        </div>
+
+        <div class="ps-4 mt-3">
+            <div class="col-4">
+                <div class="dropdown"><label class="form-label" for="">View Course</label>
+                    <select class="text-start form-select p-2">
+                        <option value="0" selected disabled>Course</option>
+                        @foreach (App\Models\Course::latest()->get() as $course)
+                            <option>
+                                <a class="dropdown-item" href="#">{{ $course->name }}
+                                    ({{ $course->abbreviation }})
+                                </a>
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <table class="table mt-5">
+                <thead>
+                    <tr>
+                        <th>Active Courses</th>
+                        <th>Subjects</th>
+                        <th>Total Average Grade</th>
+                        <th>Sections</th>
+                        <th>Students</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Math 1</th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <th>Math 2</th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <th>Math 3</th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <th>Math 4</th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <th>Math 5</th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <th>Math 6</th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <th>BSIT</th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <th>Math 8</th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+            </table>
+        </div>
     @else
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Edit Course</h3>
@@ -178,7 +183,7 @@
                         </div>
                     </div>
                     <div class="row d-flex justify-content-end">
-                        <button wire:click="create" class="p-2 me-3 col-1 btn btn-primary ">
+                        <button wire:click="cancel" class="p-2 me-3 col-1 btn btn-primary ">
                             Cancel
                         </button>
                         <button class="p-2 col-3 btn btn-primary ">

@@ -13,8 +13,7 @@ class SectionController extends Component
     public $course_id;
     public $description;
 
-
-
+    // adding a data in section table
     public function create()
     {
         $this->window = "create";
@@ -24,6 +23,13 @@ class SectionController extends Component
         $section->description = $this->description;
         $section->save();
         $this->reset('name', 'course_id', 'description');
+    }
+
+    // this function is when admin clicked the cancel button when admin is in the edit form.
+    public function create_tab()
+    {
+        $this->window = "create";
+      
     }
 
     public function edit()

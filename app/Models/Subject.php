@@ -16,5 +16,6 @@ class Subject extends Model
         'subject_code',
         'description',
         'units',
+        'year_level'
     ];
 }
