@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->unsignedBigInteger('section_id');
@@ -29,7 +28,7 @@ return new class extends Migration
             $table->string('nationality');
             $table->string('contact_number');
             $table->string('address');
-            $table->string('password');
+            $table->timestamps();
         });
     }
 
