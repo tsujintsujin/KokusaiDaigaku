@@ -17,7 +17,7 @@
 
 <div class="container my-5 text-center text-dark d-flex align-items-center">
         <div class="row">
-            <div class="col-lg-4 p-5">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="300">
                 <h2 class="fw-bold color-title ">MISSION</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">W</span>e aim to provide a diverse
                     range of
@@ -34,7 +34,7 @@
                     corporate social responsibility in all of
                     our endeavors.</h5>
             </div>
-            <div class="col-lg-4 p-5">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="600">
                 <h2 class="fw-bold color-title">PHILOSOPHY</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">T</span>he College is dedicated to
                     providing
@@ -53,7 +53,7 @@
                     values to make a positive impact on
                     the world.</>
             </div>
-            <div class="col-lg-4 p-5">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="900">
                 <h2 class="fw-bold color-title">VISION</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">A</span>n academic community
                     proficient in
@@ -74,15 +74,15 @@
     <div class="container mt-5">
         <h1 class="fw-bold color-title text-center">THE PILLARS OF MKD</h1>
         <div class="row text-center mt-5 mb-5">
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="300">
                 <img src="{{ asset('/image/MR-TATSUO-UCHIDA.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">MR. TATSUO UCHIDA</h5>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="600">
             <img src="{{ asset('/image/mrs-ayako-uchida.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">MRS. AYAKO UCHIDA</h5>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="900">
             <img src="{{ asset('/image/REV-MASATAKA-AJIRO.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">REV. MASATAKA AJIRO</h5>
             </div>
