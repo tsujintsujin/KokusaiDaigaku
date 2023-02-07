@@ -8,7 +8,7 @@ use App\Models\Section;
 use App\Models\Student;
 use App\Models\ContactPerson;
 use App\Models\ContactPersonStudent;
-use App\Models\User;
+use App\Models\StudentAccount;
 use Illuminate\Support\Facades\Hash;
 class StudentManagement extends Component
 {
@@ -47,7 +47,6 @@ class StudentManagement extends Component
         $student->nationality = $this->studentNationality;
         $student->contact_number = $this->studentContactNumber;
         $student->address = $this->studentAddress;
-        $student->password = $this->studentLastName;
         $student->course_id = $this->selectedCourse;
         $student->section_id = $this->selectedSection;
         $student->save();
@@ -70,7 +69,7 @@ class StudentManagement extends Component
         $contact_person_student->contact_person_id = ContactPerson::orderBy('id', 'desc')->first()->id;
         $contact_person_student->student_id = Student::orderBy('id', 'desc')->first()->id;
         $contact_person_student->save();
-        User::create([
+        StudentAccount::create([
             'username' => Student::orderBy('id', 'desc')->first()->id,
             'student_id' => Student::orderBy('id', 'desc')->first()->id,
             'password' => Hash::make($this->studentLastName),
