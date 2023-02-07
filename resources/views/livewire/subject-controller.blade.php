@@ -47,19 +47,21 @@
                         </div>
                     </div>
                     
+                    
                 </div>
-                <div class="col-2 mt-4 pt-1">
-                    <div class="col text-center pt-2">
+                <div class="col-3">
+                    <label class="form-label text-muted" for="">Semester: </label>
+                    <div class="col text-center pt-1 ps-3 justify-content-start d-flex">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="semesterRadio" id="semesterRadio1"
                                 value="1" />
-                            <label class="form-check-label" for="inlineRadio1">1st Semester</label>
+                            <label class="form-check-label" for="inlineRadio1">1st</label>
                         </div>
 
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="semesterRadio" id="semesterRadio2"
                                 value="2" />
-                            <label class="form-check-label" for="inlineRadio2">2nd Semester</label>
+                            <label class="form-check-label" for="inlineRadio2">2nd</label>
                         </div>
                     </div>
                 </div>
