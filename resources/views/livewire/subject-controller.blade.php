@@ -37,7 +37,6 @@
                         <div class="dropdown">
                             <h6 class="text-muted text-left ps-1">Year Level</h6>
                             <select wire:model="year_level" class="text-start form-select p-2">
-                                <option selected value="not required">Not Required</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
