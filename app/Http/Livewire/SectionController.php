@@ -2,10 +2,9 @@
 
 namespace App\Http\Livewire;
 
+use Livewire\Component;
 use App\Models\Section;
 use App\Models\Course;
-use Livewire\Component;
-
 class SectionController extends Component
 {
     public $window = "create";
