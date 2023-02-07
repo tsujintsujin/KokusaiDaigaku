@@ -44,10 +44,10 @@
                 <div class="col-4">
                     <div class="dropdown"><label class="form-label" for="">View Course</label>
                         <select class="text-start form-select p-2">
-                        
+                            <option value="0" selected disabled>Course</option>
                             @foreach (App\Models\Course::latest()->get() as $course)
                                 <option>
-                                    <a class="dropdown-item" href="#">{{ $course->name }}</a>
+                                    <a class="dropdown-item" href="#">{{ $course->name }} ({{ $course->abbreviation }})</a>
                                 </option>
                             @endforeach
                         </select>
