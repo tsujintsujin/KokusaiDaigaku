@@ -46,7 +46,24 @@
                             </select>
                         </div>
                     </div>
+                    
                 </div>
+                <div class="col-2 mt-4 pt-1">
+                    <div class="col text-center pt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="semesterRadio" id="semesterRadio1"
+                                value="1" />
+                            <label class="form-check-label" for="inlineRadio1">1st Semester</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="semesterRadio" id="semesterRadio2"
+                                value="2" />
+                            <label class="form-check-label" for="inlineRadio2">2nd Semester</label>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div class="row">
                 <div class="col">

@@ -67,6 +67,14 @@ Route::get('/teacher_management', function () {
     return view('dashboard.admin_teacher_management');
 })->name('teacher_management');
 
+Route::get('/assign_subject', function () {
+    return view('dashboard.admin_assign_subject');
+})->name('assign_subject');
+
+
+
+
+
 Route::get('/archive', function () {
     return view('dashboard.admin_archive');
 })->name('archive');
