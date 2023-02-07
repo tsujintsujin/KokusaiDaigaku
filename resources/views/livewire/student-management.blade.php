@@ -3,7 +3,6 @@
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Student Account</h3>
         </div>
-        @csrf
         <div class="row dashboardContainer ps-4 pb-4">
             <div class="row mt-4">
                 <div class="col-4">
