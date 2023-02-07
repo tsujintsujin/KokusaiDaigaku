@@ -14,9 +14,9 @@
 <div class="container my-5 py-5">
     <div class="row">
         <div class="col justify-content">
-            <h1 class="fw-bold color-title">SCHOLARSHIPS<span><img class="yellow-arrow ms-3 mb-2" src="{{ asset('image/right_arrow.png') }}" alt=""></span></h1>
-            <h5 class="fw-bold color-title">ACADEMIC SCHOLARSHIPS AND GRANT-IN-AID</h5>
-            <p>The College acknowledges top-performing students
+            <h1 class="fw-bold color-title" data-aos="fade-right">SCHOLARSHIPS<span><img class="yellow-arrow ms-3 mb-2" src="{{ asset('image/right_arrow.png') }}" alt=""></span></h1>
+            <h5 class="fw-bold color-title" data-aos="fade-right" data-aos-delay="200">ACADEMIC SCHOLARSHIPS AND GRANT-IN-AID</h5>
+            <p data-aos="fade-right" data-aos-delay="200">The College acknowledges top-performing students
                 every semester who are granted discounts on their
                 tuition fees. In order to become a Dean's Lister,
                 students must carry at least 18 units every semester
@@ -27,7 +27,7 @@
                 Japanese Nationals.</p>
         </div>
         <div class="col-md-1"></div>
-        <div class="col mt-5">
+        <div class="col mt-5" data-aos="fade-left" data-aos-delay="400">
             <h5 class="mx-4 color-title fw-bold">Other Scholarships Offered</h5>
             <ul class="justify-content">
                 <li>Board of Trustees/Employee Tuition Fee Discount</li>
@@ -45,12 +45,12 @@
 
 <div class="container">
     <div class="text-end">
-        <h1 class="fw-bold color-title"><span><img class="yellow-arrow me-3 mb-2" src="{{ asset('image/left_arrow.png') }}" alt=""></span>LINKAGES</h1>
+        <h1 class="fw-bold color-title" data-aos="fade-left"><span><img class="yellow-arrow me-3 mb-2" src="{{ asset('image/left_arrow.png') }}" alt=""></span>LINKAGES</h1>
         <h5 class="fw-bold color-title">Partner Institutions of MKD in Japan</h5>
     </div>
     <div class="mb-5">
-        <p class="mt-5">The Academic Partnership Agreements with the following Japanese colleges and corporations were forged to cooperate in the spirit of equality and mutual benefit, deepen friendship and promote education and academic exchanges between students, faculty members, and administrative staff.</p>
-        <ul>
+        <p class="mt-5" data-aos="fade-right" data-aos-delay="400">The Academic Partnership Agreements with the following Japanese colleges and corporations were forged to cooperate in the spirit of equality and mutual benefit, deepen friendship and promote education and academic exchanges between students, faculty members, and administrative staff.</p>
+        <ul data-aos="fade-right" data-aos-delay="600">
             <li>Chubu Gakuin University</li>
             <li>FSG College League</li>
             <li>Musashino University</li>
@@ -65,10 +65,10 @@
         </ul>
     </div>
     <div class="mb-5">
-        <h3 class="color-title">BE ONE OF THEM!<span><img class="yellow-arrow ms-3 mb-2" src="{{ asset('image/right_arrow.png') }}" alt=""></span></h3>
-        <p>The College supports different educational tour opportunities outside the country. Selected students benefit from the beauty of cultural exchanges.</p>
-        <p>The following are the study tour programs enjoyed by the MKDians:</p>
-        <ul>
+        <h3 class="color-title" data-aos="fade-right" data-aos-delay="700">BE ONE OF THEM!<span><img class="yellow-arrow ms-3 mb-2" src="{{ asset('image/right_arrow.png') }}" alt=""></span></h3>
+        <p data-aos="fade-right" data-aos-delay="800">The College supports different educational tour opportunities outside the country. Selected students benefit from the beauty of cultural exchanges.</p>
+        <p data-aos="fade-right" data-aos-delay="800">The following are the study tour programs enjoyed by the MKDians:</p>
+        <ul data-aos="fade-right" data-aos-delay="900">
             <li>JPVA Study Tour Program</li>
             <li>Japan-East Asia Network of Exchange for Students and Youths Program (JENESYS Program)</li>
             <li>Japan Foundation Tour</li>
