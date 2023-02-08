@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('nationality');
             $table->string('contact_number');
             $table->string('address');
-            $table->enum('employment_type', array('male', 'female'));
+            $table->enum('employment_type', array('fulltime', 'parttime'));
             $table->timestamps();
         });
     }

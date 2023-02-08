@@ -285,7 +285,7 @@
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Find Student Account</h3>
         </div>
-        <form action="{{ route('createstudent') }}" method="POST">
+        <form >
             @csrf
             <div class="row dashboardContainer ps-4 pb-4">
                 <div class="row mt-4">
@@ -306,7 +306,7 @@
                     </div> --}}
                     <div class="col"></div>
                     <div class="col-3 d-flex justify-content-end">
-                        <button wire:click='create' type="button" class="pt-2 me-3 col-8 btn btn-primary">
+                        <button wire:click='back' type="button" class="pt-2 me-3 col-8 btn btn-primary">
                             Back
                         </button>
                     </div>

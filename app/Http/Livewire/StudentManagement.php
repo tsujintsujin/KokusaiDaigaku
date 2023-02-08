@@ -106,6 +106,11 @@ class StudentManagement extends Component
     {
         $this->window = "edit";
     }
+    public function back()
+    {
+        $this->window = "create";
+      
+    }
 
     // this is for dropdown selected course.
     public $selectedCourse = NULL;

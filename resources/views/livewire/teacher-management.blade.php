@@ -52,13 +52,13 @@
                             <div class="col pt-2">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input"  type="radio" wire:model="teacherType"
-                                        id="inlineRadio1" value="male" />
+                                        id="inlineRadio1" value="fulltime" />
                                     <label class="form-check-label" for="inlineRadio1">Full-time</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" wire:model="teacherType"
-                                        id="inlineRadio2" value="female" />
+                                        id="inlineRadio2" value="parttime" />
                                     <label class="form-check-label" for="inlineRadio2">Part-time</label>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Find Teacher Account</h3>
         </div>
-        <form action="{{ route('createteacher') }}" method="POST">
+        <form wire:submit.prevent="edit">
             @csrf
             <div class="row dashboardContainer ps-4 pb-4">
                 <div class="row mt-4">
@@ -301,7 +301,7 @@
                     </div> --}}
                     <div class="col"></div>
                     <div class="col-3 d-flex justify-content-end">
-                        <button wire:click='create' type="button" class="pt-2 me-3 col-8 btn btn-primary">
+                        <button wire:click='back' type="button" class="pt-2 me-3 col-8 btn btn-primary">
                             Back
                         </button>
                     </div>
