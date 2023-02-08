@@ -306,7 +306,7 @@
                     </div> --}}
                     <div class="col"></div>
                     <div class="col-3 d-flex justify-content-end">
-                        <button wire:click='create' type="button" class="pt-2 me-3 col-8 btn btn-primary">
+                        <button wire:click='back' type="button" class="pt-2 me-3 col-8 btn btn-primary">
                             Back
                         </button>
                     </div>

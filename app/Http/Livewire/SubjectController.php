@@ -28,6 +28,7 @@ class SubjectController extends Component
 
     }
 
+ 
     // this function is when admin clicked the cancel button when admin is in the edit form.
     public function cancel()
     {

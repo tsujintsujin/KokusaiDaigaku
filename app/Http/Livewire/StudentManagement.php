@@ -101,7 +101,10 @@ class StudentManagement extends Component
         );
     }
     //    wire:model="" /
-
+    public function back(){
+        $this->window = "create";
+    }
+    
     public function edit()
     {
         $this->window = "edit";
