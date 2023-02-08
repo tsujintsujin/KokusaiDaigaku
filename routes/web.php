@@ -7,6 +7,8 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\Admin_Course;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminHome;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +51,6 @@ Route::get('/contact', function () {
 Route::get('/admin', function () {
     return view('dashboard.admin_dashboard');
 })->name('admin');
-
 
 Route::get('/sections', function () {
     return view('dashboard.admin_section');
@@ -167,4 +168,4 @@ Route::post('/createsection', [SectionController::class, 'create'])->name('creat
 Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
 
 
- 
+Route::get('/admin', [AdminHome::class, 'admin'])->name('admin');
