@@ -101,10 +101,15 @@ class StudentManagement extends Component
         );
     }
     //    wire:model="" /
-
+    
     public function edit()
     {
         $this->window = "edit";
+    }
+    public function back()
+    {
+        $this->window = "create";
+      
     }
 
     // this is for dropdown selected course.
