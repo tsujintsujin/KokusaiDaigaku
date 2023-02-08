@@ -60,7 +60,7 @@
 
 
                 <label class="ms-1 fw-bold" for="">Student List:</label>
-                <div class="row d-flex mt-4 ms-1">
+                <div class="row d-flex mt-4 ms-1 pt-4">
                     <button class="p-2 btn-sm me-3 col-2 btn btn-primary" for="1">
                         Select All
                     </button>
@@ -119,7 +119,7 @@
                     </div>
                     <div class="col-3">
                         <div class="dropdown">
-                            <label class="ms-1" for="">Level Requirement:</label>
+                            <label class="ms-1" for="">From Year Level:</label>
                             <select class="text-start form-select p-2">
                                 <option value="1">1st Year</option>
                                 <option value="2">2nd Year</option>
@@ -129,20 +129,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-3 mt-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                              Major
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                              Minor
-                            </label>
-                          </div>
-                    </div>
+                    
                 </div>
                 <div class="col-7">
                     <table class="table mt-3">
@@ -176,6 +163,13 @@
                 </div>
             </div>
         </div>
-
+        <div class="row d-flex mt-4 ms-1 pt-4 justify-content-end">
+            <button class="p-2 btn-sm me-3 col-1 btn btn-primary" for="1">
+                Cancel
+            </button>
+            <button class="p-2 me-3 btn-sm col-1 btn btn-primary ">
+                Confirm
+            </button>
+        </div>
     </div>
 </div>
