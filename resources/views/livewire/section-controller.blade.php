@@ -19,16 +19,6 @@
                                 </option>
                             @endforeach
                         </select>
-                        {{-- <input wire:model="course_id" id="course" > --}}
-                        {{-- this script is for getting the value of selected courses and put in the hidden input field --}}
-                        {{-- <script>
-                            let select = document.querySelector("#selectedCourse");
-                            let input = document.querySelector("#course");
-
-                            select.addEventListener("change", function() {
-                                input.value = select.value;
-                            });
-                        </script> --}}
                 </div>
                 <div class="col-2">
                     <div class="form-outline bg-white rounded p-1">
@@ -82,13 +72,7 @@
                     <div class="dropdown"><label class="form-label" for="">Section</label>
                         <select class="text-start form-select p-2">
                             <option value="0" selected disabled>Section</option>
-                            {{-- @foreach (App\Models\Section::latest()->get() as $section)
-                            <option class="option" value="{{ $section->id }}">
-                                <a class="dropdown-item" href="#">{{ $section->name }}
-                                    ({{ $section->description }})
-                                </a>
-                            </option>
-                        @endforeach --}}
+        
                             @if (!is_null($selectedCourse))
                                 @foreach ($sections as $section)
                                     <option class="option" value="{{ $section->id }}">

@@ -10,9 +10,10 @@ use App\Models\ContactPerson;
 use App\Models\ContactPersonStudent;
 use App\Models\StudentAccount;
 use Illuminate\Support\Facades\Hash;
+
 class StudentManagement extends Component
 {
-    public $window = "create";
+    public $window = "edit";
     public $studentLastName;
     public $studentFirstName;
     public $studentMiddleName;
@@ -101,7 +102,7 @@ class StudentManagement extends Component
         );
     }
     //    wire:model="" /
-    
+
     public function edit()
     {
         $this->window = "edit";
@@ -109,28 +110,58 @@ class StudentManagement extends Component
     public function back()
     {
         $this->window = "create";
-      
     }
 
-    // this is for dropdown selected course.
+    // for dropdwons
     public $selectedCourse = NULL;
     public $sections;
     public $courses;
+
+    public $selectedStudent = NULL;
+    public $students;
+    public $student_data;
+    public $student_section;
     public function mount()
     {
+        //for selecting course and section in creating student
         $this->courses = Course::all();
         $this->sections = collect();
+
+        //edit of student data.
+        $this->students = Student::all();
+        $this->student_data;
+        $this->student_section;
+        // $this->sections = collect();
     }
+    // this is for dropdown selected course.
     public function updatedSelectedCourse($course)
     {
         if (!is_null($course)) {
             $this->sections = Section::where('course_id', $course)->get();
         }
     }
+    // this is for dropdown selected student.
+    public function updatedSelectedStudent($student_id)
+    {
+        if (!is_null($student_id)) {
+            $this->student_data = Student::where('id', $student_id)->get();
+        }
+    }
+
+
+    // public function mount()
+    // {
+    //     $this->students = Student::all();
+    //     $this->courses = collect();
+    //     $this->sections = collect();
+    // }
+
 
     public function render()
     {
         return view('livewire.student-management')
-            ->with('courses', Course::latest()->get());
+            // ->with('courses', Course::latest()->get())
+            // ->with('students', Student::latest()->get())
+        ;
     }
 }
