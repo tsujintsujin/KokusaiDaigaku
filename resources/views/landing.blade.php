@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+    
     <div class="hero container-fluid d-flex vh-100" style="background-image: url({{ asset('image/hero_bg.jpg') }})">
         <div class="ps-2 ms-2 mb-lg-5 pb-lg-5 row">
             <div class="col d-flex justify-content-center align-items-center h-100">
