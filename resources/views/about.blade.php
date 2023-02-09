@@ -145,7 +145,30 @@
     <hr>
 
     <div class="container mb-5 mt-5">
-        <h1 class="text-center color-title fw-bold"><span style="color:#F6C400;">MKD </span>HYMN</h1>
+        <h1 class="text-center color-title fw-bold mb-5"><span style="color:#F6C400;">MKD </span>HYMN</h1>
+        <div class="col-md-3 mx-auto text-center">
+            <p class="h5">
+                Deep from the soul, we sing to you
+                Mindanao Kokusai Daigaku
+                Depp from the heart, we pledge to you
+                Mindanao International College
+                Guided by houshi, gakusai, and shourai
+                Service, experiential learning, and future
+                Your motto, Mindanao Kokusai Daigaku
+                Onward we march to reach our vision
+                Till we fulfill your noble mission
+                Higher and higher, we raise your flag
+                Aiming our dreams into the sky
+                Bright is our destiny with you
+                Mindanao Kokusai Daigaku
+                Global, we go to your success
+                Mindanao international college
+                Your education guides our ambition
+                Shaping our future in life’s great adventure
+                God bless you, Mindanao Kokusai Daigaku
+                Mindanao International College
+            </p>
+        </div>
     </div>
-
+ 
 @endsection
