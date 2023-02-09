@@ -9,7 +9,7 @@
 
                 <div class="col-3">
                     <form wire:submit.prevent="create">
-                        <select wire:model="course_id" id="selectedCourse" class="text-start form-select p-2 pb-2">
+                        <select wire:focus="courseErrorClear" wire:model="course_id" id="selectedCourse" class="text-start form-select p-2 pb-2">
                             <option value="0" selected>Course</option>
                             @foreach ($courses as $course)
                                 <option class="option" value="{{ $course->id }}">
@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-2">
                     <div class="form-outline bg-white rounded p-1">
-                        <input wire:model="name" type="text" id="" class="form-control" name="name" />
+                        <input wire:focus="sectionErrorClear"  wire:model="name" type="text" id="" class="form-control" name="name" />
                         <label class="form-label" for="">Section Name</label>
                     </div>
                     @error('name')

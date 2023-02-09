@@ -25,6 +25,14 @@ class SectionController extends Component
         'name.unique' => 'Section already exist.',
         'course_id.required' => 'Course cannot be empty.',
     ];
+    public function courseErrorClear()
+    {
+        $this->resetValidation('course_id');
+    }
+    public function sectionErrorClear()
+    {
+        $this->resetValidation('name');
+    }
 
     // adding a data in section table
     public function create()
