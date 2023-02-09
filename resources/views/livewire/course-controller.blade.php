@@ -9,24 +9,37 @@
                 <div class="col-6">
                     <form wire:submit.prevent="create">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="name" type="text" id="" class="form-control" name="name" />
+                            <input wire:model="name" wire:focus="courseErrorClear"  type="text" id="" class="form-control" name="name" />
                             <label class="form-label" for="">Course Name (Full)</label>
                         </div>
+                        @error('name')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                 </div>
                 <div class="col-2">
                     <div class="form-outline bg-white rounded p-1">
-                        <input wire:model="abbreviation" type="text" id="" class="form-control"
+                        <input wire:model="abbreviation" wire:focus="abbreviationErrorClear"  type="text" id="" class="form-control"
                             name="abbreviation" />
                         <label class="form-label" for="">Abbreviation</label>
+
+                        {{-- wire:click="clearErrorMessage" --}}
                     </div>
+                    @error('abbreviation')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <div class="row mt-4">
                     <div class="col">
-                        <div class="form-outline mb-4 bg-white rounded ">
-                            <textarea wire:model="description" class="text-area-no-resize form-control " id="" cols="1"
-                                max-rows="4" name="description"></textarea>
-                            <label class="form-label" for="3">Description</label>
+                        <div class="mb-3 ">
+                            <div class="form-outline bg-white rounded m-none">
+                                <textarea wire:model="description" wire:focus="descriptionErrorClear" class="text-area-no-resize form-control " id="" cols="1"
+                                    max-rows="4" name="descriptionErrorClear"></textarea>
+                                <label class="form-label" for="3">Description</label>
+                            </div>
+                            @error('description')
+                                <span class="m-none" class="error">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                 </div>

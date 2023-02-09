@@ -10,18 +10,39 @@ class SectionController extends Component
     public $window = "create";
     public $name;
     public $course_id;
-    public $description;
+
+    protected function rules()
+    {
+        // mga condition sa input ng data sa creating sections
+        return [
+            'name' => 'required|unique:sections,name,NULL,id,course_id,' . $this->course_id,
+            'course_id' => 'required',
+        ];
+    }
+    protected $messages = [
+        // messages for every error of admin
+        'name.required' => 'Section name cannot be empty.',
+        'name.unique' => 'Section already exist.',
+        'course_id.required' => 'Course cannot be empty.',
+    ];
 
     // adding a data in section table
     public function create()
     {
-        $this->window = "create";
-        $section = new Section;
-        $section->name = $this->name;
-        $section->course_id = $this->course_id;
-        $section->description = $this->description;
-        $section->save();
-        $this->reset('name', 'course_id', 'description');
+        $this->validate();
+        // $this->window = "create";
+        // $section = new Section;
+        // $section->name = $this->name;
+        // $section->course_id = $this->course_id;
+        // $section->description = $this->description;
+        // $section->save();
+        // $this->reset('name', 'course_id', 'description');
+
+        Section::create([
+            'name' => $this->name,
+            'course_id' => $this->course_id,
+        ]);
+        $this->reset('name', 'course_id');
     }
 
     // this function is when admin clicked the cancel button when admin is in the edit form.
