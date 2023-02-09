@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 
 class StudentManagement extends Component
 {
-    public $window = "edit";
+    public $window = "create";
     public $selectedSection;
 
     public $studentLastName;
@@ -36,24 +36,86 @@ class StudentManagement extends Component
     public $contactEmail;
     public $contactAddress;
     public $contactRelationship;
-    // $cntct_
+    protected function rules()
+    {
+        // mga condition sa input ng data sa creating stdents
+        return [
+            'selectedCourse' => 'required',
+            'selectedSection' => 'required',
+            'studentLastName' => 'required',
+            'studentFirstName' => 'required',
+            'studentMiddleName' => 'required',
+            'studentGender' => 'required',
+            'studentBirthdate' => 'required',
+            'studentNationality' => 'required',
+            'studentContactNumber' => 'required',
+            'studentEmail' => 'email',
+            'studentAddress' => 'required',
+            'contactLastName' => 'required',
+            'contactFirstName' => 'required',
+            'contactMiddleName' => 'required',
+            'contactGender' => 'required',
+            'contactNationality' => 'required',
+            'contactContactNumber' => 'required',
+            'contactEmail' => 'email',
+            'contactAddress' => 'required',
+            'contactRelationship' => 'required',
+    
+        ];
+    }
+     protected $messages = [
+        'selectedCourse' => 'Select course',
+        'selectedSection' => 'Select section',
+        'studentLastName' => 'Last Name cannot be empty.',
+        'studentFirstName' => 'First Name cannot be empty.',
+        'studentMiddleName' => 'Middle Name cannot be empty.',
+        'studentGender' => 'Select gender',
+        'studentBirthdate' => 'Select birthdate',
+        'studentNationality' => 'Nationality cannot be empty.',
+        'studentContactNumber' => 'Contact number cannot be empty.',
+        'studentEmail' => 'invalid email.',
+        'studentAddress' => 'Address cannot be empty.',
+        'contactLastName' => 'Last Name cannot be empty.',
+        'contactFirstName' => 'First Name cannot be empty.',
+        'contactMiddleName' => 'Last Name cannot be empty.',
+        'contactGender' => 'Select section',
+        'contactNationality' => 'Nationality cannot be empty.',
+        'contactContactNumber' => 'Contact number cannot be empty.',
+        'contactEmail' => 'Invalid email.',
+        'contactAddress' => 'Address cannot be empty.',
+        'contactRelationship' => 'Relationship cannot be empty.',
+    ];
     public function create()
     {
-        $this->window = "create";
-        $student = new Student;
-        $student->course_id = $this->selectedCourse;
-        $student->section_id = $this->selectedSection;
-        $student->last_name = $this->studentLastName;
-        $student->first_name = $this->studentFirstName;
-        $student->middle_name = $this->studentMiddleName;
-        $student->suffix_name = $this->studentSuffixName;
-        $student->gender = $this->studentGender;
-        $student->birthdate = $this->studentBirthdate;
-        $student->nationality = $this->studentNationality;
-        $student->contact_number = $this->studentContactNumber;
-        $student->email = $this->studentEmail;
-        $student->address = $this->studentAddress;
-        $student->save();
+        $this->validate();
+        // $student = new Student;
+        // $student->course_id = $this->selectedCourse;
+        // $student->section_id = $this->selectedSection;
+        // $student->last_name = $this->studentLastName;
+        // $student->first_name = $this->studentFirstName;
+        // $student->middle_name = $this->studentMiddleName;
+        // $student->suffix_name = $this->studentSuffixName;
+        // $student->gender = $this->studentGender;
+        // $student->birthdate = $this->studentBirthdate;
+        // $student->nationality = $this->studentNationality;
+        // $student->contact_number = $this->studentContactNumber;
+        // $student->email = $this->studentEmail;
+        // $student->address = $this->studentAddress;
+        // $student->save();
+        Student::create([
+            'course_id' => $this->selectedCourse,
+            'section_id' => $this->selectedSection,
+            'last_name' => $this->studentLastName,
+            'first_name' => $this->studentFirstName,
+            'middle_name' => $this->studentMiddleName,
+            'suffix_name' => $this->studentSuffixName,
+            'gender' => $this->studentGender,
+            'birthdate' => $this->studentBirthdate,
+            'nationality' => $this->studentNationality,
+            'contact_number' => $this->studentContactNumber,
+            'email' => $this->studentEmail,
+            'address' => $this->studentAddress,
+        ]);
 
         // contact person table
         $contact = new ContactPerson;
@@ -64,6 +126,7 @@ class StudentManagement extends Component
         $contact->gender = $this->contactGender;
         $contact->nationality = $this->contactNationality;
         $contact->contact_number = $this->contactContactNumber;
+        $contact->email = $this->contactEmail;
         $contact->address = $this->contactAddress;
         $contact->save();
 

@@ -17,8 +17,7 @@
                     </button>
                 </div>
             </div>
-            <form wire:submit="create">
-                @csrf
+            <form wire:submit.prevent="create">
                 <div class="row mt-3">
                     <div class="col-2">
 
@@ -48,7 +47,6 @@
                                     @foreach ($sections as $section)
                                         <option class="option" value="{{ $section->id }}">
                                             <a class="dropdown-item" href="#">{{ $section->name }}
-                                                ({{ $section->description }})
                                             </a>
                                         </option>
                                     @endforeach
@@ -65,17 +63,21 @@
                             <input wire:model="studentLastName" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Last Name</label>
                         </div>
+                        @error('studentLastName')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
+                    </div>
+                  
+                    <div class="col">
+                        <div class="form-outline bg-white rounded p-1">
+                            <input wire:model="studentFirstName" type="text" id="" class="form-control" />
+                            <label class="form-label" for="">First Name</label>
+                        </div>
                     </div>
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:model="studentMiddleName" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Middle Name</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentFirstName" type="text" id="" class="form-control" />
-                            <label class="form-label" for="">First Name</label>
                         </div>
                     </div>
                     <div class="col-2">

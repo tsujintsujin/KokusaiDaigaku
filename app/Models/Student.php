@@ -23,6 +23,7 @@ class Student extends Model
         'nationality',
         'contact_number',
         'address',
+        'email'
     ];
     // $table->string('last_name');
     // $table->string('first_name');
