@@ -17,7 +17,7 @@
                     </button>
                 </div>
             </div>
-            <form wire:submit.prevent="create">
+            <form wire:submit="create">
                 @csrf
                 <div class="row mt-3">
                     <div class="col-2">
@@ -254,7 +254,7 @@
             </form>
 
         </div>
-    @else
+    @elseif ($window === 'edit')
         {{-- ----------------------------- else edit----------------------------------- --}}
 
 
@@ -262,7 +262,8 @@
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Find Student Account</h3>
         </div>
-        <form>
+        <form wire:submit="update">
+            
             @csrf
             <div class="row dashboardContainer ps-4 pb-4">
                 <div class="row mt-4">
@@ -295,17 +296,28 @@
                     <div class="col-2">
                         <div class="dropdown">
                             <h6 class="text-muted text-left ps-1">New Course</h6>
-                            <select wire:model="selectedCourse" class="form-select p-2" aria-label="Default select example">
-                                <option value="" selected>No changes</option>
-                                @if (!is_null($selectedStudent))
+                            <select wire:model="selectedCourse" class="form-select p-2"
+                                aria-label="Default select example">
 
-                                    @foreach ($courses as $course)
-                                        <option class="option" value="{{ $course->id }}">
-                                            <a class="dropdown-item" href="#">
-                                                {{ $course->name }}
-                                            </a>
-                                        </option>
+                                @if (!is_null($selectedStudent))
+                                    @foreach ($student_course as $std_course)
+                                        <option value="{{ $std_course->id }}" selected>current:
+                                            {{ $std_course->name }}</option>
+                                        @foreach ($courses as $course)
+                                            @if ($course->id !== $std_course->id)
+                                                <option class="option" value="{{ $course->id }}">
+                                                    <a class="dropdown-item" href="#">
+                                                        {{ $course->name }}
+                                                    </a>
+                                                </option>
+                                            @endif
+                                        @endforeach
                                     @endforeach
+                                @elseif (is_null($selectedStudent))
+                                    <option selected class="option" value="" selected>
+                                        <a class="dropdown-item" href="#">Course
+                                        </a>
+                                    </option>
                                 @endif
                             </select>
                         </div>
@@ -314,16 +326,28 @@
                         <div class="dropdown">
                             <h6 class="text-muted text-left ps-1">New Section</h6>
                             <select class="form-select p-2" aria-label="Default select example">
-                                <option value="" selected>No changes</option>
                                 @if (!is_null($selectedCourse))
-                                @foreach ($sections as $section)
-                                    <option class="option" value="{{ $section->id }}">
-                                        <a class="dropdown-item" href="#">{{ $section->name }}
-                                            ({{ $section->description }})
+                                    @foreach ($student_section as $std_sctn)
+                                        <option selected class="option" value="{{ $std_sctn->id }}">
+                                            <a class="dropdown-item" href="#">current: {{ $std_sctn->name }}
+                                            </a>
+                                        </option>
+                                        @foreach ($sections as $section)
+                                            @if ($section->id !== $std_sctn->id)
+                                                <option class="option" value="{{ $section->id }}">
+                                                    <a class="dropdown-item" href="#">{{ $section->name }}
+                                                        ({{ $section->description }})
+                                                    </a>
+                                                </option>
+                                            @endif
+                                        @endforeach
+                                    @endforeach
+                                @else
+                                    <option selected class="option" value="" selected>
+                                        <a class="dropdown-item" href="#">Section
                                         </a>
                                     </option>
-                                @endforeach
-                            @endif
+                                @endif
                             </select>
                         </div>
                     </div>
@@ -335,7 +359,7 @@
                             @if (!is_null($selectedStudent))
                                 @foreach ($student_data as $student)
                                     <input type="text" id="lname" class="form-control"
-                                        value="{{ $student->last_name }}" />
+                                        wire:model="studentLastName" />
                                     <label class="form-label" for="">Last Name </label>
                                 @endforeach
                             @else
@@ -529,7 +553,7 @@
                         <button class="p-2 me-3 col-2 btn btn-primary">
                             Archive Account
                         </button>
-                        <button wire:click="edit" class="p-2 me-3 col-1 btn btn-primary">
+                        <button class="p-2 me-3 col-1 btn btn-primary">
                             Update
                         </button>
                     </div>

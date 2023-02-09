@@ -18,6 +18,7 @@ class ContactPerson extends Model
         'gender',
         'nationality',
         'contact_number',
+        'email',
         'address',
     ];
 }

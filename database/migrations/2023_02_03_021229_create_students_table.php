@@ -27,6 +27,7 @@ return new class extends Migration
             $table->date('birthdate');
             $table->string('nationality');
             $table->string('contact_number');
+            $table->string('email');
             $table->string('address');
             $table->timestamps();
         });
