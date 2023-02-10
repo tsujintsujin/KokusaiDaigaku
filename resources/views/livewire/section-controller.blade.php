@@ -8,9 +8,10 @@
             <div class="row mt-4">
          
                 <div class="col-3">
+                    <label class="form-label ps-1" for="">Select Course</label>
                     <form wire:submit.prevent="create">
                         <select wire:model="course_id" id="selectedCourse" class="text-start form-select p-2 pb-2">
-                            <option value="0" selected>Course</option>
+                            <option value="0" selected >Course</option>
                             @foreach ($courses as $course)
                                 <option class="option" value="{{ $course->id }}">
                                     <a class="dropdown-item" href="#">{{ $course->name }}
@@ -21,19 +22,20 @@
                         </select>
                 </div>
                 <div class="col-2">
+                    <label class="form-label ps-1" for="">Section Name</label>
                     <div class="form-outline bg-white rounded p-1">
                         <input wire:model="name" type="text" id="" class="form-control" name="name" />
-                        <label class="form-label" for="">Section Name</label>
                     </div>
                 </div>
 
 
                 <div class="row mt-4">
                     <div class="col">
+                        <label class="form-label ps-1" for="">Description</label>
+
                         <div class="form-outline mb-4 bg-white rounded ">
                             <textarea wire:model="description" class="text-area-no-resize form-control " id="" cols="1"
                                 max-rows="4"></textarea>
-                            <label class="form-label" for="3">Description</label>
                         </div>
                     </div>
                 </div>
@@ -170,8 +172,9 @@
         <div class="row dashboardContainer ps-4 pb-4">
             <div class="row mt-4">
                 <div class="col-3">
+                    <label class="form-label ps-1" for="">From Which Course</label>
+
                     <div class="dropdown">
-                        <label for="sectioncourse">From which course</label>
                         <select class="text-start form-select p-2" id="">
                             <option value="0" selected disabled>Select Course</option>
                             <option value="1">1</option>
@@ -182,7 +185,7 @@
                 </div>
                 <div class="col-3">
                     <div class="dropdown">
-                        <label for="">Select Section</label>
+                        <label class="form-label ps-1" for="">Select Section</label>
                         <select class="text-start form-select p-2" id="">
                             <option value="0" selected disabled>Section</option>
                             <option value="1">1</option>
@@ -195,7 +198,7 @@
                     <div class="col">
                         <div class="form-outline mb-4 bg-white rounded ">
                             <textarea disabled class="text-area-no-resize form-control " id="" cols="1" max-rows="4"></textarea>
-                            <label class="form-label" for="">section desription</label>
+                            <label class="form-label" for="">section desription here</label>
                         </div>
                     </div>
                 </div>
@@ -207,7 +210,7 @@
             <div class="row mt-4">
                 <div class="col-3">
                     <div class="dropdown">
-                        <label for="sectioncourse">Transfer other course?</label>
+                        <label class="form-label ps-1" for="sectioncourse">Transfer other course?</label>
                         <select class="text-start form-select p-2 p-2" id="sectioncourse">
                             <option value="0" selected>Do not transfer</option>
                             <option value="1">1</option>
@@ -217,18 +220,19 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="form-outline bg-white rounded p-1 mt-4">
+                    <label class="form-label ps-1" for="">New Section Name</label>
+                    <div class="form-outline bg-white rounded p-1">
                         <input type="text" id="" class="form-control" name="abbr" />
-                        <label class="form-label" for="">New Section Name</label>
+                        
                     </div>
                 </div>
                 {{-- <form action="{{ route('createcourse') }}" method="POST"> --}}
                 {{-- @csrf --}}
                 <div class="row mt-4">
                     <div class="col">
+                        <label class="form-label ps-1" for="">New Description</label>
                         <div class="form-outline mb-4 bg-white rounded ">
                             <textarea class="text-area-no-resize form-control " id="" cols="1" max-rows="4"></textarea>
-                            <label class="form-label" for="3">New Description</label>
                         </div>
                     </div>
                 </div>
