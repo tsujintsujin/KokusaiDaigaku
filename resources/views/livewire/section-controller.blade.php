@@ -4,14 +4,19 @@
             <h3 class="fw-bold pt-2">Sections</h3>
         </div>
         <div class="row dashboardContainer ps-4 pb-4">
-          
+
             <div class="row mt-4">
-         
+
                 <div class="col-3">
                     <label class="form-label ps-1" for="">Select Course</label>
                     <form wire:submit.prevent="create">
+<<<<<<< HEAD
+                        <select wire:focus="courseErrorClear" wire:model="course_id" id="selectedCourse" class="text-start form-select p-2 pb-2">
+                            <option value="0" selected>Course</option>
+=======
                         <select wire:model="course_id" id="selectedCourse" class="text-start form-select p-2 pb-2">
                             <option value="0" selected >Course</option>
+>>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                             @foreach ($courses as $course)
                                 <option class="option" value="{{ $course->id }}">
                                     <a class="dropdown-item" href="#">{{ $course->name }}
@@ -20,25 +25,49 @@
                                 </option>
                             @endforeach
                         </select>
+                        @error('course_id')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                 </div>
                 <div class="col-2">
                     <label class="form-label ps-1" for="">Section Name</label>
                     <div class="form-outline bg-white rounded p-1">
+<<<<<<< HEAD
+                        <input wire:focus="sectionErrorClear"  wire:model="name" type="text" id="" class="form-control" name="name" />
+                        <label class="form-label" for="">Section Name</label>
+=======
                         <input wire:model="name" type="text" id="" class="form-control" name="name" />
+>>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                     </div>
+                    @error('name')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
                 </div>
 
-
-                <div class="row mt-4">
+                {{-- !!!!!!!!  commented out description of section !!!!!!!!!!!! --}}
+                {{-- <div class="row mt-4">
                     <div class="col">
+<<<<<<< HEAD
+                        <div class="mb-4">
+                            <div class="form-outline  bg-white rounded ">
+                                <textarea wire:model="description" class="text-area-no-resize form-control " id="" cols="1"
+                                    max-rows="4"></textarea>
+                                <label class="form-label" for="3">Description</label>
+                            </div>
+                            @error('description')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+=======
                         <label class="form-label ps-1" for="">Description</label>
 
                         <div class="form-outline mb-4 bg-white rounded ">
                             <textarea wire:model="description" class="text-area-no-resize form-control " id="" cols="1"
                                 max-rows="4"></textarea>
+>>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                         </div>
                     </div>
-                </div>
+                </div> --}}
+                {{-- !!!!!!!!  commented out description of section !!!!!!!!!!!! --}}
                 <div class="row d-flex justify-content-end">
                     <button class="p-2 me-3 col-1 btn btn-primary " type="submit">
                         Add
@@ -66,6 +95,7 @@
                                 </option>
                             @endforeach
                         </select>
+
                     </div>
                 </div>
 
@@ -74,12 +104,11 @@
                     <div class="dropdown"><label class="form-label" for="">Section</label>
                         <select class="text-start form-select p-2">
                             <option value="0" selected disabled>Section</option>
-        
+
                             @if (!is_null($selectedCourse))
                                 @foreach ($sections as $section)
                                     <option class="option" value="{{ $section->id }}">
                                         <a class="dropdown-item" href="#">{{ $section->name }}
-                                            ({{ $section->description }})
                                         </a>
                                     </option>
                                 @endforeach

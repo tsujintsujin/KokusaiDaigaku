@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('units');
             $table->string('year_level');
+            $table->string('semester');
             $table->timestamps();
         });
     }

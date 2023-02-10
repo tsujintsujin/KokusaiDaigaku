@@ -16,7 +16,8 @@ class Subject extends Model
         'subject_code',
         'description',
         'units',
-        'year_level'
+        'year_level',
+        'semester'
     ];
 
     public function Course()
