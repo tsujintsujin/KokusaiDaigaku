@@ -74,15 +74,15 @@
     <div class="container mt-5">
         <h1 class="fw-bold color-title text-center">THE PILLARS OF MKD</h1>
         <div class="row text-center mt-5 mb-5">
-            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="300">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="300"  data-aos-duration="2000">
                 <img src="{{ asset('/image/MR-TATSUO-UCHIDA.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">MR. TATSUO UCHIDA</h5>
             </div>
-            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="600">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="600"  data-aos-duration="2000">
             <img src="{{ asset('/image/mrs-ayako-uchida.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">MRS. AYAKO UCHIDA</h5>
             </div>
-            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="900">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="900"  data-aos-duration="2000">
             <img src="{{ asset('/image/REV-MASATAKA-AJIRO.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">REV. MASATAKA AJIRO</h5>
             </div>
@@ -130,7 +130,7 @@
                 by a member of the MKD Board of Trustees,
                 Mr. Ricardo N. Obenza, Jr.
             </div>
-            <div class="col">
+            <div class="col" data-aos="zoom-in" data-aos-duration="1000">
                 <img src="{{ asset('/image/kokusai_meaning.png') }}" class="mb-5">
             </div>
             <div class="col justify-content">

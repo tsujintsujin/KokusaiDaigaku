@@ -5,10 +5,10 @@
         <div class="ps-2 ms-2 mb-lg-5 pb-lg-5 row">
             <div class="col d-flex justify-content-center align-items-center h-100">
                 <div class="col ps-lg-5 ms-lg-5 ps-md-2 ms-md-2">
-                    <h1 class="fw-bold">The No. 1</h1>
-                    <h1 class="fw-bold">Japanese Language College</h1>
-                    <h1 class="fw-bold mb-4">In The Philippines</h1>
-                    <button class="btn btn-lg border-primary fs-6 py-3"> Read More →</button>
+                    <h1 class="fw-bold" data-aos="fade-right"  data-aos-duration="1500" data-aos-delay="150">The No. 1</h1>
+                    <h1 class="fw-bold" data-aos="fade-left"  data-aos-duration="1500" data-aos-delay="300">Japanese Language College</h1>
+                    <h1 class="fw-bold mb-4" data-aos="fade-right"  data-aos-duration="1500" data-aos-delay="450">In The Philippines</h1>
+                    <a href="{{ route('about') }}" class="btn btn-lg border-primary fs-6 py-3" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="800"> Read More →</a>
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
     <!-- Mission, Philosophy, Vision -->
     <div class="container my-5 text-center text-dark d-flex align-items-center">
         <div class="row">
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="300">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
                 <h2 class="fw-bold color-title ">MISSION</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">W</span>e aim to provide a diverse
                     range of
@@ -33,7 +33,7 @@
                     corporate social responsibility in all of
                     our endeavors.</h5>
             </div>
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="600">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000">
                 <h2 class="fw-bold color-title">PHILOSOPHY</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">T</span>he College is dedicated to
                     providing
@@ -52,7 +52,7 @@
                     values to make a positive impact on
                     the world.</>
             </div>
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="900">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="900" data-aos-duration="2000">
                 <h2 class="fw-bold color-title">VISION</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">A</span>n academic community
                     proficient in
@@ -73,16 +73,16 @@
         style="background-image: url({{ asset('/image/admission_bg.jpg') }})">
         <div class="row d-flex justify-content-end  align-content-center h-100">
             <div class="admission-text col-md-8 col-lg-4 text-end">
-                <h1 class="fw-bold color-title" data-aos="fade-right" data-aos-delay="200"><span><img class="yellow-arrow me-3 mb-2"
+                <h1 class="fw-bold color-title" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500"><span><img class="yellow-arrow me-3 mb-2"
                             src="{{ asset('image/left_arrow.png') }}" alt=""></span>ADMISSION</h1>
                 <hr>
-                <h5 data-aos="fade-right" data-aos-delay="400">Please visit the MKD Facebook page for additional info on
+                <h5 data-aos="fade-right" data-aos-delay="400" data-aos-duration="1500">Please visit the MKD Facebook page for additional info on
                     the Online Enrollment for face-to-face schedules.</h5>
-                <h5 data-aos="fade-right" data-aos-delay="400">For an advanced enrollment, you may click on the
+                <h5 data-aos="fade-right" data-aos-delay="400" data-aos-duration="1500">For an advanced enrollment, you may click on the
                     button below. Please provide accurate email address
                     and contact number, so we can contact you directly
                     should you have any lacking requirements.</h5>
-                <button class="btn btn-lg border-primary fs-6 py-3 mt-3" data-aos="fade-right" data-aos-delay="600"> Submit Form →</button>
+                <button class="btn btn-lg border-primary fs-6 py-3 mt-3" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1500"> Submit Form →</button>
             </div>
             <div class="col-lg-1"></div>
         </div>
@@ -121,23 +121,23 @@
         </div>
         <div class="container my-5 py-5 ">
             <div class="color-title row text-center">
-                <div class="col-sm" data-aos="fade-right">
+                <div class="col-sm" data-aos="fade-right"  data-aos-duration="2000">
                     <img src="{{ asset('/image/academics-1.png') }}" width="200" height="200">
                     <p class="fw-bold">International Studies Department</p>
                 </div>
-                <div class="col-sm" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-sm" data-aos="fade-up" data-aos-delay="200"  data-aos-duration="2000">
                     <img src="{{ asset('/image/academics-2.png') }}" width="200" height="200">
                     <p class="fw-bold">Human Services Department</p>
                 </div>
-                <div class="col-sm" data-aos="fade-down" data-aos-delay="400">
+                <div class="col-sm" data-aos="fade-down" data-aos-delay="400" data-aos-duration="2000">
                     <img src="{{ asset('/image/academics-3.png') }}" width="200" height="200">
                     <p class="fw-bold">Education Department</p>
                 </div>
-                <div class="col-sm" data-aos="fade-up" data-aos-delay="600">
+                <div class="col-sm" data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000">
                     <img src="{{ asset('/image/academics-4.png') }}" width="200" height="200">
                     <p class="fw-bold">Information System Department</p>
                 </div>
-                <div class="col-sm" data-aos="fade-left" data-aos-delay="800">
+                <div class="col-sm" data-aos="fade-left" data-aos-delay="800" data-aos-duration="2000">
                     <img src="{{ asset('/image/academics-5.png') }}" width="150" height="200">
                     <p class="fw-bold">Entrepreneurship Department</p>
                 </div>
@@ -148,7 +148,7 @@
         <!-- section 4 -->
         <div class="container my-5 py-5">
             <div class="row mb-5">
-                <div class="col justify-content">
+                <div class="col justify-content" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1500">
                     <h1 class="fw-bold color-title">SCHOLARSHIPS<span><img class="yellow-arrow ms-3 mb-2"
                                 src="{{ asset('image/right_arrow.png') }}" alt=""></span></h1>
                     <h5 class="fw-bold color-title">ACADEMIC SCHOLARSHIPS AND GRANT-IN-AID</h5>
@@ -163,7 +163,7 @@
                         Japanese Nationals.</p>
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col mt-5">
+                <div class="col mt-5" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1500">
                     <h5 class="mx-4 color-title fw-bold">Other Scholarships Offered</h5>
                     <ul class="justify-content">
                         <li>Board of Trustees/Employee Tuition Fee Discount</li>
@@ -228,7 +228,7 @@
 
                 <div class="container mt-3 pt-3">
                     <div class="row mt-3 d-flex justify-content-center">
-                        <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in">
+                        <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-duration="1500">
                             <div class="card text-white border-0 mask">
                                 <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
                             </div>
@@ -244,7 +244,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">
                             <div class="overlay-text d-flex flex-column justify-content-end">
                                 <h5 class="card-title "> One Heart.
                                     One Community.
@@ -262,7 +262,7 @@
                         </div>
                     </div>
                     <div class="row mt-3 d-flex justify-content-center">
-                        <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">
                             <div class="card text-white border-0 mask">
                                 <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
                             </div>
@@ -278,7 +278,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1500">
                             <div class="overlay-text d-flex flex-column justify-content-end">
                                 <h5 class="card-title "> One Heart.
                                     One Community.
@@ -313,7 +313,7 @@
                 </div>
                 <div class="faq container pb-5 mb-5">
                     <div class="row">
-                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5" data-aos="fade-right" data-aos-delay="400">
+                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1500">
                             <div class="row align-items-center">
                                 <div class="col-2 text-title-lines">
                                 </div>
@@ -334,7 +334,7 @@
                                 <h5>&emsp;&emsp;Early Childhood Education</h5>
                             </h5>
                         </div>
-                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5" data-aos="fade-left" data-aos-delay="400">
+                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1500">
                             <div class="row align-items-center">
                                 <div class="col-2 text-title-lines">
                                 </div>

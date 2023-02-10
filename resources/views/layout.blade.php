@@ -24,6 +24,7 @@
                 <img src="kokusai_logo.png">
             </div>
             <div class="col">
+                <h3 class="ps-md-4 ps-lg-5 text-center text-md-start">ミンダナオ国際大学</h3>
                 <h1 class="ps-md-4 ps-lg-5 text-center text-md-start"><span class="firstLetter" style="color:#F6C400;">M</span>indanao <span class="firstLetter"
                         style="color:#F6C400;">K</span>okusai <span class="firstLetter" style="color:#F6C400;">D</span>aigaku</h1>
                 <h6 class="ps-md-4 ps-lg-5 text-center text-md-start">THE NO. 1 JAPANESE LANGUAGE COLLEGE IN THE
