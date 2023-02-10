@@ -6,9 +6,7 @@
         <div class="row dashboardContainer ps-4 pb-4">
             <div class="row mt-4">
                 <div class="col-4">
-
                     <h2 class="fw-bold">Student Account Creation</h2>
-
                 </div>
                 <div class="col"></div>
                 <div class="col-3 d-flex justify-content-end">
@@ -256,9 +254,6 @@
         </div>
     @elseif ($window === 'edit')
         {{-- ----------------------------- else edit----------------------------------- --}}
-
-
-
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Find Student Account</h3>
         </div>

@@ -11,7 +11,7 @@
                 <div class="col-2">
                     <form wire:submit.prevent="create">
                         <div class="dropdown">
-                            <h6 class="text-muted text-left ps-1">Select Course</h6>
+                            <label class="form-label" for="">Select Course</label>
                             <select wire:model="course_id" class="form-select p-2" aria-label="Default select example">
                                 <option value="0" selected>Course</option>
                                 @foreach ($courses as $course)
@@ -26,16 +26,17 @@
                 </div>
                 <div class="col-2">
                     <div class="col">
-                        <div class="form-outline mb-4 bg-white rounded p-1 pt-2 mt-4">
-                            <input wire:model="subject_code" type="text" id="" class="form-control" >
-                            <label class="form-label mt-1" for="">Subject Code</label>
+                        <label class="form-label" for="">Subject Code</label>
+                        <div class="form-outline bg-white rounded p-1">
+                            <input wire:model="subject_code" type="text" id="" class="form-control"/>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="col">
                         <div class="dropdown">
-                            <h6 class="text-muted text-left ps-1">Year Level</h6>
+                            <label class="form-label" for="">Year Level</label>
                             <select wire:model="year_level" class="text-start form-select p-2">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -48,7 +49,7 @@
                     
                     
                 </div>
-                <div class="col-3">
+                {{-- <div class="col-3">
                     <label class="form-label text-muted" for="">Semester: </label>
                     <div class="col text-center pt-1 ps-3 justify-content-start d-flex">
                         <div class="form-check form-check-inline">
@@ -64,13 +65,13 @@
                         </div>
                     </div>
                 </div>
-                
+                 --}}
             </div>
             <div class="row">
                 <div class="col">
+                    <label class="form-label" for="">Description</label>
                     <div class="form-outline mb-4 bg-white rounded ">
                         <textarea wire:model="description" class="text-area-no-resize form-control "  cols="1" max-rows="4"></textarea>
-                        <label class="form-label" for="3">Description</label>
                     </div>
                 </div>
             </div>
@@ -163,7 +164,7 @@
                     </tr>
             </table>
         </div>
-    @else
+    @elseif ($window === 'edit')
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Edit Subject</h3>
         </div>
@@ -171,7 +172,7 @@
             <div class="row my-4">
                 <div class="col-2">
                     <div class="dropdown">
-                        <h6 class="text-muted text-left ps-1">From Course</h6>
+                        <label class="form-label" for="">From Course</label>
                         <select class="text-start form-select p-2">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -182,7 +183,7 @@
                 <div class="col-2">
                     <div class="col">
                         <div class="dropdown">
-                            <h6 class="text-muted text-left ps-1">Subject Code</h6>
+                            <label class="form-label" for="">Subject Code</label>
                             <select class="text-start form-select p-2">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -193,24 +194,24 @@
                 </div>
 
                 <div class="col-1">
-                    <div class="mb-4 rounded p-1 mt-4 pt-2">
+                    <div class="mb-4 rounded p-1 mt-4 pt-3">
                         <h5 class="form-label">3 Units</h5>
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="mb-4 rounded p-1 mt-4 pt-2">
+                    <div class="mb-4 rounded p-1 mt-4 pt-3">
                         <h5 class="form-label">Year Level</h5>
                     </div>
                 </div>
                 <div class="col-12 mt-4">
                     <div class="form-outline mb-4 rounded ">
-                        <textarea readonly class="text-area-no-resize form-control">asdasdsa</textarea>
+                        <textarea readonly class="text-area-no-resize form-control">desc here</textarea>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-2">
-                    <h6 class="text-muted text-left ps-1">Transfer to Course</h6>
+                    <label class="form-label" for="">Transfer to Course</label>
                     <select class="text-start form-select p-2">
                         <option value="0">Do not transfer</option>
                         <option value="1">1</option>
@@ -219,19 +220,22 @@
                     </select>
                 </div>
                 <div class="col-2">
+                    <label class="form-label" for="">New Subject Code</label>
+
                     <div class="col">
                         <div class="dropdown">
-                            <div class="col pt-1">
-                                <div class="form-outline bg-white rounded mt-4">
+                            <div class="col">
+                                <div class="form-outline bg-white rounded">
                                     <input type="text" id="" class="form-control p-2">
-                                    <label class="form-label" for="">New Subject Code</label>
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-1 pt-1">
-                    <select class="text-start mt-4 form-select p-2">
+                <div class="col-1">
+                    <label class="form-label" for="">Units</label>
+                    <select class="text-start form-select p-2">
                         <option disabled selected value="0">Units</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -241,7 +245,7 @@
                 <div class="col-2">
                     <div class="col">
                         <div class="dropdown">
-                            <h6 class="text-muted text-left ps-1">Year Level</h6>
+                            <label class="form-label" for="">Year Level</label>
                             <select class="text-start form-select p-2">
                                 <option selected value="0">No changes</option>
                                 <option value="1">1</option>
@@ -252,9 +256,10 @@
                     </div>
                 </div>
                 <div class="col-12 mt-4">
+                    <label class="form-label" for="">New Description</label>
+
                     <div class="form-outline mb-4 bg-white rounded p-0">
                         <textarea class="text-area-no-resize form-control " id="" cols="1" max-rows="4"></textarea>
-                        <label class="form-label" for="">New Description</label>
                     </div>
                 </div>
             </div>

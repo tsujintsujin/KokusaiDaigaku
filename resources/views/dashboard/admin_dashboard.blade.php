@@ -4,12 +4,7 @@
     <div class="container justify-content-center col-9 py-5 rounded-top-left-1 rounded-top-right-1">
         <div class="row">
             <div class="col text-center  d-flex flex-column">
-                {{-- <div class="col text-end">
-                    <h1 class="date-heading fw-bold">{{ $date->monthName }} {{ $date->day }}<br>
-                        {{ $date->year }}</h1>
-                </div>
-                <div class="col text-end">
-                </div> --}}
+                
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -138,19 +133,19 @@
                     @foreach ($Course as $course)
                         <tr>
                             <th>{{ $course->name }} ({{ $course->abbreviation }})</th>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
+                            <th>{{$course->Subject->count()}}</th>
+                            <th>--</th>
+                            <th>{{$course->Section->count()}}</th>
+                            <th>{{$course->Student->count()}}</th>
                         </tr>
                     @endforeach
                 @else
                     <tr>
                         <th>--</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
                     </tr>
                 @endif
         </table>
