@@ -84,8 +84,8 @@
                                             id="1">
                                     </div>
                                 </th>
-                                <td><label class="ms-1" for="1">Sheena Maria Silveria Soriano Isorena</label>
-                                </td>
+                                <th><label class="ms-1" for="1">Sheena Maria Silveria Soriano Isorena</label>
+                                </th>
                             </tr>
                             <tr>
                                 <th class="d-flex justify-content-center">
@@ -94,7 +94,7 @@
                                             id="2">
                                     </div>
                                 </th>
-                                <td><label class="ms-1" for="2">Clarence P</label></td>
+                                <th><label class="ms-1" for="2">Clarence P</label></th>
                             </tr>
                     </table>
                 </div>
@@ -147,8 +147,8 @@
                                             id="11">
                                     </div>
                                 </th>
-                                <td><label class="ms-1" for="11">English</label>
-                                </td>
+                                <th><label class="ms-1" for="11">English</label>
+                                </th>
                             </tr>
                             <tr>
                                 <th class="d-flex justify-content-center">
@@ -157,7 +157,7 @@
                                             id="22">
                                     </div>
                                 </th>
-                                <td><label class="ms-1" for="22">Math</label></td>
+                                <th><label class="ms-1" for="22">Math</label></th>
                             </tr>
                     </table>
                 </div>

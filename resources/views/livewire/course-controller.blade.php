@@ -104,6 +104,9 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    
+                    @if (@isset($course))
                     @foreach ($course::find($currentCourse)->subject as $courseSubject)
                         @if ($courseSubject->count() > 0)
                             <tr>
@@ -121,9 +124,11 @@
                             </tr>
                         @endif
                     @endforeach
+                    @endif
+
             </table>
         </div>
-    @else
+    @elseif($window === 'edit')
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Edit Course</h3>
         </div>
