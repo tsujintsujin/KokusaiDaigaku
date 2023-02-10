@@ -78,7 +78,6 @@
                         <label class="form-label ps-1" for="">Middle Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentFirstNameErrorClear" wire:model="studentFirstName" type="text" id="" class="form-control" />
-                            <label class="form-label" for="">First Name</label>
                         </div>
                         @error('studentFirstName')
                             <span class="error">{{ $message }}</span>
@@ -88,7 +87,6 @@
                         <label class="form-label ps-1" for="">First Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentMiddleNameErrorClear" wire:model="studentMiddleName" type="text" id="" class="form-control" />
-                            <label class="form-label" for="">Middle Name</label>
                         </div>
                         @error('studentMiddleName')
                             <span class="error">{{ $message }}</span>
@@ -108,6 +106,7 @@
 
                 <div class="row">
                     <div class="col text-center pt-2">
+                        <label class="form-label ps-1" for="">Gender</label>
                         <div>
                             <div class="form-check form-check-inline">
                                 <input  wire:focus="studentGenderErrorClear" wire:model="studentGender" class="form-check-input" type="radio"
@@ -128,9 +127,9 @@
                     </div>
 
                     <div class="col">
+                        <label class="form-label ps-1" for="">Nationality</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentNationalityErrorClear" wire:model="studentNationality" type="text" id="" class="form-control" />
-                            <label class="form-label" for="">Nationality</label>
                         </div>
                         @error('studentNationality')
                             <span class="error">{{ $message }}</span>
