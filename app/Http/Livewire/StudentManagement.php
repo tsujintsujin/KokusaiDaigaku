@@ -14,8 +14,7 @@ use Illuminate\Support\Facades\Hash;
 class StudentManagement extends Component
 {
     public $window = "create";
-    public $selectedSection;
-
+    
     public $studentLastName;
     public $studentFirstName;
     public $studentMiddleName;
@@ -23,7 +22,7 @@ class StudentManagement extends Component
     public $studentGender;
     public $studentBirthdate;
     public $studentNationality;
-    public $studentContactNumber ='09';
+    public $studentContactNumber = '09';
     public $studentEmail;
     public $studentAddress;
     public $contactLastName;
@@ -36,6 +35,7 @@ class StudentManagement extends Component
     public $contactEmail;
     public $contactAddress;
     public $contactRelationship;
+    public $selectedSection;
     protected function rules()
     {
         // mga condition sa input ng data sa creating stdents
@@ -62,7 +62,7 @@ class StudentManagement extends Component
             'contactRelationship' => 'required',
         ];
     }
-     protected $messages = [
+    protected $messages = [
         'selectedCourse' => 'Select course',
         'selectedSection' => 'Select section',
         'studentLastName' => 'Last Name cannot be empty.',
@@ -117,40 +117,52 @@ class StudentManagement extends Component
     public function studentBirthdateErrorClear()
     {
         $this->resetValidation('studentBirthdate');
-    }  public function studentContactNumberErrorClear()
+    }
+    public function studentContactNumberErrorClear()
     {
         $this->resetValidation('studentContactNumber');
-    }  public function studentEmailErrorClear()
+    }
+    public function studentEmailErrorClear()
     {
         $this->resetValidation('studentEmail');
-    }  public function studentAddressErrorClear()
+    }
+    public function studentAddressErrorClear()
     {
         $this->resetValidation('studentAddress');
-    }  public function contactLastNameErrorClear()
+    }
+    public function contactLastNameErrorClear()
     {
         $this->resetValidation('contactLastName');
-    }  public function contactFirstNameErrorClear()
+    }
+    public function contactFirstNameErrorClear()
     {
         $this->resetValidation('contactFirstName');
-    }  public function contactMiddleNameErrorClear()
+    }
+    public function contactMiddleNameErrorClear()
     {
         $this->resetValidation('contactMiddleName');
-    }  public function contactGenderErrorClear()
+    }
+    public function contactGenderErrorClear()
     {
         $this->resetValidation('contactGender');
-    }  public function contactNationalityErrorClear()
+    }
+    public function contactNationalityErrorClear()
     {
         $this->resetValidation('contactNationality');
-    }  public function contactRelationshipErrorClear()
+    }
+    public function contactRelationshipErrorClear()
     {
         $this->resetValidation('contactRelationship');
-    }  public function contactContactNumberErrorClear()
+    }
+    public function contactContactNumberErrorClear()
     {
         $this->resetValidation('contactContactNumber');
-    }  public function contactEmailErrorClear()
+    }
+    public function contactEmailErrorClear()
     {
         $this->resetValidation('contactEmail');
-    }  public function contactAddressErrorClear()
+    }
+    public function contactAddressErrorClear()
     {
         $this->resetValidation('contactAddress');
     }
@@ -158,20 +170,6 @@ class StudentManagement extends Component
     {
         // dump('hellow world');
         $this->validate();
-        // $student = new Student;
-        // $student->course_id = $this->selectedCourse;
-        // $student->section_id = $this->selectedSection;
-        // $student->last_name = $this->studentLastName;
-        // $student->first_name = $this->studentFirstName;
-        // $student->middle_name = $this->studentMiddleName;
-        // $student->suffix_name = $this->studentSuffixName;
-        // $student->gender = $this->studentGender;
-        // $student->birthdate = $this->studentBirthdate;
-        // $student->nationality = $this->studentNationality;
-        // $student->contact_number = $this->studentContactNumber;
-        // $student->email = $this->studentEmail;
-        // $student->address = $this->studentAddress;
-        // $student->save();
         Student::create([
             'course_id' => $this->selectedCourse,
             'section_id' => $this->selectedSection,
@@ -206,6 +204,7 @@ class StudentManagement extends Component
         $contact_person_student->contact_person_id = ContactPerson::orderBy('id', 'desc')->first()->id;
         $contact_person_student->student_id = Student::orderBy('id', 'desc')->first()->id;
         $contact_person_student->save();
+        
         StudentAccount::create([
             'username' => Student::orderBy('id', 'desc')->first()->id,
             'student_id' => Student::orderBy('id', 'desc')->first()->id,
@@ -250,14 +249,17 @@ class StudentManagement extends Component
 
     public function edit()
     {
-        $this->window = "edit";
         $this->resetElements();
+        $this->reset('selectedCourse', 'selectedSection');
+        $this->window = "edit";
     }
     public function back()
     {
+        $this->resetElements();
+        $this->reset('selectedCourse', 'selectedSection');
         $this->window = "create";
         // $this->reset('selectedSection');
-        $this->resetElements();
+
     }
 
     // for dropdwons

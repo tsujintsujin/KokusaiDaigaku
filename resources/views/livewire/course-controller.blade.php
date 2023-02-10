@@ -80,7 +80,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($course::find($currentCourse)->subject as $courseSubject)
+                    {{-- @foreach ($course::find($currentCourse)->subject as $courseSubject)
                         @if ($courseSubject->count() > 0)
                             <tr>
                                 <th>{{ $courseSubject->subject_code }}</th>
@@ -96,7 +96,7 @@
                                 <th>--</th>
                             </tr>
                         @endif
-                    @endforeach
+                    @endforeach --}}
             </table>
         </div>
     @else

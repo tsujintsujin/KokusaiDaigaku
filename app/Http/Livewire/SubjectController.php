@@ -13,8 +13,8 @@ class SubjectController extends Component
     public $subject_code;
     public $description;
     public $units;
-    public $year_level;
-    public $semester;
+    public $year_level = '1';
+    // public $semester;
     protected function rules()
     {
         // mga condition sa input ng data sa creating subjects
@@ -23,7 +23,7 @@ class SubjectController extends Component
             'subject_code' => 'required',
             // |unique:subjects,subject_code,NULL,id,year_level,' . $this->year_level,
             'year_level' => 'required',
-            'semester' => 'required',
+            // 'semester' => 'required',
             'description' => 'required',
             'units' => 'required',
         ];
@@ -35,7 +35,7 @@ class SubjectController extends Component
         'subject_code.required' => 'Subject cannot be empty.',
         // 'subject_code.unique' => 'Subject already exist in thisyear level.',
         'year_level.required' => 'Select year level.',
-        'semester' => 'Select semester',
+        // 'semester' => 'Select semester',
         'description.required' => 'Description cannot be empty.',
         'units.required' => 'Select units.',
     ];
@@ -52,10 +52,10 @@ class SubjectController extends Component
     {
         $this->resetValidation('year_level');
     }
-    public function semesterErrorClear()
-    {
-        $this->resetValidation('semester');
-    }
+    // public function semesterErrorClear()
+    // {
+    //     $this->resetValidation('semester');
+    // }
     public function descriptionErrorClear()
     {
         $this->resetValidation('description');
@@ -82,9 +82,8 @@ class SubjectController extends Component
             'description' => $this->description,
             'units' => $this->units,
             'year_level' => $this->year_level,
-            'semester' => $this->semester,
         ]);
-        $this->reset('course_id', 'subject_code','description','units','year_level','semester');
+        $this->reset('course_id', 'subject_code','description','units','year_level');
 
     }
 

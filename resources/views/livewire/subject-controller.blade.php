@@ -85,8 +85,8 @@
             <div class="row">
                 <div class="col-1">
                     <select wire:model="units" class="form-select p-2">
-                        <option disabled value="0">Units</option>
-                        <option selected value="1">1</option>
+                        <option selected  value="">Units</option>
+                        <option  value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>

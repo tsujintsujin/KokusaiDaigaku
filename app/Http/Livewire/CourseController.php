@@ -9,6 +9,7 @@ class CourseController extends Component
 {
 
     public $window = "create";
+    public $currentCourse = '1';
     public $name;
     public $abbreviation;
     public $description;
@@ -74,7 +75,7 @@ class CourseController extends Component
 
     // this function is when admin clicked the cancel button when admin is in the edit form.
 
-    public $currentCourse = '1';
+  
 
 
     // this function is when admin clicked the cancel button when admin is in the edit form.
