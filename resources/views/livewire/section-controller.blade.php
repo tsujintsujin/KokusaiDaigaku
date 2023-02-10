@@ -103,60 +103,60 @@
                 <tbody>
                     <tr>
                         <th>Math 1</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>-- -- --</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>-- -- --</th>
                     </tr>
                     <tr>
                         <th>Math 2</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>-- -- --</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>-- -- --</th>
 
                     </tr>
                     <tr>
                         <th>Math 3</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>-- -- --</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>-- -- --</th>
                     </tr>
                     <tr>
                         <th>Math 4</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>-- -- --</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>-- -- --</th>
                     </tr>
                     <tr>
                         <th>Math 5</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>-- -- --</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>-- -- --</th>
                     </tr>
                     <tr>
                         <th>Math 6</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>-- -- --</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>-- -- --</th>
                     </tr>
                     <tr>
                         <th>BSIT</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>-- -- --</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>-- -- --</th>
                     </tr>
                     <tr>
                         <th>Math 8</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>-- -- --</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>-- -- --</th>
                     </tr>
             </table>
         </div>

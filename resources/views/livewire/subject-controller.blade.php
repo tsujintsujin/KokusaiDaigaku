@@ -124,41 +124,41 @@
                 <tbody>
                     <tr>
                         <th>Math 1</th>
-                        <td>--</td> {{-- class="text-truncate"  data-bs-toggle="tooltip"
+                        <th>--</th> {{-- class="text-truncate"  data-bs-toggle="tooltip"
                                                             data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                                                             data-bs-title="Description sample" --}}
-                        <td>--</td>
-                        <td>--</td>
+                        <th>--</th>
+                        <th>--</th>
                     </tr>
                     <tr>
                         <th>Math 2</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
                     </tr>
                     <tr>
                         <th>Math 3</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
                     </tr>
                     <tr>
                         <th>Math 4</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
                     </tr>
                     <tr>
                         <th>Math 5</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
                     </tr>
                     <tr>
                         <th>Math 6</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
                     </tr>
             </table>
         </div>

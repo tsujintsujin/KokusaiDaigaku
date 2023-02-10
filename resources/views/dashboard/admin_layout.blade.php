@@ -14,11 +14,11 @@
 
 <body>
     <div class="container-fluid ps-0">
-        <div class="row">
-            <div class="col-2">
+        <div class="row d-flex">
+            <div class="col-2" id="navCol">
                 @include('dashboard.admin_sidenav')
             </div>
-            <div class="col d-flex justify-content-end p-0">
+            <div class="col d-flex justify-content-center p-0">
                 @yield('content')
             </div>
         </div>

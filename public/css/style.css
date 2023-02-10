@@ -271,27 +271,54 @@ font-size: 96px;
     background-color: #393280;
     /* height: 100vh; */
     position: fixed !important;
-
+    z-index: 100;
+    transition: ease-in-out 0.3s;
+   
 }
-
-
+#sidebar.active {
+    margin-left: -280px;
+    transition: ease-in-out 0.3s;
+}
 
 #navToggle {
-    width: 30px;
-    height: 30px;
-    right: -15;
-    top: 100;
-    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    right: -20;
+    top: 215;
     position:absolute !important;
     cursor: pointer;
+    transition: ease-in-out 0.3s;
 }
 
+#navToggle.active {
+    right: -60;
+    top: 10;
+    transition: ease-in-out 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#navToggle:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom, rgba(106,17,203,0.5), rgba(37,117,252,0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, rgba(106,17,203,0.5), rgba(37,117,252,0.5))
+  }
 
 
-
-
-
-
-
-
-
+  .gradient-2 {
+    /* fallback for old browsers */
+    background: #6a85b6;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to top, rgba(106,133,182,0.5), rgba(186,200,224,0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top, rgba(106,133,182,0.5), rgba(186,200,224,0.5))
+  }

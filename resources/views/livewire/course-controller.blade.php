@@ -79,7 +79,7 @@
                         @if ($courseSubject->count() > 0)
                             <tr>
                                 <th>{{ $courseSubject->subject_code }}</th>
-                                <th>{{ $courseSubject->description }}</th>
+                                <th>{{ $courseSubject->subject_code }}</th>
                                 <th>--</th>
                                 <th>--</th>
                             </tr>

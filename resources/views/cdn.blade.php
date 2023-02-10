@@ -17,4 +17,5 @@
    <!-- animation on scroll -->
    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-   <!-- MDB -->
+
+    <script src="js/sidenav.js"></script>   
