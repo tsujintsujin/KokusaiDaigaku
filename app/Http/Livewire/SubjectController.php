@@ -44,7 +44,6 @@ class SubjectController extends Component
 
     public function render()
     {
-        $this->window = "create";
         return view('livewire.subject-controller')
         ->with('courses', Course::latest()->get());
     }

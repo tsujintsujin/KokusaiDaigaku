@@ -28,9 +28,9 @@
                     <div class="col">
                         <label class="form-label" for="">Subject Code</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="subject_code" type="text" id="" class="form-control"/>
+                            <input wire:model="subject_code" type="text" id="" class="form-control" />
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="col-2">
@@ -46,8 +46,6 @@
                             </select>
                         </div>
                     </div>
-                    
-                    
                 </div>
                 {{-- <div class="col-3">
                     <label class="form-label text-muted" for="">Semester: </label>
@@ -71,14 +69,14 @@
                 <div class="col">
                     <label class="form-label" for="">Description</label>
                     <div class="form-outline mb-4 bg-white rounded ">
-                        <textarea wire:model="description" class="text-area-no-resize form-control "  cols="1" max-rows="4"></textarea>
+                        <textarea wire:model="description" class="text-area-no-resize form-control " cols="1" max-rows="4"></textarea>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-1">
                     <select wire:model="units" class="form-select p-2">
-                        <option  disabled value="0">Units</option>
+                        <option disabled value="0">Units</option>
                         <option selected value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -165,6 +163,8 @@
             </table>
         </div>
     @elseif ($window === 'edit')
+        {{-- ----------------------------------------------edit-------------------------------------------------- --}}
+
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Edit Subject</h3>
         </div>
@@ -219,29 +219,31 @@
                         <option value="3">3</option>
                     </select>
                 </div>
-                <div class="col-2">
-                    <label class="form-label" for="">New Subject Code</label>
 
+                <div class="col-2">
                     <div class="col">
-                        <div class="dropdown">
-                            <div class="col">
-                                <div class="form-outline bg-white rounded">
-                                    <input type="text" id="" class="form-control p-2">
-                                   
-                                </div>
-                            </div>
+                        <label class="form-label" for="">New Subject Code</label>
+                        <div class="form-outline bg-white rounded p-1">
+                            <input wire:model="subject_code" type="text" id="" class="form-control"/>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="col-1">
-                    <label class="form-label" for="">Units</label>
-                    <select class="text-start form-select p-2">
-                        <option disabled selected value="0">Units</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+                    <div class="col">
+                        <div class="dropdown">
+                            <label class="form-label" for="">Units</label>
+                              <select class="text-start form-select p-2">
+                                <option disabled selected value="0">Units</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
+
+                
                 <div class="col-2">
                     <div class="col">
                         <div class="dropdown">
