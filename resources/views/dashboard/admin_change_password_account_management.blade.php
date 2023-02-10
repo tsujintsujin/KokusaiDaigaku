@@ -25,8 +25,8 @@
                         <tbody>
                             <tr>
                                 <th>543654754</th>
-                                <td>Justin M</td>
-                                <td class="col text-center d-flex align-items-center">
+                                <th>Justin M</th>
+                                <th class="col text-center d-flex align-items-center">
                                     <div class="col-4"></div>
                                     <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
                                                 class="vri-icon" src="{{ asset('image/view_active.png') }}"
@@ -38,12 +38,12 @@
                                                 class="vri-icon" src="{{ asset('image/ignore.png') }}"
                                                 alt=""></button></div>
                                     <div class="col-3"></div>
-                                </td>
+                                </th>
                             </tr>
                             <tr>
                                 <th>543654711</th>
-                                <td>Ralph C</td>
-                                <td class="col text-center d-flex align-items-center">
+                                <th>Ralph C</th>
+                                <th class="col text-center d-flex align-items-center">
                                     <div class="col-4"></div>
                                     <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
                                                 class="vri-icon" src="{{ asset('image/view.png') }}"
@@ -55,12 +55,12 @@
                                                 class="vri-icon" src="{{ asset('image/ignore.png') }}"
                                                 alt=""></button></div>
                                     <div class="col-3"></div>
-                                </td>
+                                </th>
                             </tr>
                             <tr>
                                 <th>543624711</th>
-                                <td>Clarence P</td>
-                                <td class="col text-center d-flex align-items-center">
+                                <th>Clarence P</th>
+                                <th class="col text-center d-flex align-items-center">
                                     <div class="col-4"></div>
                                     <div class="col"><button class="btn p-0 mx-2 border-0 shadow-none"><img
                                                 class="vri-icon" src="{{ asset('image/view.png') }}"
@@ -72,7 +72,7 @@
                                                 class="vri-icon" src="{{ asset('image/ignore.png') }}"
                                                 alt=""></button></div>
                                     <div class="col-3"></div>
-                                </td>
+                                </th>
                             </tr>
                     </table>
                 </div>
