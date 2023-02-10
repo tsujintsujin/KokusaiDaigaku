@@ -18,4 +18,9 @@ class Subject extends Model
         'units',
         'year_level'
     ];
+
+    public function Course()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }

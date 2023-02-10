@@ -169,3 +169,9 @@ Route::post('/createstudent', [StudentController::class, 'create'])->name('creat
 
 
 Route::get('/admin', [AdminHome::class, 'admin'])->name('admin');
+
+
+
+Route::get('/cal', function () {
+    return view('dashboard.cal');
+})->name('cal');

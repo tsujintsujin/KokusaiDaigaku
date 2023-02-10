@@ -16,4 +16,9 @@ class Course extends Model
         'description',
         'abbreviation'
     ];
+
+    public function Subject()
+    {
+        return $this->hasMany(Subject::class);
+    }
 }
