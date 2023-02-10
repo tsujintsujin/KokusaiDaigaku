@@ -167,7 +167,6 @@
                         <label class="form-label ps-1" for="">Email</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentEmailErrorClear" wire:model="studentEmail" type="email" id="" class="form-control" />
-                            <label class="form-label" for="">Email</label>
                         </div>
                         @error('studentEmail')
                             <span class="error">{{ $message }}</span>
@@ -177,7 +176,6 @@
                         <label class="form-label ps-1" for="">Address</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentAddressErrorClear" wire:model="studentAddress" type="text" id="" class="form-control" />
-                            <label class="form-label" for="">Address</label>
                         </div>
                         @error('studentAddress')
                             <span class="error">{{ $message }}</span>
@@ -279,7 +277,6 @@
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactRelationshipErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactRelationship" />
-                            <label class="form-label ps-1" for=""></label>
                         </div>
                         @error('contactRelationship')
                             <span class="error">{{ $message }}</span>
@@ -306,7 +303,6 @@
                         <label class="form-label ps-1" for="">Email</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactEmailErrorClear" type="email" id="" class="form-control" wire:model="contactEmail" />
-                            <label class="form-label" for="">Email</label>
                         </div>
                         @error('contactEmail')
                             <span class="error">{{ $message }}</span>
@@ -316,7 +312,6 @@
                         <label class="form-label ps-1" for="">Address</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactAddressErrorClear" type="text" id="" class="form-control" wire:model="contactAddress" />
-                            <label class="form-label" for="">Address</label>
                         </div>
                         @error('contactAddress')
                             <span class="error">{{ $message }}</span>
