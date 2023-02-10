@@ -1,7 +1,8 @@
 @extends('dashboard.admin_layout')
+@include('cal_css')
 @section('title', 'Pre_Enrolls')
 @section('content')
-    <div class="container justify-content-center col-9 py-5 rounded-top-left-1 rounded-top-right-1">
+<div class="container-fluid justify-content-center p-5  ms-3 me-4 rounded-top-left-1 rounded-top-right-1" id="contentM">
         <div class="row d-flex">
             <div class="col-7 dashboardContainer d-flex flex-column rounded-top">
                 <div class="row dashboardTitleContainer ps-4 rounded-top">
@@ -78,24 +79,19 @@
                     </table>
                 </div>
             </div>
-
             <div class="col ps-5 ms-5">
                 <h1 class="fw-bold">Justin Masiga</h1>
+                <h5>Enrolling For:</h5>
                 <h5>Bachelor in Science Major
                     in Computer Science</h5>
-                <h5>Section: WD 29</h5>
                 <div class="mt-5">
                     <h5>Nationality</h5>
                     <h5>Gender</h5>
-                    <h5>Phone Number</h5>
                     <h5>Birthdate</h5>
-                    <h5>Email</h5>
+                    <h5>Phone Number</h5>
+                    <h5>Email</h5> 
                     <h5>Address</h5>
-                    <h2 class="fw-bold mt-5 text-muted">Enrolling For</h2>
-                    <h3 class="fw-bold">2nd Semester</h3>
-                    <h3 class="fw-bold">S.Y. 2022-2023</h3>
                 </div>
-
             </div>
         </div>
     @endsection

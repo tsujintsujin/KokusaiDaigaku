@@ -8,21 +8,31 @@
             <div class="row mt-4">
                 <div class="col-6">
                     <form wire:submit.prevent="create">
+                        <label class="form-label" for="">Course Name (Full)</label>
                         <div class="form-outline bg-white rounded p-1">
+<<<<<<< HEAD
                             <input wire:model="name" wire:focus="courseErrorClear"  type="text" id="" class="form-control" name="name" />
                             <label class="form-label" for="">Course Name (Full)</label>
+=======
+                            <input wire:model="name" type="text" id="" class="form-control" name="name" />
+>>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                         </div>
                         @error('name')
                             <span class="error">{{ $message }}</span>
                         @enderror
                 </div>
                 <div class="col-2">
+                    <label class="form-label" for="">Abbreviation</label>
                     <div class="form-outline bg-white rounded p-1">
                         <input wire:model="abbreviation" wire:focus="abbreviationErrorClear"  type="text" id="" class="form-control"
                             name="abbreviation" />
+<<<<<<< HEAD
                         <label class="form-label" for="">Abbreviation</label>
 
                         {{-- wire:click="clearErrorMessage" --}}
+=======
+
+>>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                     </div>
                     @error('abbreviation')
                         <span class="error">{{ $message }}</span>
@@ -31,6 +41,7 @@
 
                 <div class="row mt-4">
                     <div class="col">
+<<<<<<< HEAD
                         <div class="mb-3 ">
                             <div class="form-outline bg-white rounded m-none">
                                 <textarea wire:model="description" wire:focus="descriptionErrorClear" class="text-area-no-resize form-control " id="" cols="1"
@@ -40,6 +51,13 @@
                             @error('description')
                                 <span class="m-none" class="error">{{ $message }}</span>
                             @enderror
+=======
+                        <label class="form-label" for="3">Description</label>
+                        <div class="form-outline mb-4 bg-white rounded ">
+                            <textarea wire:model="description" class="text-area-no-resize form-control " id="" cols="1"
+                                max-rows="4" name="description"></textarea>
+
+>>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                         </div>
                     </div>
                 </div>
@@ -59,85 +77,50 @@
         <div class="ps-4 mt-3">
             <div class="col-4">
                 <div class="dropdown"><label class="form-label" for="">View Course</label>
-                    <select class="text-start form-select p-2">
+                    <select class="text-start form-select p-2" wire:model="currentCourse">
                         <option value="0" selected disabled>Course</option>
-                        @foreach (App\Models\Course::latest()->get() as $course)
-                            <option>
+                        {{-- @foreach (App\Models\Course::latest()->get() as $course) --}}
+
+                        @foreach ($Course as $course)
+                            <option value="{{ $course->id }}">
                                 <a class="dropdown-item" href="#">{{ $course->name }}
                                     ({{ $course->abbreviation }})
                                 </a>
                             </option>
                         @endforeach
+
                     </select>
                 </div>
             </div>
+
+
             <table class="table mt-5">
                 <thead>
                     <tr>
-                        <th>Active Courses</th>
                         <th>Subjects</th>
-                        <th>Total Average Grade</th>
-                        <th>Sections</th>
-                        <th>Students</th>
+                        <th>Description</th>
+                        <th># of Students</th>
+                        <th>Average Grade</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>Math 1</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 2</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 3</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 4</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 5</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 6</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>BSIT</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <th>Math 8</th>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
+                    @foreach ($course::find($currentCourse)->subject as $courseSubject)
+                        @if ($courseSubject->count() > 0)
+                            <tr>
+                                <th>{{ $courseSubject->subject_code }}</th>
+                                <th>{{ $courseSubject->subject_code }}</th>
+                                <th>--</th>
+                                <th>--</th>
+                            </tr>
+                        @else
+                            <tr>
+                                <th></th>
+                                <th>--</th>
+                                <th>--</th>
+                                <th>--</th>
+                            </tr>
+                        @endif
+                    @endforeach
             </table>
         </div>
     @else
@@ -177,22 +160,25 @@
             <h2 class="fw-bold mt-5">Update Course to:</h2>
             <div class="row mt-4">
                 <div class="col-6">
+                    <label class="form-label" for="">Course Name (Full)</label>
+
                     <div class="form-outline bg-white rounded p-1">
                         <input type="text" id="" class="form-control" name="name" />
-                        <label class="form-label" for="">Course Name (Full)</label>
                     </div>
                 </div>
                 <div class="col-2">
+                    <label class="form-label" for="">Abbreviation</label>
+
                     <div class="form-outline bg-white rounded p-1">
                         <input type="text" id="" class="form-control" name="abbr" />
-                        <label class="form-label" for="">Abbreviation</label>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col">
+                        <label class="form-label" for="3">Description</label>
+
                         <div class="form-outline mb-4 bg-white rounded ">
                             <textarea class="text-area-no-resize form-control " id=""></textarea>
-                            <label class="form-label" for="3">Description</label>
                         </div>
                     </div>
                     <div class="row d-flex justify-content-end">

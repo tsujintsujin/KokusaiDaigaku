@@ -4,25 +4,24 @@
             <h3 class="fw-bold pt-2">Teacher Account</h3>
         </div>
 
-        <div class="row dashboardContainer ps-4 pb-4">
-            <div class="row mt-4">
-                <div class="col-4">
+        <div class="row dashboardContainer ps-4 pb-4 pe-4">
+            <div class="container-fluid">
+                <div class="row mt-4">
+                    <div class="col-4">
+                        <h2 class="fw-bold">Teacher Account Creation</h2>
+                        {{-- enable the one below during edit mode --}}
 
-
-                    <h2 class="fw-bold">Teacher Account Creation</h2>
-
-                    {{-- enable the one below during edit mode --}}
-
-                    {{-- <div class="form-outline bg-white rounded p-1 pt-2">
+                        {{-- <div class="form-outline bg-white rounded p-1 pt-2">
                             <input type="text" id="" class="form-control" />
-                            <label class="form-label" for="">Student Name</label>
+                            <label class="form-label ps-1" for="">Student Name</label>
                         </div> --}}
-                </div>
-                <div class="col"></div>
-                <div class="col-3 d-flex justify-content-end">
-                    <button wire:click='edit' type="button" class="pt-2 me-3 col-8 btn btn-primary">
-                        Search & Update
-                    </button>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col-3 d-flex justify-content-end">
+                        <button wire:click='edit' type="button" class="pt-2 col btn btn-primary">
+                            Search & Update
+                        </button>
+                    </div>
                 </div>
             </div>
             <form wire:submit.prevent="create">
@@ -32,7 +31,7 @@
 
                         <div class="row">
                             <div class="col-1 mt-2">
-                                <h5>Assigned to: </h5>
+                                <h5>Assign to: </h5>
                             </div>
                             <div class="col-3">
                                 <div class="dropdown">
@@ -49,25 +48,13 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col pt-2">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input"  type="radio" wire:model="teacherType"
-                                        id="inlineRadio1" value="fulltime" />
-                                    <label class="form-check-label" for="inlineRadio1">Full-time</label>
-                                </div>
 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" wire:model="teacherType"
-                                        id="inlineRadio2" value="parttime" />
-                                    <label class="form-check-label" for="inlineRadio2">Part-time</label>
-                                </div>
-                            </div>
                         </div>
                         {{-- enable the one below during edit mode --}}
 
                         {{-- <div class="form-outline bg-white rounded p-1 pt-2">
                         <input type="text" id="" class="form-control" />
-                        <label class="form-label" for="">teacher Name</label>
+                        <label class="form-label ps-1" for="">teacher Name</label>
                     </div> --}}
                     </div>
 
@@ -76,27 +63,27 @@
 
                 <div class="row mt-4">
                     <div class="col">
+                        <label class="form-label ps-1" for="">Last Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="teacherLastName" />
-                            <label class="form-label" for="">Last Name</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Middle Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="teacherMiddleName" />
-                            <label class="form-label" for="">Middle Name</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">First Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="teacherFirstName" />
-                            <label class="form-label" for="">First Name</label>
                         </div>
                     </div>
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Pre/Suffix</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="teacherSuffixName" />
-                            <label class="form-label" for="">Pre/Suffix</label>
                         </div>
                     </div>
                 </div>
@@ -104,34 +91,36 @@
                     <hr class="hr my-4">
                 </div>
                 <div class="row">
-                    <div class="col text-center pt-2">
+                    <div class="col-3 pt-2">
+                        <label class="form-label ps-1 text-start ps-1" for="">Gender</label>
+                        <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="teacherGender" id="inlineRadio1"
+                            <input wire:model="teacherGender" class="form-check-input" type="radio" id="inlineRadio1"
                                 value="male" />
                             <label class="form-check-label" for="inlineRadio1">Male</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="teacherGender" id="inlineRadio2"
+                            <input wire:model="teacherGender" class="form-check-input" type="radio" id="inlineRadio2"
                                 value="female" />
                             <label class="form-check-label" for="inlineRadio2">Female</label>
                         </div>
                     </div>
-                    <div class="col">
+
+
+                    <div class="col-4">
+                        <label class="form-label ps-1" for="">Nationality</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
-                                wire:model="teacherNationality" />
-                            <label class="form-label" for="">Nationality</label>
+                            <input wire:model="teacherNationality" type="text" id="" class="form-control" />
+
                         </div>
                     </div>
-                    <div class="col-1 text-end pt-2">
-                        <h5>Birthdate:</h5>
-                    </div>
+
                     <div class="col">
+                        <label class="form-label ps-1" for="">Birthdate</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="date" id="" class="form-control"
-                                wire:model="teacherBirthdate" />
-                            <label class="form-label" for=""></label>
+                            <input wire:model="teacherBirthdate" type="date" id="" class="form-control" />
+                            <label class="form-label ps-1" for=""></label>
                         </div>
                     </div>
                 </div>
@@ -140,22 +129,22 @@
 
                 <div class="row mt-4">
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Contact Number</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="teacherContactNumber" />
-                            <label class="form-label" for="">Contact Number</label>
                         </div>
                     </div>
                     <div class="col-3">
+                        <label class="form-label ps-1" for="">Email</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="email" id="" class="form-control" wire:model="teacherEmail" />
-                            <label class="form-label" for="">Email</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Address</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="teacherAddress" />
-                            <label class="form-label" for="">Address</label>
                         </div>
                     </div>
 
@@ -176,64 +165,70 @@
             <div class="" id="accord">
                 <div class="row mt-4">
                     <div class="col">
+                        <label class="form-label ps-1" for="">Last Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="contactLastName" />
-                            <label class="form-label" for="">Last Name</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Middle Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="contactMiddleName" />
-                            <label class="form-label" for="">Middle Name</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">First Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="contactFirstName" />
-                            <label class="form-label" for="">First Name</label>
                         </div>
                     </div>
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Pre/Suffix</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="contactSuffixName" />
-                            <label class="form-label" for="">Pre/Suffix</label>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <hr class="hr my-4">
                 </div>
+
+
                 <div class="row">
-                    <div class="col text-center pt-2">
+                    <div class="col-3 pt-2">
+                        <label class="form-label ps-1 text-start ps-1" for="">Gender</label>
+                        <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="contactGender"
-                                id="inlineRadio1" value="male" />
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                            <input wire:model="contactGender" class="form-check-input" type="radio"
+                                id="inlineRadio3" value="male" />
+                            <label class="form-check-label" for="inlineRadio3">Male</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="contactGender"
-                                id="inlineRadio2" value="female" />
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                            <input wire:model="contactGender" class="form-check-input" type="radio"
+                                id="inlineRadio4" value="female" />
+                            <label class="form-check-label" for="inlineRadio4">Female</label>
                         </div>
                     </div>
-                    <div class="col">
+
+                    <div class="col-4">
+                        <label class="form-label ps-1" for="">Nationality</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
-                                wire:model="contactNationality" />
-                            <label class="form-label" for="">Nationality</label>
+                            <input wire:model="contactNationality" type="text" id=""
+                                class="form-control" />
+
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col"><label class="form-label ps-1" for="">Relationship</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="contactRelationship" />
-                            <label class="form-label" for="">Relationship</label>
+
                         </div>
                     </div>
                 </div>
@@ -242,22 +237,22 @@
 
                 <div class="row mt-4">
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Contact Number</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="contactContactNumber" />
-                            <label class="form-label" for="">Contact Number</label>
                         </div>
                     </div>
                     <div class="col-3">
+                        <label class="form-label ps-1" for="">Email</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="email" id="" class="form-control" wire:model="contactEmail" />
-                            <label class="form-label" for="">Email</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Address</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="contactAddress" />
-                            <label class="form-label" for="">Address</label>
                         </div>
                     </div>
                 </div>
@@ -267,13 +262,11 @@
                         Create Teacher Account
                     </button>
                 </div>
-            </form>
+                </form>
             </div>
         </div>
-  
     @else
         {{-- ----------------------------- else edit----------------------------------- --}}
-
 
 
 
@@ -285,9 +278,9 @@
             <div class="row dashboardContainer ps-4 pb-4">
                 <div class="row mt-4">
                     <div class="col-3">
+                        <label class="form-label ps-1" for="">Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="" />
-                            <label class="form-label" for="">Name</label>
                         </div>
                     </div>
 
@@ -297,12 +290,12 @@
 
                     {{-- <div class="form-outline bg-white rounded p-1 pt-2">
                         <input type="text" id="" class="form-control" />
-                        <label class="form-label" for="">teacher Name</label>
+                        <label class="form-label ps-1" for="">teacher Name</label>
                     </div> --}}
                     <div class="col"></div>
                     <div class="col-3 d-flex justify-content-end">
-                        <button wire:click='back' type="button" class="pt-2 me-3 col-8 btn btn-primary">
-                            Back
+                        <button wire:click='back' type="button" class="pt-2 col btn btn-primary">
+                            Cancel
                         </button>
                     </div>
                 </div>
@@ -343,31 +336,31 @@
 
                 <div class="row mt-4">
                     <div class="col">
+                        <label class="form-label ps-1" for="">Last Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="teacherLastName" />
-                            <label class="form-label" for="">Last Name</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Middle Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="teacherMiddleName" />
-                            <label class="form-label" for="">Middle Name</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">First Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="teacherFirstName" />
-                            <label class="form-label" for="">First Name</label>
                         </div>
                     </div>
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Pre/Suffix</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="teacherSuffixName" />
-                            <label class="form-label" for="">Pre/Suffix</label>
                         </div>
                     </div>
                 </div>
@@ -375,56 +368,60 @@
                     <hr class="hr my-4">
                 </div>
                 <div class="row">
-                    <div class="col text-center pt-2">
+                    <div class="col-3 pt-2">
+                        <label class="form-label ps-1 text-start ps-1" for="">Gender</label>
+                        <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="teacherGender"
+                            <input wire:model="teacherGender" class="form-check-input" type="radio"
                                 id="inlineRadio1" value="male" />
                             <label class="form-check-label" for="inlineRadio1">Male</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="teacherGender"
+                            <input wire:model="teacherGender" class="form-check-input" type="radio"
                                 id="inlineRadio2" value="female" />
                             <label class="form-check-label" for="inlineRadio2">Female</label>
                         </div>
                     </div>
-                    <div class="col">
+
+
+                    <div class="col-4">
+                        <label class="form-label ps-1" for="">Nationality</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
-                                wire:model="teacherNationality" />
-                            <label class="form-label" for="">Nationality</label>
+                            <input wire:model="teacherNationality" type="text" id=""
+                                class="form-control" />
+
                         </div>
                     </div>
-                    <div class="col-1 text-end pt-2">
-                        <h5>Birthdate:</h5>
-                    </div>
+
                     <div class="col">
+                        <label class="form-label ps-1" for="">Birthdate</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="date" id="" class="form-control"
-                                wire:model="teacherBirthdate" />
-                            <label class="form-label" for=""></label>
+                            <input wire:model="teacherBirthdate" type="date" id=""
+                                class="form-control" />
+                            <label class="form-label ps-1" for=""></label>
                         </div>
                     </div>
                 </div>
 
                 <div class="row mt-4">
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Contact Number</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="teacherContactNumber" />
-                            <label class="form-label" for="">Contact Number</label>
                         </div>
                     </div>
                     <div class="col-3">
+                        <label class="form-label ps-1" for="">Email</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="email" id="" class="form-control" wire:model="teacherEmail" />
-                            <label class="form-label" for="">Email</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Address</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="teacherAddress" />
-                            <label class="form-label" for="">Address</label>
                         </div>
                     </div>
 
@@ -443,31 +440,31 @@
                 <div class="" id="accord2">
                     <div class="row mt-4">
                         <div class="col">
+                            <label class="form-label ps-1" for="">Last Name</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactLastName" />
-                                <label class="form-label" for="">Last Name</label>
                             </div>
                         </div>
                         <div class="col">
+                            <label class="form-label ps-1" for="">Middle Name</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactMiddleName" />
-                                <label class="form-label" for="">Middle Name</label>
                             </div>
                         </div>
                         <div class="col">
+                            <label class="form-label ps-1" for="">First Name</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactFirstName" />
-                                <label class="form-label" for="">First Name</label>
                             </div>
                         </div>
                         <div class="col-2">
+                            <label class="form-label ps-1" for="">Pre/Suffix</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactSuffixName" />
-                                <label class="form-label" for="">Pre/Suffix</label>
                             </div>
                         </div>
                     </div>
@@ -475,56 +472,60 @@
                         <hr class="hr my-4">
                     </div>
                     <div class="row">
-                        <div class="col text-center pt-2">
+                        <div class="col-3 pt-2">
+                            <label class="form-label ps-1 text-start ps-1" for="">Gender</label>
+                            <br>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" wire:model="contactGender"
-                                    id="inlineRadio1" value="male" />
-                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                                <input wire:model="contactGender" class="form-check-input" type="radio"
+                                    id="inlineRadio3" value="male" />
+                                <label class="form-check-label" for="inlineRadio3">Male</label>
                             </div>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" wire:model="contactGender"
-                                    id="inlineRadio2" value="female" />
-                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                                <input wire:model="contactGender" class="form-check-input" type="radio"
+                                    id="inlineRadio4" value="female" />
+                                <label class="form-check-label" for="inlineRadio4">Female</label>
                             </div>
                         </div>
-                        <div class="col">
+
+                        <div class="col-4">
+                            <label class="form-label ps-1" for="">Nationality</label>
                             <div class="form-outline bg-white rounded p-1">
-                                <input type="text" id="" class="form-control"
-                                    wire:model="contactNationality" />
-                                <label class="form-label" for="">Nationality</label>
+                                <input wire:model="contactNationality" type="text" id=""
+                                    class="form-control" />
+
                             </div>
                         </div>
 
-                        <div class="col">
+                        <div class="col"><label class="form-label ps-1" for="">Relationship</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactRelationship" />
-                                <label class="form-label" for="">Relationship</label>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="row my-4">
                         <div class="col-2">
+                            <label class="form-label ps-1" for="">Contact Number</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactContactNumber" />
-                                <label class="form-label" for="">Contact Number</label>
                             </div>
                         </div>
                         <div class="col-3">
+                            <label class="form-label ps-1" for="">Email</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="email" id="" class="form-control"
                                     wire:model="contactEmail" />
-                                <label class="form-label" for="">Email</label>
                             </div>
                         </div>
                         <div class="col">
+                            <label class="form-label ps-1" for="">Address</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactAddress" />
-                                <label class="form-label" for="">Address</label>
                             </div>
                         </div>
                     </div>

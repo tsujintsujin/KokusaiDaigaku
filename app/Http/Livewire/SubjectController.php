@@ -14,8 +14,13 @@ class SubjectController extends Component
     public $description;
     public $units;
     public $year_level;
+<<<<<<< HEAD
     public $semester;
     protected function rules()
+=======
+
+    public function create()
+>>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
     {
         // mga condition sa input ng data sa creating subjects
         return [

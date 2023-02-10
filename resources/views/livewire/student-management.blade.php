@@ -1,23 +1,24 @@
 <div>
     @if ($window === 'create')
-        <div class="row dashboardTitleContainer ps-4 rounded-top">
+        <div class="row dashboardTitleContainer ps-4 rounded-top ">
             <h3 class="fw-bold pt-2">Student Account</h3>
         </div>
-        <div class="row dashboardContainer ps-4 pb-4">
-            <div class="row mt-4">
-                <div class="col-4">
-
-                    <h2 class="fw-bold">Student Account Creation</h2>
-
-                </div>
-                <div class="col"></div>
-                <div class="col-3 d-flex justify-content-end">
-                    <button wire:click='edit' type="button" class="pt-2 me-3 col-8 btn btn-primary">
-                        Search & Update
-                    </button>
+        <div class="row dashboardContainer ps-4 pb-4 pe-4">
+            <div class="container-fluid">
+                <div class="row mt-4">
+                    <div class="col-4">
+                        <h2 class="fw-bold">Student Account Creation</h2>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col-3 d-flex justify-content-end">
+                        <button wire:click='edit' type="button" class="pt-2 col btn btn-primary">
+                            Search & Update
+                        </button>
+                    </div>
                 </div>
             </div>
-            <form wire:submit.prevent="create">
+            <form wire:submit="create">
+                @csrf
                 <div class="row mt-3">
                     <div class="col-2">
 
@@ -65,9 +66,9 @@
 
                 <div class="row mt-4">
                     <div class="col">
+                        <label class="form-label ps-1" for="">Last Name</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:focus="studentLastNameErrorClear" wire:model="studentLastName" type="text" id="" class="form-control" />
-                            <label class="form-label" for="">Last Name</label>
+                            <input wire:focus="studentLastNameErrorClear" wire:model="studentLastName" type="text" id="lname" class="form-control" />
                         </div>
                         @error('studentLastName')
                             <span class="error">{{ $message }}</span>
@@ -75,6 +76,7 @@
                     </div>
 
                     <div class="col">
+                        <label class="form-label ps-1" for="">Middle Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentFirstNameErrorClear" wire:model="studentFirstName" type="text" id="" class="form-control" />
                             <label class="form-label" for="">First Name</label>
@@ -84,6 +86,7 @@
                         @enderror
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">First Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentMiddleNameErrorClear" wire:model="studentMiddleName" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Middle Name</label>
@@ -93,9 +96,9 @@
                         @enderror
                     </div>
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Pre/Suffix</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:model="studentSuffixName" type="text" id="" class="form-control" />
-                            <label class="form-label" for="">Pre/Suffix</label>
                         </div>
 
                     </div>
@@ -103,6 +106,7 @@
                 <div class="row justify-content-center">
                     <hr class="hr my-4">
                 </div>
+
                 <div class="row">
                     <div class="col text-center pt-2">
                         <div>
@@ -133,14 +137,13 @@
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div class="col-1 text-end pt-2">
-                        <h5>Birthdate:</h5>
-                    </div>
+
                     <div class="col">
+                        <label class="form-label ps-1" for="">Birthdate</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentBirthdateErrorClear" wire:model="studentBirthdate" type="date" id=""
                                 class="form-control" />
-                            <label class="form-label" for=""></label>
+                            <label class="form-label ps-1" for=""></label>
                         </div>
                         @error('studentBirthdate')
                             <span class="error">{{ $message }}</span>
@@ -152,16 +155,18 @@
 
                 <div class="row mt-4">
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Contact Number</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentContactNumberErrorClear" wire:model="studentContactNumber" type="text" id=""
                                 class="form-control" />
-                            <label class="form-label" for="">Contact Number</label>
+
                         </div>
                         @error('studentContactNumber')
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="col-3">
+                        <label class="form-label ps-1" for="">Email</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentEmailErrorClear" wire:model="studentEmail" type="email" id="" class="form-control" />
                             <label class="form-label" for="">Email</label>
@@ -171,6 +176,7 @@
                         @enderror
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Address</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentAddressErrorClear" wire:model="studentAddress" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Address</label>
@@ -187,24 +193,24 @@
         <div class="row dashboardContainer ps-4 pb-4 pe-4">
             <div class="row mt-4">
                 <div class="col-3 " type="button">
-                    {{-- data-mdb-toggle="collapse" data-mdb-target="#accord" --}}
                     <h2 class="fw-bold text-muted">Contact Person</h2>
                 </div>
             </div>
-            {{-- accordion-collapse collapse --}}
+
             <div class="" id="accord">
                 <div class="row mt-4">
                     <div class="col">
+                        <label class="form-label ps-1" for="">Last Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactLastNameErrorClear" wire:model="contactLastName" type="text" id="" class="form-control"
                                 wire:model="contactLastName" />
-                            <label class="form-label" for="">Last Name</label>
                         </div>
                         @error('contactLastName')
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Middle Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactFirstNameErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactFirstName" />
@@ -215,6 +221,7 @@
                         @enderror
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">First Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactMiddleNameErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactMiddleName" />
@@ -226,10 +233,10 @@
                     </div>
 
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Pre/Suffix</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input  type="text" id="" class="form-control"
                                 wire:model="contactSuffixName" />
-                            <label class="form-label" for="">Pre/Suffix</label>
                         </div>
                     </div>
                 </div>
@@ -255,11 +262,14 @@
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div class="col">
+
+
+
+                    <div class="col-4">
+                        <label class="form-label ps-1" for="">Nationality</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactNationalityErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactNationality" />
-                            <label class="form-label" for="">Nationality</label>
                         </div>
                         @error('contactNationality')
                             <span class="error">{{ $message }}</span>
@@ -267,31 +277,35 @@
                     </div>
 
                     <div class="col">
+                        <label class="form-label ps-1" for="">Relationship</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactRelationshipErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactRelationship" />
-                            <label class="form-label" for="">Relationship</label>
+                            <label class="form-label ps-1" for=""></label>
                         </div>
                         @error('contactRelationship')
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
+
+
                 </div>
 
 
 
                 <div class="row mt-4">
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Contact Number</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactContactNumberErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactContactNumber" />
-                            <label class="form-label" for="">Contact Number</label>
                         </div>
                         @error('contactContactNumber')
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="col-3">
+                        <label class="form-label ps-1" for="">Email</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactEmailErrorClear" type="email" id="" class="form-control" wire:model="contactEmail" />
                             <label class="form-label" for="">Email</label>
@@ -301,6 +315,7 @@
                         @enderror
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Address</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="contactAddressErrorClear" type="text" id="" class="form-control" wire:model="contactAddress" />
                             <label class="form-label" for="">Address</label>
@@ -323,16 +338,14 @@
         </div>
     @elseif ($window === 'edit')
         {{-- ----------------------------- else edit----------------------------------- --}}
-
-
-
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Find Student Account</h3>
         </div>
         <form wire:submit="update">
 
+
             @csrf
-            <div class="row dashboardContainer ps-4 pb-4">
+            <div class="row dashboardContainer ps-4 pb-4 ">
                 <div class="row mt-4">
                     <div class="col-3">
                         <div class="dropdown">
@@ -354,8 +367,8 @@
                     </div>
                     <div class="col"></div>
                     <div class="col-3 d-flex justify-content-end">
-                        <button wire:click='back' type="button" class="pt-2 me-3 col-8 btn btn-primary">
-                            Back
+                        <button wire:click='back' type="button" class="pt-2 col btn btn-primary">
+                            Cancel
                         </button>
                     </div>
                 </div>
@@ -421,40 +434,39 @@
                 </div>
 
                 <div class="row mt-4">
-                    <div class="col">
+                    <div class="col"><label class="form-label ps-1" for="">Last Name </label>
                         <div class="form-outline bg-white rounded p-1">
                             @if (!is_null($selectedStudent))
                                 @foreach ($student_data as $student)
                                     <input type="text" id="lname" class="form-control"
                                         wire:model="studentLastName" />
-                                    <label class="form-label" for="">Last Name </label>
                                 @endforeach
                             @else
                                 <input type="text" id="" class="form-control" value="" />
-                                <label class="form-label" for="">Last Name </label>
+
                             @endif
 
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Middle Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="studentMiddleName" />
-                            <label class="form-label" for="">Middle Name</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">First Name</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="studentFirstName" />
-                            <label class="form-label" for="">First Name</label>
                         </div>
                     </div>
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Pre/Suffix</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="studentSuffixName" />
-                            <label class="form-label" for="">Pre/Suffix</label>
                         </div>
                     </div>
                 </div>
@@ -462,56 +474,64 @@
                     <hr class="hr my-4">
                 </div>
                 <div class="row">
-                    <div class="col text-center pt-2">
+                    <div class="col-3 pt-2">
+                        <label class="form-label ps-1 text-start ps-1" for="">Gender</label>
+                        <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="studentGender"
+                            <input wire:model="studentGender" class="form-check-input" type="radio"
                                 id="inlineRadio1" value="male" />
                             <label class="form-check-label" for="inlineRadio1">Male</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="studentGender"
+                            <input wire:model="studentGender" class="form-check-input" type="radio"
                                 id="inlineRadio2" value="female" />
                             <label class="form-check-label" for="inlineRadio2">Female</label>
                         </div>
                     </div>
-                    <div class="col">
+
+
+                    <div class="col-4">
+                        <label class="form-label ps-1" for="">Nationality</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
-                                wire:model="studentNationality" />
-                            <label class="form-label" for="">Nationality</label>
+                            <input wire:model="studentNationality" type="text" id=""
+                                class="form-control" />
+
                         </div>
                     </div>
-                    <div class="col-1 text-end pt-2">
-                        <h5>Birthdate:</h5>
-                    </div>
+
                     <div class="col">
+                        <label class="form-label ps-1" for="">Birthdate</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="date" id="" class="form-control"
-                                wire:model="studentBirthdate" />
-                            <label class="form-label" for=""></label>
+                            <input wire:model="studentBirthdate" type="date" id=""
+                                class="form-control" />
+                            <label class="form-label ps-1" for=""></label>
                         </div>
                     </div>
+
+
+
+
                 </div>
 
                 <div class="row mt-4">
                     <div class="col-2">
+                        <label class="form-label ps-1" for="">Contact Number</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control"
                                 wire:model="studentContactNumber" />
-                            <label class="form-label" for="">Contact Number</label>
                         </div>
                     </div>
                     <div class="col-3">
+                        <label class="form-label ps-1" for="">Email</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="email" id="" class="form-control" wire:model="studentEmail" />
-                            <label class="form-label" for="">Email</label>
                         </div>
                     </div>
                     <div class="col">
+                        <label class="form-label ps-1" for="">Address</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input type="text" id="" class="form-control" wire:model="studentAddress" />
-                            <label class="form-label" for="">Address</label>
                         </div>
                     </div>
 
@@ -528,31 +548,31 @@
                 <div class="" id="accord2">
                     <div class="row mt-4">
                         <div class="col">
+                            <label class="form-label ps-1" for="">Last Name</label>
                             <div class="form-outline bg-white rounded p-1">
-                                <input type="text" id="" class="form-control"
-                                    wire:model="contactLastName" />
-                                <label class="form-label" for="">Last Name</label>
+                                <input wire:model="contactLastName" type="text" id=""
+                                    class="form-control" wire:model="contactLastName" />
                             </div>
                         </div>
                         <div class="col">
+                            <label class="form-label ps-1" for="">Middle Name</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactMiddleName" />
-                                <label class="form-label" for="">Middle Name</label>
                             </div>
                         </div>
                         <div class="col">
+                            <label class="form-label ps-1" for="">First Name</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactFirstName" />
-                                <label class="form-label" for="">First Name</label>
                             </div>
                         </div>
                         <div class="col-2">
+                            <label class="form-label ps-1" for="">Pre/Suffix</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactSuffixName" />
-                                <label class="form-label" for="">Pre/Suffix</label>
                             </div>
                         </div>
                     </div>
@@ -560,63 +580,72 @@
                         <hr class="hr my-4">
                     </div>
                     <div class="row">
-                        <div class="col text-center pt-2">
+                        <div class="col-3 pt-2">
+                            <label class="form-label ps-1 text-start ps-1" for="">Gender</label>
+                            <br>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" wire:model="contactGender"
-                                    id="inlineRadio1" value="male" />
-                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                                <input wire:model="studentGender" class="form-check-input" type="radio"
+                                    wire:model="contactGender" id="inlineRadio3" value="male" />
+                                <label class="form-check-label" for="inlineRadio3">Male</label>
                             </div>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" wire:model="contactGender"
-                                    id="inlineRadio2" value="female" />
-                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                                <input wire:model="studentGender" class="form-check-input" type="radio"
+                                    wire:model="contactGender" id="inlineRadio4" value="female" />
+                                <label class="form-check-label" for="inlineRadio4">Female</label>
                             </div>
                         </div>
-                        <div class="col">
+
+
+
+                        <div class="col-4">
+                            <label class="form-label ps-1" for="">Nationality</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactNationality" />
-                                <label class="form-label" for="">Nationality</label>
                             </div>
                         </div>
 
                         <div class="col">
+                            <label class="form-label ps-1" for="">Relationship</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactRelationship" />
-                                <label class="form-label" for="">Relationship</label>
+                                <label class="form-label ps-1" for=""></label>
                             </div>
                         </div>
+
+
                     </div>
 
 
 
-                    <div class="row my-4">
+                    <div class="row mt-4">
                         <div class="col-2">
+                            <label class="form-label ps-1" for="">Contact Number</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactContactNumber" />
-                                <label class="form-label" for="">Contact Number</label>
                             </div>
                         </div>
                         <div class="col-3">
+                            <label class="form-label ps-1" for="">Email</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="email" id="" class="form-control"
                                     wire:model="contactEmail" />
-                                <label class="form-label" for="">Email</label>
                             </div>
                         </div>
                         <div class="col">
+                            <label class="form-label ps-1" for="">Address</label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input type="text" id="" class="form-control"
                                     wire:model="contactAddress" />
-                                <label class="form-label" for="">Address</label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row d-flex justify-content-end">
+
+                    <div class="mt-4 row d-flex justify-content-end">
                         <button class="p-2 me-3 col-2 btn btn-primary">
                             Archive Account
                         </button>

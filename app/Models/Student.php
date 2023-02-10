@@ -35,4 +35,12 @@ class Student extends Model
     // $table->integer('contact_number');
     // $table->string('address');
     // $table->string('password');
+
+
+
+    public function Course()
+    {
+        return $this->belongsTo(Course::class);
+    }
+
 }
