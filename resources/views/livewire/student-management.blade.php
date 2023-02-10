@@ -23,9 +23,9 @@
 
                         <div class="dropdown">
                             <h6 class="text-muted text-left ps-1">Select Course</h6>
-                            <select wire:model="selectedCourse" class="form-select p-2"
+                            <select wire:focus="courseErrorClear" wire:model="selectedCourse" class="form-select p-2"
                                 aria-label="Default select example">
-                                <option value="0" selected>Course</option>
+                                <option value="" selected>Course</option>
                                 @foreach ($courses as $course)
                                     <option class="option" value="{{ $course->id }}">
                                         <a class="dropdown-item" href="#">{{ $course->name }}
@@ -34,13 +34,16 @@
                                     </option>
                                 @endforeach
                             </select>
+                            @error('selectedCourse')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="col-2">
                         <div class="dropdown">
                             <h6 class="text-muted text-left ps-1">Select Section</h6>
-                            <select wire:model="selectedSection" class="form-select p-2"
+                            <select wire:focus="sectionErrorClear" wire:model="selectedSection" class="form-select p-2"
                                 aria-label="Default select example">
                                 <option value="0" selected>Section</option>
                                 @if (!is_null($selectedCourse))
@@ -52,6 +55,9 @@
                                     @endforeach
                                 @endif
                             </select>
+                            @error('selectedSection')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -60,31 +66,38 @@
                 <div class="row mt-4">
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentLastName" type="text" id="" class="form-control" />
+                            <input wire:focus="studentLastNameErrorClear" wire:model="studentLastName" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Last Name</label>
                         </div>
                         @error('studentLastName')
-                        <span class="error">{{ $message }}</span>
-                    @enderror
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
-                  
+
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentFirstName" type="text" id="" class="form-control" />
+                            <input wire:focus="studentFirstNameErrorClear" wire:model="studentFirstName" type="text" id="" class="form-control" />
                             <label class="form-label" for="">First Name</label>
                         </div>
+                        @error('studentFirstName')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentMiddleName" type="text" id="" class="form-control" />
+                            <input wire:focus="studentMiddleNameErrorClear" wire:model="studentMiddleName" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Middle Name</label>
                         </div>
+                        @error('studentMiddleName')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col-2">
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:model="studentSuffixName" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Pre/Suffix</label>
                         </div>
+
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -92,33 +105,46 @@
                 </div>
                 <div class="row">
                     <div class="col text-center pt-2">
-                        <div class="form-check form-check-inline">
-                            <input wire:model="studentGender" class="form-check-input" type="radio" id="inlineRadio1"
-                                value="male" />
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input  wire:focus="studentGenderErrorClear" wire:model="studentGender" class="form-check-input" type="radio"
+                                    id="inlineRadio1" value="male" />
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input wire:focus="studentGenderErrorClear" class="form-check-input" type="radio"
+                                    id="inlineRadio2" value="female" />
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                            </div>
                         </div>
 
-                        <div class="form-check form-check-inline">
-                            <input wire:model="studentGender" class="form-check-input" type="radio" id="inlineRadio2"
-                                value="female" />
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                        </div>
+                        @error('studentGender')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
+
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentNationality" type="text" id="" class="form-control" />
+                            <input wire:focus="studentNationalityErrorClear" wire:model="studentNationality" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Nationality</label>
                         </div>
+                        @error('studentNationality')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col-1 text-end pt-2">
                         <h5>Birthdate:</h5>
                     </div>
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentBirthdate" type="date" id=""
+                            <input wire:focus="studentBirthdateErrorClear" wire:model="studentBirthdate" type="date" id=""
                                 class="form-control" />
                             <label class="form-label" for=""></label>
                         </div>
+                        @error('studentBirthdate')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
 
@@ -127,22 +153,31 @@
                 <div class="row mt-4">
                     <div class="col-2">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentContactNumber" type="text" id=""
+                            <input wire:focus="studentContactNumberErrorClear" wire:model="studentContactNumber" type="text" id=""
                                 class="form-control" />
                             <label class="form-label" for="">Contact Number</label>
                         </div>
+                        @error('studentContactNumber')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col-3">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentEmail" type="email" id="" class="form-control" />
+                            <input wire:focus="studentEmailErrorClear" wire:model="studentEmail" type="email" id="" class="form-control" />
                             <label class="form-label" for="">Email</label>
                         </div>
+                        @error('studentEmail')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="studentAddress" type="text" id="" class="form-control" />
+                            <input wire:focus="studentAddressErrorClear" wire:model="studentAddress" type="text" id="" class="form-control" />
                             <label class="form-label" for="">Address</label>
                         </div>
+                        @error('studentAddress')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
 
 
@@ -161,28 +196,38 @@
                 <div class="row mt-4">
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="contactLastName" type="text" id="" class="form-control"
+                            <input wire:focus="contactLastNameErrorClear" wire:model="contactLastName" type="text" id="" class="form-control"
                                 wire:model="contactLastName" />
                             <label class="form-label" for="">Last Name</label>
                         </div>
+                        @error('contactLastName')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
-                                wire:model="contactMiddleName" />
-                            <label class="form-label" for="">Middle Name</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
+                            <input wire:focus="contactFirstNameErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactFirstName" />
                             <label class="form-label" for="">First Name</label>
                         </div>
+                        @error('contactFirstName')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
+                    <div class="col">
+                        <div class="form-outline bg-white rounded p-1">
+                            <input wire:focus="contactMiddleNameErrorClear" type="text" id="" class="form-control"
+                                wire:model="contactMiddleName" />
+                            <label class="form-label" for="">Middle Name</label>
+                        </div>
+                        @error('contactMiddleName')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
+                    </div>
+
                     <div class="col-2">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
+                            <input  type="text" id="" class="form-control"
                                 wire:model="contactSuffixName" />
                             <label class="form-label" for="">Pre/Suffix</label>
                         </div>
@@ -193,32 +238,43 @@
                 </div>
                 <div class="row">
                     <div class="col text-center pt-2">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="contactGender"
-                                id="inlineRadio1" value="male" />
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                        </div>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input wire:focus="contactGenderErrorClear" class="form-check-input" type="radio" wire:model="contactGender"
+                                    id="inlineRadio1" value="male" />
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            </div>
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" wire:model="contactGender"
-                                id="inlineRadio2" value="female" />
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                            <div class="form-check form-check-inline">
+                                <input wire:focus="contactGenderErrorClear" class="form-check-input" type="radio" wire:model="contactGender"
+                                    id="inlineRadio2" value="female" />
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                            </div>
                         </div>
+                        @error('contactGender')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
+                            <input wire:focus="contactNationalityErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactNationality" />
                             <label class="form-label" for="">Nationality</label>
                         </div>
+                        @error('contactNationality')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
+                            <input wire:focus="contactRelationshipErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactRelationship" />
                             <label class="form-label" for="">Relationship</label>
                         </div>
+                        @error('contactRelationship')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
 
@@ -227,22 +283,31 @@
                 <div class="row mt-4">
                     <div class="col-2">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control"
+                            <input wire:focus="contactContactNumberErrorClear" type="text" id="" class="form-control"
                                 wire:model="contactContactNumber" />
                             <label class="form-label" for="">Contact Number</label>
                         </div>
+                        @error('contactContactNumber')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col-3">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="email" id="" class="form-control" wire:model="contactEmail" />
+                            <input wire:focus="contactEmailErrorClear" type="email" id="" class="form-control" wire:model="contactEmail" />
                             <label class="form-label" for="">Email</label>
                         </div>
+                        @error('contactEmail')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col">
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control" wire:model="contactAddress" />
+                            <input wire:focus="contactAddressErrorClear" type="text" id="" class="form-control" wire:model="contactAddress" />
                             <label class="form-label" for="">Address</label>
                         </div>
+                        @error('contactAddress')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
 
@@ -265,7 +330,7 @@
             <h3 class="fw-bold pt-2">Find Student Account</h3>
         </div>
         <form wire:submit="update">
-            
+
             @csrf
             <div class="row dashboardContainer ps-4 pb-4">
                 <div class="row mt-4">

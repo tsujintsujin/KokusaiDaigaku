@@ -23,7 +23,7 @@ class StudentManagement extends Component
     public $studentGender;
     public $studentBirthdate;
     public $studentNationality;
-    public $studentContactNumber;
+    public $studentContactNumber ='09';
     public $studentEmail;
     public $studentAddress;
     public $contactLastName;
@@ -32,7 +32,7 @@ class StudentManagement extends Component
     public $contactSuffixName;
     public $contactGender;
     public $contactNationality;
-    public $contactContactNumber;
+    public $contactContactNumber = '09';
     public $contactEmail;
     public $contactAddress;
     public $contactRelationship;
@@ -48,7 +48,7 @@ class StudentManagement extends Component
             'studentGender' => 'required',
             'studentBirthdate' => 'required',
             'studentNationality' => 'required',
-            'studentContactNumber' => 'required',
+            'studentContactNumber' => 'required|numeric|digits:11',
             'studentEmail' => 'email',
             'studentAddress' => 'required',
             'contactLastName' => 'required',
@@ -56,11 +56,10 @@ class StudentManagement extends Component
             'contactMiddleName' => 'required',
             'contactGender' => 'required',
             'contactNationality' => 'required',
-            'contactContactNumber' => 'required',
+            'contactContactNumber' => 'required|numeric|digits:11',
             'contactEmail' => 'email',
             'contactAddress' => 'required',
             'contactRelationship' => 'required',
-    
         ];
     }
      protected $messages = [
@@ -72,7 +71,8 @@ class StudentManagement extends Component
         'studentGender' => 'Select gender',
         'studentBirthdate' => 'Select birthdate',
         'studentNationality' => 'Nationality cannot be empty.',
-        'studentContactNumber' => 'Contact number cannot be empty.',
+        'studentContactNumber.required' => 'Contact number cannot be empty.',
+        'studentContactNumber.numeric' => 'Invalid contactnumber',
         'studentEmail' => 'invalid email.',
         'studentAddress' => 'Address cannot be empty.',
         'contactLastName' => 'Last Name cannot be empty.',
@@ -81,12 +81,82 @@ class StudentManagement extends Component
         'contactGender' => 'Select section',
         'contactNationality' => 'Nationality cannot be empty.',
         'contactContactNumber' => 'Contact number cannot be empty.',
+        'contactContactNumber.numeric' => 'Invalid contactnumber',
         'contactEmail' => 'Invalid email.',
         'contactAddress' => 'Address cannot be empty.',
         'contactRelationship' => 'Relationship cannot be empty.',
     ];
+    public function courseErrorClear()
+    {
+        $this->resetValidation('selectedCourse');
+    }
+    public function sectionErrorClear()
+    {
+        $this->resetValidation('selectedSection');
+    }
+    public function studentLastNameErrorClear()
+    {
+        $this->resetValidation('studentLastName');
+    }
+    public function studentFirstNameErrorClear()
+    {
+        $this->resetValidation('studentFirstName');
+    }
+    public function studentMiddleNameErrorClear()
+    {
+        $this->resetValidation('studentMiddleName');
+    }
+    public function studentGenderErrorClear()
+    {
+        $this->resetValidation('studentGender');
+    }
+    public function studentNationalityErrorClear()
+    {
+        $this->resetValidation('studentNationality');
+    }
+    public function studentBirthdateErrorClear()
+    {
+        $this->resetValidation('studentBirthdate');
+    }  public function studentContactNumberErrorClear()
+    {
+        $this->resetValidation('studentContactNumber');
+    }  public function studentEmailErrorClear()
+    {
+        $this->resetValidation('studentEmail');
+    }  public function studentAddressErrorClear()
+    {
+        $this->resetValidation('studentAddress');
+    }  public function contactLastNameErrorClear()
+    {
+        $this->resetValidation('contactLastName');
+    }  public function contactFirstNameErrorClear()
+    {
+        $this->resetValidation('contactFirstName');
+    }  public function contactMiddleNameErrorClear()
+    {
+        $this->resetValidation('contactMiddleName');
+    }  public function contactGenderErrorClear()
+    {
+        $this->resetValidation('contactGender');
+    }  public function contactNationalityErrorClear()
+    {
+        $this->resetValidation('contactNationality');
+    }  public function contactRelationshipErrorClear()
+    {
+        $this->resetValidation('contactRelationship');
+    }  public function contactContactNumberErrorClear()
+    {
+        $this->resetValidation('contactContactNumber');
+    }  public function contactEmailErrorClear()
+    {
+        $this->resetValidation('contactEmail');
+    }  public function contactAddressErrorClear()
+    {
+        $this->resetValidation('contactAddress');
+    }
     public function create()
     {
+        // dump('hellow world');
         $this->validate();
         // $student = new Student;
         // $student->course_id = $this->selectedCourse;
@@ -147,8 +217,8 @@ class StudentManagement extends Component
     public function resetElements()
     {
         $this->reset(
-            'selectedCourse',
-            'selectedSection',
+            // 'selectedCourse',
+            // 'selectedSection',
             'studentLastName',
             'studentFirstName',
             'studentMiddleName',
@@ -186,6 +256,7 @@ class StudentManagement extends Component
     public function back()
     {
         $this->window = "create";
+        // $this->reset('selectedSection');
         $this->resetElements();
     }
 
