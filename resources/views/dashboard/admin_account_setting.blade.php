@@ -1,4 +1,5 @@
 @extends('dashboard.admin_layout')
+@include('cal_css')
 @section('content')
     <div class="vh-100 container d-flex justify-content-center  rounded-top-left-1 rounded-top-right-1 rounded-top align-items-center">
         <div class="row col-5">
