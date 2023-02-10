@@ -17,8 +17,7 @@
                     </div>
                 </div>
             </div>
-            <form wire:submit="create">
-                @csrf
+            <form wire:submit.prevent="create">
                 <div class="row mt-3">
                     <div class="col-2">
 

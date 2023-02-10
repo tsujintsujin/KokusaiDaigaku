@@ -10,12 +10,7 @@
                     <form wire:submit.prevent="create">
                         <label class="form-label" for="">Course Name (Full)</label>
                         <div class="form-outline bg-white rounded p-1">
-<<<<<<< HEAD
-                            <input wire:model="name" wire:focus="courseErrorClear"  type="text" id="" class="form-control" name="name" />
-                            <label class="form-label" for="">Course Name (Full)</label>
-=======
                             <input wire:model="name" type="text" id="" class="form-control" name="name" />
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                         </div>
                         @error('name')
                             <span class="error">{{ $message }}</span>
@@ -26,13 +21,6 @@
                     <div class="form-outline bg-white rounded p-1">
                         <input wire:model="abbreviation" wire:focus="abbreviationErrorClear"  type="text" id="" class="form-control"
                             name="abbreviation" />
-<<<<<<< HEAD
-                        <label class="form-label" for="">Abbreviation</label>
-
-                        {{-- wire:click="clearErrorMessage" --}}
-=======
-
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                     </div>
                     @error('abbreviation')
                         <span class="error">{{ $message }}</span>
@@ -41,23 +29,11 @@
 
                 <div class="row mt-4">
                     <div class="col">
-<<<<<<< HEAD
-                        <div class="mb-3 ">
-                            <div class="form-outline bg-white rounded m-none">
-                                <textarea wire:model="description" wire:focus="descriptionErrorClear" class="text-area-no-resize form-control " id="" cols="1"
-                                    max-rows="4" name="descriptionErrorClear"></textarea>
-                                <label class="form-label" for="3">Description</label>
-                            </div>
-                            @error('description')
-                                <span class="m-none" class="error">{{ $message }}</span>
-                            @enderror
-=======
                         <label class="form-label" for="3">Description</label>
                         <div class="form-outline mb-4 bg-white rounded ">
                             <textarea wire:model="description" class="text-area-no-resize form-control " id="" cols="1"
                                 max-rows="4" name="description"></textarea>
 
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                         </div>
                     </div>
                 </div>

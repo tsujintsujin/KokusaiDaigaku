@@ -11,16 +11,9 @@
                 <div class="col-2">
                     <form wire:submit.prevent="create">
                         <div class="dropdown">
-<<<<<<< HEAD
-                            <h6 class="text-muted text-left ps-1">Select Course</h6>
-                            <select wire:focus="courseErrorClear" wire:model="course_id" class="form-select p-2"
-                                aria-label="Default select example">
-                                <option value="" selected>Course</option>
-=======
                             <label class="form-label" for="">Select Course</label>
                             <select wire:model="course_id" class="form-select p-2" aria-label="Default select example">
                                 <option value="0" selected>Course</option>
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                                 @foreach ($courses as $course)
                                     <option class="option" value="{{ $course->id }}">
                                         <a class="dropdown-item" href="#">{{ $course->name }}
@@ -36,21 +29,9 @@
                 </div>
                 <div class="col-2">
                     <div class="col">
-<<<<<<< HEAD
-                        <div class="mb-4 ">
-                            <div class="form-outline bg-white rounded p-1 pt-2 mt-4">
-                                <input wire:focus="subjectErrorClear" wire:model="subject_code" type="text"
-                                    id="" class="form-control">
-                                <label class="form-label mt-1" for="">Subject Code/Name</label>
-                            </div>
-                            @error('subject_code')
-                                <span class="error">{{ $message }}</span>
-                            @enderror
-=======
                         <label class="form-label" for="">Subject Code</label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:model="subject_code" type="text" id="" class="form-control" />
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                         </div>
 
                     </div>
@@ -58,15 +39,8 @@
                 <div class="col-2">
                     <div class="col">
                         <div class="dropdown">
-<<<<<<< HEAD
-                            <h6 class="text-muted text-left ps-1">Year Level</h6>
-                            <select wire:focus="yearLevelErrorClear" wire:model="year_level"
-                                class="text-start form-select p-2">
-                                <option value="" selected>year level</option>
-=======
                             <label class="form-label" for="">Year Level</label>
                             <select wire:model="year_level" class="text-start form-select p-2">
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -78,11 +52,6 @@
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                 </div>
                 {{-- <div class="col-3">
                     <label class="form-label text-muted" for="">Semester: </label>
@@ -103,21 +72,6 @@
                         <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
-<<<<<<< HEAD
-
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="mb-4">
-                        <div class="form-outline  bg-white rounded ">
-                            <textarea wire:focus="descriptionErrorClear" wire:model="description" class="text-area-no-resize form-control "
-                                cols="1" max-rows="4"></textarea>
-                            <label class="form-label" for="3">Description</label>
-                        </div>
-                        @error('description')
-                            <span class="error">{{ $message }}</span>
-                        @enderror
-=======
                  --}}
             </div>
             <div class="row">
@@ -125,21 +79,14 @@
                     <label class="form-label" for="">Description</label>
                     <div class="form-outline mb-4 bg-white rounded ">
                         <textarea wire:model="description" class="text-area-no-resize form-control " cols="1" max-rows="4"></textarea>
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-1">
-<<<<<<< HEAD
-                    <select wire:focus="unitsErrorClear" wire:model="units" class="form-select p-2">
-                        <option selected value="">Units</option>
-                        <option value="1">1</option>
-=======
                     <select wire:model="units" class="form-select p-2">
                         <option disabled value="0">Units</option>
                         <option selected value="1">1</option>
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>

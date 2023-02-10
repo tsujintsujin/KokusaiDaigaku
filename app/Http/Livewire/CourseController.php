@@ -12,8 +12,6 @@ class CourseController extends Component
     public $name;
     public $abbreviation;
     public $description;
-<<<<<<< HEAD
-
     public $name_null = NULL;
     protected $rules = [
         'name' => 'required',
@@ -75,31 +73,15 @@ class CourseController extends Component
     }
 
     // this function is when admin clicked the cancel button when admin is in the edit form.
+
+    public $currentCourse = '1';
+
+
+    // this function is when admin clicked the cancel button when admin is in the edit form.
     public function cancel()
     {
         $this->window = "create";
     }
-=======
-    public $currentCourse = '1';
-
-
-    public function create()
-    {
-        $this->window = "create";
-        $course = new Course;
-        $course->name = $this->name;
-        $course->abbreviation = $this->abbreviation;
-        $course->description = $this->description;
-        $course->save();
-        $this->reset('name', 'abbreviation', 'description');
-    }
-
-      // this function is when admin clicked the cancel button when admin is in the edit form.
-      public function cancel()
-      {
-          $this->window = "create";
-      }
->>>>>>> 363b30a3b6d73365e8e4c371935db82e55bc6dd3
 
     public function edit()
     {
@@ -109,6 +91,6 @@ class CourseController extends Component
     public function render()
     {
         return view('livewire.course-controller')
-        ->with('Course', Course::all());
+            ->with('Course', Course::all());
     }
 }
