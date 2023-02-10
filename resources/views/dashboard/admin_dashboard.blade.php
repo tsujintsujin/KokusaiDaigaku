@@ -1,10 +1,9 @@
 @extends('dashboard.admin_layout')
 @include('cal_cdn')
 @section('content')
-    <div class="container justify-content-center col-9 py-5 rounded-top-left-1 rounded-top-right-1">
+<div class="container-fluid justify-content-center p-5 me-5  rounded-top-left-1 rounded-top-right-1">
         <div class="row">
             <div class="col text-center  d-flex flex-column">
-                
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -151,3 +150,4 @@
         </table>
     </div>
 @endsection
+ 

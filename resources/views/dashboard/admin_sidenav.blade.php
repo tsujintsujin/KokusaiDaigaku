@@ -1,6 +1,9 @@
 {{-- Side Bar --}}
 <div class="d-flex col-md-2 col-lg-3 flex-column flex-shrink-0 vh-100 dashboardContainer " id="sidebar"
     style="width: 280px;">
+    
+    <div id="navToggle" class="bg-danger"></div>
+
     <div class="text-center my-5 ">
         <img src="{{asset('kokusai_logo.png')}}" class="rounded"
             alt="Mindanao Kokusai Daigaku Logo">
@@ -14,7 +17,7 @@
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#home"></use>
                 </svg>
-                Dashboard
+                Dashboard 
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">

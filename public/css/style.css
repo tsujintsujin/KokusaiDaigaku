@@ -4,12 +4,7 @@ body {
     /* Hide horizontal scrollbar */
 }
 
-#sidebar {
-    color: #fafafc;
-    background-color: #393280;
-    /* height: 100vh; */
 
-}
 
 #courseContainers,
 #subjectContainers {
@@ -271,9 +266,25 @@ font-size: 96px;
 }
 
 
+#sidebar {
+    color: #fafafc;
+    background-color: #393280;
+    /* height: 100vh; */
+    position: fixed !important;
+
+}
 
 
 
+#navToggle {
+    width: 30px;
+    height: 30px;
+    right: -15;
+    top: 100;
+    border-radius: 15px;
+    position:absolute !important;
+    cursor: pointer;
+}
 
 
 
