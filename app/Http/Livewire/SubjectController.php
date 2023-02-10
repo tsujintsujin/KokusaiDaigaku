@@ -14,6 +14,7 @@ class SubjectController extends Component
     public $description;
     public $units;
     public $year_level;
+
     public function create()
     {
         $this->window = "create";
@@ -43,6 +44,7 @@ class SubjectController extends Component
 
     public function render()
     {
+        $this->window = "create";
         return view('livewire.subject-controller')
         ->with('courses', Course::latest()->get());
     }

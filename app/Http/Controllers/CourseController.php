@@ -31,7 +31,7 @@ class CourseController extends Controller
         $course->abbreviation = $request->abbreviation;
         $course->description = $request->description;
         $course->save();
-        return redirect()->route('courses'); //->with('courses',Course::orderBy('name','asc'));
+        return redirect()->route('courses')->with('Course', $this->course); //->with('courses',Course::orderBy('name','asc'));
 
         // redirect()->route('add_courses_subjects');
     }
