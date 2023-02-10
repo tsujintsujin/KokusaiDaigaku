@@ -2,7 +2,7 @@
 <div class="d-flex col-md-2 col-lg-3 flex-column flex-shrink-0 vh-100 dashboardContainer " id="sidebar"
     style="width: 280px;">
     <div class="text-center my-5 ">
-        <img src="https://mkdph.com/wp-content/uploads/2022/06/MKD-logo-93p.png" class="rounded"
+        <img src="{{asset('kokusai_logo.png')}}" class="rounded"
             alt="Mindanao Kokusai Daigaku Logo">
         <h4 class="h4 mt-5">Hello Admin</h4>
         <p class="">Account ID: MKD105915</p>

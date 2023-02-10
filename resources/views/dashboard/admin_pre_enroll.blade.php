@@ -78,24 +78,19 @@
                     </table>
                 </div>
             </div>
-
             <div class="col ps-5 ms-5">
                 <h1 class="fw-bold">Justin Masiga</h1>
+                <h5>Enrolling For:</h5>
                 <h5>Bachelor in Science Major
                     in Computer Science</h5>
-                <h5>Section: WD 29</h5>
                 <div class="mt-5">
                     <h5>Nationality</h5>
                     <h5>Gender</h5>
-                    <h5>Phone Number</h5>
                     <h5>Birthdate</h5>
-                    <h5>Email</h5>
+                    <h5>Phone Number</h5>
+                    <h5>Email</h5> 
                     <h5>Address</h5>
-                    <h2 class="fw-bold mt-5 text-muted">Enrolling For</h2>
-                    <h3 class="fw-bold">2nd Semester</h3>
-                    <h3 class="fw-bold">S.Y. 2022-2023</h3>
                 </div>
-
             </div>
         </div>
     @endsection
