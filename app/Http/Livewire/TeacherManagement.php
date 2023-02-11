@@ -51,7 +51,7 @@ class TeacherManagement extends Component
         $teacher->contact_number = $this->teacherContactNumber;
         $teacher->address = $this->teacherAddress;
         $teacher->course_id = $this->selectedCourse;
-        $teacher->employment_type = $this->teacherType;
+        $teacher->employment_type = 'Fulltime';
         $teacher->save();
 
         // contact person table
@@ -72,6 +72,8 @@ class TeacherManagement extends Component
         $contact_person_teacher->contact_person_id = ContactPerson::orderBy('id', 'desc')->first()->id;
         $contact_person_teacher->teacher_id = teacher::orderBy('id', 'desc')->first()->id;
         $contact_person_teacher->save();
+
+
 
         TeacherAccount::create([
             'username' => Teacher::orderBy('id', 'desc')->first()->id,
