@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 class TeacherManagement extends Component
 {
 
-    public $window = "create";
+    public $window = "edit";
     public $teacherLastName;
     public $teacherFirstName;
     public $teacherMiddleName;
@@ -159,6 +159,8 @@ class TeacherManagement extends Component
     }
     public function update()
     {
+        // dump($this->teacherLastName);
+        $this->validate();
         $teacher = Teacher::find($this->selectedTeacher);
         $teacher->last_name = $this->teacherLastName;
         $teacher->first_name = $this->teacherFirstName;
