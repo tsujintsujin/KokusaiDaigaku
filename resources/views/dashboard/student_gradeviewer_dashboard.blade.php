@@ -1,6 +1,8 @@
 @extends('dashboard.student_layout')
+@include('cal_css')
+
 @section('content')
-    <div class="container col-9 py-5 ">
+<div class="container-fluid justify-content-center p-5  ms-3 me-4 rounded-top-left-1 rounded-top-right-1" id="contentM">
         <div class="row">
             <div class="col-5 text-center dashboardContainer d-flex flex-column rounded-top">
                 <div class="row dashboardTitleContainer rounded-top">
@@ -45,59 +47,59 @@
             <tbody>
                 <tr>
                     <th scope="row">Math 1</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
                 </tr>
                 <tr>
                     <th scope="row">Math 2</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
                 </tr>
                 <tr>
                     <th scope="row">Math 3</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
                 </tr>
                 <tr>
                     <th scope="row">Math 4</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
                 </tr>
                 <tr>
                     <th scope="row">Math 5</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
                 </tr>
                 <tr>
                     <th scope="row">Math 6</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
                 </tr>
                 <tr>
                     <th scope="row">Math 7</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
                 </tr>
                 <tr>
                     <th scope="row">Math 8</th>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
+                    <th>--</th>
                 </tr>
         </table>
 

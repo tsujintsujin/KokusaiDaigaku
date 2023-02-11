@@ -73,6 +73,8 @@ class TeacherManagement extends Component
         $contact_person_teacher->teacher_id = teacher::orderBy('id', 'desc')->first()->id;
         $contact_person_teacher->save();
 
+
+
         TeacherAccount::create([
             'username' => Teacher::orderBy('id', 'desc')->first()->id,
             'teacher_id' => Teacher::orderBy('id', 'desc')->first()->id,

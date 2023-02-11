@@ -1,10 +1,9 @@
 @extends('dashboard.student_layout')
+@include('cal_css')
 @section('content')
-    <div class="container justify-content-center col-9 py-5">
-
+<div class="container-fluid justify-content-center p-5  ms-3 me-4 rounded-top-left-1 rounded-top-right-1" id="contentM">
         <div class="row">
             <div class="col">
-
                 <div class="col p-5 rounded bg-account shadow">
                     <h1 class="fw-bold">Ralph Cadelina</h1>
                     <h5 class="text-muted">Bachelor in Science and Computer Science Major
