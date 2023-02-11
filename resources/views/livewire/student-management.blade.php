@@ -357,15 +357,12 @@
             <h3 class="fw-bold pt-2">Find Student Account</h3>
         </div>
         <form wire:submit="update">
-
-
             @csrf
             <div class="row dashboardContainer ps-4 pb-4 pe-4">
                 <div class="row mt-4">
                     <div class="col-3">
                         <div class="dropdown">
                             <h6 class="text-muted text-left ps-1">Select Student</h6>
-                            {{-- wire:model="selectedStudent" --}}
                             <select wire:model="selectedStudent" class="form-select p-2"
                                 aria-label="Default select example">
                                 <option value="0" selected>Student id</option>
@@ -382,7 +379,7 @@
                     </div>
                     <div class="col"></div>
                     <div class="col-3 d-flex justify-content-end">
-                        <button wire:click='back' type="button" class="pt-2 col btn btn-primary">
+                        <button wire:click='cancel' type="button" class="pt-2 col btn btn-primary">
                             Cancel
                         </button>
                     </div>

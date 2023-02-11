@@ -9,12 +9,6 @@
                     <div class="row mt-4">
                         <div class="col-4">
                             <h2 class="fw-bold">Teacher Account Creation</h2>
-                            {{-- enable the one below during edit mode --}}
-
-                            {{-- <div class="form-outline bg-white rounded p-1 pt-2">
-                            <input type="text" id="" class="form-control" />
-                            <label class="form-label ps-1" for="">Student Name</label>
-                        </div> --}}
                         </div>
                         <div class="col"></div>
                         <div class="col-3 d-flex justify-content-end">
@@ -58,10 +52,7 @@
                         </div>
                         {{-- enable the one below during edit mode --}}
 
-                        {{-- <div class="form-outline bg-white rounded p-1 pt-2">
-                        <input type="text" id="" class="form-control" />
-                        <label class="form-label ps-1" for="">teacher Name</label>
-                    </div> --}}
+                     
                     </div>
 
                 </div>
@@ -323,16 +314,9 @@
             @csrf
             <div class="row dashboardContainer ps-4 pb-4">
                 <div class="row mt-4">
-                    {{-- <div class="col-3">
-                        <label class="form-label ps-1" for="">Name</label>
-                        <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id="" class="form-control" wire:model="" />
-                        </div>
-                    </div> --}}
                     <div class="col-3">
                         <div class="dropdown">
                             <h6 class="text-muted text-left ps-1">Select Teacher</h6>
-                            {{-- wire:model="selectedTeacher" --}}
                             <select wire:model="selectedTeacher"class="form-select p-2"
                                 aria-label="Default select example">
                                 <option value="" selected>Teacher id</option>
@@ -348,14 +332,6 @@
                         </div>
                     </div>
 
-                    {{-- <h2 class="fw-bold text-muted">ID: 523643734</h2> --}}
-
-                    {{-- enable the one below during edit mode --}}
-
-                    {{-- <div class="form-outline bg-white rounded p-1 pt-2">
-                        <input type="text" id="" class="form-control" />
-                        <label class="form-label ps-1" for="">teacher Name</label>
-                    </div> --}}
                     <div class="col"></div>
                     <div class="col-3 d-flex justify-content-end">
                         <button wire:click='cancel' type="button" class="pt-2 col btn btn-primary">
@@ -365,37 +341,7 @@
                 </div>
                 <div class="row mt-3">
 
-                    {{-- <div class="col-2">
-                    <div class="dropdown">
-                        <h6 class="text-muted text-left ps-1">Select Course</h6>
-                        <input type="text" wire:model="course_id">
-                        <a class="btn btn-primary dropdown-toggle w-100 text-start" href="#" role="button"
-                            id="dropdownMenuLink" data-mdb-toggle="dropdown" aria-expanded="false">
-                            BSIT
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">BSCS</a></li>
-                            <li><a class="dropdown-item" href="#">BSBA</a></li>
-                            <li><a class="dropdown-item" href="#">BSTM</a></li>
-                        </ul>
-                    </div>
-                </div> --}}
-
-                    {{-- <div class="col-2">
-                    <div class="dropdown">
-                        <h6 class="text-muted text-left ps-1">Section</h6>
-                        <input type="text" wire:model="section_id">
-                        <a class="btn btn-primary dropdown-toggle w-100 text-start" href="#" role="button"
-                            id="dropdownMenuLink" data-mdb-toggle="dropdown" aria-expanded="false">
-                            BSIT
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">BSCS</a></li>
-                            <li><a class="dropdown-item" href="#">BSBA</a></li>
-                            <li><a class="dropdown-item" href="#">BSTM</a></li>
-                        </ul>
-                    </div>
-                </div> --}}
+                 
                 </div>
 
                 <div class="row mt-4">
@@ -507,12 +453,10 @@
 
             <div class="row dashboardContainer ps-4 pb-4 pe-4">
                 <div class="row mt-4">
-                    {{-- data-mdb-toggle="collapse" data-mdb-target="#accord2" --}}
                     <div class="col-3" type="button">
                         <h2 class="fw-bold text-muted">Contact Person </h2>
                     </div>
                 </div>
-                {{-- accordion-collapse collapse --}}
                 <div class="" id="accord2">
                     <div class="row mt-4">
                         <div class="col">

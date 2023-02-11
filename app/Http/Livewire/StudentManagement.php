@@ -85,6 +85,7 @@ class StudentManagement extends Component
    
     public function create()
     {
+        $this->window = "create";
         // dump('hellow world');
         $this->validate();
         Student::create([
@@ -170,7 +171,7 @@ class StudentManagement extends Component
         $this->reset('selectedCourse', 'selectedSection');
         $this->window = "edit";
     }
-    public function back()
+    public function cancel()
     {
         $this->resetElements();
         $this->reset('selectedCourse', 'selectedSection');
@@ -197,11 +198,8 @@ class StudentManagement extends Component
         $this->sections = collect();
 
         //edit of student data.
-        $this->students = Student::all();
+        $this->students = Student::orderBy('id', 'ASC')->latest()->get();
         $this->student_data;
-        $this->student_section;
-        $this->student_course;
-        $this->studentLastName;
 
         // $this->sections = collect();
     }
@@ -222,7 +220,7 @@ class StudentManagement extends Component
             $this->resetElements();
         } elseif (!is_null($student_id) || $this->selectedStudent != 0) {
             //  $this->student_data variable is use in student-management.blade.php
-            $this->student_data = Student::where('id', $student_id)->get();
+            // $this->student_data = Student::where('id', $student_id)->get();
 
             // student course
             $std_crs = Student::select('course_id')->where('id', $student_id)->first();

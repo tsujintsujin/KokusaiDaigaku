@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 class TeacherManagement extends Component
 {
 
-    public $window = "edit";
+    public $window = "create";
     public $teacherLastName;
     public $teacherFirstName;
     public $teacherMiddleName;
