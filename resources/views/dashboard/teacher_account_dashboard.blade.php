@@ -1,6 +1,8 @@
 @extends('dashboard.teacher_layout')
+@include('cal_css')
 @section('content')
-    <div class="container justify-content-center col-9 py-5">
+
+<div class="container-fluid justify-content-center p-5  ms-3 me-4 rounded-top-left-1 rounded-top-right-1" id="contentM">
 
         <div class="row">
             <div class="col">

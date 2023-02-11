@@ -1,6 +1,8 @@
 @extends('dashboard.teacher_layout')
+@include('cal_css')
 @section('content')
-    <div class="container col-9 py-5 ">
+
+<div class="container-fluid justify-content-center p-5  ms-3 me-4 rounded-top-left-1 rounded-top-right-1" id="contentM">
         <div class="row">
             <div class="col-5 text-center dashboardContainer d-flex flex-column rounded-top">
                 <div class="row dashboardTitleContainer rounded-top">
@@ -52,88 +54,88 @@
                 <tr>
             <tbody>
                 <tr>
-                    <td class="pt-3">Justin Masiga</td>
-                    <td>
+                    <th class="pt-3">Justin Masiga</th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="prelim" />
                             </div>
                         </div>
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="midterm" />
                             </div>
                         </div>
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="finals" />
                             </div>
                         </div>
-                    </td>
-                    <td class="text-end">
+                    </th>
+                    <th class="text-end">
                        
                         <button class="btn btn-sm shadow-none btn-primary" href="">Update</button>
-                    </td>
+                    </th>
                 </tr>
                 <tr>
-                    <td class="pt-3">Clarence P</td>
-                    <td>
+                    <th class="pt-3">Clarence P</th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="prelim" />
                             </div>
                         </div>
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="midterm" />
                             </div>
                         </div>
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="finals" />
                             </div>
                         </div>
-                    </td>
-                    <td class="text-end">
+                    </th>
+                    <th class="text-end">
                        
                         <button class="btn btn-sm shadow-none btn-primary" href="">Update</button>
-                    </td>
+                    </th>
                 </tr>
                 <tr>
-                    <td class="pt-3">Ralph C</td>
-                    <td>
+                    <th class="pt-3">Ralph C</th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="prelim" />
                             </div>
                         </div>
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="midterm" />
                             </div>
                         </div>
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         <div class="col-2  text-center">
                             <div class=" border-0">
                                 <input placeholder="--" type="text" id="" class="form-control  text-center" name="finals" />
                             </div>
                         </div>
-                    </td>
-                    <td class="text-end">
+                    </th>
+                    <th class="text-end">
                        
                         <button class="btn btn-sm shadow-none btn-primary" href="">Update</button>
-                    </td>
+                    </th>
                 </tr>
         </table>
 
