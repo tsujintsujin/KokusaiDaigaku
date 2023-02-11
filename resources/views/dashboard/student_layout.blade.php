@@ -10,7 +10,6 @@
     @livewireStyles
 </head>
 
-
 <body>
     <div class="container-fluid ps-0">
         <div class="row d-flex">
