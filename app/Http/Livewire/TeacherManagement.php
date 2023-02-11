@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 class TeacherManagement extends Component
 {
 
-    public $window = "edit";
+    public $window = "create";
     public $teacherLastName;
     public $teacherFirstName;
     public $teacherMiddleName;
@@ -116,15 +116,15 @@ class TeacherManagement extends Component
     {
         $teacher = Teacher::find($this->selectedTeacher);
         $teacher->last_name = $this->teacherLastName;
-        $teacher->last_name = $this->teacherFirstName;
-        $teacher->last_name = $this->teacherMiddleName;
-        $teacher->last_name = $this->teacherSuffixName;
-        $teacher->last_name = $this->teacherGender;
-        $teacher->last_name = $this->teacherBirthdate;
-        $teacher->last_name = $this->teacherNationality;
-        $teacher->last_name = $this->teacherContactNumber;
-        $teacher->last_name = $this->teacherEmail;
-        $teacher->last_name = $this->teacherAddress;
+        $teacher->first_name = $this->teacherFirstName;
+        $teacher->middle_name = $this->teacherMiddleName;
+        $teacher->suffix_name = $this->teacherSuffixName;
+        $teacher->gender = $this->teacherGender;
+        $teacher->birthdate = $this->teacherBirthdate;
+        $teacher->nationality = $this->teacherNationality;
+        $teacher->contact_number = $this->teacherContactNumber;
+        $teacher->email = $this->teacherEmail;
+        $teacher->address = $this->teacherAddress;
         $teacher->save();
         // find('teacher_id,contact_id')->
         $ContactPersonTeacher = ContactPersonTeacher::where('teacher_id', $this->selectedTeacher)->first();
@@ -139,7 +139,10 @@ class TeacherManagement extends Component
         $cntct_data->contact_number =  $this->contactContactNumber;
         $cntct_data->email =  $this->contactEmail;
         $cntct_data->address =  $this->contactAddress;
-        // $cntct_data->last_name =  $this->contactLastName;
+
+        $ContactPersonTeacher->relationship =  $this->contactRelationship;
+
+        $ContactPersonTeacher->save();
         $cntct_data->save();
 
         $this->reset('selectedTeacher');
