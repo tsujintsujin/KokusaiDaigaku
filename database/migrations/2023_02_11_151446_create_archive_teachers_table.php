@@ -15,6 +15,18 @@ return new class extends Migration
     {
         Schema::create('archive_teachers', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('course_id');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->string('last_name');
+            $table->string('first_name');
+            $table->string('middle_name')->nullable();
+            $table->string('suffix_name')->nullable();
+            $table->enum('gender', array('male', 'female'));
+            $table->date('birthdate');
+            $table->string('nationality');
+            $table->string('contact_number');
+            $table->string('email');
+            $table->string('address');
             $table->timestamps();
         });
     }
