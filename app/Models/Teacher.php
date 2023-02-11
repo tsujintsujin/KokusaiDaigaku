@@ -21,7 +21,7 @@ class Teacher extends Model
         'birthdate',
         'nationality',
         'contact_number',
+        'email',
         'address',
-        'employment_type'
     ];
 }

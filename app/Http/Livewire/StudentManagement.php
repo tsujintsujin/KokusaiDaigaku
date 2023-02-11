@@ -86,86 +86,7 @@ class StudentManagement extends Component
         'contactAddress' => 'Address cannot be empty.',
         'contactRelationship' => 'Relationship cannot be empty.',
     ];
-    public function courseErrorClear()
-    {
-        $this->resetValidation('selectedCourse');
-    }
-    public function sectionErrorClear()
-    {
-        $this->resetValidation('selectedSection');
-    }
-    public function studentLastNameErrorClear()
-    {
-        $this->resetValidation('studentLastName');
-    }
-    public function studentFirstNameErrorClear()
-    {
-        $this->resetValidation('studentFirstName');
-    }
-    public function studentMiddleNameErrorClear()
-    {
-        $this->resetValidation('studentMiddleName');
-    }
-    public function studentGenderErrorClear()
-    {
-        $this->resetValidation('studentGender');
-    }
-    public function studentNationalityErrorClear()
-    {
-        $this->resetValidation('studentNationality');
-    }
-    public function studentBirthdateErrorClear()
-    {
-        $this->resetValidation('studentBirthdate');
-    }
-    public function studentContactNumberErrorClear()
-    {
-        $this->resetValidation('studentContactNumber');
-    }
-    public function studentEmailErrorClear()
-    {
-        $this->resetValidation('studentEmail');
-    }
-    public function studentAddressErrorClear()
-    {
-        $this->resetValidation('studentAddress');
-    }
-    public function contactLastNameErrorClear()
-    {
-        $this->resetValidation('contactLastName');
-    }
-    public function contactFirstNameErrorClear()
-    {
-        $this->resetValidation('contactFirstName');
-    }
-    public function contactMiddleNameErrorClear()
-    {
-        $this->resetValidation('contactMiddleName');
-    }
-    public function contactGenderErrorClear()
-    {
-        $this->resetValidation('contactGender');
-    }
-    public function contactNationalityErrorClear()
-    {
-        $this->resetValidation('contactNationality');
-    }
-    public function contactRelationshipErrorClear()
-    {
-        $this->resetValidation('contactRelationship');
-    }
-    public function contactContactNumberErrorClear()
-    {
-        $this->resetValidation('contactContactNumber');
-    }
-    public function contactEmailErrorClear()
-    {
-        $this->resetValidation('contactEmail');
-    }
-    public function contactAddressErrorClear()
-    {
-        $this->resetValidation('contactAddress');
-    }
+   
     public function create()
     {
         // dump('hellow world');
@@ -247,7 +168,7 @@ class StudentManagement extends Component
         $this->resetElements();
     }
 
-    public function edit()
+    public function search_update()
     {
         $this->resetElements();
         $this->reset('selectedCourse', 'selectedSection');
@@ -353,7 +274,86 @@ class StudentManagement extends Component
     }
 
 
-
+    public function courseErrorClear()
+    {
+        $this->resetValidation('selectedCourse');
+    }
+    public function sectionErrorClear()
+    {
+        $this->resetValidation('selectedSection');
+    }
+    public function studentLastNameErrorClear()
+    {
+        $this->resetValidation('studentLastName');
+    }
+    public function studentFirstNameErrorClear()
+    {
+        $this->resetValidation('studentFirstName');
+    }
+    public function studentMiddleNameErrorClear()
+    {
+        $this->resetValidation('studentMiddleName');
+    }
+    public function studentGenderErrorClear()
+    {
+        $this->resetValidation('studentGender');
+    }
+    public function studentNationalityErrorClear()
+    {
+        $this->resetValidation('studentNationality');
+    }
+    public function studentBirthdateErrorClear()
+    {
+        $this->resetValidation('studentBirthdate');
+    }
+    public function studentContactNumberErrorClear()
+    {
+        $this->resetValidation('studentContactNumber');
+    }
+    public function studentEmailErrorClear()
+    {
+        $this->resetValidation('studentEmail');
+    }
+    public function studentAddressErrorClear()
+    {
+        $this->resetValidation('studentAddress');
+    }
+    public function contactLastNameErrorClear()
+    {
+        $this->resetValidation('contactLastName');
+    }
+    public function contactFirstNameErrorClear()
+    {
+        $this->resetValidation('contactFirstName');
+    }
+    public function contactMiddleNameErrorClear()
+    {
+        $this->resetValidation('contactMiddleName');
+    }
+    public function contactGenderErrorClear()
+    {
+        $this->resetValidation('contactGender');
+    }
+    public function contactNationalityErrorClear()
+    {
+        $this->resetValidation('contactNationality');
+    }
+    public function contactRelationshipErrorClear()
+    {
+        $this->resetValidation('contactRelationship');
+    }
+    public function contactContactNumberErrorClear()
+    {
+        $this->resetValidation('contactContactNumber');
+    }
+    public function contactEmailErrorClear()
+    {
+        $this->resetValidation('contactEmail');
+    }
+    public function contactAddressErrorClear()
+    {
+        $this->resetValidation('contactAddress');
+    }
     public function render()
     {
         return view('livewire.student-management');

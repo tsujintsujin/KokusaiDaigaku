@@ -12,7 +12,7 @@
                         </div>
                         <div class="col"></div>
                         <div class="col-3 d-flex justify-content-end">
-                            <button wire:click='edit' type="button" class="pt-2 col btn btn-primary">
+                            <button wire:click='search_update' type="button" class="pt-2 col btn btn-primary">
                                 Search & Update
                             </button>
                         </div>
