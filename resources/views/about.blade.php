@@ -17,7 +17,7 @@
 
 <div class="container my-5 text-center text-dark d-flex align-items-center">
         <div class="row">
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="300">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
                 <h2 class="fw-bold color-title ">MISSION</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">W</span>e aim to provide a diverse
                     range of
@@ -34,7 +34,7 @@
                     corporate social responsibility in all of
                     our endeavors.</h5>
             </div>
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="600">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000">
                 <h2 class="fw-bold color-title">PHILOSOPHY</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">T</span>he College is dedicated to
                     providing
@@ -53,7 +53,7 @@
                     values to make a positive impact on
                     the world.</>
             </div>
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="900">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="900" data-aos-duration="2000">
                 <h2 class="fw-bold color-title">VISION</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">A</span>n academic community
                     proficient in
@@ -130,7 +130,7 @@
                 by a member of the MKD Board of Trustees,
                 Mr. Ricardo N. Obenza, Jr.
             </div>
-            <div class="col" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="col" data-aos="zoom-in" data-aos-duration="2000">
                 <img src="{{ asset('/image/kokusai_meaning.png') }}" class="mb-5">
             </div>
             <div class="col justify-content">

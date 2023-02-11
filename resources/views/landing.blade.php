@@ -313,7 +313,7 @@
                 </div>
                 <div class="faq container pb-5 mb-5">
                     <div class="row">
-                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1500">
+                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5" data-aos="fade-right" data-aos-duration="1500">
                             <div class="row align-items-center">
                                 <div class="col-2 text-title-lines">
                                 </div>
@@ -334,7 +334,7 @@
                                 <h5>&emsp;&emsp;Early Childhood Education</h5>
                             </h5>
                         </div>
-                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1500">
+                        <div class="col-12 col-lg-6 mt-5 pt-5 px-5" data-aos="fade-left" data-aos-duration="1500">
                             <div class="row align-items-center">
                                 <div class="col-2 text-title-lines">
                                 </div>
