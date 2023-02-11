@@ -91,9 +91,7 @@
 
                     </div>
                     <div class="col">
-                        <label class="form-label ps-1" for="">Middle Name @error('studentMiddleName')
-                                <span class="error" style="color:red; font-weight:bold; ">{{ $message }}</span>
-                            @enderror
+                        <label class="form-label ps-1" for="">Middle Name
                         </label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:focus="studentMiddleNameErrorClear" wire:model="studentMiddleName"
@@ -240,9 +238,7 @@
 
                         </div>
                         <div class="col">
-                            <label class="form-label ps-1" for="">Middle Name @error('contactMiddleName')
-                                    <span class="error" style="color:red; font-weight:bold; ">{{ $message }}</span>
-                                @enderror
+                            <label class="form-label ps-1" for="">Middle Name 
                             </label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input wire:focus="contactMiddleNameErrorClear" type="text" id=""
