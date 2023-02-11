@@ -22,7 +22,7 @@ class StudentManagement extends Component
     public $studentGender;
     public $studentBirthdate;
     public $studentNationality;
-    public $studentContactNumber = '09';
+    public $studentContactNumber = '09093545643';
     public $studentEmail;
     public $studentAddress;
     public $contactLastName;
@@ -31,7 +31,7 @@ class StudentManagement extends Component
     public $contactSuffixName;
     public $contactGender;
     public $contactNationality;
-    public $contactContactNumber = '09';
+    public $contactContactNumber = '09093545645';
     public $contactEmail;
     public $contactAddress;
     public $contactRelationship;

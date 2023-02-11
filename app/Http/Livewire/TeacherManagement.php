@@ -21,7 +21,7 @@ class TeacherManagement extends Component
     public $teacherGender;
     public $teacherBirthdate;
     public $teacherNationality;
-    public $teacherContactNumber;
+    public $teacherContactNumber = '09094354564';
     public $teacherEmail;
     public $teacherAddress;
     public $selectedCourse;
@@ -31,13 +31,60 @@ class TeacherManagement extends Component
     public $contactSuffixName;
     public $contactGender;
     public $contactNationality;
-    public $contactContactNumber;
+    public $contactContactNumber = '09093545644';
     public $contactEmail;
     public $contactAddress;
     public $contactRelationship;
 
+    protected function rules()
+    {
+        // mga condition sa input ng data sa creating stdents
+        return [
+            'selectedCourse' => 'required',
+            'teacherLastName' => 'required',
+            'teacherFirstName' => 'required',
+            'teacherMiddleName' => 'required',
+            'teacherGender' => 'required',
+            'teacherBirthdate' => 'required',
+            'teacherNationality' => 'required',
+            'teacherContactNumber' => 'required|numeric|digits:11',
+            'teacherEmail' => 'email',
+            'teacherAddress' => 'required',
+            'contactLastName' => 'required',
+            'contactFirstName' => 'required',
+            'contactMiddleName' => 'required',
+            'contactGender' => 'required',
+            'contactNationality' => 'required',
+            'contactContactNumber' => 'required|numeric|digits:11',
+            'contactEmail' => 'email',
+            'contactAddress' => 'required',
+            'contactRelationship' => 'required',
+        ];
+    }
+    protected $messages = [
+        'selectedCourse' => '**invalid**',
+        'teacherLastName' => '**invalid**',
+        'teacherFirstName' => '**invalid**',
+        'teacherMiddleName' => '**invalid**',
+        'teacherGender' => '**invalid**',
+        'teacherBirthdate' => '**invalid**',
+        'teacherNationality' => '**invalid**',
+        'teacherContactNumber' => '**invalid**',
+        'teacherEmail' => '**invalid**',
+        'teacherAddress' => '**invalid**',
+        'contactLastName' => '**invalid**',
+        'contactFirstName' => '**invalid**',
+        'contactMiddleName' => '**invalid**',
+        'contactGender' => '**invalid**',
+        'contactNationality' => '**invalid**',
+        'contactContactNumber' => '**invalid**',
+        'contactEmail' => '**invalid**',
+        'contactAddress' => '**invalid**',
+        'contactRelationship' => '**invalid**',
+    ];
     public function create()
     {
+        $this->validate();
         $this->window = "create";
         $teacher = new Teacher;
         $teacher->last_name = $this->teacherLastName;
