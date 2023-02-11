@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 class TeacherManagement extends Component
 {
 
-    public $window = "create";
+    public $window = "edit";
     public $teacherLastName;
     public $teacherFirstName;
     public $teacherMiddleName;
@@ -153,6 +153,7 @@ class TeacherManagement extends Component
     }
     public function cancel()
     {
+        $this->clearErrors();
         $this->window = "create";
         $this->resetElements();
         $this->reset('selectedTeacher');
@@ -162,6 +163,7 @@ class TeacherManagement extends Component
         // dump($this->teacherLastName);
         $this->validate();
         $teacher = Teacher::find($this->selectedTeacher);
+
         $teacher->last_name = $this->teacherLastName;
         $teacher->first_name = $this->teacherFirstName;
         $teacher->middle_name = $this->teacherMiddleName;
@@ -172,6 +174,7 @@ class TeacherManagement extends Component
         $teacher->contact_number = $this->teacherContactNumber;
         $teacher->email = $this->teacherEmail;
         $teacher->address = $this->teacherAddress;
+        $teacher->course_id = $this->selectedCourse;
         $teacher->save();
         // find('teacher_id,contact_id')->
         $ContactPersonTeacher = ContactPersonTeacher::where('teacher_id', $this->selectedTeacher)->first();
@@ -191,14 +194,14 @@ class TeacherManagement extends Component
 
         $ContactPersonTeacher->save();
         $cntct_data->save();
-
-        $this->reset('selectedTeacher');
+        
+        $this->reset('selectedTeacher','selectedCourse');
         $this->resetElements();
     }
 
     public function edit()
     {
-
+        $this->clearErrors();
         $this->window = "edit";
         $this->resetElements();
         $this->reset('selectedCourse');
@@ -218,7 +221,7 @@ class TeacherManagement extends Component
     public function updatingSelectedTeacher($teacher_id)
     {
         // dump($teacher_id);
-        if (!is_null($teacher_id)) {
+        if (!is_null($teacher_id) && $teacher_id !== "") {
             // $this->teacher_data = Teacher::where('id', $teacher_id)->first();
             $teacher_data = Teacher::where('id', $teacher_id)->first();
             $this->teacherLastName = $teacher_data->last_name;
@@ -231,6 +234,8 @@ class TeacherManagement extends Component
             $this->teacherContactNumber = $teacher_data->contact_number;
             $this->teacherEmail = $teacher_data->email;
             $this->teacherAddress = $teacher_data->address;
+            $this->selectedCourse = $teacher_data->course_id;
+
 
             $ContactPersonTeacher = ContactPersonTeacher::where('teacher_id', $teacher_id)->first();
             $cntct_id = $ContactPersonTeacher->contact_person_id;
@@ -246,14 +251,106 @@ class TeacherManagement extends Component
             $this->contactAddress = $cntct_data->address;
 
             $this->contactRelationship = $ContactPersonTeacher->relationship;
+        }elseif($teacher_id === ""){
+            $this->reset('selectedTeacher','selectedCourse');
+            $this->resetElements();
         }
     }
 
+    public function courseErrorClear()
+    {
+        $this->resetValidation('selectedCourse');
+    }
+   
+    public function teacherLastNameErrorClear()
+    {
+        $this->resetValidation('teacherLastName');
+    }
+    public function teacherFirstNameErrorClear()
+    {
+        $this->resetValidation('teacherFirstName');
+    }
+   
+    public function teacherGenderErrorClear()
+    {
+        $this->resetValidation('teacherGender');
+    }
+    public function teacherNationalityErrorClear()
+    {
+        $this->resetValidation('teacherNationality');
+    }
+    public function teacherBirthdateErrorClear()
+    {
+        $this->resetValidation('teacherBirthdate');
+    }
+    public function teacherContactNumberErrorClear()
+    {
+        $this->resetValidation('teacherContactNumber');
+    }
+    public function teacherEmailErrorClear()
+    {
+        $this->resetValidation('teacherEmail');
+    }
+    public function teacherAddressErrorClear()
+    {
+        $this->resetValidation('teacherAddress');
+    }
+    public function contactLastNameErrorClear()
+    {
+        $this->resetValidation('contactLastName');
+    }
+    public function contactFirstNameErrorClear()
+    {
+        $this->resetValidation('contactFirstName');
+    }
+    public function contactGenderErrorClear()
+    {
+        $this->resetValidation('contactGender');
+    }
+    public function contactNationalityErrorClear()
+    {
+        $this->resetValidation('contactNationality');
+    }
+    public function contactRelationshipErrorClear()
+    {
+        $this->resetValidation('contactRelationship');
+    }
+    public function contactContactNumberErrorClear()
+    {
+        $this->resetValidation('contactContactNumber');
+    }
+    public function contactEmailErrorClear()
+    {
+        $this->resetValidation('contactEmail');
+    }
+    public function contactAddressErrorClear()
+    {
+        $this->resetValidation('contactAddress');
+    }
+
+    public function clearErrors(){
+        $this->courseErrorClear();
+        $this->teacherLastNameErrorClear();
+        $this->teacherFirstNameErrorClear();
+        $this->teacherGenderErrorClear();
+        $this->teacherNationalityErrorClear();
+        $this->teacherBirthdateErrorClear();
+        $this->teacherContactNumberErrorClear();
+        $this->teacherEmailErrorClear();
+        $this->teacherAddressErrorClear();
+        $this->contactLastNameErrorClear();
+        $this->contactFirstNameErrorClear();
+        $this->contactGenderErrorClear();
+        $this->contactNationalityErrorClear();
+        $this->contactRelationshipErrorClear();
+        $this->contactContactNumberErrorClear();
+        $this->contactEmailErrorClear();
+        $this->contactAddressErrorClear();
+    }
     public function render()
     {
         return view('livewire.teacher-management')
             ->with('courses', Course::latest()->get())
             ->with('teachers', Teacher::orderBy('id', 'ASC')->latest()->get());
-         
     }
 }
