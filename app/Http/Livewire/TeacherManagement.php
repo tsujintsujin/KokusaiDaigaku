@@ -8,6 +8,7 @@ use App\Models\Teacher;
 use App\Models\ContactPerson;
 use App\Models\ContactPersonTeacher;
 use App\Models\TeacherAccount;
+use App\Models\ArchiveTeacher;
 use Illuminate\Support\Facades\Hash;
 
 class TeacherManagement extends Component
@@ -125,9 +126,12 @@ class TeacherManagement extends Component
             'type' => 'teacher',
         ]);
         $this->resetElements();
+
     }
     public function resetElements()
-    {
+    { 
+        $this->clearErrors();
+        
         $this->reset(
             'teacherLastName',
             'teacherFirstName',
@@ -153,7 +157,6 @@ class TeacherManagement extends Component
     }
     public function cancel()
     {
-        $this->clearErrors();
         $this->window = "create";
         $this->resetElements();
         $this->reset('selectedTeacher');
@@ -194,14 +197,14 @@ class TeacherManagement extends Component
 
         $ContactPersonTeacher->save();
         $cntct_data->save();
-        
-        $this->reset('selectedTeacher','selectedCourse');
+
+        $this->reset('selectedTeacher', 'selectedCourse');
         $this->resetElements();
+
     }
 
     public function edit()
     {
-        $this->clearErrors();
         $this->window = "edit";
         $this->resetElements();
         $this->reset('selectedCourse');
@@ -251,17 +254,47 @@ class TeacherManagement extends Component
             $this->contactAddress = $cntct_data->address;
 
             $this->contactRelationship = $ContactPersonTeacher->relationship;
-        }elseif($teacher_id === ""){
-            $this->reset('selectedTeacher','selectedCourse');
+
+        } elseif ($teacher_id === "") {
+            $this->reset('selectedTeacher', 'selectedCourse');
             $this->resetElements();
         }
+        $this->clearErrors();
+
+    }
+
+    public function archive()
+    {
+        $this->validate();
+        $teacher = new ArchiveTeacher;
+
+        $teacher->last_name = $this->teacherLastName;
+        $teacher->first_name = $this->teacherFirstName;
+        $teacher->middle_name = $this->teacherMiddleName;
+        $teacher->suffix_name = $this->teacherSuffixName;
+        $teacher->gender = $this->teacherGender;
+        $teacher->birthdate = $this->teacherBirthdate;
+        $teacher->nationality = $this->teacherNationality;
+        $teacher->contact_number = $this->teacherContactNumber;
+        $teacher->email = $this->teacherEmail;
+        $teacher->address = $this->teacherAddress;
+        $teacher->course_id = $this->selectedCourse;
+        $teacher->save();
+
+        $teacher_delete = Teacher::find($this->selectedTeacher);
+        $teacher_delete->delete();
+        $this->reset('selectedTeacher', 'selectedCourse');
+        $this->resetElements();
+        $this->clearErrors();
+        
+        
     }
 
     public function courseErrorClear()
     {
         $this->resetValidation('selectedCourse');
     }
-   
+
     public function teacherLastNameErrorClear()
     {
         $this->resetValidation('teacherLastName');
@@ -270,7 +303,7 @@ class TeacherManagement extends Component
     {
         $this->resetValidation('teacherFirstName');
     }
-   
+
     public function teacherGenderErrorClear()
     {
         $this->resetValidation('teacherGender');
@@ -328,7 +361,8 @@ class TeacherManagement extends Component
         $this->resetValidation('contactAddress');
     }
 
-    public function clearErrors(){
+    public function clearErrors()
+    {
         $this->courseErrorClear();
         $this->teacherLastNameErrorClear();
         $this->teacherFirstNameErrorClear();
@@ -349,6 +383,7 @@ class TeacherManagement extends Component
     }
     public function render()
     {
+
         return view('livewire.teacher-management')
             ->with('courses', Course::latest()->get())
             ->with('teachers', Teacher::orderBy('id', 'ASC')->latest()->get());
