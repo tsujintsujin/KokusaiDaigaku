@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Hash;
 
 class StudentManagement extends Component
 {
-    public $window = "create";
-    
+    public $window = "edit";
+
     public $studentLastName;
     public $studentFirstName;
     public $studentMiddleName;
@@ -80,12 +80,12 @@ class StudentManagement extends Component
         'contactAddress' => '**invalid**',
         'contactRelationship' => '**invalid**',
     ];
-   
+
     public function create()
     {
         $this->window = "create";
         // dump('hellow world');
-       
+
         $this->validate();
         Student::create([
             'course_id' => $this->selectedCourse,
@@ -121,7 +121,7 @@ class StudentManagement extends Component
         $contact_person_student->contact_person_id = ContactPerson::orderBy('id', 'desc')->first()->id;
         $contact_person_student->student_id = Student::orderBy('id', 'desc')->first()->id;
         $contact_person_student->save();
-        
+
         StudentAccount::create([
             'username' => Student::orderBy('id', 'desc')->first()->id,
             'student_id' => Student::orderBy('id', 'desc')->first()->id,
@@ -156,14 +156,24 @@ class StudentManagement extends Component
             'contactEmail',
             'contactAddress',
             'contactRelationship',
-            'selectedStudent'
+            // 'selectedStudent'
         );
     }
     public function update()
     {
-       
-        $this->resetElements();
+        if (is_null($this->selectedCourse)) {
+            $student = Student::find($this->selectedStudent);
+            $this->selectedCourse = $student->course_id;
+            dump($this->selectedCourse);
+        }
+        if (is_null($this->selectedSection)) {
+            $student = Student::find($this->selectedStudent);
+            $this->selectedSection = $student->course_id;
+            dump($this->selectedSection);
+        }
+        // $this->resetElements();
     }
+
 
     public function search_update()
     {
@@ -180,92 +190,94 @@ class StudentManagement extends Component
 
     }
 
-    // for dropdwons
+
+
+    // // for dropdwons
     public $selectedCourse = NULL;
-    public $sections;
-    public $courses;
+    // public $sections;
+    // public $courses;
 
     public $selectedStudent = NULL;
-    public $students;
-    public $student_data;
-    public $student_section;
-    public $student_course;
+    // public $students;
+    // public $student_data;
+    // public $student_section;
+    // public $student_course;
 
-    public function mount()
-    {
-        //for selecting course and section in creating student
-        $this->courses = Course::all();
-        $this->sections = collect();
+    // public function mount()
+    // {
+    //     //for selecting course and section in creating student
+    //     $this->courses = Course::all();
+    //     $this->sections = collect();
 
-        //edit of student data.
-        $this->students = Student::orderBy('id', 'ASC')->latest()->get();
-        $this->student_data;
+    //     //edit of student data.
+    //     $this->students = Student::orderBy('id', 'ASC')->latest()->get();
+    //     $this->student_data;
 
-        // $this->sections = collect();
-    }
-    // this is for dropdown selected course.
-    public function updatedSelectedCourse($course)
-    {
-        if (!is_null($course)) {
-            $this->sections = Section::where('course_id', $course)->get();
-        }
-    }
-
-
-    // edit student 
-    // this is for dropdown selected student.
-    public function updatedSelectedStudent($student_id)
-    {
-        if ($this->selectedStudent == 0) {
-            $this->resetElements();
-        } elseif (!is_null($student_id) || $this->selectedStudent != 0) {
-            //  $this->student_data variable is use in student-management.blade.php
-            $this->student_data = Student::where('id', $student_id)->get();
-
-            // student course
-            $std_crs = Student::select('course_id')->where('id', $student_id)->first();
-            $course_id = $std_crs->course_id;
-            $this->student_course = Course::where('id', $course_id)->get();
-            $this->selectedCourse = $course_id;
-            $this->updatedSelectedCourse($course_id);
-
-            // student section
-            $std_sctn = Student::select('section_id')->where('id', $student_id)->first();
-            $section_id = $std_sctn->section_id;
-            $this->student_section = Section::where('id', $section_id)->get();
+    //     // $this->sections = collect();
+    // }
+    // // this is for dropdown selected course.
+    // public function updatedSelectedCourse($course)
+    // {
+    //     if (!is_null($course)) {
+    //         $this->sections = Section::where('course_id', $course)->get();
+    //     }
+    // }
 
 
-            // getting the data of student
-            $stdnt_data = Student::where('id', $student_id)->first();
-            $this->studentLastName = $stdnt_data->last_name;
-            $this->studentFirstName = $stdnt_data->first_name;
-            $this->studentMiddleName = $stdnt_data->middle_name;
-            $this->studentSuffixName = $stdnt_data->suffix_name;
-            $this->studentGender = $stdnt_data->gender;
-            $this->studentBirthdate = $stdnt_data->birthdate;
-            $this->studentNationality = $stdnt_data->nationality;
-            $this->studentContactNumber = $stdnt_data->contact_number;
-            $this->studentEmail = $stdnt_data->email;
-            $this->studentAddress = $stdnt_data->address;
+    // // edit student 
+    // // this is for dropdown selected student.
+    // public function updatedSelectedStudent($student_id)
+    // {
+    //     if ($this->selectedStudent == 0) {
+    //         $this->resetElements();
+    //     } elseif (!is_null($student_id) || $this->selectedStudent != 0) {
+    //         //  $this->student_data variable is use in student-management.blade.php
+    //         $this->student_data = Student::where('id', $student_id)->get();
 
-            // getting the data of contact person.
-            $ContactPersonStudent = ContactPersonStudent::where('student_id', $student_id)->first();
-            $cntct_id = $ContactPersonStudent->contact_person_id;
-            $cntct_data = ContactPerson::where('id', $cntct_id)->first();
-            $this->contactLastName = $cntct_data->last_name;
-            $this->contactFirstName = $cntct_data->first_name;
-            $this->contactMiddleName = $cntct_data->middle_name;
-            $this->contactSuffixName = $cntct_data->suffix_name;
-            $this->contactGender = $cntct_data->gender;
-            $this->contactNationality = $cntct_data->nationality;
-            $this->contactContactNumber = $cntct_data->contact_number;
-            $this->contactEmail = $cntct_data->email;
-            $this->contactAddress = $cntct_data->address;
+    //         // student course
+    //         $std_crs = Student::select('course_id')->where('id', $student_id)->first();
+    //         $course_id = $std_crs->course_id;
+    //         $this->student_course = Course::where('id', $course_id)->get();
+    //         $this->selectedCourse = $course_id;
+    //         $this->updatedSelectedCourse($course_id);
 
-            // $relationship = $ContactPersonStudent->relationship;
-            $this->contactRelationship = $ContactPersonStudent->relationship;
-        }
-    }
+    //         // student section
+    //         $std_sctn = Student::select('section_id')->where('id', $student_id)->first();
+    //         $section_id = $std_sctn->section_id;
+    //         $this->student_section = Section::where('id', $section_id)->get();
+
+
+    //         // getting the data of student
+    //         $stdnt_data = Student::where('id', $student_id)->first();
+    //         $this->studentLastName = $stdnt_data->last_name;
+    //         $this->studentFirstName = $stdnt_data->first_name;
+    //         $this->studentMiddleName = $stdnt_data->middle_name;
+    //         $this->studentSuffixName = $stdnt_data->suffix_name;
+    //         $this->studentGender = $stdnt_data->gender;
+    //         $this->studentBirthdate = $stdnt_data->birthdate;
+    //         $this->studentNationality = $stdnt_data->nationality;
+    //         $this->studentContactNumber = $stdnt_data->contact_number;
+    //         $this->studentEmail = $stdnt_data->email;
+    //         $this->studentAddress = $stdnt_data->address;
+
+    //         // getting the data of contact person.
+    //         $ContactPersonStudent = ContactPersonStudent::where('student_id', $student_id)->first();
+    //         $cntct_id = $ContactPersonStudent->contact_person_id;
+    //         $cntct_data = ContactPerson::where('id', $cntct_id)->first();
+    //         $this->contactLastName = $cntct_data->last_name;
+    //         $this->contactFirstName = $cntct_data->first_name;
+    //         $this->contactMiddleName = $cntct_data->middle_name;
+    //         $this->contactSuffixName = $cntct_data->suffix_name;
+    //         $this->contactGender = $cntct_data->gender;
+    //         $this->contactNationality = $cntct_data->nationality;
+    //         $this->contactContactNumber = $cntct_data->contact_number;
+    //         $this->contactEmail = $cntct_data->email;
+    //         $this->contactAddress = $cntct_data->address;
+
+    //         // $relationship = $ContactPersonStudent->relationship;
+    //         $this->contactRelationship = $ContactPersonStudent->relationship;
+    //     }
+    // }
 
 
     public function courseErrorClear()
@@ -274,7 +286,6 @@ class StudentManagement extends Component
     }
     public function sectionErrorClear()
     {
-        dump($this->selectedSection);
         $this->resetValidation('selectedSection');
     }
     public function studentLastNameErrorClear()
@@ -372,6 +383,9 @@ class StudentManagement extends Component
     }
     public function render()
     {
-        return view('livewire.student-management');
+        return view('livewire.student-management')
+            ->with('courses', Course::latest()->get())
+            ->with('sections', Section::latest()->get())
+            ->with('students', Student::orderBy('id', 'ASC')->latest()->get());
     }
 }

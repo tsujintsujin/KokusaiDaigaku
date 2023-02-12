@@ -1,5 +1,6 @@
 <div>
     @if ($window === 'create')
+    <div>
         <div class="row dashboardTitleContainer ps-4 rounded-top ">
             <h3 class="fw-bold pt-2">Student Account</h3>
         </div>
@@ -50,13 +51,15 @@
                             </h6>
                             <select wire:click="sectionErrorClear" wire:model="selectedSection" class="form-select p-2"
                                 aria-label="Default select example">
-                                <option value="0" selected>Section</option>
+                                <option value="" selected>Section</option>
                                 @if (!is_null($selectedCourse))
                                     @foreach ($sections as $section)
-                                        <option class="option" value="{{ $section->id }}">
-                                            <a class="dropdown-item" href="#">{{ $section->name }}
-                                            </a>
-                                        </option>
+                                        @if ($section->course_id == $selectedCourse)
+                                            <option class="option" value="{{ $section->id }}">
+                                                <a class="dropdown-item" href="#">{{ $section->name }}
+                                                </a>
+                                            </option>
+                                        @endif
                                     @endforeach
                                 @endif
                             </select>
@@ -351,11 +354,14 @@
 
             </div>
         </form>
+    </div>
+      
     @elseif ($window === 'edit')
         {{-- ----------------------------- else edit----------------------------------- --}}
         <div class="row dashboardTitleContainer ps-4 rounded-top">
             <h3 class="fw-bold pt-2">Find Student Account</h3>
         </div>
+       
         <form wire:submit="update">
             <div class="row dashboardContainer ps-4 pb-4 pe-4">
                 <div class="row mt-4">
@@ -364,7 +370,7 @@
                             <h6 class="text-muted text-left ps-1">Select Student</h6>
                             <select wire:model="selectedStudent" class="form-select p-2"
                                 aria-label="Default select example">
-                                <option value="0" selected>Student id</option>
+                                <option value="" selected>Student id</option>
                                 @foreach ($students as $student)
                                     <option class="option" value="{{ $student->id }}">
                                         <a class="dropdown-item" href="#">{{ $student->id }}:
@@ -391,19 +397,26 @@
                                 aria-label="Default select example">
 
                                 @if (!is_null($selectedStudent))
-                                    @foreach ($student_course as $std_course)
-                                        <option value="{{ $std_course->id }}" selected>current:
-                                            {{ $std_course->name }}</option>
+                                    
+                                        {{-- <option value="{{ $student->id }}" selected>current:
+                                            {{ $student->name }}</option> --}}
                                         @foreach ($courses as $course)
-                                            @if ($course->id !== $std_course->id)
-                                                <option class="option" value="{{ $course->id }}">
-                                                    <a class="dropdown-item" href="#">
-                                                        {{ $course->name }}
-                                                    </a>
-                                                </option>
+                                            
+                                            @if ($course->id === $student->course_id)
+                                            <option selected class="option" value="{{ $course->id }}">
+                                                <a class="dropdown-item" href="#">
+                                                    {{ $course->name }}
+                                                </a>
+                                            </option>
+                                            @elseif ($course->id !== $student->course_id)
+                                            <option class="option" value="{{ $course->id }}">
+                                                <a class="dropdown-item" href="#">
+                                                    {{ $course->name }}
+                                                </a>
+                                            </option>
                                             @endif
                                         @endforeach
-                                    @endforeach
+                          
                                 @elseif (is_null($selectedStudent))
                                     <option selected class="option" value="" selected>
                                         <a class="dropdown-item" href="#">Course
@@ -418,21 +431,21 @@
                             <h6 class="text-muted text-left ps-1">New Section</h6>
                             <select class="form-select p-2" aria-label="Default select example">
                                 @if (!is_null($selectedCourse))
-                                    @foreach ($student_section as $std_sctn)
-                                        <option selected class="option" value="{{ $std_sctn->id }}">
-                                            <a class="dropdown-item" href="#">current: {{ $std_sctn->name }}
+                                    {{-- @foreach ($students as $student) --}}
+                                        {{-- <option selected class="option" value="{{ $student->id }}">
+                                            <a class="dropdown-item" href="#">current: {{ $student->name }}
                                             </a>
-                                        </option>
+                                        </option> --}}
                                         @foreach ($sections as $section)
-                                            @if ($section->id !== $std_sctn->id)
+                                            @if ($section->id !== $student->id)
                                                 <option class="option" value="{{ $section->id }}">
-                                                    <a class="dropdown-item" href="#">{{ $section->name }}
-                                                        ({{ $section->description }})
+                                                    <a class="dropdown-item" href="#">
+                                                        {{ $section->name }}
                                                     </a>
                                                 </option>
                                             @endif
                                         @endforeach
-                                    @endforeach
+                                    {{-- @endforeach --}}
                                 @else
                                     <option selected class="option" value="" selected>
                                         <a class="dropdown-item" href="#">Section
@@ -448,10 +461,10 @@
                     <div class="col"><label class="form-label ps-1" for="">Last Name </label>
                         <div class="form-outline bg-white rounded p-1">
                             @if (!is_null($selectedStudent))
-                                @foreach ($student_data as $student)
+                                {{-- @foreach ($students as $student)
                                     <input type="text" id="lname" class="form-control"
                                         wire:model="studentLastName" />
-                                @endforeach
+                                @endforeach --}}
                             @else
                                 <input type="text" id="" class="form-control" value="" />
 
