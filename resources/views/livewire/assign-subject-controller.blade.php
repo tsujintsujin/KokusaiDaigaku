@@ -7,15 +7,19 @@
             <div class="col">
                 <div class="dropdown">
                     <label class="ms-1" for="">Course:</label>
-                    <select class="text-start form-select p-2">
+                    <select wire:model="selectedCourse" class="text-start form-select p-2">
                         <option value="0" selected>Any</option>
-                        <option value="1">BSIT</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                        @foreach ($Course as $course)
+                            <option value="{{ $course->id }}">
+                                <a class="dropdown-item" href="#">{{ $course->name }}
+                                    ({{ $course->abbreviation }})
+                                </a>
+                            </option>
+                        @endforeach
                     </select>
                 </div>
             </div>
-
+ 
             {{-- dito muna to, gawa pa logic para sa year level --}}
 
             {{-- <div class="col-3">
@@ -34,12 +38,15 @@
             <div class="col-4">
                 <div class="dropdown">
                     <label class="ms-1" for="">by Section:</label>
-                    <select class="text-start form-select p-2">
+                    <select wire:model="selectedSection" class="text-start form-select p-2">
                         <option value="0" selected>Any</option>
-                        <option value="1">BSIT</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+                        @foreach ($Section as $section)
+                            <option class="option" value="{{ $section->id }}">
+                                <a class="dropdown-item" href="#">{{ $section->name }}
+                                </a>
+                            </option>
+                        @endforeach
+                        </select>
                 </div>
             </div>
         </div>
@@ -48,7 +55,6 @@
                 <label class="ms-1" for="">by Name:</label>
                 <div class="form-outline bg-white rounded p-1">
                     <input type="text" id="" class="form-control" name="name" />
-                    <label class="form-label" for="">Name</label>
                 </div>
             </div>
         </div>
@@ -69,6 +75,9 @@
                     </button>
                 </div>
                 <div class="col-7">
+
+
+                    
                     <table class="table mt-3">
                         <thead>
                             <tr>
@@ -77,25 +86,18 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($Student as $student)
                             <tr>
                                 <th class="d-flex justify-content-center">
                                     <div class="form-check">
-                                        <input class="form-check-input rounded-circle " type="checkbox" value=""
-                                            id="1">
+                                        <input class="form-check-input rounded-circle " type="checkbox" value="{{$student->id}}"
+                                            id="{{$student->id}}">
                                     </div>
                                 </th>
-                                <th><label class="ms-1" for="1">Sheena Maria Silveria Soriano Isorena</label>
+                                <th><label class="ms-1" for="{{$student->id}}">{{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</label>
                                 </th>
                             </tr>
-                            <tr>
-                                <th class="d-flex justify-content-center">
-                                    <div class="form-check">
-                                        <input class="form-check-input rounded-circle" type="checkbox" value=""
-                                            id="2">
-                                    </div>
-                                </th>
-                                <th><label class="ms-1" for="2">Clarence P</label></th>
-                            </tr>
+                            @endforeach
                     </table>
                 </div>
             </div>
@@ -107,13 +109,17 @@
                     <div class="col-6">
                         <div class="dropdown">
                             <label class="ms-1" for="">From Course:</label>
-                            <select class="text-start form-select p-2">
+                            <select wire:model="fromCourse" class="text-start form-select p-2">
                                 {{-- lets seelect where to get the subject course, for further development when considering irregulars na kukuha
                                     ng subject from ibang course for a different schedule --}}
                                 <option value="0" selected>Default</option>
-                                <option value="1">BSIT</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                                @foreach ($Course as $course)
+                            <option value="{{ $course->id }}">
+                                <a class="dropdown-item" href="#">{{ $course->name }}
+                                    ({{ $course->abbreviation }})
+                                </a>
+                            </option>
+                        @endforeach
                             </select>
                         </div>
                     </div>
@@ -124,8 +130,8 @@
                                 <option value="1">1st Year</option>
                                 <option value="2">2nd Year</option>
                                 <option value="3">3rd Year</option>
-                                <option value="3">4th Year</option>
-                                <option value="3">5th Year</option>
+                                <option value="4">4th Year</option>
+                                <option value="5">5th Year</option>
                             </select>
                         </div>
                     </div>
@@ -167,8 +173,8 @@
             <button class="p-2 btn-sm me-3 col-1 btn btn-primary" for="1">
                 Cancel
             </button>
-            <button class="p-2 me-3 btn-sm col-1 btn btn-primary ">
-                Confirm
+            <button class="p-2 me-3 btn-sm col-3 btn btn-primary ">
+                Add Subjects to Students Record
             </button>
         </div>
     </div>
