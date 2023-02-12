@@ -238,7 +238,7 @@
 
                         </div>
                         <div class="col">
-                            <label class="form-label ps-1" for="">Middle Name 
+                            <label class="form-label ps-1" for="">Middle Name
                             </label>
                             <div class="form-outline bg-white rounded p-1">
                                 <input wire:focus="contactMiddleNameErrorClear" type="text" id=""
@@ -357,7 +357,6 @@
             <h3 class="fw-bold pt-2">Find Student Account</h3>
         </div>
         <form wire:submit="update">
-            @csrf
             <div class="row dashboardContainer ps-4 pb-4 pe-4">
                 <div class="row mt-4">
                     <div class="col-3">
@@ -658,9 +657,7 @@
 
 
                     <div class="mt-4 row d-flex justify-content-end">
-                        <button class="p-2 me-3 col-2 btn btn-primary">
-                            Archive Account
-                        </button>
+
                         <button class="p-2 me-3 col-1 btn btn-primary">
                             Update
                         </button>
@@ -668,5 +665,8 @@
                 </div>
             </div>
         </form>
+        <button class="p-2 me-3 col-2 btn btn-primary">
+            Archive Account
+        </button>
     @endif
 </div>

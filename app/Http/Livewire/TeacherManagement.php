@@ -214,13 +214,7 @@ class TeacherManagement extends Component
     public $selectedTeacher = NULL;
     // public $teachers;
     public $teacher_data;
-    // public function mount()
-    // {
-
-    //     $this->teachers =  Teacher::latest()->orderBy('id','asc')->get();
-    //     // $this->teacher_data;
-
-    // }
+  
     public function updatingSelectedTeacher($teacher_id)
     {
         // dump($teacher_id);

@@ -61,32 +61,31 @@ class StudentManagement extends Component
         ];
     }
     protected $messages = [
-        'selectedCourse' => 'Select course',
-        'selectedSection' => 'Select section',
-        'studentLastName' => 'Last Name cannot be empty.',
-        'studentFirstName' => 'First Name cannot be empty.',
-        'studentGender' => 'Select gender',
-        'studentBirthdate' => 'Select birthdate',
-        'studentNationality' => 'Nationality cannot be empty.',
-        'studentContactNumber.required' => 'Contact number cannot be empty.',
-        'studentContactNumber.numeric' => 'Invalid contactnumber',
-        'studentEmail' => 'invalid email.',
-        'studentAddress' => 'Address cannot be empty.',
-        'contactLastName' => 'Last Name cannot be empty.',
-        'contactFirstName' => 'First Name cannot be empty.',
-        'contactGender' => 'Select section',
-        'contactNationality' => 'Nationality cannot be empty.',
-        'contactContactNumber' => 'Contact number cannot be empty.',
-        'contactContactNumber.numeric' => 'Invalid contactnumber',
-        'contactEmail' => 'Invalid email.',
-        'contactAddress' => 'Address cannot be empty.',
-        'contactRelationship' => 'Relationship cannot be empty.',
+        'selectedCourse' => '**invalid**',
+        'selectedSection' => '**invalid**',
+        'studentLastName' => '**invalid**',
+        'studentFirstName' => '**invalid**',
+        'studentGender' => '**invalid**',
+        'studentBirthdate' => '**invalid**',
+        'studentNationality' => '**invalid**',
+        'studentContactNumber' => '**invalid**',
+        'studentEmail' => '**invalid**',
+        'studentAddress' => '**invalid**',
+        'contactLastName' => '**invalid**',
+        'contactFirstName' => '**invalid**',
+        'contactGender' => '**invalid**',
+        'contactNationality' => '**invalid**',
+        'contactContactNumber' => '**invalid**',
+        'contactEmail' => '**invalid**',
+        'contactAddress' => '**invalid**',
+        'contactRelationship' => '**invalid**',
     ];
    
     public function create()
     {
         $this->window = "create";
         // dump('hellow world');
+       
         $this->validate();
         Student::create([
             'course_id' => $this->selectedCourse,
@@ -133,6 +132,7 @@ class StudentManagement extends Component
     }
     public function resetElements()
     {
+        $this->clearErrors();
         $this->reset(
             // 'selectedCourse',
             // 'selectedSection',
@@ -161,7 +161,7 @@ class StudentManagement extends Component
     }
     public function update()
     {
-        dump($this->studentLastName);
+       
         $this->resetElements();
     }
 
@@ -220,7 +220,7 @@ class StudentManagement extends Component
             $this->resetElements();
         } elseif (!is_null($student_id) || $this->selectedStudent != 0) {
             //  $this->student_data variable is use in student-management.blade.php
-            // $this->student_data = Student::where('id', $student_id)->get();
+            $this->student_data = Student::where('id', $student_id)->get();
 
             // student course
             $std_crs = Student::select('course_id')->where('id', $student_id)->first();
@@ -274,6 +274,7 @@ class StudentManagement extends Component
     }
     public function sectionErrorClear()
     {
+        dump($this->selectedSection);
         $this->resetValidation('selectedSection');
     }
     public function studentLastNameErrorClear()
@@ -347,6 +348,27 @@ class StudentManagement extends Component
     public function contactAddressErrorClear()
     {
         $this->resetValidation('contactAddress');
+    }
+
+    public function clearErrors()
+    {
+        $this->courseErrorClear();
+        $this->studentLastNameErrorClear();
+        $this->studentFirstNameErrorClear();
+        $this->studentGenderErrorClear();
+        $this->studentNationalityErrorClear();
+        $this->studentBirthdateErrorClear();
+        $this->studentContactNumberErrorClear();
+        $this->studentEmailErrorClear();
+        $this->studentAddressErrorClear();
+        $this->contactLastNameErrorClear();
+        $this->contactFirstNameErrorClear();
+        $this->contactGenderErrorClear();
+        $this->contactNationalityErrorClear();
+        $this->contactRelationshipErrorClear();
+        $this->contactContactNumberErrorClear();
+        $this->contactEmailErrorClear();
+        $this->contactAddressErrorClear();
     }
     public function render()
     {
