@@ -19,7 +19,7 @@
                     </select>
                 </div>
             </div>
- 
+
             {{-- dito muna to, gawa pa logic para sa year level --}}
 
             {{-- <div class="col-3">
@@ -46,7 +46,7 @@
                                 </a>
                             </option>
                         @endforeach
-                        </select>
+                    </select>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
                 <div class="col-7">
 
 
-                    
+
                     <table class="table mt-3">
                         <thead>
                             <tr>
@@ -87,16 +87,17 @@
                         </thead>
                         <tbody>
                             @foreach ($Student as $student)
-                            <tr>
-                                <th class="d-flex justify-content-center">
-                                    <div class="form-check">
-                                        <input class="form-check-input rounded-circle " type="checkbox" value="{{$student->id}}"
-                                            id="{{$student->id}}">
-                                    </div>
-                                </th>
-                                <th><label class="ms-1" for="{{$student->id}}">{{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</label>
-                                </th>
-                            </tr>
+                                <tr>
+                                    <th class="d-flex justify-content-center">
+                                        <div class="form-check">
+                                            <input class="form-check-input rounded-circle " type="checkbox"
+                                                value="{{ $student->id }}" id="{{ $student->id }}">
+                                        </div>
+                                    </th>
+                                    <th><label class="ms-1" for="{{ $student->id }}">{{ $student->first_name }}
+                                            {{ $student->middle_name }} {{ $student->last_name }}</label>
+                                    </th>
+                                </tr>
                             @endforeach
                     </table>
                 </div>
@@ -114,19 +115,19 @@
                                     ng subject from ibang course for a different schedule --}}
                                 <option value="0" selected>Default</option>
                                 @foreach ($Course as $course)
-                            <option value="{{ $course->id }}">
-                                <a class="dropdown-item" href="#">{{ $course->name }}
-                                    ({{ $course->abbreviation }})
-                                </a>
-                            </option>
-                        @endforeach
+                                    <option value="{{ $course->id }}">
+                                        <a class="dropdown-item" href="#">{{ $course->name }}
+                                            ({{ $course->abbreviation }})
+                                        </a>
+                                    </option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="dropdown">
                             <label class="ms-1" for="">From Year Level:</label>
-                            <select class="text-start form-select p-2">
+                            <select wire:model="yearSelection" class="text-start form-select p-2">
                                 <option value="1">1st Year</option>
                                 <option value="2">2nd Year</option>
                                 <option value="3">3rd Year</option>
@@ -135,7 +136,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-7">
                     <table class="table mt-3">
@@ -149,21 +150,23 @@
                             <tr>
                                 <th class="d-flex justify-content-center">
                                     <div class="form-check">
-                                        <input class="form-check-input rounded-circle " type="checkbox" value=""
-                                            id="11">
+                                        <input value="English" value="English" 
+                                            class="form-check-input rounded-circle " type="checkbox"
+                                            id="English">
                                     </div>
                                 </th>
-                                <th><label class="ms-1" for="11">English</label>
+                                <th><label class="ms-1" value="English" for="English">English</label>
                                 </th>
                             </tr>
                             <tr>
                                 <th class="d-flex justify-content-center">
                                     <div class="form-check">
-                                        <input class="form-check-input rounded-circle" type="checkbox" value="11"
-                                            id="22">
+                                        <input value="Math" value="Math"
+                                            class="form-check-input rounded-circle" type="checkbox"
+                                            id="Math">
                                     </div>
                                 </th>
-                                <th><label class="ms-1" for="22">Math</label></th>
+                                <th><label  class="ms-1" value="Math" for="Math">Math</label></th>
                             </tr>
                     </table>
                 </div>

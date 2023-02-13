@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\Course;
 use App\Models\Section;
 use App\Models\Student;
-
+use Illuminate\Support\Arr;
 
 
 class AssignSubjectController extends Component
@@ -16,14 +16,19 @@ class AssignSubjectController extends Component
     public $selectedCourse = NULL;
     public $selectedSection = NULL;
     public $fromCourse = "";
-    
+    public $subjectsSelected;
+    public $counter = 0;
+
     public function mount(){
         $this->Section = Section::all();
         $this->Student = Student::all();
     }
 
+
     public function render()
     {
+
+     
         return view('livewire.assign-subject-controller')
         ->with('Course', Course::all())
         ->with('Section', Section::all())
