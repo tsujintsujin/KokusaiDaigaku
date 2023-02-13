@@ -17,7 +17,7 @@
                         @enderror
                 </div>
                 <div class="col-2">
-                    <label class="form-label" for="">Abbreviation</label>
+                    <label class="form-label ps-1" for="">Abbreviation</label>
                     <div class="form-outline bg-white rounded p-1">
                         <input wire:model="abbreviation" wire:focus="abbreviationErrorClear" type="text"
                             id="" class="form-control" name="abbreviation" />
@@ -52,7 +52,7 @@
 
         <div class="ps-4 mt-3">
             <div class="col-4">
-                <div class="dropdown"><label class="form-label" for="">View Course</label>
+                <div class="dropdown"><label class="form-label ps-1" for="">View Course</label>
                     <select class="text-start form-select p-2" wire:model="currentCourse">
                         <option value="0" selected disabled>Course</option>
                         {{-- @foreach (App\Models\Course::latest()->get() as $course) --}}
@@ -140,7 +140,7 @@
             <h2 class="fw-bold mt-5">Update Course to:</h2>
             <div class="row mt-4">
                 <div class="col-6">
-                    <label class="form-label" for="">Course Name (Full)</label>
+                    <label class="form-label ps-1" for="">Course Name (Full)</label>
 
                     <div class="form-outline bg-white rounded p-1">
                         <input type="text" id="" class="form-control" name="name" />
@@ -155,7 +155,7 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col">
-                        <label class="form-label" for="3">Description</label>
+                        <label class="form-label ps-1" for="3">Description</label>
 
                         <div class="form-outline mb-4 bg-white rounded ">
                             <textarea class="text-area-no-resize form-control " id=""></textarea>

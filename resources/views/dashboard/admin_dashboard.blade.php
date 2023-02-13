@@ -105,13 +105,13 @@
                 <div class="row  mt-5">
                     <div class="col"></div>
                     <div class="col">
-                        <h1 class="fw-bold pt-2">{{ $Student->count() }}</h1>
+                        <h1 class="fw-bold pt-2 studentCount">{{ $Student->count() }}</h1>
                         <h5 for="">Students</h5>
                     </div>
                     <div class="col">
                     </div>
                     <div class="col">
-                        <h1 class="fw-bold pt-2">{{ $Teacher->count() }}</h1>
+                        <h1 class="fw-bold pt-2 teacherCount">{{ $Teacher->count() }}</h1>
                         <h5 for="">Teachers</h5>
                     </div>
                     <div class="col"></div>
