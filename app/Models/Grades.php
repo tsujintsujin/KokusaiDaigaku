@@ -18,4 +18,9 @@ class Grades extends Model
     ];
 
 
+    public function StudentSubject()
+    {
+        return $this->hasMany(StudentSubject::class);
+    }
+
 }
