@@ -14,7 +14,7 @@
                             <label class="form-label" for="">Select Course</label>
                             <select wire:model="course_id" class="form-select p-2" aria-label="Default select example">
                                 <option value="0" selected>Course</option>
-                                @foreach ($courses as $course)
+                                @foreach ($Course as $course)
                                     <option class="option" value="{{ $course->id }}">
                                         <a class="dropdown-item" href="#">{{ $course->name }}
                                             ({{ $course->abbreviation }})
@@ -110,68 +110,55 @@
         </div>
         <div class="ps-4 mt-3">
             <div class="col-4">
-                <div class="dropdown"><label class="form-label" for="">Viewing Course</label>
-                    <select class="text-start form-select p-2">
-                        <option value="" selected>Course</option>
-                        @foreach ($courses as $course)
-                            <option class="option" value="{{ $course->id }}">
-                                <a class="dropdown-item" href="#">{{ $course->name }}
-                                    ({{ $course->abbreviation }})
-                                </a>
-                            </option>
-                        @endforeach
+                <div class="dropdown"><label class="form-label ps-1" for="">View Course</label>
+                    <select class="text-start form-select p-2" wire:model="currentCourse">
+                        <option value="0" selected disabled>Course</option>
+                        {{-- @foreach (App\Models\Course::latest()->get() as $course) --}}
+                        @if (@isset($Course))
+                            @foreach ($Course as $course)
+                                <option value="{{ $course->id }}">
+                                    <a class="dropdown-item" href="#">{{ $course->name }}
+                                        ({{ $course->abbreviation }})
+                                    </a>
+                                </option>
+                            @endforeach
+                            @endif
                     </select>
                 </div>
             </div>
+
+
             <table class="table mt-5">
                 <thead>
                     <tr>
-                        <th>Subject Code</th>
-                        <th>Description</th> {{-- hover to view --}}
-                        <th>Average Grade of Students</th>
-                        <th>Total Students</th>
-
+                        <th>Subjects</th>
+                        <th>Description</th>
+                        <th># of Students</th>
+                        <th>Average Grade</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>Math 1</th>
-                        <th>--</th> {{-- class="text-truncate"  data-bs-toggle="tooltip"
-                                                            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                                                            data-bs-title="Description sample" --}}
-                        <th>--</th>
-                        <th>--</th>
-                    </tr>
-                    <tr>
-                        <th>Math 2</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                    </tr>
-                    <tr>
-                        <th>Math 3</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                    </tr>
-                    <tr>
-                        <th>Math 4</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                    </tr>
-                    <tr>
-                        <th>Math 5</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                    </tr>
-                    <tr>
-                        <th>Math 6</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                    </tr>
+
+
+                    @if (@isset($course))
+                        @foreach ($course::find($currentCourse)->subject as $courseSubject)
+                            @if ($courseSubject->count() > 0)
+                                <tr>
+                                    <th>{{ $courseSubject->subject_code }}</th>
+                                    <th>{{ $courseSubject->description }}</th>
+                                    <th>{{ $StudentSubject->where('subject_id',$courseSubject->id)->count()}}</th>
+                                    <th>--</th>
+                                </tr>
+                            @else
+                                <tr>
+                                    <th></th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                </tr>
+                            @endif
+                        @endforeach
+                    @endif
             </table>
         </div>
     @elseif ($window === 'edit')

@@ -11,8 +11,8 @@
                     <label class="form-label ps-1" for="">Select Course</label>
                     <form wire:submit.prevent="create">
                         <select wire:model="course_id" id="selectedCourse" class="text-start form-select p-2 pb-2">
-                            <option value="0" selected >Course</option>
-                            @foreach ($courses as $course)
+                            <option value="0" selected>Course</option>
+                            @foreach ($Course as $course)
                                 <option class="option" value="{{ $course->id }}">
                                     <a class="dropdown-item" href="#">{{ $course->name }}
                                         ({{ $course->abbreviation }})
@@ -65,7 +65,7 @@
                     <div class="dropdown"><label class="form-label" for="">Course</label>
                         <select wire:model="selectedCourse" class="text-start form-select p-2">
                             <option value="0" selected>Course</option>
-                            @foreach ($courses as $course)
+                            @foreach ($Course as $course)
                                 <option class="option" value="{{ $course->id }}">
                                     <a class="dropdown-item" href="#">{{ $course->name }}
                                         ({{ $course->abbreviation }})
@@ -73,20 +73,18 @@
                                 </option>
                             @endforeach
                         </select>
-
                     </div>
                 </div>
 
                 <div class="col-3">
 
                     <div class="dropdown"><label class="form-label" for="">Section</label>
-                        <select class="text-start form-select p-2">
-                            <option value="0" selected disabled>Section</option>
-
-                            @if (!is_null($selectedCourse))
-                                @foreach ($sections as $section)
+                        <select wire:model="selectedSection" class="text-start form-select p-2">
+                            <option value="0" selected>Section</option>
+                            @if (@isset($Section))
+                                @foreach ($Section as $section)
                                     <option class="option" value="{{ $section->id }}">
-                                        <a class="dropdown-item" href="#">{{ $section->name }}
+                                        <a class="dropdown-item">{{ $section->name }}
                                         </a>
                                     </option>
                                 @endforeach
@@ -97,6 +95,7 @@
                 </div>
 
             </div>
+
             <table class="table mt-5">
                 <thead>
                     <tr>
@@ -108,63 +107,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>Math 1</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>-- -- --</th>
-                    </tr>
-                    <tr>
-                        <th>Math 2</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>-- -- --</th>
-
-                    </tr>
-                    <tr>
-                        <th>Math 3</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>-- -- --</th>
-                    </tr>
-                    <tr>
-                        <th>Math 4</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>-- -- --</th>
-                    </tr>
-                    <tr>
-                        <th>Math 5</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>-- -- --</th>
-                    </tr>
-                    <tr>
-                        <th>Math 6</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>-- -- --</th>
-                    </tr>
-                    <tr>
-                        <th>BSIT</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>-- -- --</th>
-                    </tr>
-                    <tr>
-                        <th>Math 8</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>--</th>
-                        <th>-- -- --</th>
-                    </tr>
+                    @if (count($Student) > 0)
+                        @foreach ($Student as $student)
+                        <tr>
+                            <th>{{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</th>
+                            <th>{{$student->contact_number}}</th>
+                            <th>{{$student->email}}</th>
+                            <th>{{$student->gender}}</th>
+                            <th>-- -- --</th>
+                        </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <th>--</th>
+                            <th>--</th>
+                            <th>--</th>
+                            <th>--</th>
+                            <th>-- -- --</th>
+                        </tr>
+                    @endif
             </table>
         </div>
     @else
@@ -230,7 +191,7 @@
                     <label class="form-label ps-1" for="">New Section Name</label>
                     <div class="form-outline bg-white rounded p-1">
                         <input type="text" id="" class="form-control" name="abbr" />
-                        
+
                     </div>
                 </div>
                 {{-- <form action="{{ route('createcourse') }}" method="POST"> --}}
