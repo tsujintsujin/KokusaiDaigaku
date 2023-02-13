@@ -273,32 +273,42 @@ class StudentManagement extends Component
     public function archive()
     {
         $this->validate();
-        // $student = new ArchiveStudent;
+        $student = new ArchiveStudent;
+        if (is_null($this->selectedCourse)) {
+            $this->selectedCourse = $student->course_id;
+        } else {
+            $student->course_id = $this->selectedCourse;
+        }
+        if (is_null($this->selectedSection)) {
+            $this->selectedSection = $student->course_id;
+        } else {
+            $student->section_id = $this->selectedSection;
+        }
+        $student->last_name = $this->studentLastName;
+        $student->first_name = $this->studentFirstName;
+        $student->middle_name = $this->studentMiddleName;
+        $student->suffix_name = $this->studentSuffixName;
+        $student->gender = $this->studentGender;
+        $student->birthdate = $this->studentBirthdate;
+        $student->nationality = $this->studentNationality;
+        $student->contact_number = $this->studentContactNumber;
+        $student->email = $this->studentEmail;
+        $student->address = $this->studentAddress;
+        $student->course_id = $this->selectedCourse;
+        
+        $student_id = $this->selectedStudent;
+        $student->save();
 
-        // $student->last_name = $this->studentLastName;
-        // $student->first_name = $this->studentFirstName;
-        // $student->middle_name = $this->studentMiddleName;
-        // $student->suffix_name = $this->studentSuffixName;
-        // $student->gender = $this->studentGender;
-        // $student->birthdate = $this->studentBirthdate;
-        // $student->nationality = $this->studentNationality;
-        // $student->contact_number = $this->studentContactNumber;
-        // $student->email = $this->studentEmail;
-        // $student->address = $this->studentAddress;
-        // $student->course_id = $this->selectedCourse;
-        // $student_id = $this->selectedStudent;
-        // $student->save();
+        $ContactPersonstudent = ContactPersonstudent::where('student_id', $student_id )->first();
+        $cntct_id = $ContactPersonstudent->contact_person_id;
+        $cntct_data = ContactPerson::find($cntct_id);
+        $cntct_data->delete();
 
-        // $ContactPersonstudent = ContactPersonstudent::where('student_id', $student_id )->first();
-        // $cntct_id = $ContactPersonstudent->contact_person_id;
-        // $cntct_data = ContactPerson::find($cntct_id);
-        // $cntct_data->delete();
-
-        // $student_delete = student::find($this->selectedStudent);
-        // $student_delete->delete();
-        // $this->reset('selectedStudent', 'selectedCourse');
-        // $this->resetElements();
-        // $this->clearErrors();
+        $student_delete = student::find($this->selectedStudent);
+        $student_delete->delete();
+        $this->reset('selectedStudent', 'selectedCourse');
+        $this->resetElements();
+        $this->clearErrors();
         
         
     }
