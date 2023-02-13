@@ -5,11 +5,17 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Section;
 use App\Models\Course;
+use App\Models\Student;
+
 class SectionController extends Component
 {
     public $window = "create";
     public $name;
     public $course_id;
+    public $selectedCourse;
+    public $selectedSection;
+
+
 
     protected function rules()
     {
@@ -65,27 +71,82 @@ class SectionController extends Component
         $this->window = "edit";
     }
 
-
+ 
     // this is for dropdown selected course.
-    public $selectedCourse = NULL;
-    public $sections;
-    public $courses;
 
-    public function mount()
-    {
-        $this->courses = Course::all();
-        $this->sections = collect();
-    }
-    
+   
     public function updatedSelectedCourse($course)
     {
-        if (!is_null($course)) {
-            $this->sections = Section::where('course_id', $course)->get();
+        if ($course == 0 && $this->selectedSection == 0) {
+            $this->Section = Section::all();
+            $this->Student = Student::all();
+        }else if($course == 0 && $this->selectedSection != 0){
+            $this->Section = Section::where('course_id', $this->selectedCourse)->get();
+            $this->Student = Student::where('section_id', $this->selectedSection)->get();
+        }else if($course != 0 && $this->selectedSection != 0){    
+            $this->Section = Section::where('course_id', $this->selectedCourse)->get();
+            $this->Student = Student::where(
+                [['course_id', $this->selectedCourse],
+                ['section_id', $this->selectedSection]])->get();
+        }else{
+            $this->Section = Section::where('course_id', $this->selectedCourse)->get();
+            $this->Student = Student::where('course_id', $this->selectedCourse)->get();
+        }
+
+        if($course==0){
+            $this->selectedSection = 0;
+            $this->Section = Section::all();
+            $this->Student = Student::all();
+        }
+
+    }
+
+
+
+    public function updatedSelectedSection($section)
+    {
+        $this->selectedSection = $section;
+        if ($section == 0 && $this->selectedCourse == 0) {
+            $this->Student = Student::all();
+        }else if($section == 0 && $this->selectedCourse != 0) {
+            $this->Student = Student::where('course_id', $this->selectedCourse)->get();
+        }else if($section != 0 && $this->selectedCourse != 0) {
+           $this->Student = Student::where(
+                [['course_id', $this->selectedCourse],
+                ['section_id', $this->selectedSection]])->get();
+        }else{
+            $this->Student = Student::where('section_id', $this->selectedSection)->get();
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function render()
     {
-        return view('livewire.section-controller')->with('courses', Course::latest()->get());
+        return view('livewire.section-controller')
+        ->with('Course', Course::all())
+        ->with('Student', Student::all())
+        ->with('Section', Section::all());
     }
 }

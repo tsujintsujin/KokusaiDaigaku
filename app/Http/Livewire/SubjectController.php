@@ -5,9 +5,11 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Course;
 use App\Models\Subject;
+use App\Models\StudentSubject;
+
 class SubjectController extends Component
 {
-
+    public $currentCourse = '1';
     public $window = "create";
     public $course_id;
     public $subject_code;
@@ -15,6 +17,12 @@ class SubjectController extends Component
     public $units;
     public $year_level = '1';
     // public $semester;
+
+
+    public function mount(){
+        $this->StudentSubject = StudentSubject::all();
+        }
+
     protected function rules()
     {
         // mga condition sa input ng data sa creating subjects
@@ -103,7 +111,8 @@ class SubjectController extends Component
     public function render()
     {
         return view('livewire.subject-controller')
-        ->with('courses', Course::latest()->get());
+        ->with('Course', Course::all())
+            ->with('StudentSubject', StudentSubject::all());
     }
 
 }
