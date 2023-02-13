@@ -313,7 +313,75 @@ font-size: 96px;
     margin-left: -280px;
     transition: ease-in-out 0.3s;
 }
+#navToggle2{
+    width: 50px;
+    height: 50px;
+    right: -60;
+    top: -80;
+    position:absolute !important;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
 
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#navtoggle3{
+    width: 50px;
+    height: 50px;
+    right: -60;
+    top: -150;
+    position:absolute !important;
+    cursor: pointer;
+    
+    transition: ease-in-out 0.1s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#navToggle4{
+    width: 50px;
+    height: 50px;
+    right: -60;
+    top: -220;
+    position:absolute !important;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#navToggle5{
+    width: 50px;
+    height: 50px;
+    right: -60;
+    top: -290;
+    position:absolute !important;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#navToggle2.active{
+    right: -60;
+    top: 80;
+    transition: ease-in-out 0.3s;
+    transition-delay: 0.8s;
+}
+
+#navToggle3.active{
+    right: -60;
+    top: 150;
+    transition: ease-in-out 0.4s;
+    transition-delay: 0.8s;
+
+}
+#navToggle4.active{
+    right: -60;
+    top: 220;
+    transition: ease-in-out 0.5s;
+    transition-delay: 0.8s;
+}
+#navToggle5.active{
+    right: -60;
+    top: 290;
+    transition: ease-in-out 0.6s;
+    transition-delay: 0.8s;
+}
 #navToggle {
     width: 50px;
     height: 50px;

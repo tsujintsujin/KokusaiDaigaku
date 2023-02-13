@@ -6,6 +6,18 @@
     
     <div id="navToggle" class="text-center bg-secondary-color p-1 rounded-circle"><h3 id="navToggleText" class="text-dark">‹</h3></div>
     {{-- dashboardTitleContainer --}}
+    <div id="navToggle2" class="text-center bg-secondary-color p-1 rounded-circle">
+        <label id="navToggleText2" class="text-dark pt-2">D</label>
+    </div>
+    <div id="navToggle3" class="text-center bg-secondary-color p-1 rounded-circle">
+        <label id="navToggleText3" class="text-dark pt-2">G</label>
+    </div>
+    <div id="navToggle4" class="text-center bg-secondary-color p-1 rounded-circle">
+        <label id="navToggleText4" class="text-dark pt-2">E</label>
+    </div>
+    <div id="navToggle5" class="text-center bg-secondary-color p-1 rounded-circle" style="display: none">
+        <label id="navToggleText5" class="text-dark pt-2" style="display: none">A</label>
+    </div>
     <div class="text-center my-5 ">
         <img src="https://mkdph.com/wp-content/uploads/2022/06/MKD-logo-93p.png" class="rounded"
             alt="Mindanao Kokusai Daigaku Logo">
