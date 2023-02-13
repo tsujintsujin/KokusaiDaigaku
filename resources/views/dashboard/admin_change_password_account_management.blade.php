@@ -7,7 +7,7 @@
                 <div class="row dashboardTitleContainer ps-4 rounded-top">
                     <h3 class="fw-bold pt-2">Requests For Password Reset</h3>
                 </div>
-                <div class="row dashboardContainer ps-4 pb-4 mt-3">
+                <div class="row  ps-4 pb-4 mt-3">
                     <table class="table mt-5">
                         <thead>
                             <tr>

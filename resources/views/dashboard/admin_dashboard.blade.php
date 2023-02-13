@@ -99,10 +99,10 @@
                     </div>
             </div>
             <div class="col text-center dashboardContainer d-flex flex-column">
-                <div class="row dashboardTitleContainer">
+                <div class="row dashboardTitleContainer rounded-top-left-1 rounded-top-right-1">
                     <h3 class="fw-bold pt-2">Users in the System</h3>
                 </div>
-                <div class="row dashboardContainer mt-5">
+                <div class="row  mt-5">
                     <div class="col"></div>
                     <div class="col">
                         <h1 class="fw-bold pt-2">{{ $Student->count() }}</h1>
