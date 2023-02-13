@@ -19,7 +19,7 @@
                     </select>
                 </div>
             </div>
-            
+              
             <div class="col-4">
                 <div class="dropdown">
                     <label class="ms-1" for="">by Section:</label>
@@ -43,6 +43,9 @@
                     <input wire:model="studentSearch" type="text" id="" class="form-control"
                         name="name" />
                 </div>
+            </div>
+            <div class="col">
+                <h2 class="fw-bold mt-4 text-center text-muted">S.Y. 2023-2024</h2>
             </div>
         </div>
 
@@ -203,7 +206,7 @@
             <button class="p-2 btn-sm me-3 col-1 btn btn-primary" for="1" onClick="window.location.reload();">
                 Clear
             </button>
-            <button class="p-2 me-3 btn-sm col-3 btn btn-primary ">
+            <button wire:click="addStudentSubjects" class="p-2 me-3 btn-sm col-3 btn btn-primary ">
                 Add Subjects to Students Records
             </button>
         </div>

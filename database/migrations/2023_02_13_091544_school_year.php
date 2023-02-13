@@ -15,12 +15,10 @@ return new class extends Migration
     {
         Schema::create('schoolyear', function (Blueprint $table) {
             $table->id();
-            $table->float('prelim');
-            $table->float('midterm');
-            $table->float('finals');
+            $table->string('school_year');
+            $table->integer('semester');
             $table->timestamps();
         });
-
     }
 
     /**

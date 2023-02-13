@@ -21,4 +21,5 @@ class SchoolYear extends Model
     {
         return $this->hasMany(StudentSubject::class);
     }
+    
 }

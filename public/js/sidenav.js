@@ -37,7 +37,9 @@ onload = (event) => {
 
   checkAllButton.addEventListener("click", function () {
     checkboxes.forEach(checkbox => {
-      checkbox.click();
+      if (!checkbox.checked) {
+        checkbox.click();
+      }
     });
   });
 
