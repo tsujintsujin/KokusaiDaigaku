@@ -9,6 +9,7 @@ use App\Models\Student;
 use App\Models\ContactPerson;
 use App\Models\ContactPersonStudent;
 use App\Models\StudentAccount;
+use App\Models\ArchiveStudent;
 use Illuminate\Support\Facades\Hash;
 
 class StudentManagement extends Component
@@ -83,10 +84,8 @@ class StudentManagement extends Component
 
     public function create()
     {
-        $this->window = "create";
-        // dump('hellow world');
-
         $this->validate();
+        $this->window = "create";
         Student::create([
             'course_id' => $this->selectedCourse,
             'section_id' => $this->selectedSection,
@@ -159,28 +158,6 @@ class StudentManagement extends Component
             // 'selectedStudent'
         );
     }
-    public function update()
-    {
-        if (is_null($this->selectedCourse)) {
-            $student = Student::find($this->selectedStudent);
-            $this->selectedCourse = $student->course_id;
-            dump($this->selectedCourse);
-        }
-        if (is_null($this->selectedSection)) {
-            $student = Student::find($this->selectedStudent);
-            $this->selectedSection = $student->course_id;
-            dump($this->selectedSection);
-        }
-        // $this->resetElements();
-    }
-
-
-    public function search_update()
-    {
-        $this->resetElements();
-        $this->reset('selectedCourse', 'selectedSection');
-        $this->window = "edit";
-    }
     public function cancel()
     {
         $this->resetElements();
@@ -189,20 +166,142 @@ class StudentManagement extends Component
         // $this->reset('selectedSection');
 
     }
+    public function update()
+    {
+        $this->validate();
+        $student = Student::find($this->selectedStudent);
+        // $student->course_id = $this->selectedCourse;
+        // $student->section_id = $this->selectedSection;
+        if (is_null($this->selectedCourse)) {
+            $this->selectedCourse = $student->course_id;
+        } else {
+            $student->course_id = $this->selectedCourse;
+        }
+        if (is_null($this->selectedSection)) {
+            $this->selectedSection = $student->course_id;
+        } else {
+            $student->section_id = $this->selectedSection;
+        }
+        $student->last_name = $this->studentLastName;
+        $student->first_name = $this->studentFirstName;
+        $student->middle_name = $this->studentMiddleName;
+        $student->suffix_name = $this->studentSuffixName;
+        $student->gender = $this->studentGender;
+        $student->birthdate = $this->studentBirthdate;
+        $student->nationality = $this->studentNationality;
+        $student->contact_number = $this->studentContactNumber;
+        $student->email = $this->studentEmail;
+        $student->address = $this->studentAddress;
+        $student->course_id = $this->selectedCourse;
+        $student->save();
+        // find('student_id,contact_id')->
+        $ContactPersonstudent = ContactPersonstudent::where('student_id', $this->selectedStudent)->first();
+        $cntct_id = $ContactPersonstudent->contact_person_id;
+        $cntct_data = ContactPerson::find($cntct_id);
+        $cntct_data->last_name =  $this->contactLastName;
+        $cntct_data->first_name =  $this->contactFirstName;
+        $cntct_data->middle_name =  $this->contactMiddleName;
+        $cntct_data->suffix_name =  $this->contactSuffixName;
+        $cntct_data->gender =  $this->contactGender;
+        $cntct_data->nationality =  $this->contactNationality;
+        $cntct_data->contact_number =  $this->contactContactNumber;
+        $cntct_data->email =  $this->contactEmail;
+        $cntct_data->address =  $this->contactAddress;
+
+        $ContactPersonstudent->relationship =  $this->contactRelationship;
+
+        $ContactPersonstudent->save();
+        $cntct_data->save();
+
+        $this->reset('selectedStudent', 'selectedCourse');
+        $this->resetElements();
+    }
 
 
+    public function search_update()
+    {
+        $this->resetElements();
+        $this->reset('selectedCourse', 'selectedSection');
+        $this->window = "edit";
+        $this->clearErrors();
+    }
 
-    // // for dropdwons
     public $selectedCourse = NULL;
-    // public $sections;
-    // public $courses;
 
     public $selectedStudent = NULL;
-    // public $students;
-    // public $student_data;
-    // public $student_section;
-    // public $student_course;
+  
+    public function updatingselectedStudent($student_id)
+    {
+        // dump($student_id);
+        if (!is_null($student_id) && $student_id !== "") {
+            // $this->student_data = student::where('id', $student_id)->first();
+            $student_data = Student::where('id', $student_id)->first();
+            $this->studentLastName = $student_data->last_name;
+            $this->studentFirstName = $student_data->first_name;
+            $this->studentMiddleName = $student_data->middle_name;
+            $this->studentSuffixName = $student_data->suffix_name;
+            $this->studentGender = $student_data->gender;
+            $this->studentBirthdate = $student_data->birthdate;
+            $this->studentNationality = $student_data->nationality;
+            $this->studentContactNumber = $student_data->contact_number;
+            $this->studentEmail = $student_data->email;
+            $this->studentAddress = $student_data->address;
+            $this->selectedCourse = $student_data->course_id;
+            $this->selectedSection = $student_data->section_id;
 
+            $ContactPersonstudent = ContactPersonstudent::where('student_id', $student_id)->first();
+            $cntct_id = $ContactPersonstudent->contact_person_id;
+            $cntct_data = ContactPerson::where('id', $cntct_id)->first();
+            $this->contactLastName = $cntct_data->last_name;
+            $this->contactFirstName = $cntct_data->first_name;
+            $this->contactMiddleName = $cntct_data->middle_name;
+            $this->contactSuffixName = $cntct_data->suffix_name;
+            $this->contactGender = $cntct_data->gender;
+            $this->contactNationality = $cntct_data->nationality;
+            $this->contactContactNumber = $cntct_data->contact_number;
+            $this->contactEmail = $cntct_data->email;
+            $this->contactAddress = $cntct_data->address;
+
+            $this->contactRelationship = $ContactPersonstudent->relationship;
+        } elseif ($student_id === "") {
+            $this->reset('selectedStudent', 'selectedCourse','selectedSection');
+            $this->resetElements();
+        }
+        $this->clearErrors();
+    }
+
+    public function archive()
+    {
+        $this->validate();
+        // $student = new ArchiveStudent;
+
+        // $student->last_name = $this->studentLastName;
+        // $student->first_name = $this->studentFirstName;
+        // $student->middle_name = $this->studentMiddleName;
+        // $student->suffix_name = $this->studentSuffixName;
+        // $student->gender = $this->studentGender;
+        // $student->birthdate = $this->studentBirthdate;
+        // $student->nationality = $this->studentNationality;
+        // $student->contact_number = $this->studentContactNumber;
+        // $student->email = $this->studentEmail;
+        // $student->address = $this->studentAddress;
+        // $student->course_id = $this->selectedCourse;
+        // $student_id = $this->selectedStudent;
+        // $student->save();
+
+        // $ContactPersonstudent = ContactPersonstudent::where('student_id', $student_id )->first();
+        // $cntct_id = $ContactPersonstudent->contact_person_id;
+        // $cntct_data = ContactPerson::find($cntct_id);
+        // $cntct_data->delete();
+
+        // $student_delete = student::find($this->selectedStudent);
+        // $student_delete->delete();
+        // $this->reset('selectedStudent', 'selectedCourse');
+        // $this->resetElements();
+        // $this->clearErrors();
+        
+        
+    }
     // public function mount()
     // {
     //     //for selecting course and section in creating student
@@ -226,7 +325,7 @@ class StudentManagement extends Component
 
     // // edit student 
     // // this is for dropdown selected student.
-    // public function updatedSelectedStudent($student_id)
+    // public function updatedselectedStudent($student_id)
     // {
     //     if ($this->selectedStudent == 0) {
     //         $this->resetElements();
