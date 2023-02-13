@@ -174,8 +174,7 @@
                     </div>
 
 
-
-                    <div class="row dashboardContainer ps-4 pb-4">
+                    <div class="row  ps-4 pb-4">
                         <div class="row mt-4">
                             <div class="col-3 " type="button" data-mdb-toggle="collapse" data-mdb-target="#accord">
                                 <h2 class="fw-bold text-muted">Contact Person ▾</h2>
@@ -290,7 +289,7 @@
 
 
             <div class="tab-pane fade " id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                <div class="row dashboardContainer ps-4 pb-4">
+                <div class="row  ps-4 pb-4">
                     <div class="row mt-4">
                         <div class="col-3">
                             <h2 class="fw-bold text-muted">Add Teacher:</h2>
@@ -411,7 +410,7 @@
 
 
                 {{--  --}}
-                <div class="row dashboardContainer ps-4 pb-4">
+                <div class="row  ps-4 pb-4">
                     <div class="row mt-4">
                         <div class="col-3 " type="button" data-mdb-toggle="collapse" data-mdb-target="#accord">
                             <h2 class="fw-bold text-muted">Contact Person ▾</h2>

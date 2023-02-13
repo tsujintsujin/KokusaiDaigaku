@@ -136,7 +136,6 @@
                 </div>
             </div>
 
-
             <h2 class="fw-bold mt-5">Update Course to:</h2>
             <div class="row mt-4">
                 <div class="col-6">
@@ -155,7 +154,7 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col">
-                        <label class="form-label ps-1" for="3">Description</label>
+                        <label class="form-label ps-" for="3">Description</label>
 
                         <div class="form-outline mb-4 bg-white rounded ">
                             <textarea class="text-area-no-resize form-control " id=""></textarea>
