@@ -5,7 +5,7 @@
     style="width: 280px;">
     
     <div id="navToggle" class="text-center bg-secondary-color p-1 rounded-circle"><h3 id="navToggleText" class="text-dark">‹</h3></div>
-    {{-- dashboardTitleContainer --}}<div id="navToggle2" class="text-center bg-secondary-color p-1 rounded-circle">
+    <div id="navToggle2" class="text-center bg-secondary-color p-1 rounded-circle">
         <label id="navToggleText2" class="text-dark pt-2">D</label>
     </div>
     <div id="navToggle3" class="text-center bg-secondary-color p-1 rounded-circle">
