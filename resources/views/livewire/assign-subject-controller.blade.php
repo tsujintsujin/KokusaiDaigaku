@@ -90,7 +90,8 @@
                                 <tr>
                                     <th class="d-flex justify-content-center">
                                         <div class="form-check">
-                                            <input class="form-check-input rounded-circle " type="checkbox"
+                                            <input class="form-check-input rounded-circle " type="checkbox" 
+                                                wire:change="studentAdd('{{ $student->id }}', '{{ $student->first_name }} {{ $student->middle_name }} {{ $student->last_name }}')" 
                                                 value="{{ $student->id }}" id="{{ $student->id }}">
                                         </div>
                                     </th>
@@ -150,29 +151,32 @@
                             <tr>
                                 <th class="d-flex justify-content-center">
                                     <div class="form-check">
-                                        <input value="English" value="English" 
-                                            class="form-check-input rounded-circle " type="checkbox"
+                                        <input value="English" wire:change="subjectAdd('1', 'English')"
+                                            class="form-check-input rounded-circle" type="checkbox"
                                             id="English">
                                     </div>
                                 </th>
-                                <th><label class="ms-1" value="English" for="English">English</label>
+                                <th><label class="ms-1" for="English">English</label>
                                 </th>
                             </tr>
                             <tr>
                                 <th class="d-flex justify-content-center">
                                     <div class="form-check">
-                                        <input value="Math" value="Math"
+                                        <input value="Math" wire:change="subjectAdd('2', 'Math')"
                                             class="form-check-input rounded-circle" type="checkbox"
                                             id="Math">
                                     </div>
                                 </th>
-                                <th><label  class="ms-1" value="Math" for="Math">Math</label></th>
+                                <th><label  class="ms-1" for="Math">Math</label></th>
                             </tr>
                     </table>
                 </div>
             </div>
         </div>
         <div class="row d-flex mt-4 ms-1 pt-4 justify-content-end">
+            <button wire:click="showCont" class="p-2 btn-sm me-3 col-1 btn btn-warning" for="1">
+                show
+            </button>
             <button class="p-2 btn-sm me-3 col-1 btn btn-primary" for="1">
                 Cancel
             </button>

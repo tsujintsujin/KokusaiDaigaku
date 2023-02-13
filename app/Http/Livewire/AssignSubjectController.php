@@ -16,7 +16,8 @@ class AssignSubjectController extends Component
     public $selectedCourse = NULL;
     public $selectedSection = NULL;
     public $fromCourse = "";
-    public $subjectsSelected;
+    public $subjectsSelected = [];
+    public $studentsSelected = [];
     public $counter = 0;
 
     public function mount(){
@@ -25,10 +26,30 @@ class AssignSubjectController extends Component
     }
 
 
+    public function subjectAdd($sub, $id){
+        if (isset($this->subjectsSelected[$id])) {
+            unset($this->subjectsSelected[$id]);
+        }else{
+            $this->subjectsSelected[$id] = $sub;
+        }
+    }
+
+    public function studentAdd($id, $name){
+        if (isset($this->studentsSelected[$id])) {
+            unset($this->studentsSelected[$id]);
+        }else{
+            $this->studentsSelected[$id] = $name;
+        }
+    }
+
+    public function showCont(){
+        dump($this->studentsSelected, $this->subjectsSelected);
+    }
+
     public function render()
     {
 
-     
+
         return view('livewire.assign-subject-controller')
         ->with('Course', Course::all())
         ->with('Section', Section::all())
