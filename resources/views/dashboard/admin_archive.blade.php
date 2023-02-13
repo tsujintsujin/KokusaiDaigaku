@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row dashboardContainer ps-4 pb-4 mt-3">
+                <div class="row  ps-4 pb-4 mt-3">
                     <table class="table mt-5">
                         <thead>
                             <tr>

@@ -19,8 +19,8 @@
                 <div class="col-2">
                     <label class="form-label" for="">Abbreviation</label>
                     <div class="form-outline bg-white rounded p-1">
-                        <input wire:model="abbreviation" wire:focus="abbreviationErrorClear"  type="text" id="" class="form-control"
-                            name="abbreviation" />
+                        <input wire:model="abbreviation" wire:focus="abbreviationErrorClear" type="text"
+                            id="" class="form-control" name="abbreviation" />
                     </div>
                     @error('abbreviation')
                         <span class="error">{{ $message }}</span>
@@ -56,15 +56,15 @@
                     <select class="text-start form-select p-2" wire:model="currentCourse">
                         <option value="0" selected disabled>Course</option>
                         {{-- @foreach (App\Models\Course::latest()->get() as $course) --}}
-@if (@isset($course))
-                        @foreach ($Course as $course)
-                            <option value="{{ $course->id }}">
-                                <a class="dropdown-item" href="#">{{ $course->name }}
-                                    ({{ $course->abbreviation }})
-                                </a>
-                            </option>
-                        @endforeach
-
+                        @if (@isset($course))
+                            @foreach ($Course as $course)
+                                <option value="{{ $course->id }}">
+                                    <a class="dropdown-item" href="#">{{ $course->name }}
+                                        ({{ $course->abbreviation }})
+                                    </a>
+                                </option>
+                            @endforeach
+                            @endif
                     </select>
                 </div>
             </div>
@@ -81,27 +81,26 @@
                 </thead>
                 <tbody>
 
-                    
-                    @if (@isset($course))
-                    @foreach ($course::find($currentCourse)->subject as $courseSubject)
-                        @if ($courseSubject->count() > 0)
-                            <tr>
-                                <th>{{ $courseSubject->subject_code }}</th>
-                                <th>{{ $courseSubject->subject_code }}</th>
-                                <th>--</th>
-                                <th>--</th>
-                            </tr>
-                        @else
-                            <tr>
-                                <th></th>
-                                <th>--</th>
-                                <th>--</th>
-                                <th>--</th>
-                            </tr>
-                        @endif
-                    @endforeach
-                    @endif
 
+                    @if (@isset($course))
+                        @foreach ($course::find($currentCourse)->subject as $courseSubject)
+                            @if ($courseSubject->count() > 0)
+                                <tr>
+                                    <th>{{ $courseSubject->subject_code }}</th>
+                                    <th>{{ $courseSubject->subject_code }}</th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                </tr>
+                            @else
+                                <tr>
+                                    <th></th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                </tr>
+                            @endif
+                        @endforeach
+                    @endif
             </table>
         </div>
     @elseif($window === 'edit')
@@ -172,5 +171,7 @@
                     </div>
                 </div>
             </div>
+            </div>
+
     @endif
 </div>
