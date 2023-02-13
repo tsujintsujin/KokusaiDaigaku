@@ -13,8 +13,7 @@ class StudentSubject extends Model
     protected $fillable = [
         'student_id',
         'subject_id',
-        'grade_id',
-        'school_year_id',
+        'school_year_id'
     ];
 
 

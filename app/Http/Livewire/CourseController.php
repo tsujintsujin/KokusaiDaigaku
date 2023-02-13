@@ -4,10 +4,12 @@ namespace App\Http\Livewire;
 
 use App\Models\Course;
 use Livewire\Component;
+use App\Models\StudentSubject;
+
 
 class CourseController extends Component
 {
-
+    public $StudentSubject;
     public $window = "create";
     public $currentCourse = '1';
     public $name;
@@ -19,6 +21,13 @@ class CourseController extends Component
         'abbreviation' => 'required',
         'description' => 'required'
     ];
+
+    public function mount(){
+        $this->StudentSubject = StudentSubject::all();
+        }
+
+
+
     protected function rules()
     {
         // mga condition sa input ng data sa creating courses
@@ -92,6 +101,7 @@ class CourseController extends Component
     public function render()
     {
         return view('livewire.course-controller')
-            ->with('Course', Course::all());
+            ->with('Course', Course::all())
+            ->with('StudentSubject', StudentSubject::all());
     }
 }
