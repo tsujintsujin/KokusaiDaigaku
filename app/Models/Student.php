@@ -42,5 +42,8 @@ class Student extends Model
     {
         return $this->belongsTo(Course::class);
     }
-
+    public function Section()
+    {
+        return $this->belongsTo(Section::class);
+    }
 }

@@ -70,11 +70,13 @@ class SectionController extends Component
     public $selectedCourse = NULL;
     public $sections;
     public $courses;
+
     public function mount()
     {
         $this->courses = Course::all();
         $this->sections = collect();
     }
+    
     public function updatedSelectedCourse($course)
     {
         if (!is_null($course)) {

@@ -56,7 +56,7 @@
                     <select class="text-start form-select p-2" wire:model="currentCourse">
                         <option value="0" selected disabled>Course</option>
                         {{-- @foreach (App\Models\Course::latest()->get() as $course) --}}
-
+@if (@isset($course))
                         @foreach ($Course as $course)
                             <option value="{{ $course->id }}">
                                 <a class="dropdown-item" href="#">{{ $course->name }}

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Hash;
 class TeacherManagement extends Component
 {
 
-    public $window = "edit";
+    public $window = "create";
     public $teacherLastName;
     public $teacherFirstName;
     public $teacherMiddleName;
@@ -263,6 +263,7 @@ class TeacherManagement extends Component
 
     }
 
+    
     public function archive()
     {
         $this->validate();
@@ -279,7 +280,13 @@ class TeacherManagement extends Component
         $teacher->email = $this->teacherEmail;
         $teacher->address = $this->teacherAddress;
         $teacher->course_id = $this->selectedCourse;
+        $teacher_id = $this->selectedTeacher;
         $teacher->save();
+
+        $ContactPersonTeacher = ContactPersonTeacher::where('teacher_id', $teacher_id )->first();
+        $cntct_id = $ContactPersonTeacher->contact_person_id;
+        $cntct_data = ContactPerson::find($cntct_id);
+        $cntct_data->delete();
 
         $teacher_delete = Teacher::find($this->selectedTeacher);
         $teacher_delete->delete();

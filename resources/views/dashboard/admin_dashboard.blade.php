@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="elegant-calencar d-md-flex">
-                                    <div class="wrap-header d-flex align-items-center dashboardTitleContainer">
+                                    <div class="wrap-header d-flex align-items-center calendar-head">
                                         <p id="reset">today</p>
                                         <div id="header" class="p-0">
                                             <div class="pre-button d-flex align-items-center justify-content-center"><i
