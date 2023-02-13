@@ -17,7 +17,7 @@
 
 <div class="container my-5 text-center text-dark d-flex align-items-center">
         <div class="row">
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="300">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
                 <h2 class="fw-bold color-title ">MISSION</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">W</span>e aim to provide a diverse
                     range of
@@ -34,7 +34,7 @@
                     corporate social responsibility in all of
                     our endeavors.</h5>
             </div>
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="600">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000">
                 <h2 class="fw-bold color-title">PHILOSOPHY</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">T</span>he College is dedicated to
                     providing
@@ -53,7 +53,7 @@
                     values to make a positive impact on
                     the world.</>
             </div>
-            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="900">
+            <div class="col-lg-4 p-5" data-aos="fade-down" data-aos-delay="900" data-aos-duration="2000">
                 <h2 class="fw-bold color-title">VISION</h2>
                 <h5 class="fst-italic justify-content"><span class="h2 color-highlight">A</span>n academic community
                     proficient in
@@ -74,15 +74,15 @@
     <div class="container mt-5">
         <h1 class="fw-bold color-title text-center">THE PILLARS OF MKD</h1>
         <div class="row text-center mt-5 mb-5">
-            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="300">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="300"  data-aos-duration="2000">
                 <img src="{{ asset('/image/MR-TATSUO-UCHIDA.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">MR. TATSUO UCHIDA</h5>
             </div>
-            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="600">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="600"  data-aos-duration="2000">
             <img src="{{ asset('/image/mrs-ayako-uchida.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">MRS. AYAKO UCHIDA</h5>
             </div>
-            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="900">
+            <div class="col-lg-4" data-aos="zoom-out" data-aos-delay="900"  data-aos-duration="2000">
             <img src="{{ asset('/image/REV-MASATAKA-AJIRO.jpg') }}" class="rounded-circle border-style"><br>
                 <h5 class="fw-bold mt-3">REV. MASATAKA AJIRO</h5>
             </div>
@@ -130,7 +130,7 @@
                 by a member of the MKD Board of Trustees,
                 Mr. Ricardo N. Obenza, Jr.
             </div>
-            <div class="col">
+            <div class="col" data-aos="zoom-in" data-aos-duration="2000">
                 <img src="{{ asset('/image/kokusai_meaning.png') }}" class="mb-5">
             </div>
             <div class="col justify-content">
@@ -145,7 +145,30 @@
     <hr>
 
     <div class="container mb-5 mt-5">
-        <h1 class="text-center color-title fw-bold"><span style="color:#F6C400;">MKD </span>HYMN</h1>
+        <h1 class="text-center color-title fw-bold mb-5"><span style="color:#F6C400;">MKD </span>HYMN</h1>
+        <div class="col-md-3 mx-auto text-center">
+            <p class="h5">
+                Deep from the soul, we sing to you
+                Mindanao Kokusai Daigaku
+                Depp from the heart, we pledge to you
+                Mindanao International College
+                Guided by houshi, gakusai, and shourai
+                Service, experiential learning, and future
+                Your motto, Mindanao Kokusai Daigaku
+                Onward we march to reach our vision
+                Till we fulfill your noble mission
+                Higher and higher, we raise your flag
+                Aiming our dreams into the sky
+                Bright is our destiny with you
+                Mindanao Kokusai Daigaku
+                Global, we go to your success
+                Mindanao international college
+                Your education guides our ambition
+                Shaping our future in life’s great adventure
+                God bless you, Mindanao Kokusai Daigaku
+                Mindanao International College
+            </p>
+        </div>
     </div>
-
+ 
 @endsection

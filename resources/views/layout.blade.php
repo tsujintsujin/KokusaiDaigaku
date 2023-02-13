@@ -11,6 +11,12 @@
 </head>
 
 <body>
+    <button
+        type="button"
+        class="btn btn-secondary btn-lg"
+        id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <!-- Header -->
     <header class="container mt-4">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -18,6 +24,7 @@
                 <img src="kokusai_logo.png">
             </div>
             <div class="col">
+                <h3 class="ps-md-4 ps-lg-5 text-center text-md-start">ミンダナオ国際大学</h3>
                 <h1 class="ps-md-4 ps-lg-5 text-center text-md-start"><span class="firstLetter" style="color:#F6C400;">M</span>indanao <span class="firstLetter"
                         style="color:#F6C400;">K</span>okusai <span class="firstLetter" style="color:#F6C400;">D</span>aigaku</h1>
                 <h6 class="ps-md-4 ps-lg-5 text-center text-md-start">THE NO. 1 JAPANESE LANGUAGE COLLEGE IN THE
@@ -173,6 +180,35 @@
     
     <script>
         AOS.init();
+    </script>
+    <script>
+
+        //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+    scrollFunction();
+    };
+
+    function scrollFunction() {
+    if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+    ) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+
     </script>
 </body>
 </html>

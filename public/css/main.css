@@ -23,3 +23,16 @@ nav{
 }
 
 /* end main pages animation */
+
+/* scroll to top button */
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #393280;
+  }
+
+
+/* end scroll top */
