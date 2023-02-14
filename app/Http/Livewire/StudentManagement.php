@@ -122,10 +122,10 @@ class StudentManagement extends Component
         $contact_person_student->save();
 
         StudentAccount::create([
-            'username' => Student::orderBy('id', 'desc')->first()->id,
-            'student_id' => Student::orderBy('id', 'desc')->first()->id,
+            'name' => Student::orderBy('id', 'desc')->first()->last_name,
+            'email' => Student::orderBy('id', 'desc')->first()->email,
+            'role' => 'student',
             'password' => Hash::make($this->studentLastName),
-            'type' => 'student',
         ]);
         $this->resetElements();
     }
