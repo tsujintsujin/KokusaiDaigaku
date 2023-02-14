@@ -11,10 +11,7 @@
 </head>
 
 <body>
-    <button
-        type="button"
-        class="btn btn-secondary btn-lg"
-        id="btn-back-to-top">
+    <button type="button" class="btn btn-secondary btn-lg" id="btn-back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
     <!-- Header -->
@@ -25,8 +22,10 @@
             </div>
             <div class="col">
                 <h3 class="ps-md-4 ps-lg-5 text-center text-md-start">ミンダナオ国際大学</h3>
-                <h1 class="ps-md-4 ps-lg-5 text-center text-md-start"><span class="firstLetter" style="color:#F6C400;">M</span>indanao <span class="firstLetter"
-                        style="color:#F6C400;">K</span>okusai <span class="firstLetter" style="color:#F6C400;">D</span>aigaku</h1>
+                <h1 class="ps-md-4 ps-lg-5 text-center text-md-start"><span class="firstLetter"
+                        style="color:#F6C400;">M</span>indanao <span class="firstLetter"
+                        style="color:#F6C400;">K</span>okusai <span class="firstLetter"
+                        style="color:#F6C400;">D</span>aigaku</h1>
                 <h6 class="ps-md-4 ps-lg-5 text-center text-md-start">THE NO. 1 JAPANESE LANGUAGE COLLEGE IN THE
                     PHILIPPINES</h6>
             </div>
@@ -94,31 +93,55 @@
                         <div class="nav-divider vr vr-blurry mx-5"></div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('/') ? 'active':'' }}" href="/">HOME</a>
+                        <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">HOME</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('academics') ? 'active':'' }}" href="{{ route('academics') }}">ACADEMICS</a>
+                        <a class="nav-link {{ Request::is('academics') ? 'active' : '' }}"
+                            href="{{ route('academics') }}">ACADEMICS</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('admission') ? 'active':'' }}" href="{{ route('admission') }}">ADMISSION</a>
+                        <a class="nav-link {{ Request::is('admission') ? 'active' : '' }}"
+                            href="{{ route('admission') }}">ADMISSION</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('student_services') ? 'active':'' }}" href="{{ route('student_services') }}">STUDENT SERVICES</a>
+                        <a class="nav-link {{ Request::is('student_services') ? 'active' : '' }}"
+                            href="{{ route('student_services') }}">STUDENT SERVICES</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('about') ? 'active':'' }}" href="{{ route('about') }}">ABOUT</a>
+                        <a class="nav-link {{ Request::is('about') ? 'active' : '' }}"
+                            href="{{ route('about') }}">ABOUT</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('contact') ? 'active':'' }}" href="{{ route('contact') }}">CONTACT</a>
+                        <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}"
+                            href="{{ route('contact') }}">CONTACT</a>
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item btn-login-head">
-                        <a class="nav-link" href="#">LOGIN</a>
+                        @if (Auth::check())
+                            @if (Auth::user()->role === 'admin')
+                                <a class="nav-link" href="{{ route('admin') }}">DASHBOARD</a>
+                            @elseif(Auth::user()->role === 'student')
+                                <a class="nav-link" href="{{ route('student') }}">DASHBOARD</a>
+                            @elseif(Auth::user()->role === 'teacher')
+                                <a class="nav-link" href="{{ route('teacher') }}">DASHBOARD</a>
+                            @endif
+                        @else
+                            <a class="nav-link" href="{{ route('login') }}">LOGIN</a>
+                        @endif
+                    </li>
+                    @if (Auth::check())
+                        <div class="nav-divider vr vr-blurry mx-5"></div>
+                        <li class="nav-item btn-login-head">
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="btn nav-link shadow-none" role="button" type="submit">LOGOUT</button>
+                            </form>
+                    @endif
                     </li>
                 </ul>
                 <!-- Left links -->
@@ -143,11 +166,11 @@
         <h6 class="col-md-2">CONTACT</h6>
     </div> --}}
     <!-- Landing Page Heading -->
-  
+
     @yield('content')
 
 
-   
+
     <!-- Footer -->
     <div class="bg-main-color mb-1" style="height:10px;"></div>
     <footer class="text-center text-white p-4 bg-main-color">
@@ -177,38 +200,37 @@
         </div>
         <p>© 2023 Mindanao Kokusai Daigaku. All Rights Reserved</p>
     </footer>
-    
+
     <script>
         AOS.init();
     </script>
     <script>
-
         //Get the button
-    let mybutton = document.getElementById("btn-back-to-top");
+        let mybutton = document.getElementById("btn-back-to-top");
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () {
-    scrollFunction();
-    };
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
 
-    function scrollFunction() {
-    if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-    ) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    }
-    // When the user clicks on the button, scroll to the top of the document
-    mybutton.addEventListener("click", backToTop);
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
 
-    function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    }
-
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 </body>
+
 </html>

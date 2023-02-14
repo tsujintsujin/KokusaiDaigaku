@@ -42,9 +42,12 @@
             </div>
         </div>
 
-        <div class="row d-flex justify-content-center">
-            <a href="{{route('studentchangepassword')}}" class="mt-5 p-3 col-3 btn btn-primary shadow">
-                Change Password
+        <div class="row d-flex justify-content-end mt-4">
+            <a href="" class="m-3 p-3 col-3 btn btn-primary shadow">
+                Pre Enroll
+            </a>
+            <a href="" class="m-3 p-3 col-3 btn btn-primary shadow">
+                Download Form
             </a>
         </div>
     </div>

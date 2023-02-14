@@ -6,7 +6,8 @@
     <div id="navToggle" class="text-center bg-secondary-color p-1 rounded-circle">
         <h3 id="navToggleText" class="text-dark">‹</h3>
     </div>
-    
+   
+
     {{-- dashboardTitleContainer --}}
     <div class="text-center my-5 ">
         <img src="{{ asset('kokusai_logo.png') }}" class="rounded" alt="Mindanao Kokusai Daigaku Logo">

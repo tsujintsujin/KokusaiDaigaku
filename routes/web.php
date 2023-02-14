@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CourseController;
@@ -12,7 +13,6 @@ use App\Http\Controllers\AdminHome;
 use App\Models\Course;
 use App\Models\Student;
 use PDF as PDf;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +23,19 @@ use PDF as PDf;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/dashboard', function () {
+    return view('landing');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
 
 //navbar routes
 Route::get('/', function () {

@@ -1,8 +1,8 @@
-let navtoggle;
-let navtoggle2;
-let navtoggle3;
-let navtoggle4;
-let navtoggle5;
+let navToggle;
+let navToggle2;
+let navToggle3;
+let navToggle4;
+let navToggle5;
 let sideNav;
 let navCol;
 let contentM;
@@ -15,11 +15,23 @@ let checkboxes;
 addEventListener("load", (event) => { });
 
 onload = (event) => {
-  navtoggle = document.getElementById('navToggle');
-  navtoggle2 = document.getElementById('navToggle2');
-  navtoggle3 = document.getElementById('navToggle3');
-  navtoggle4 = document.getElementById('navToggle4');
-  navtoggle5 = document.getElementById('navToggle5');
+
+  navToggle = document.getElementById('navToggle');
+
+  if (document.getElementById('navToggle2')) {
+    navToggle2 = document.getElementById('navToggle2');
+  }
+  if (document.getElementById('navToggle3')) {
+    navToggle3 = document.getElementById('navToggle3');
+  }
+  if (document.getElementById('navToggle4')) {
+    navToggle4 = document.getElementById('navToggle4');
+  }
+  if (document.getElementById('navToggle5')) {
+    navToggle5 = document.getElementById('navToggle5');
+  }
+
+
   sideNav = document.getElementById('sidebar');
   navCol = document.getElementById('navCol');
   contentM = document.getElementById('contentM');
@@ -29,49 +41,59 @@ onload = (event) => {
   checkboxes = document.querySelectorAll(".studentCheckBox");
 
 
-  navtoggle.addEventListener("click", (event) => {
+  navToggle.addEventListener("click", (event) => {
 
     sidebar.classList.toggle("active");
     navCol.classList.toggle("col-2");
     contentM.classList.toggle("container-fluid");
     contentM.classList.toggle("container");
-    navtoggle.classList.toggle("active");
-    navtoggle2.classList.toggle("active");
-    navtoggle3.classList.toggle("active");
-    navtoggle4.classList.toggle("active");
-    navtoggle5.classList.toggle("active");
+    if (navToggle2) {
+      navToggle2.classList.toggle("active");
+    }
+    if (navToggle3) {
+      navToggle3.classList.toggle("active");
+    }
+    if (navToggle4) {
+      navToggle4.classList.toggle("active");
+    }
+    if (navToggle5) {
+      navToggle5.classList.toggle("active");
+    }
+    navToggle.classList.toggle("active");
+
     if (navToggleText.innerHTML === "‹") {
       navToggleText.innerHTML = "›";
-     
-     
-     
+
+
+
     } else {
-     
-     
-     
+
+
+
       navToggleText.innerHTML = "‹";
 
     }
   });
 
-
-  checkAllButton.addEventListener("click", function () {
-    checkboxes.forEach(checkbox => {
-      if (!checkbox.checked) {
-        checkbox.click();
-      }
+  if (checkAllButton) {
+    checkAllButton.addEventListener("click", function () {
+      checkboxes.forEach(checkbox => {
+        if (!checkbox.checked) {
+          checkbox.click();
+        }
+      });
     });
-  });
-
-  uncheckAllButton.addEventListener("click", function () {
-    checkboxes.forEach(checkbox => {
-      if (checkbox.checked) {
-        checkbox.click();
-      }
+  }
+  if (uncheckAllButton) {
+    uncheckAllButton.addEventListener("click", function () {
+      checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          checkbox.click();
+        }
+      });
     });
-  });
-};
-
+  };
+}
 
 
 
