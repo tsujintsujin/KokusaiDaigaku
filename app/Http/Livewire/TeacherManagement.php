@@ -9,6 +9,7 @@ use App\Models\ContactPerson;
 use App\Models\ContactPersonTeacher;
 use App\Models\TeacherAccount;
 use App\Models\ArchiveTeacher;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class TeacherManagement extends Component
@@ -119,11 +120,11 @@ class TeacherManagement extends Component
 
 
 
-        TeacherAccount::create([
-            'username' => Teacher::orderBy('id', 'desc')->first()->id,
-            'teacher_id' => Teacher::orderBy('id', 'desc')->first()->id,
+        User::create([
+            'name' => Teacher::orderBy('id', 'desc')->first()->last_name,
+            'email' => Teacher::orderBy('id', 'desc')->first()->email,
+            'role' => 'teacher',
             'password' => Hash::make($this->teacherLastName),
-            'type' => 'teacher',
         ]);
         $this->resetElements();
 
