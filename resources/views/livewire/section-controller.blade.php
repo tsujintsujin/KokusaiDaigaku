@@ -21,7 +21,7 @@
                             @endforeach
                         </select>
                         @error('course_id')
-                            <span class="error">{{ $message }}</span>
+                            <span class="error" style="color:red;">{{ $message }}</span>
                         @enderror
                 </div>
                 <div class="col-2">
@@ -30,7 +30,7 @@
                         <input wire:model="name" type="text" id="" class="form-control" name="name" />
                     </div>
                     @error('name')
-                        <span class="error">{{ $message }}</span>
+                        <span class="error" style="color:red;">{{ $message }}</span>
                     @enderror
                 </div>
 

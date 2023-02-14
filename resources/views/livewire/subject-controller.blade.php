@@ -11,7 +11,10 @@
                 <div class="col-2">
                     <form wire:submit.prevent="create">
                         <div class="dropdown">
-                            <label class="form-label" for="">Select Course</label>
+                            <label class="form-label" for="">Select Course @error('course_id')
+                                    <span class="error" style="color:red;">{{ $message }}</span>
+                                @enderror
+                            </label>
                             <select wire:model="course_id" class="form-select p-2" aria-label="Default select example">
                                 <option value="0" selected>Course</option>
                                 @foreach ($Course as $course)
@@ -22,16 +25,18 @@
                                     </option>
                                 @endforeach
                             </select>
-                            @error('course_id')
-                                <span class="error">{{ $message }}</span>
-                            @enderror
+
                         </div>
                 </div>
                 <div class="col-2">
                     <div class="col">
-                        <label class="form-label" for="">Subject Code</label>
+                        <label class="form-label" for="">Subject Code @error('subject_code')
+                                <span class="error mt-none" style="color:red;">{{ $message }}</span>
+                            @enderror
+                        </label>
                         <div class="form-outline bg-white rounded p-1">
                             <input wire:model="subject_code" type="text" id="" class="form-control" />
+
                         </div>
 
                     </div>
@@ -39,7 +44,10 @@
                 <div class="col-2">
                     <div class="col">
                         <div class="dropdown">
-                            <label class="form-label" for="">Year Level</label>
+                            <label class="form-label" for="">Year Level @error('year_level')
+                                    <span class="error" style="color:red;">{{ $message }}</span>
+                                @enderror
+                            </label>
                             <select wire:model="year_level" class="text-start form-select p-2">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -48,54 +56,40 @@
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        @error('year_level')
-                            <span class="error">{{ $message }}</span>
-                        @enderror
-                    </div>
-                </div>
-                {{-- <div class="col-3">
-                    <label class="form-label text-muted" for="">Semester: </label>
-                    <div class="col text-center pt-1 ps-3 justify-content-start d-flex">
-                        <div class="form-check form-check-inline">
-                            <input wire:focus="semesterErrorClear" wire:model="semester" class="form-check-input"
-                                type="radio" name="semesterRadio" id="semesterRadio1" value="1" />
-                            <label class="form-check-label" for="inlineRadio1">1st</label>
-                        </div>
 
-                        <div class="form-check form-check-inline">
-                            <input wire:focus="semesterErrorClear" wire:model="semester" class="form-check-input"
-                                type="radio" name="semesterRadio" id="semesterRadio2" value="2" />
-                            <label class="form-check-label" for="inlineRadio2">2nd</label>
-                        </div>
                     </div>
-                    @error('semester')
-                        <span class="error">{{ $message }}</span>
-                    @enderror
                 </div>
-                 --}}
+
             </div>
             <div class="row">
                 <div class="col">
-                    <label class="form-label" for="">Description</label>
+                    <label class="form-label" for="">Description @error('description')
+                            <span class="error" style="color:red;">{{ $message }}</span>
+                        @enderror
+                    </label>
                     <div class="form-outline mb-4 bg-white rounded ">
                         <textarea wire:model="description" class="text-area-no-resize form-control " cols="1" max-rows="4"></textarea>
                     </div>
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-1">
+                    <label class="form-label" for="">Units @error('units')
+                            <span class="error" style="color:red;">{{ $message }}</span>
+                        @enderror
+                    </label>
+
                     <select wire:model="units" class="form-select p-2">
-                        <option selected  value="">Units</option>
-                        <option  value="1">1</option>
+                        <option selected value="">Units</option>
+                        <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    @error('units')
-                        <span class="error">{{ $message }}</span>
-                    @enderror
+
                 </div>
             </div>
             <div class="row d-flex justify-content-end">
@@ -122,7 +116,7 @@
                                     </a>
                                 </option>
                             @endforeach
-                            @endif
+                        @endif
                     </select>
                 </div>
             </div>
@@ -146,7 +140,7 @@
                                 <tr>
                                     <th>{{ $courseSubject->subject_code }}</th>
                                     <th>{{ $courseSubject->description }}</th>
-                                    <th>{{ $StudentSubject->where('subject_id',$courseSubject->id)->count()}}</th>
+                                    <th>{{ $StudentSubject->where('subject_id', $courseSubject->id)->count() }}</th>
                                     <th>--</th>
                                 </tr>
                             @else
@@ -223,16 +217,16 @@
                     <div class="col">
                         <label class="form-label" for="">New Subject Code</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="subject_code" type="text" id="" class="form-control"/>
+                            <input wire:model="subject_code" type="text" id="" class="form-control" />
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="col-1">
                     <div class="col">
                         <div class="dropdown">
                             <label class="form-label" for="">Units</label>
-                              <select class="text-start form-select p-2">
+                            <select class="text-start form-select p-2">
                                 <option disabled selected value="0">Units</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -242,7 +236,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="col-2">
                     <div class="col">
                         <div class="dropdown">

@@ -50,13 +50,14 @@ class PreEnrolledStudentsController extends Component
 
     }
 
-    // public function generatePDF($id)
-    // {
-    //     // dump($id);
-    //  redirect()->route('generate-pdf', ['id' => $id]));
-    // // return redirect()->route('generate-pdf',['id' => $id]);
+    public function generatePDF($id)
+    {
+        if($id != 0){
+     redirect()->route('generate-pdf', ['id' => $id]);
 
-    // }
+        }
+
+    }
     public function render()
     {
         return view('livewire.pre-enrolled-students-controller')

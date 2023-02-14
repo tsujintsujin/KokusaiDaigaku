@@ -13,7 +13,7 @@
                             <input wire:model="name" type="text" id="" class="form-control" name="name" />
                         </div>
                         @error('name')
-                            <span class="error">{{ $message }}</span>
+                            <span class="error" style="color:red;">{{ $message }}</span>
                         @enderror
                 </div>
                 <div class="col-2">
@@ -23,7 +23,7 @@
                             id="" class="form-control" name="abbreviation" />
                     </div>
                     @error('abbreviation')
-                        <span class="error">{{ $message }}</span>
+                        <span class="error" class="error" style="color:red;">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -35,6 +35,9 @@
                                 max-rows="4" name="description"></textarea>
 
                         </div>
+                        @error('description')
+                        <span class="error" class="error" style="color:red;">{{ $message }}</span>
+                    @enderror
                     </div>
                 </div>
                 <div class="row d-flex justify-content-end">
