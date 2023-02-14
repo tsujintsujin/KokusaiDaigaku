@@ -20,8 +20,8 @@
     <!-- Header -->
     <header class="container mt-4">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <div class="col-md-2 col-lg-1">
-                <img src="kokusai_logo.png">
+            <div class="col-md-2 col-lg-1 mt-2">
+                <img src="{{ asset('image/logo.png') }}" style="width: 140px !important;">
             </div>
             <div class="col">
                 <h3 class="ps-md-4 ps-lg-5 text-center text-md-start">ミンダナオ国際大学</h3>

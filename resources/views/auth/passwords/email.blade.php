@@ -14,7 +14,7 @@
                         @csrf
                         <div class="row mb-3 mt-5 pt-5 d-flex justify-content-center">
                             
-                            <img src="{{ asset('kokusai_logo.png') }}" class="position-absolute"  alt="Mindanao Kokusai Daigaku Logo"
+                            <img src="{{ asset('image/logo.png') }}" class="position-absolute"  alt="Mindanao Kokusai Daigaku Logo"
                             style="width: 200px !important;
                             z-index: 100;
                             left: 0;
@@ -37,8 +37,8 @@
 
                       
 
-                        <div class="row mb-0 ">
-                            <div class="col-12 d-flex justify-content-center mt-5">
+                        <div class="row mb-0 d-flex justify-content-center ">
+                            <div class="col-10 d-flex justify-content-center mt-5">
                                 <button type="submit" class="btn btn-primary col-10 py-3">
                                     {{ __('Request Reset') }}
                                 </button>
@@ -48,8 +48,8 @@
                         </div>
                         <div class="row mb-0">
                             <div class="col d-flex justify-content-center mt-3">
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link text-sm fw-bold text-decoration-none text-muted" href="{{ route('password.request') }}">
+                                @if (Route::has('login'))
+                                    <a class="btn btn-link text-sm fw-bold text-decoration-none text-muted" href="{{ route('login') }}">
                                         {{ __('Login Instead') }}
                                     </a>
                                 @endif

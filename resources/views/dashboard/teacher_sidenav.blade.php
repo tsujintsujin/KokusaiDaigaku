@@ -20,7 +20,7 @@
     <div id="navToggle5" class="text-center bg-secondary-color p-1 rounded-circle" style="display: none">
     </div>
     <div class="text-center my-5 ">
-        <img src="https://mkdph.com/wp-content/uploads/2022/06/MKD-logo-93p.png" class="rounded"
+        <img src="{{ asset('image/logo.png') }}" class="rounded" style="width: 200px !important;"
             alt="Mindanao Kokusai Daigaku Logo">
         <h4 class="h4 mt-5">Hello Teacher</h4>
         <p class="">Account ID: MKD105915</p>

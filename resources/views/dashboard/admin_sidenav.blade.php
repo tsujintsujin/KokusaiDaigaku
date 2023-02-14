@@ -9,7 +9,7 @@
     
     {{-- dashboardTitleContainer --}}
     <div class="text-center my-5 ">
-        <img src="{{ asset('kokusai_logo.png') }}" class="rounded" alt="Mindanao Kokusai Daigaku Logo">
+        <img src="{{ asset('image/logo.png') }}" class="rounded" alt="Mindanao Kokusai Daigaku Logo" style="width: 200px !important;">
         <h4 class="h4 mt-5">Hello Admin</h4>
         <p class="">Account ID: MKD105915</p>
     </div>

@@ -12,7 +12,7 @@
                         @csrf
                         <div class="row mb-3 mt-5 pt-5 d-flex justify-content-center">
                             
-                            <img src="{{ asset('kokusai_logo.png') }}" class="rounded loginLogo position-absolute"  alt="Mindanao Kokusai Daigaku Logo">
+                            <img src="{{ asset('image/logo.png') }}" class="rounded loginLogo position-absolute"  alt="Mindanao Kokusai Daigaku Logo">
 
                             <div class="col-md-8">
                                 <input placeholder="{{ __('ID') }}" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -39,8 +39,8 @@
 
                       
 
-                        <div class="row mb-0 ">
-                            <div class="col-12 d-flex justify-content-center mt-5">
+                        <div class="row mb-0 d-flex justify-content-center  ">
+                            <div class="col-10 mt-4 d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary col-10 py-3">
                                     {{ __('Login') }}
                                 </button>

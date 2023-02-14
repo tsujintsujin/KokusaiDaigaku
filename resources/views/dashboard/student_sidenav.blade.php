@@ -20,7 +20,7 @@
         <a role="button" href="{{ route('studentchangepassword') }}" id="navToggleText5" class="text-dark pt-2 btn rounded-circle btnToggle">A</a>
     </div>
     <div class="text-center my-5 ">
-        <img src="{{asset('kokusai_logo.png')}}" class="rounded"
+        <img src="{{ asset('image/logo.png') }}" class="rounded" style="width: 200px !important;"
             alt="Mindanao Kokusai Daigaku Logo">
             <h4 class="h4 mt-5">Hello Student</h4>
             <p class="">Account ID: MKD105915</p>
