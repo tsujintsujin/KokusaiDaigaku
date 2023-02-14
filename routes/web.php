@@ -141,8 +141,6 @@ Route::get('/teacherchangepassword', function () {
 // end teacher area
 
 
-Auth::routes();
-
 Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 
@@ -175,3 +173,7 @@ Route::get('/admin', [AdminHome::class, 'admin'])->name('admin');
 Route::get('/cal', function () {
     return view('dashboard.cal');
 })->name('cal');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
