@@ -9,6 +9,9 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\Admin_Course;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminHome;
+use App\Models\Course;
+use App\Models\Student;
+use PDF as PDf;
 
 /*
 |--------------------------------------------------------------------------
@@ -175,3 +178,21 @@ Route::get('/admin', [AdminHome::class, 'admin'])->name('admin');
 Route::get('/cal', function () {
     return view('dashboard.cal');
 })->name('cal');
+
+
+Route::get('/generate-pdf/{id}', function ($id) {
+    $student_data = Student::where('id', $id)->first();
+    $course_id =  $student_data->course_id;
+    $course = Course::where('id', $course_id)->first();
+
+    $studentCourse = $course->name;
+    $data = [
+        'students' => $student_data,
+        'studentCourse' => $studentCourse,
+    ];
+
+    $pdf = PDF::loadView('livewire.studentPDF', $data);
+    $lastname = $student_data->last_name;
+    $filename = $id . '_' . $lastname . '.pdf';
+    return $pdf->download($filename);
+})->name('generate-pdf');
