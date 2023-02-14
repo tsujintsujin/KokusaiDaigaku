@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
+use App\Models\StudentSubject;
 use Illuminate\Http\Request;
 
-
-class CourseController extends Controller
+class StudentSubjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        // return view('livewire.course-controller')->with('courses', Course::orderBy('name', 'asc')->get());  
-        return view('dashboard.admin_course')->with('success', 'hello world');  
-
+        //
     }
 
     /**
@@ -25,16 +22,9 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        $course = new Course;
-        $course->name = $request->name;
-        $course->abbreviation = $request->abbreviation;
-        $course->description = $request->description;
-        $course->save();
-        return redirect()->route('courses')->with('Course', $this->course); //->with('courses',Course::orderBy('name','asc'));
-
-        // redirect()->route('add_courses_subjects');
+        //
     }
 
     /**
@@ -51,10 +41,10 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Course  $course
+     * @param  \App\Models\StudentSubject  $studentSubject
      * @return \Illuminate\Http\Response
      */
-    public function show(Course $course)
+    public function show(StudentSubject $studentSubject)
     {
         //
     }
@@ -62,10 +52,10 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Course  $course
+     * @param  \App\Models\StudentSubject  $studentSubject
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course)
+    public function edit(StudentSubject $studentSubject)
     {
         //
     }
@@ -74,10 +64,10 @@ class CourseController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Course  $course
+     * @param  \App\Models\StudentSubject  $studentSubject
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, StudentSubject $studentSubject)
     {
         //
     }
@@ -85,10 +75,10 @@ class CourseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Course  $course
+     * @param  \App\Models\StudentSubject  $studentSubject
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
+    public function destroy(StudentSubject $studentSubject)
     {
         //
     }

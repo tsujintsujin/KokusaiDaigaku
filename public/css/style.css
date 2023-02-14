@@ -8,21 +8,60 @@
 }
 
 .dashboardContainer {
-    background-color: #d9d9da;
+     /* fallback for old browsers */
+     background: #ffecd2;
+  
+     /* Chrome 10-25, Safari 5.1-6 */
+     background: -webkit-linear-gradient(to top, rgba(255,236,210,0.15), rgba(252,182,159,0.15));
+   
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     background: linear-gradient(to top, rgba(255,236,210,0.15), rgba(252,182,159,0.15));
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.form-outline{
+   transition: ease-in-out 0.3s;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #4141412c;
+}
+
+.form-outline:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   transition: ease-in-out 0.3s;
 }
 
 .bg-account{
-    background-color: #EEEFFF;
+    background-color: #EEEFFF ;
 }
 
 .dashboardTitleContainer {
     color: #fafafc;
     background-color: #2f98d0 !important;
+
+}
+.studentCount{
+font-size: 80px;
 }
 
+.teacherCount{
+    font-size: 80px;
+}
+
+
+
+
+
+.hoverOfSidebar{
+    transition: ease-in-out 0.3s;
+
+}
 .hoverOfSidebar:hover {
-    background-color: #886a43;
+    background: #6587f681;
+    /* Chrome 10-25, Safari 5.1-6 */
     cursor: pointer;
+    padding-left: 10px;
+    transition: ease-in-out 0.3s;
 }
 
 .sidebarActive {
@@ -268,17 +307,95 @@ font-size: 96px;
     position: fixed !important;
     z-index: 100;
     transition: ease-in-out 0.3s;
-   
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 #sidebar.active {
     margin-left: -280px;
     transition: ease-in-out 0.3s;
 }
+#navToggle2{
+    width: 50px;
+    height: 50px;
+    right: -60;
+    top: -80;
+    position:absolute !important;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#navtoggle3{
+    width: 50px;
+    height: 50px;
+    right: -60;
+    top: -150;
+    position:absolute !important;
+    cursor: pointer;
+    
+    transition: ease-in-out 0.1s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#navToggle4{
+    width: 50px;
+    height: 50px;
+    right: -60;
+    top: -220;
+    position:absolute !important;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#navToggle5{
+    width: 50px;
+    height: 50px;
+    right: -60;
+    top: -290;
+    position:absolute !important;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#navToggle2.active{
+    right: -60;
+    top: 80;
+    transition: ease-in-out 0.3s;
+    transition-delay: 0.8s;
+}
+
+#navToggle3.active{
+    right: -60;
+    top: 150;
+    transition: ease-in-out 0.4s;
+    transition-delay: 0.8s;
+
+}
+#navToggle4.active{
+    right: -60;
+    top: 220;
+    transition: ease-in-out 0.5s;
+    transition-delay: 0.8s;
+}
+#navToggle5.active{
+    right: -60;
+    top: 290;
+    transition: ease-in-out 0.6s;
+    transition-delay: 0.8s;
+}
+
+.btnToggle{
+    box-shadow: none !important;
+    text-shadow: none !important;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+
 
 #navToggle {
     width: 50px;
     height: 50px;
-    right: -20;
+    right: -25;
     top: 215;
     position:absolute !important;
     cursor: pointer;

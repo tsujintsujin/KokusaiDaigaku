@@ -2,6 +2,7 @@
 @include('cal_css')
 @include('cal_js')
 @section('content')
+
 <div class="container-fluid justify-content-center p-5  ms-3 me-4 rounded-top-left-1 rounded-top-right-1" id="contentM">
         <div class="row">
             <div class="col text-center d-flex flex-column">
@@ -99,19 +100,19 @@
                     </div>
             </div>
             <div class="col text-center dashboardContainer d-flex flex-column">
-                <div class="row dashboardTitleContainer">
+                <div class="row dashboardTitleContainer rounded-top-left-1 rounded-top-right-1">
                     <h3 class="fw-bold pt-2">Users in the System</h3>
                 </div>
-                <div class="row dashboardContainer mt-5">
+                <div class="row  mt-5">
                     <div class="col"></div>
                     <div class="col">
-                        <h1 class="fw-bold pt-2">{{ $Student->count() }}</h1>
+                        <h1 class="fw-bold pt-2 studentCount">{{ $Student->count() }}</h1>
                         <h5 for="">Students</h5>
                     </div>
                     <div class="col">
                     </div>
                     <div class="col">
-                        <h1 class="fw-bold pt-2">{{ $Teacher->count() }}</h1>
+                        <h1 class="fw-bold pt-2 teacherCount">{{ $Teacher->count() }}</h1>
                         <h5 for="">Teachers</h5>
                     </div>
                     <div class="col"></div>
