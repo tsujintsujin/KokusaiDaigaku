@@ -64,5 +64,12 @@
                 Account    
             </a>
         </li>
+        <li class="nav-item my-1 hoverOfSidebar">
+            <a href="{{ route('logout') }}" class="nav-link link-light sideBarLink py-3">
+                    <use xlink:href="#speedometer2"></use>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-user.png') }}" alt="">
+                Logout    
+            </a>
+        </li>
     </ul>
 </div>
