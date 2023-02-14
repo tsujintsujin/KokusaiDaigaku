@@ -176,3 +176,4 @@ Route::get('/cal', function () {
 Route::get('/home', function () {
     return view('landing');
 })->name('home');
+
