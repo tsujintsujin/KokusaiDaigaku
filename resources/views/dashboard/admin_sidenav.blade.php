@@ -6,7 +6,8 @@
     <div id="navToggle" class="text-center bg-secondary-color p-1 rounded-circle">
         <h3 id="navToggleText" class="text-dark">‹</h3>
     </div>
-    
+   
+
     {{-- dashboardTitleContainer --}}
     <div class="text-center my-5 ">
         <img src="{{ asset('kokusai_logo.png') }}" class="rounded" alt="Mindanao Kokusai Daigaku Logo">
@@ -100,11 +101,13 @@
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('adminaccount') }}" class="nav-link link-light sideBarLink py-3">                
-                    <use xlink:href="#grid"></use>
-                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-admin.png') }}" alt="">   
-                Admin Account
-            </a>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+            <button type="submit" class="shadow-none btn nav-link link-light sideBarLink ">
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-user.png') }}" alt="">
+               <label class="mt-3">Logout</label>    
+            </button>
+        </form>
         </li>
     </ul>
 </div>

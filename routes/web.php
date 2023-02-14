@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CourseController;
@@ -12,7 +13,6 @@ use App\Http\Controllers\AdminHome;
 use App\Models\Course;
 use App\Models\Student;
 use PDF as PDf;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,10 +24,19 @@ use PDF as PDf;
 |
 */
 
-//navbar routes
 Route::get('/', function () {
     return view('landing');
+})->name('landing');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+require __DIR__.'/auth.php';
+
+//navbar routes landing pages
 
 Route::get('/academics', function () {
     return view('academics');
@@ -49,6 +58,7 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::middleware(['auth', 'user-role:admin'])->group(function () {
 
 //admin routes
 Route::get('/admin', function () {
@@ -75,10 +85,6 @@ Route::get('/assign_subject', function () {
     return view('dashboard.admin_assign_subject');
 })->name('assign_subject');
 
-
-
-
-
 Route::get('/archive', function () {
     return view('dashboard.admin_archive');
 })->name('archive');
@@ -87,20 +93,26 @@ Route::get('/change_password_account_management', function () {
     return view('dashboard.admin_change_password_account_management');
 })->name('change_password_account_management');
 
-
 Route::get('/pre_enroll', function () {
     return view('dashboard.admin_pre_enroll');
 })->name('pre_enroll');
-
 
 Route::get('/adminaccount', function () {
     return view('dashboard.admin_account_setting');
 })->name('adminaccount');
 
-// end admin area
+Route::post('/createsubject', [SubjectController::class, 'create'])->name('createsubject');
 
-// student area
+Route::post('/createsection', [SectionController::class, 'create'])->name('createsection');
 
+Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
+
+Route::get('/admin', [AdminHome::class, 'admin'])->name('admin');
+
+});
+
+Route::middleware(['auth', 'user-role:student'])->group(function () {
+// student routes
 Route::get('/student', function () {
     return view('dashboard.student_dashboard');
 })->name('student');
@@ -113,16 +125,15 @@ Route::get('/studentaccount', function () {
     return view('dashboard.student_account_dashboard');
 })->name('studentaccount');
 
-
 Route::get('/studentchangepassword', function () {
     return view('dashboard.student_account_change_password');
 })->name('studentchangepassword');
 
+});
 
-// end student area
+Route::middleware(['auth', 'user-role:teacher'])->group(function () {
 
-// teacher area
-
+// teacher routes
 Route::get('/teacher', function () {
     return view('dashboard.teacher_dashboard');
 })->name('teacher');
@@ -135,45 +146,32 @@ Route::get('/teacheraccount', function () {
     return view('dashboard.teacher_account_dashboard');
 })->name('teacheraccount');
 
-
 Route::get('/teacherchangepassword', function () {
     return view('dashboard.teacher_account_change_password');
 })->name('teacherchangepassword');
 
+});
 
-// end teacher area
 
 
+
+//misc
 Auth::routes();
 
 Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
-
-
-
 
 //course routes 
 Route::post('/createcourse', [CourseController::class, 'create'])->name('createcourse');
 // Route::get('/admin_course', [CourseController::class, 'index'])->name('indexcourses');
 Route::get('/courses', [CourseController::class, 'index'])->name('courses');
 
-// subject routes
-Route::post('/createsubject', [SubjectController::class, 'create'])->name('createsubject');
 
-//section routes
-Route::post('/createsection', [SectionController::class, 'create'])->name('createsection');
-
-//student routes
-Route::post('/createstudent', [StudentController::class, 'create'])->name('createstudent');
-
-
-Route::get('/admin', [AdminHome::class, 'admin'])->name('admin');
 
 
 
 Route::get('/cal', function () {
     return view('dashboard.cal');
 })->name('cal');
-
 
 Route::get('/generate-pdf/{id}', function ($id) {
     $student_data = Student::where('id', $id)->first();

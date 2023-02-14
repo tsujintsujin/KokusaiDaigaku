@@ -82,7 +82,7 @@
                     button below. Please provide accurate email address
                     and contact number, so we can contact you directly
                     should you have any lacking requirements.</h5>
-                <button class="btn btn-lg border-primary fs-6 py-3 mt-3" data-aos="fade-right" data-aos-delay="400"  data-aos-duration="1500"> Submit Form →</button>
+                <a type="button" role="button" href="{{route('studentaccount')}}" class="btn btn-lg border-primary fs-6 py-3 mt-3" data-aos="fade-right" data-aos-delay="400"  data-aos-duration="1500"> Submit Form →</a>
             </div>
             <div class="col-lg-1"></div>
         </div>
