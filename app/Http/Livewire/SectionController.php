@@ -123,6 +123,7 @@ class SectionController extends Component
 
     public function update()
     {
+      
         $section = Section::find($this->selectedSection);
         $section->course_id = $this->selectedCourse;
         $section->name = $this->name;

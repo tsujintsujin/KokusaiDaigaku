@@ -10,7 +10,8 @@
                     <div class="col-3">
                         <label class="form-label ps-1" for="">Select Course</label>
 
-                        <select wire:model="course_id" id="selectedCourse" class="text-start form-select p-2 pb-2">
+                        <select wire:change="courseErrorClear" wire:focus="courseErrorClear" wire:model="course_id"
+                            id="selectedCourse" class="text-start form-select p-2 pb-2">
                             <option value="0" selected>Course</option>
                             @foreach ($Course as $course)
                                 <option class="option" value="{{ $course->id }}">
@@ -27,7 +28,7 @@
                     <div class="col-2">
                         <label class="form-label ps-1" for="">Section Name</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input wire:model="name" type="text" id="" class="form-control"
+                            <input wire:change="sectionErrorClear" wire:focus="sectionErrorClear" wire:model="name" type="text" id="" class="form-control"
                                 name="name" />
                         </div>
                         @error('name')
@@ -150,7 +151,8 @@
                     </label>
 
                     <div class="dropdown">
-                        <select wire:model="selectedCourse" class="text-start form-select p-2">
+                        <select  wire:change="courseErrorClear"
+                        wire:focus="courseErrorClear" wire:model="selectedCourse" class="text-start form-select p-2">
                             <option value="0" selected>Course</option>
                             @foreach ($Course as $course)
                                 <option class="option" value="{{ $course->id }}">
@@ -164,7 +166,7 @@
                 </div>
                 <div class="col-3">
                     <div class="dropdown"><label class="form-label" for="">Section</label>
-                        <select wire:model="selectedSection" class="text-start form-select p-2">
+                        <select wire:model="selectedSection"  wire:change="sectionErrorClear" wire:focus="sectionErrorClear" class="text-start form-select p-2">
                             <option value="0" selected>Section</option>
                             @if (@isset($Section))
                                 @foreach ($Section as $section)
@@ -190,11 +192,13 @@
                         <div class="dropdown">
                             <label class="form-label ps-1" for="sectioncourse">Transfer other course?</label>
                             <select class="text-start form-select p-2 p-2" id="sectioncourse"
-                                wire:model="selectedCourse">
+                                wire:model="selectedCourse" wire:change="courseErrorClear"
+                                wire:focus="courseErrorClear"
+                                >
                                 <option value="0" selected>
                                     <a class="dropdown-item" href="#">Course
                                     </a>
-                                </option> 
+                                </option>
                                 @foreach ($Course as $course)
                                     @if ($course->id != $selectedCourse)
                                         <option class="option" value="{{ $course->id }}">
@@ -205,9 +209,9 @@
                                     @else{
                                         <option value="{{ $selectedCourse }}" selected>
                                             <a class="dropdown-item" href="#">current: {{ $course->name }}
-                                              ({{ $course->abbreviation }})
+                                                ({{ $course->abbreviation }})
                                             </a>
-                                        </option> 
+                                        </option>
 
                                         }
                                     @endif
@@ -218,7 +222,8 @@
                     <div class="col-2">
                         <label class="form-label ps-1" for="">New Section Name</label>
                         <div class="form-outline bg-white rounded p-1">
-                            <input type="text" id=""  wire:model="name" value="{{ $name }}" class="form-control" />
+                            <input  wire:change="sectionErrorClear" wire:focus="sectionErrorClear" type="text" id="" wire:model="name" value="{{ $name }}"
+                                class="form-control" />
                             <input type="text" hidden wire:model="selectedSection" name="" id="">
                         </div>
                     </div>
