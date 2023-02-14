@@ -147,11 +147,6 @@ Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->nam
 
 
 
-Route::get('/login', function () {
-    return view('login');
-});
-
-
 
 //course routes 
 Route::post('/createcourse', [CourseController::class, 'create'])->name('createcourse');
