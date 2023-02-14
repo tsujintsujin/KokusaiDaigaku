@@ -16,43 +16,38 @@
     {{-- sidebarActive --}}
     <ul class="nav text-light flex-column mb-auto">
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('admin') }}" class="nav-link link-light sideBarLink py-3">
-                <svg class="bi me-2" width="16" height="16">
+            <a href="{{ route('admin') }}" class="nav-link link-light sideBarLink py-3">                
                     <use xlink:href="#home"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-dashboard.png') }}" alt="">
                 Dashboard
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('courses') }}" class="nav-link link-light sideBarLink py-3">
-                <svg class="bi me-2" width="16" height="16">
+            <a href="{{ route('courses') }}" class="nav-link link-light sideBarLink py-3">               
                     <use xlink:href="#speedometer2"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-course.png') }}" alt="">       
                 Courses
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('sections') }}" class="nav-link link-light sideBarLink py-3">
-                <svg class="bi me-2" width="16" height="16">
+            <a href="{{ route('sections') }}" class="nav-link link-light sideBarLink py-3">                
                     <use xlink:href="#speedometer2"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-section.png') }}" alt="">    
                 Sections
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('subjects') }}" class="nav-link link-light sideBarLink py-3">
-                <svg class="bi me-2" width="16" height="16">
+            <a href="{{ route('subjects') }}" class="nav-link link-light sideBarLink py-3">                
                     <use xlink:href="#speedometer2"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-subject.png') }}" alt="">      
                 Subjects
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
             <a class="nav-link link-light sideBarLink py-3" data-bs-toggle="collapse" data-bs-target="#home-collapse"
-                aria-expanded="false">
-                <svg class="bi me-2" width="16" height="16">
+                aria-expanded="false">                
                     <use xlink:href="#speedometer2"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-accounts.png') }}" alt="">   
                 Accounts &nbsp; ▾
             </a>
         </li>
@@ -84,34 +79,30 @@
             </li>
         </div>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('assign_subject') }}" class="nav-link link-light sideBarLink py-3">
-                <svg class="bi me-2" width="16" height="16">
+            <a href="{{ route('assign_subject') }}" class="nav-link link-light sideBarLink py-3">                
                     <use xlink:href="#grid"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-assign-subject.png') }}" alt="">   
                 Assign Subjects
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('archive') }}" class="nav-link link-light sideBarLink py-3">
-                <svg class="bi me-2" width="16" height="16">
+            <a href="{{ route('archive') }}" class="nav-link link-light sideBarLink py-3">                
                     <use xlink:href="#grid"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-archive.png') }}" alt="">   
                 Archive
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('pre_enroll') }}" class="nav-link link-light sideBarLink py-3">
-                <svg class="bi me-2" width="16" height="16">
+            <a href="{{ route('pre_enroll') }}" class="nav-link link-light sideBarLink py-3">                
                     <use xlink:href="#grid"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-pre-enrolled.png') }}" alt="">   
                 Pre Enrolled Students
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('adminaccount') }}" class="nav-link link-light sideBarLink py-3">
-                <svg class="bi me-2" width="16" height="16">
+            <a href="{{ route('adminaccount') }}" class="nav-link link-light sideBarLink py-3">                
                     <use xlink:href="#grid"></use>
-                </svg>
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-admin.png') }}" alt="">   
                 Admin Account
             </a>
         </li>
