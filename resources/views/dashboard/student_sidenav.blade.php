@@ -6,16 +6,18 @@
     
     <div id="navToggle" class="text-center bg-secondary-color p-1 rounded-circle"><h3 id="navToggleText" class="text-dark">‹</h3></div>
     <div id="navToggle2" class="text-center bg-secondary-color p-1 rounded-circle">
-        <label id="navToggleText2" class="text-dark pt-2">D</label>
+        <a role="button" href="{{ route('student') }}" id="navToggleText2" class="text-dark pt-2 btn rounded-circle btnToggle">D</a>
     </div>
     <div id="navToggle3" class="text-center bg-secondary-color p-1 rounded-circle">
-        <label id="navToggleText3" class="text-dark pt-2">G</label>
+        <a role="button" href="{{ route('gradeviewer') }}" id="navToggleText3" class="text-dark pt-2 btn rounded-circle btnToggle">G</a>
     </div>
+    
     <div id="navToggle4" class="text-center bg-secondary-color p-1 rounded-circle">
-        <label id="navToggleText4" class="text-dark pt-2">E</label>
+        <a role="button" href="{{ route('studentaccount') }}" id="navToggleText4" class="text-dark pt-2 btn rounded-circle btnToggle">E</a>
+
     </div>
     <div id="navToggle5" class="text-center bg-secondary-color p-1 rounded-circle">
-        <label id="navToggleText5" class="text-dark pt-2">A</label>
+        <a role="button" href="{{ route('studentchangepassword') }}" id="navToggleText5" class="text-dark pt-2 btn rounded-circle btnToggle">A</a>
     </div>
     <div class="text-center my-5 ">
         <img src="{{asset('kokusai_logo.png')}}" class="rounded"
