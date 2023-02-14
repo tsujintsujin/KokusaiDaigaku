@@ -29,18 +29,18 @@ class DatabaseSeeder extends Seeder
         $admin->save();
         
         $student = new User();
-        $admin->role="student";
-        $admin->name="student";
-        $admin->email="student@gmail.com";
-        $admin->password="123123123";
-        $admin->save();
+        $student->role="student";
+        $student->name="student";
+        $student->email="student@gmail.com";
+        $student->password="123123123";
+        $student->save();
         
-        $student = new User();
-        $admin->role="teacher";
-        $admin->name="teacher";
-        $admin->email="teacher@gmail.com";
-        $admin->password="123123123";
-        $admin->save();
+        $teacher = new User();
+        $teacher->role="teacher";
+        $teacher->name="teacher";
+        $teacher->email="teacher@gmail.com";
+        $teacher->password="123123123";
+        $teacher->save();
     }
 }
  
