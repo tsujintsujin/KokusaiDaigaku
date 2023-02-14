@@ -24,7 +24,7 @@ use App\Http\Controllers\AdminHome;
 //navbar routes
 Route::get('/', function () {
     return view('landing');
-});
+})->name('landing');
 
 Route::get('/academics', function () {
     return view('academics');

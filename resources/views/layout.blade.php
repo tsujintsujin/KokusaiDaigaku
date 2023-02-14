@@ -118,7 +118,7 @@
                     </li>
                     <div class="nav-divider vr vr-blurry mx-5"></div>
                     <li class="nav-item btn-login-head">
-                        <a class="nav-link" href="#">LOGIN</a>
+                        <a class="nav-link"  href="{{ route('login') }}">LOGIN</a>
                     </li>
                 </ul>
                 <!-- Left links -->
@@ -153,7 +153,7 @@
     <footer class="text-center text-white p-4 bg-main-color">
 
 
-        <img class="mt-3" src="kokusai_logo.png">
+        <img class="mt-3" src="{{ asset('image/logo.png') }}" style="width: 140px !important;">
         <p class="mt-3 h3">The No. 1 Japanese Language College in the Philippines</p>
         <div class="row d-flex justify-content-center">
             <div class="col-6 col-md-4 col-lg-2">
