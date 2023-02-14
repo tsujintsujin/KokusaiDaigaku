@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\SchoolYear;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,7 +21,14 @@ class DatabaseSeeder extends Seeder
         $sy->semester = "1";
         $sy->save();
        
-    
+        $admin = new User();
+        $admin->role="admin";
+        $admin->name="admin";
+        $admin->email="admin@gmail.com";
+        $admin->password="123123123";
+        $admin->save();
+        
+        
     }
 }
  

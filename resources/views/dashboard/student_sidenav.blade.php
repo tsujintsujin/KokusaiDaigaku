@@ -65,11 +65,13 @@
             </a>
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
-            <a href="{{ route('logout') }}" class="nav-link link-light sideBarLink py-3">
-                    <use xlink:href="#speedometer2"></use>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+            <button type="submit" class="shadow-none btn   nav-link link-light sideBarLink ">
                     <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-user.png') }}" alt="">
-                Logout    
-            </a>
+               <label class="mt-3">Logout</label>    
+            </button>
+        </form>
         </li>
     </ul>
 </div>
