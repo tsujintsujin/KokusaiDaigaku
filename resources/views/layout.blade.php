@@ -152,7 +152,11 @@
     <div class="bg-main-color mb-1" style="height:10px;"></div>
     <footer class="text-center text-white p-4 bg-main-color">
 
-
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
+        
         <img class="mt-3" src="kokusai_logo.png">
         <p class="mt-3 h3">The No. 1 Japanese Language College in the Philippines</p>
         <div class="row d-flex justify-content-center">

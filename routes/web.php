@@ -170,3 +170,9 @@ Route::get('/admin', [AdminHome::class, 'admin'])->name('admin');
 Route::get('/cal', function () {
     return view('dashboard.cal');
 })->name('cal');
+
+
+
+Route::get('/home', function () {
+    return view('landing');
+})->name('home');
