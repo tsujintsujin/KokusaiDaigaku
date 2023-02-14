@@ -409,9 +409,6 @@
                                 aria-label="Default select example">
 
                                 @if (!is_null($selectedStudent))
-
-                                    {{-- <option value="{{ $student->id }}" selected>current:
-                                            {{ $student->name }}</option> --}}
                                     @foreach ($courses as $course)
                                         @if ($course->id === $student->course_id)
                                             <option selected class="option" value="{{ $course->id }}">
@@ -441,11 +438,7 @@
                             <h6 class="text-muted text-left ps-1">New Section</h6>
                             <select class="form-select p-2" aria-label="Default select example">
                                 @if (!is_null($selectedStudent))
-                                    {{-- @foreach ($students as $student) --}}
-                                    {{-- <option selected class="option" value="{{ $student->id }}">
-                                            <a class="dropdown-item" href="#">current: {{ $student->name }}
-                                            </a>
-                                        </option> --}}
+                                 
                                     @foreach ($sections as $section)
                                         <option @if ($section->id === $student->section_id) selected @endif class="option"
                                             value="{{ $section->id }}">
@@ -455,24 +448,9 @@
                                                 @endif{{ $section->name }}
                                             </a>
                                         </option>
-                                        {{-- @if ($section->id === $selectedSection)
-                                                <option selected class="option" value="{{ $section->id }}">
-                                                    <a class="dropdown-item" href="#">
-                                                       current: {{ $section->name }}
-                                                    </a>
-                                                </option> --}}
-                                        {{-- @elseif ($section->id !== $selectedSection)
-                                            @if ($section->course_id === $selectedCourse)
-                                            <option class="option" value="{{ $section->id }}">
-                                                <a class="dropdown-item" href="#">
-                                                  {{ $section->name }}
-                                                </a>
-                                            </option> --}}
-                                        {{-- @endif
-                                        
-                                            @endif --}}
+                                  
                                     @endforeach
-                                    {{-- @endforeach --}}
+                           
                                 @else
                                     <option selected class="option" value="" selected>
                                         <a class="dropdown-item" href="#">Section

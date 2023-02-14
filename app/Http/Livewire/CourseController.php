@@ -22,17 +22,49 @@ class CourseController extends Component
         'description' => 'required'
     ];
 
-    public function mount(){
+    public function mount()
+    {
         $this->StudentSubject = StudentSubject::all();
+    }
+
+    public $selectedCourse = NULL;
+    public function updatingselectedCourse($course_id)
+    {
+        if (!is_null($course_id) && $course_id !== "") {
+            $course_data = Course::where('id', $course_id)->first();
+            $this->abbreviation = $course_data->abbreviation;
+            $this->description = $course_data->description;
+            $this->name = $course_data->name;
         }
+    }
+    public function update()
+    {
+        $this->validate();
 
+        $course = Course::find($this->selectedCourse);
+        $course->abbreviation =   $this->abbreviation;
+        $course->description =  $this->description;
+        $course->name = $this->name;
+        $course->save();
+        $this->resetElements();
+    }
 
+    public function resetElements()
+    {
+        $this->reset(
+            'abbreviation',
+            'selectedCourse',
+            'description',
+            'name',
+        );
+      
+    }
 
     protected function rules()
     {
         // mga condition sa input ng data sa creating courses
         return [
-            'name' => 'required|unique:courses,name,NULL,id,name,' . $this->name,
+            'name' => 'required',
             'abbreviation' => 'required',
             'description' => 'required'
         ];
@@ -47,20 +79,8 @@ class CourseController extends Component
 
     public function create()
     {
+        
         $this->validate();
-        // if (is_null($this->name)) {
-        //     $this->name_null = "Course Name Error";
-        //     // dump($this->name_null);
-        // } else {
-        //     $this->window = "create";
-        //     $course = new Course;
-        //     $course->name = $this->name;
-        //     $course->abbreviation = $this->abbreviation;
-        //     $course->description = $this->description;
-        //     $course->save();
-        //     $this->reset('name', 'abbreviation', 'description');
-        // }
-
         Course::create([
             'name' => $this->name,
             'abbreviation' => $this->abbreviation,
@@ -82,20 +102,30 @@ class CourseController extends Component
         $this->resetValidation('description');
     }
 
+    public function clearErrors()
+    {
+        $this->courseErrorClear();
+        $this->abbreviationErrorClear();
+        $this->descriptionErrorClear();
+    }
+
     // this function is when admin clicked the cancel button when admin is in the edit form.
 
-  
+
 
 
     // this function is when admin clicked the cancel button when admin is in the edit form.
     public function cancel()
     {
         $this->window = "create";
+        $this->clearErrors();
     }
 
     public function edit()
     {
         $this->window = "edit";
+        $this->clearErrors();
+
     }
 
     public function render()
