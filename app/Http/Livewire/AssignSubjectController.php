@@ -193,20 +193,20 @@ public function addStudentSubjects(){
     $studentsSelected = $this->studentsSelected;
 
     if(count($studentsSelected) === 0){
-        dump('no students selected');
     }else if(count($subjectsSelected) === 0){
-        dump('no subjects selected');
     }else{
         foreach($studentsSelected as $studentId => $name) {
             foreach($subjectsSelected as $subjectId => $code) {
                 if(StudentSubject::where('student_id', $studentId)->where('subject_id',$subjectId)->where('school_year_id', $this->schoolYear->id)){
-                    dump($studentId.'exists');
                 }else{
                     $StudentSubject = new StudentSubject();
                     $StudentSubject->student_id = $studentId;
                     $StudentSubject->subject_id = $subjectId;
                     $StudentSubject->school_year_id = $this->schoolYear->id;
                     $StudentSubject->save();
+
+                    
+
                 }
             }
         }
@@ -218,9 +218,7 @@ public function addStudentSubjects(){
     return view('livewire.assign-subject-controller');
 }
 
-    public function showCont(){
-        dump($this->subjectsSelected, $this->studentsSelected, $this->schoolYear->school_year);
-    }
+  
 }
 
 

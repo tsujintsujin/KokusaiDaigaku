@@ -200,9 +200,7 @@
             </div>
         </div>
         <div class="row d-flex mt-4 ms-1 pt-4 justify-content-end">
-            <button wire:click="showCont" class="p-2 btn-sm me-3 col-1 btn btn-warning" for="1">
-                show
-            </button>
+           
             <button class="p-2 btn-sm me-3 col-1 btn btn-primary" for="1" onClick="window.location.reload();">
                 Clear
             </button>

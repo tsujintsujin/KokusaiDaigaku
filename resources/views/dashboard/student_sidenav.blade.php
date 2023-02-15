@@ -28,10 +28,10 @@
         </a>
     </div>
     <div class="text-center my-5 ">
-        <img src="{{asset('kokusai_logo.png')}}" class="rounded"
+        <img src="{{asset('image/logo.png')}}" style="width:150px !important;" class="rounded"
             alt="Mindanao Kokusai Daigaku Logo">
-            <h4 class="h4 mt-5">Hello Student</h4>
-            <p class="">Account ID: MKD105915</p>
+            <h4 class="h4 mt-5">Hello {{Auth::user()->name}}</h4>
+    
     </div>
     {{-- sidebarActive --}}
     <ul class="nav  text-light flex-column mb-auto">
@@ -53,7 +53,7 @@
             <a href="{{ route('studentaccount') }}" class="nav-link link-light sideBarLink py-3">
                 <use xlink:href="#speedometer2"></use>
                 <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-enrollment-form.png') }}" alt="">
-                Enrollment Form -x
+                Enrollment Form
                 {{-- just a view and print pdf --}}
             </a>
         </li>
