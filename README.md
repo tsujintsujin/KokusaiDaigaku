@@ -1,8 +1,7 @@
 composer require laravel/breeze --dev
 
-php artisan breeze:install
-
-Breeze
+if papipiliin
+Blade
 
 php artisan migrate --seed
 
