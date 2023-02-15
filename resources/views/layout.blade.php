@@ -11,14 +11,20 @@
 </head>
 
 <body>
+    @if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+
     <button type="button" class="btn btn-secondary btn-lg" id="btn-back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
     <!-- Header -->
     <header class="container mt-4">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <div class="col-md-2 col-lg-1">
-                <img src="kokusai_logo.png">
+            <div class="col-md-2 col-lg-1 me-3">
+                <img src="{{asset('image/logo.png')}}"  style="width:150px !important;">
             </div>
             <div class="col">
                 <h3 class="ps-md-4 ps-lg-5 text-center text-md-start">ミンダナオ国際大学</h3>
@@ -175,8 +181,8 @@
     <div class="bg-main-color mb-1" style="height:10px;"></div>
     <footer class="text-center text-white p-4 bg-main-color">
 
+        <img class="mt-3" src="{{asset('image/logo.png')}}" style="width:120px !important;">
 
-        <img class="mt-3" src="kokusai_logo.png">
         <p class="mt-3 h3">The No. 1 Japanese Language College in the Philippines</p>
         <div class="row d-flex justify-content-center">
             <div class="col-6 col-md-4 col-lg-2">

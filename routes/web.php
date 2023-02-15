@@ -155,6 +155,7 @@ Route::get('/teacherchangepassword', function () {
 
 
 
+
 //misc
 Auth::routes();
 
