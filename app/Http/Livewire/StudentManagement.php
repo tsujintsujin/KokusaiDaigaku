@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Hash;
 
 class StudentManagement extends Component
 {
-    public $window = "edit";
+    public $window = "create";
 
     public $studentLastName;
     public $studentFirstName;
