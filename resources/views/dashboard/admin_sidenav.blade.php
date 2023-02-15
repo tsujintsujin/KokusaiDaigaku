@@ -94,14 +94,14 @@
         </li>
         <li class="nav-item my-1 hoverOfSidebar">
             <a href="{{ route('adminaccount') }}" class="nav-link link-light sideBarLink py-2">                
-                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-pre-enrolled.png') }}" alt="">   
+                    <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-user.png') }}" alt="">   
                 Account
             </a>
         </li>
         <form action="{{ route('logout') }}" method="POST">
             @csrf <!-- add a CSRF token for security -->
             <button type="submit" class="nav-item my-1 hoverOfSidebar btn shadow-none w-100 text-start text-white">
-                <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-pre-enrolled.png') }}" alt="">
+                <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-logout.png') }}" alt="">
                 Logout
             </button>
           </form>
