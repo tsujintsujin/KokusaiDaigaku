@@ -18,10 +18,10 @@ class StudentAccount extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'username',
-        'student_id',
+        'name',
+        'email',
         'password',
-        'type'
+        'role'
     ];
 
     /**

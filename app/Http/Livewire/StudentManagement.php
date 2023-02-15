@@ -10,6 +10,7 @@ use App\Models\ContactPerson;
 use App\Models\ContactPersonStudent;
 use App\Models\StudentAccount;
 use App\Models\ArchiveStudent;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class StudentManagement extends Component
@@ -121,7 +122,7 @@ class StudentManagement extends Component
         $contact_person_student->student_id = Student::orderBy('id', 'desc')->first()->id;
         $contact_person_student->save();
 
-        StudentAccount::create([
+        User::create([
             'name' => Student::orderBy('id', 'desc')->first()->last_name,
             'email' => Student::orderBy('id', 'desc')->first()->email,
             'role' => 'student',
