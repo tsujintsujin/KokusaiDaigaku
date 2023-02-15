@@ -257,14 +257,14 @@
                                 </p>
                             </div>
                             <div class="card text-white border-0 mask">
-                                <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                                <img src="{{ asset('image/events2.jpg') }}" class="card-img" alt="Stony Beach" />
                             </div>
                         </div>
                     </div>
                     <div class="row mt-3 d-flex justify-content-center">
                         <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">
                             <div class="card text-white border-0 mask">
-                                <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                                <img src="{{ asset('image/events3.jpg') }}" class="card-img" alt="Stony Beach" />
                             </div>
                             <div class="overlay-text d-flex flex-column justify-content-end">
                                 <h5 class="card-title "> One Heart.
@@ -291,7 +291,7 @@
                                 </p>
                             </div>
                             <div class="card text-white border-0 mask">
-                                <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                                <img src="{{ asset('image/events4.jpg') }}" class="card-img" alt="Stony Beach" />
                             </div>
                         </div>
                     </div>

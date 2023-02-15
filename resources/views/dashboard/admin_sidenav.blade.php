@@ -10,7 +10,7 @@
 
     {{-- dashboardTitleContainer --}}
     <div class="text-center my-5 ">
-        <img src="{{asset('image/logo.png')}}" class="rounded" style="width:150px !important;" alt="Mindanao Kokusai Daigaku Logo">
+        <a href="{{ route('landing') }}"><img src="{{asset('image/logo.png')}}" class="rounded" style="width:150px !important;" alt="Mindanao Kokusai Daigaku Logo"></a>
         <h4 class="h4 mt-5">Hello {{Auth::user()->name}}</h4>
     </div>
     {{-- sidebarActive --}}
