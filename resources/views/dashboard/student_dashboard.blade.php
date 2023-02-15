@@ -2,10 +2,9 @@
 @include('cal_css')
 @include('cal_js')
 @section('content')
- 
-<div class="container-fluid justify-content-center p-5  ms-3 me-4 rounded-top-left-1 rounded-top-right-1" id="contentM">
-    <div class="row">
-        <div class="col text-center d-flex flex-column">
+    <div class="container-fluid justify-content-center p-5  ms-3 me-4 rounded-top-left-1 rounded-top-right-1" id="contentM">
+        <div class="row">
+            <div class="col text-center d-flex flex-column">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -24,7 +23,7 @@
                                     </div>
                                 </div>
                                 <div class="calendar-wrap">
-                                    <table id="calendar"  class="text-center">
+                                    <table id="calendar" class="text-center">
                                         <thead>
                                             <tr>
                                                 <th>Sun</th>
@@ -98,80 +97,44 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col text-center dashboardContainer d-flex flex-column">
+            </div>
         </div>
-        <div class="col text-center dashboardContainer d-flex flex-column">
-        </div>
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Description</th>
+                    <th>Prelim</th>
+                    <th>Midterm</th>
+                    <th>Finals</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($StudentSubject as $studentsubject)
+                    <tr>
+                        <th>{{ $Subject::find($studentsubject->subject_id)->subject_code }}</th>
+                        <th>{{ $Subject::find($studentsubject->subject_id)->description }}</th>
+                        @if (@isset($studentsubject->prelim))
+                            <th>{{ $studentsubject->prelim }}</th>
+                        @else
+                            <th>-</th>
+                        @endif
+
+                        @if (@isset($studentsubject->midterm))
+                            <th>{{ $studentsubject->prelim }}</th>
+                        @else
+                            <th>-</th>
+                        @endif
+
+                        @if (@isset($studentsubject->final))
+                            <th>{{ $studentsubject->prelim }}</th>
+                        @else
+                            <th>-</th>
+                        @endif
+                    </tr>
+                @endforeach
+        </table>
     </div>
-    <table class="table mt-5">
-        <thead>
-            <tr>
-                <th>Subject</th>
-                <th>Description</th>
-                <th>Prelim</th>
-                <th>Midterm</th>
-                <th>Finals</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">Math 1</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-            </tr>
-            <tr>
-                <th scope="row">Math 2</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-            </tr>
-            <tr>
-                <th scope="row">Math 3</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-            </tr>
-            <tr>
-                <th scope="row">Math 4</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-            </tr>
-            <tr>
-                <th scope="row">Math 5</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-            </tr>
-            <tr>
-                <th scope="row">Math 6</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-            </tr>
-            <tr>
-                <th scope="row">BSIT</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-            </tr>
-            <tr>
-                <th scope="row">Math 8</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-                <th>--</th>
-            </tr>
-    </table>
-</div>
-
-
-
 @endsection

@@ -21,7 +21,12 @@ class DatabaseSeeder extends Seeder
         $sy->school_year = "2023-2024";
         $sy->semester = "1";
         $sy->save();
-       
+
+        $sy = new SchoolYear();
+        $sy->school_year = "2023-2024";
+        $sy->semester = "2";
+        $sy->save();
+        
         $admin = new User();
         $admin->role="admin";
         $admin->name="admin";

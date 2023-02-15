@@ -19,7 +19,7 @@
                     </select>
                 </div>
             </div>
-              
+
             <div class="col-4">
                 <div class="dropdown">
                     <label class="ms-1" for="">by Section:</label>
@@ -55,7 +55,7 @@
         <div class="row ">
             <div class="col-6">
 
-                
+
                 <label class="ms-1 fw-bold" for="">Student List:</label>
                 <div class="row d-flex mt-4 ms-1 pt-4">
 
@@ -79,35 +79,35 @@
                         </thead>
                         <tbody>
                             @if (@isset($Student))
-                            @foreach ($Student as $student)
+                                @foreach ($Student as $student)
+                                    <tr>
+                                        <th class="d-flex justify-content-center">
+                                            <div class="form-check">
+                                                <input class="form-check-input rounded-circle studentCheckBox"
+                                                    type="checkbox" wire:model="studentList.{{ $student->id }}"
+                                                    wire:change="studentAdd('{{ $student->id }}', '{{ $student->first_name }} {{ $student->middle_name }} {{ $student->last_name }}')"
+                                                    value="{{ $student->id }}" id="{{ $student->id }}">
+                                            </div>
+                                        </th>
+                                        <th><label class="ms-1" for="{{ $student->id }}">{{ $student->first_name }}
+                                                {{ $student->middle_name }} {{ $student->last_name }}</label>
+                                        </th>
+                                    </tr>
+                                @endforeach
+                            @else
                                 <tr>
-                                    <th class="d-flex justify-content-center">
-                                        <div class="form-check">
-                                            <input class="form-check-input rounded-circle studentCheckBox"
-                                                type="checkbox" wire:model="studentList.{{ $student->id }}"
-                                                wire:change="studentAdd('{{ $student->id }}', '{{ $student->first_name }} {{ $student->middle_name }} {{ $student->last_name }}')"
-                                                value="{{ $student->id }}" id="{{ $student->id }}">
-                                        </div>
+                                    <th>No Student Found
                                     </th>
-                                    <th><label class="ms-1" for="{{ $student->id }}">{{ $student->first_name }}
-                                            {{ $student->middle_name }} {{ $student->last_name }}</label>
+                                    <th>No Student Found
+                                    </th>
+                                    <th>No Student Found
                                     </th>
                                 </tr>
-                            @endforeach
-                            @else
-                            <tr>
-                                <th>No Student Found
-                                </th>
-                                <th>No Student Found
-                                </th>
-                                <th>No Student Found
-                                </th>
-                            </tr>
                             @endif
                     </table>
                 </div>
             </div>
-      
+
             <div class="col-6">
                 <label class="ms-1 fw-bold" for="">Subject List:</label>
                 <div class="row mt-4">
@@ -200,7 +200,6 @@
             </div>
         </div>
         <div class="row d-flex mt-4 ms-1 pt-4 justify-content-end">
-           
             <button class="p-2 btn-sm me-3 col-1 btn btn-primary" for="1" onClick="window.location.reload();">
                 Clear
             </button>
