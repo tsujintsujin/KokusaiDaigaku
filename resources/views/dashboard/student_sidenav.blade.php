@@ -53,7 +53,7 @@
             <a href="{{ route('studentaccount') }}" class="nav-link link-light sideBarLink py-3">
                 <use xlink:href="#speedometer2"></use>
                 <img class="vri-icon me-2 ms-4" src="{{ asset('image/icon-enrollment-form.png') }}" alt="">
-                Enrollment Form -x
+                Enrollment Form
                 {{-- just a view and print pdf --}}
             </a>
         </li>
