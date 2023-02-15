@@ -230,7 +230,7 @@
                     <div class="row mt-3 d-flex justify-content-center">
                         <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-duration="1500">
                             <div class="card text-white border-0 mask">
-                                <img src="{{ asset('image/carousel_1.jpg') }}" class="card-img" alt="Stony Beach" />
+                                <img src="{{ asset('image/events1.jpg') }}" class="card-img" alt="Stony Beach" />
                             </div>
                             <div class="overlay-text d-flex flex-column justify-content-end">
                                 <h5 class="card-title "> One Heart.
@@ -238,22 +238,17 @@
                                     One MKD.
                                 </h5>
                                 <p class="card-text">
-                                    Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
-                                    beginnings of the institution, may we move forward with hope and glory for the years to
-                                    come!
+                                    At Mindanao Kokusai Daigaku we aim to help our students improve their skills through project based learning in a fun, patient and relaxed environment.
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">
                             <div class="overlay-text d-flex flex-column justify-content-end">
-                                <h5 class="card-title "> One Heart.
-                                    One Community.
-                                    One MKD.
+                                <h5 class="card-title "> 
+                                    Philippine-Japan Festival
                                 </h5>
                                 <p class="card-text">
-                                    Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
-                                    beginnings of the institution, may we move forward with hope and glory for the years to
-                                    come!
+                                    ようこそ to the 20th Philippine-Japan Festival, with the theme: "Celebrating the History of Friendship and the Beautiful Cultures of Japan & the Philippines.
                                 </p>
                             </div>
                             <div class="card text-white border-0 mask">
@@ -267,9 +262,8 @@
                                 <img src="{{ asset('image/events3.jpg') }}" class="card-img" alt="Stony Beach" />
                             </div>
                             <div class="overlay-text d-flex flex-column justify-content-end">
-                                <h5 class="card-title "> One Heart.
-                                    One Community.
-                                    One MKD.
+                                <h5 class="card-title "> 
+                                    Graduation
                                 </h5>
                                 <p class="card-text">
                                     Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
@@ -280,14 +274,11 @@
                         </div>
                         <div class="col-lg-5 p-0 m-3 card" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1500">
                             <div class="overlay-text d-flex flex-column justify-content-end">
-                                <h5 class="card-title "> One Heart.
-                                    One Community.
-                                    One MKD.
+                                <h5 class="card-title "> 
+                                    Acquaintance Party
                                 </h5>
                                 <p class="card-text">
-                                    Today marks the 20th Anniversary of Mindanao Kokusai Daigaku. To commemorate the humble
-                                    beginnings of the institution, may we move forward with hope and glory for the years to
-                                    come!
+                                The purpose of acquaintance party is to give participants an opportunity to introduce themselves and become acquainted with each other in a non-threatening manner.
                                 </p>
                             </div>
                             <div class="card text-white border-0 mask">
