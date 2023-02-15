@@ -7,8 +7,8 @@
             <div class="row mt-3">
                 <div class="col">
                     <div class="dropdown">
-                        <select class="form-select p-2" aria-label="Default select example">
-                            <option selected disabled value="1">Course</option>
+                        <select wire:model="selectedCourse" class="form-select p-2" aria-label="Default select example">
+                            <option selected  value="1">Course</option>
                             @foreach ($Course as $course)
                             <option value="{{ $course->id }}">
                                 <a class="dropdown-item" href="#">{{ $course->name }}
@@ -21,8 +21,8 @@
                 </div>
                 <div class="col">
                     <div class="dropdown">
-                        <select class="form-select p-2" aria-label="Default select example">
-                            <option selected disabled value="0">Subject</option>
+                        <select wire:model="selectedSubject" class="form-select p-2" aria-label="Default select example">
+                            <option selected  value="0">Subject</option>
                             @foreach ($Subject as $subject)
                             <option value="{{ $subject->id }}">
                                 <a class="dropdown-item text-truncate" >{{ $subject->subject_code }}, {{ $subject->description }}
@@ -51,11 +51,12 @@
             <th>Prelim</th>
             <th>Midterm</th>
             <th>Finals</th>
-
             <tr>
         <tbody>
+            @foreach ($Student as $student) 
+                
             <tr>
-                <th class="pt-3">Justin Masiga</th>
+                <th class="pt-3">{{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</th>
                 <th>
                     <div class="col-2  text-center">
                         <div class=" border-0">
@@ -82,6 +83,9 @@
                     <button class="btn btn-sm shadow-none btn-primary" href="">Update</button>
                 </th>
             </tr>
+
+            @endforeach
+
             <tr>
                 <th class="pt-3">Clarence P</th>
                 <th>

@@ -10,6 +10,9 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\Admin_Course;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminHome;
+use App\Http\Controllers\StudentHome;
+use App\Http\Controllers\TeacherHome;
+
 use App\Models\Course;
 use App\Models\Student;
 use PDF as PDf;
@@ -129,6 +132,8 @@ Route::get('/studentchangepassword', function () {
     return view('dashboard.student_account_change_password');
 })->name('studentchangepassword');
 
+Route::get('/student', [StudentHome::class, 'student'])->name('student');
+
 });
 
 Route::middleware(['auth', 'user-role:teacher'])->group(function () {
@@ -149,6 +154,8 @@ Route::get('/teacheraccount', function () {
 Route::get('/teacherchangepassword', function () {
     return view('dashboard.teacher_account_change_password');
 })->name('teacherchangepassword');
+
+Route::get('/teacher', [TeacherHome::class, 'teacher'])->name('teacher');
 
 });
 
@@ -190,3 +197,4 @@ Route::get('/generate-pdf/{id}', function ($id) {
     $filename = $id . '_' . $lastname . '.pdf';
     return $pdf->download($filename);
 })->name('generate-pdf');
+

@@ -1,5 +1,7 @@
 <?php
 
+
+
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -18,10 +20,10 @@ class StudentAccount extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'username',
-        'student_id',
+        'name',
+        'email',
         'password',
-        'type'
+        'role'
     ];
 
     /**

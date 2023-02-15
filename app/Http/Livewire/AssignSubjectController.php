@@ -161,8 +161,6 @@ public function updatedyearSelection($yearSelection){
 
 
 public function updatedstudentSearch(){
-    // $this->studentSearch = $studentSearch;
-    // $this->Student = Student::where('first_name', 'LIKE', '"%'.$this->studentSearch.'%"')->orWhere('middle_name', 'LIKE', '%'.$this->studentSearch.'%')->orWhere('last_name', 'LIKE', '%'.$this->studentSearch.'%')->get();
     $this->Student = Student::where('first_name', 'LIKE', "%$this->studentSearch%")->orWhere('last_name', 'LIKE', "%$this->studentSearch%")->orWhere('middle_name', 'LIKE', "%$this->studentSearch%")->get();
     $this->studentsSelected = [];
     $this->selectedCourse = 0;
@@ -192,21 +190,23 @@ public function addStudentSubjects(){
     $subjectsSelected = $this->subjectsSelected;
     $studentsSelected = $this->studentsSelected;
 
+
+
     if(count($studentsSelected) === 0){
+       // message no student selected
     }else if(count($subjectsSelected) === 0){
+       // message no subject selected
     }else{
         foreach($studentsSelected as $studentId => $name) {
             foreach($subjectsSelected as $subjectId => $code) {
-                if(StudentSubject::where('student_id', $studentId)->where('subject_id',$subjectId)->where('school_year_id', $this->schoolYear->id)){
+                if(StudentSubject::where('student_id', $studentId)->where('subject_id',$subjectId)->where('school_year_id', $this->schoolYear->id)->count()){
+       // student already has subject
                 }else{
                     $StudentSubject = new StudentSubject();
                     $StudentSubject->student_id = $studentId;
                     $StudentSubject->subject_id = $subjectId;
                     $StudentSubject->school_year_id = $this->schoolYear->id;
                     $StudentSubject->save();
-
-                    
-
                 }
             }
         }

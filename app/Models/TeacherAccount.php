@@ -18,10 +18,10 @@ class TeacherAccount extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'username',
-        'teacher_id',
+        'name',
+        'email',
         'password',
-        'type'
+        'role'
     ];
 
     /**
