@@ -7,7 +7,7 @@
             <div class="row mt-3">
                 <div class="col">
                     <div class="dropdown">
-                        <select class="form-select p-2" aria-label="Default select example">
+                        <select wire:model="Course" class="form-select p-2" aria-label="Default select example">
                             <option selected disabled value="1">Course</option>
                             @foreach ($Course as $course)
                             <option value="{{ $course->id }}">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col">
                     <div class="dropdown">
-                        <select class="form-select p-2" aria-label="Default select example">
+                        <select wire:model="selectedSubject" class="form-select p-2" aria-label="Default select example">
                             <option selected disabled value="0">Subject</option>
                             @foreach ($Subject as $subject)
                             <option value="{{ $subject->id }}">
@@ -51,7 +51,6 @@
             <th>Prelim</th>
             <th>Midterm</th>
             <th>Finals</th>
-
             <tr>
         <tbody>
             <tr>
