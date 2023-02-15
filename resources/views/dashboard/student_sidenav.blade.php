@@ -28,8 +28,8 @@
         </a>
     </div>
     <div class="text-center my-5 ">
-        <img src="{{asset('image/logo.png')}}" style="width:150px !important;" class="rounded"
-            alt="Mindanao Kokusai Daigaku Logo">
+    <a href="{{ route('landing') }}"><img src="{{asset('image/logo.png')}}" style="width:150px !important;" class="rounded"
+            alt="Mindanao Kokusai Daigaku Logo"></a>
             <h4 class="h4 mt-5">Hello {{Auth::user()->name}}</h4>
     
     </div>

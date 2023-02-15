@@ -5,7 +5,7 @@
         <div class="row col-5" id="contentM">
             <div class="dashboardContainer d-flex flex-column rounded-top">
                 <div class="row dashboardTitleContainer ps-4 rounded-top">
-                    <h3 class="fw-bold pt-2 text-center">ADMIN</h3>
+                    <h3 class="fw-bold pt-2 text-center">Change Password</h3>
                 </div>
                 <div class="row  px-4 pb-4 mt-3 d-flex flex-column align-items-center">
                         <label class="form-label ps-4" for="">Current Password</label>
