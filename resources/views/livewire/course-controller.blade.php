@@ -63,7 +63,7 @@
             <div class="col-4">
                 <div class="dropdown"><label class="form-label ps-1" for="">View Course</label>
                     <select class="text-start form-select p-2" wire:focus="" wire:model="currentCourse">
-                        <option value="0" selected disabled>Course</option>
+                        <option value="0" selected>Course</option>
                         {{-- @foreach (App\Models\Course::latest()->get() as $course) --}}
                         @if (@isset($Course))
                             @foreach ($Course as $course)
