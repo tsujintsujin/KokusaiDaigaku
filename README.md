@@ -1,9 +1,10 @@
 composer require laravel/breeze --dev
 
-if papipiliin
-Blade
-
 php artisan migrate --seed
+
+npm install
+
+npm run dev
 
 Ready to use accounts below after seeding
 
